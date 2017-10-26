@@ -1,7 +1,12 @@
 # KKBOX Open API Developer SDK for JavaScript
 The SDK for accessing various metadata of KKBOX tracks, albums, artists, playlists and stations.
 
-### Install 
+### npm install
+```
+npm install @kkboxorg/kkbox-javascript-developer-sdk
+```
+
+### Source Install 
 ```
 npm install
 ```
