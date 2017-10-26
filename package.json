@@ -1,5 +1,5 @@
 {
-  "name": "kkbox-javascript-developer-sdk",
+  "name": "@kkboxorg/kkbox-javascript-developer-sdk",
   "version": "1.0.0",
   "description": "KKBOX Open API developer SDK for JavaScript. Use it to easily access KKBOX open API to get various metadata about KKBOX's tracks, albums, artists, playlists and stations. ",
   "main": "src/SDK.js",
@@ -16,7 +16,7 @@
   "author": "KKBOX",
   "repository": {
     "type": "git",
-    "url": "https://github.com/KKBOX/OpenAPI-JavaScript.git"
+    "url": "git+https://github.com/KKBOX/OpenAPI-JavaScript.git"
   },
   "license": "Apache-2.0",
   "dependencies": {
@@ -61,5 +61,18 @@
       ]
     ]
   },
-  "mailTo": "willyliu@kkbox.com"
+  "mailTo": "willyliu@kkbox.com",
+  "bugs": {
+    "url": "https://github.com/KKBOX/OpenAPI-JavaScript/issues"
+  },
+  "homepage": "https://github.com/KKBOX/OpenAPI-JavaScript#readme",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "KKBOX",
+    "OpenAPI",
+    "Open",
+    "API"
+  ]
 }
