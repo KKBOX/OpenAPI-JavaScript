@@ -1,0 +1,13 @@
+image: node:7.10
+
+pages:
+  stage: deploy
+  script:
+  - npm install esdoc
+  - npm install esdoc-standard-plugin
+  - ./node_modules/.bin/esdoc
+  artifacts:
+    paths:
+    - public
+  tags:
+    - docker
