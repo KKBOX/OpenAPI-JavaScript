@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/KKBOX/OpenAPI-JavaScript" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">api</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/AlbumFetcher.js~AlbumFetcher.html">AlbumFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/Api.js~Api.html">Api</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ArtistFetcher.js~ArtistFetcher.html">ArtistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ChartFetcher.js~ChartFetcher.html">ChartFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher.html">FeaturedPlaylistCategoryFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/FeaturedPlaylistFetcher.js~FeaturedPlaylistFetcher.html">FeaturedPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/Fetcher.js~Fetcher.html">Fetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/GenreStationFetcher.js~GenreStationFetcher.html">GenreStationFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/HttpClient.js~HttpClient.html">HttpClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/MoodStationFetcher.js~MoodStationFetcher.html">MoodStationFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher.html">NewHitsPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher.html">NewReleaseCategoryFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SearchFetcher.js~SearchFetcher.html">SearchFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher.html">SharedPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/TrackFetcher.js~TrackFetcher.html">TrackFetcher</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">auth</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/Auth.js~Auth.html">Auth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow.html">ClientCredentialsFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/TokenFetcher.js~TokenFetcher.html">TokenFetcher</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="kkbox-open-api-developer-sdk-for-javascript">KKBOX Open API Developer SDK for JavaScript</h1>
+<p>The SDK for accessing various metadata of KKBOX tracks, albums, artists, playlists and stations.</p>
+<h3 id="npm-install">npm install</h3>
+<pre><code><code class="source-code prettyprint">npm install @kkboxorg/kkbox-javascript-developer-sdk</code>
+</code></pre><h3 id="source-install">Source Install</h3>
+<pre><code><code class="source-code prettyprint">npm install</code>
+</code></pre><h3 id="build-sdk">Build SDK</h3>
+<pre><code><code class="source-code prettyprint">npm run build</code>
+</code></pre><h3 id="test">Test</h3>
+<p>For testing, you should first browse <a href="https://developer.kkbox.com/">https://developer.kkbox.com/</a> and create an developer account, then create an app to get client id and client secret for that account.</p>
+<p>Then, create a file name <code>client_secrets.json</code>, put it in the <code>test</code> directory and write the client id and client secret in it. The content will be like:</p>
+<pre><code><code class="source-code prettyprint">{
+    &quot;kkbox_sdk&quot;: {
+        &quot;client_id&quot;: &quot;YOUR CLIENT ID&quot;,
+        &quot;client_secret&quot;: &quot;YOUR CLIENT SECRET&quot;
+    }
+}</code>
+</code></pre><p>And then we can run the tests.</p>
+<pre><code><code class="source-code prettyprint">npm run test</code>
+</code></pre><h2 id="how-to-use-the-sdk">How to use the SDK</h2>
+<p>There are two classes Auth and Api and you should initialize an Auth object by client id and secret.</p>
+<pre><code><code class="source-code prettyprint">import {Auth} from &apos;kkbox-javascript-developer-sdk&apos;
+
+const auth = new Auth(client_id, client_secret)</code>
+</code></pre><p>Then use the auth object to get access token.</p>
+<pre><code><code class="source-code prettyprint">auth.clientCredentialsFlow.fetchAccessToken().then(response =&gt; {
+    const access_token = response.data.access_token
+})</code>
+</code></pre><p>After getting access token, use it to initialize Api object.</p>
+<pre><code><code class="source-code prettyprint">import {Api} from &apos;kkbox-javascript-developer-sdk&apos;
+
+const api = new Api(access_token)</code>
+</code></pre><p>Now you can use various fetcher object to fetch data.</p>
+<pre><code><code class="source-code prettyprint">api.searchFetcher.setSearchCriteria(&apos;&#x4E94;&#x6708;&#x5929; &#x6D3E;&#x5C0D;&#x52D5;&#x7269;&apos;, &apos;track&apos;).fetchSearchResult().then(response =&gt; {
+    console.log(response.data)
+})</code>
+</code></pre><p>Most methods return paged result and we can use the <code>fetchNextPage</code> method to get the next page of result.</p>
+<pre><code><code class="source-code prettyprint">api.searchFetcher.setSearchCriteria(&apos;&#x4E94;&#x6708;&#x5929; &#x6D3E;&#x5C0D;&#x52D5;&#x7269;&apos;, &apos;track&apos;).fetchSearchResult().then(response =&gt; {
+    console.log(response.data)
+    api.searchFetcher.fetchNextPage(response).then(response =&gt; {
+        console.log(response.data)
+    })
+})</code>
+</code></pre><p>All the code.</p>
+<pre><code><code class="source-code prettyprint">import {Auth} from &apos;kkbox-javascript-developer-sdk&apos;
+import {Api} from &apos;kkbox-javascript-developer-sdk&apos;
+
+const auth = new Auth(client_id, client_secret)
+auth.clientCredentialsFlow.fetchAccessToken().then(response =&gt; {
+    const access_token = response.data.access_token
+    const api = new Api(access_token)    
+    api.searchFetcher.setSearchCriteria(&apos;&#x4E94;&#x6708;&#x5929; &#x6D3E;&#x5C0D;&#x52D5;&#x7269;&apos;, &apos;track&apos;).fetchSearchResult().then(response =&gt; {
+        console.log(response.data)
+        api.searchFetcher.fetchNextPage(response).then(response =&gt; {
+            console.log(response.data)
+        })        
+    })
+})</code>
+</code></pre><h3 id="-api-documentation-https-kkbox-gelato-io-"><a href="https://kkbox.gelato.io">API Documentation</a></h3>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

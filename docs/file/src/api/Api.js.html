@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/api/Api.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/KKBOX/OpenAPI-JavaScript" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">api</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/AlbumFetcher.js~AlbumFetcher.html">AlbumFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/Api.js~Api.html">Api</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ArtistFetcher.js~ArtistFetcher.html">ArtistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ChartFetcher.js~ChartFetcher.html">ChartFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher.html">FeaturedPlaylistCategoryFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/FeaturedPlaylistFetcher.js~FeaturedPlaylistFetcher.html">FeaturedPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/Fetcher.js~Fetcher.html">Fetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/GenreStationFetcher.js~GenreStationFetcher.html">GenreStationFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/HttpClient.js~HttpClient.html">HttpClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/MoodStationFetcher.js~MoodStationFetcher.html">MoodStationFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher.html">NewHitsPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher.html">NewReleaseCategoryFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SearchFetcher.js~SearchFetcher.html">SearchFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher.html">SharedPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/TrackFetcher.js~TrackFetcher.html">TrackFetcher</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">auth</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/Auth.js~Auth.html">Auth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow.html">ClientCredentialsFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/TokenFetcher.js~TokenFetcher.html">TokenFetcher</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/api/Api.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import HttpClient from &apos;./HttpClient&apos;
+import SearchFetcher from &apos;./SearchFetcher&apos;
+import TrackFetcher from &apos;./TrackFetcher&apos;
+import AlbumFetcher from &apos;./AlbumFetcher&apos;
+import ArtistFetcher from &apos;./ArtistFetcher&apos;
+import FeaturedPlaylistFetcher from &apos;./FeaturedPlaylistFetcher&apos;
+import FeaturedPlaylistCategoryFetcher from &apos;./FeaturedPlaylistCategoryFetcher&apos;
+import NewReleaseCategoryFetcher from &apos;./NewReleaseCategoryFetcher&apos;
+import NewHitsPlaylistFetcher from &apos;./NewHitsPlaylistFetcher&apos;
+import GenreStationFetcher from &apos;./GenreStationFetcher&apos;
+import MoodStationFetcher from &apos;./MoodStationFetcher&apos;
+import ChartFetcher from &apos;./ChartFetcher&apos;
+
+/**
+ * Fetch KKBOX resources.
+ */
+export default class Api {
+    /**
+     * Need access token to initialize.
+     *
+     * @param {string} token - Get via Auth.
+     * @param {string} [territory = &apos;TW&apos;] - [&apos;TW&apos;, &apos;HK&apos;, &apos;SG&apos;, &apos;MY&apos;, &apos;JP&apos;] The territory for the fetcher.
+     * @example new Api(token)
+     * @example new Api(token, &apos;TW&apos;)
+     */
+    constructor(token, territory = &apos;TW&apos;) {        
+        this.territory = territory
+        this.httpClient = undefined
+        this.setToken(token)
+    }
+
+    /**
+     * Set new token and create fetchers with the new token.
+     *
+     * @param {string} token - Get via Auth.
+     * @example api.setToken(token)
+     */
+    setToken(token) {
+        this.httpClient = new HttpClient(token)
+
+        /**
+         * @type {SearchFetcher}
+         */
+        this.searchFetcher = new SearchFetcher(this.httpClient, this.territory)
+
+        /**
+         * @type {TrackFetcher}
+         */
+        this.trackFetcher = new TrackFetcher(this.httpClient, this.territory)
+
+        /**
+         * @type {AlbumFetcher}
+         */
+        this.albumFetcher = new AlbumFetcher(this.httpClient, this.territory)
+
+        /**
+         * @type {ArtistFetcher}
+         */
+        this.artistFetcher = new ArtistFetcher(this.httpClient, this.territory)
+
+        /**
+         * @type {FeaturedPlaylistFetcher}
+         */
+        this.featuredPlaylistFetcher = new FeaturedPlaylistFetcher(this.httpClient, this.territory)
+
+        /**
+         * @type {FeaturedPlaylistCategoryFetcher}
+         */
+        this.featuredPlaylistCategoryFetcher = new FeaturedPlaylistCategoryFetcher(this.httpClient, this.territory)
+
+        /**
+         * @type {NewReleaseCategoryFetcher}
+         */        
+        this.newReleaseCategoryFetcher = new NewReleaseCategoryFetcher(this.httpClient, this.territory)
+
+        /**
+         * @type {NewHitsPlaylistFetcher}
+         */        
+        this.newHitsPlaylistFetcher = new NewHitsPlaylistFetcher(this.httpClient, this.territory)
+        
+        /**
+         * @type {GenreStationFetcher}
+         */
+        this.genreStationFetcher = new GenreStationFetcher(this.httpClient, this.territory)
+
+        /**
+         * @type {MoodStationFetcher}
+         */
+        this.moodStationFetcher = new MoodStationFetcher(this.httpClient, this.territory)
+
+        /**
+         * @type {ChartFetcher}
+         */
+        this.chartFetcher = new ChartFetcher(this.httpClient, this.territory)        
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

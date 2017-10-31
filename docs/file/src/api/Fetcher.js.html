@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/api/Fetcher.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/KKBOX/OpenAPI-JavaScript" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">api</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/AlbumFetcher.js~AlbumFetcher.html">AlbumFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/Api.js~Api.html">Api</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ArtistFetcher.js~ArtistFetcher.html">ArtistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ChartFetcher.js~ChartFetcher.html">ChartFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher.html">FeaturedPlaylistCategoryFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/FeaturedPlaylistFetcher.js~FeaturedPlaylistFetcher.html">FeaturedPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/Fetcher.js~Fetcher.html">Fetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/GenreStationFetcher.js~GenreStationFetcher.html">GenreStationFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/HttpClient.js~HttpClient.html">HttpClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/MoodStationFetcher.js~MoodStationFetcher.html">MoodStationFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher.html">NewHitsPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher.html">NewReleaseCategoryFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SearchFetcher.js~SearchFetcher.html">SearchFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher.html">SharedPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/TrackFetcher.js~TrackFetcher.html">TrackFetcher</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">auth</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/Auth.js~Auth.html">Auth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow.html">ClientCredentialsFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/TokenFetcher.js~TokenFetcher.html">TokenFetcher</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/api/Fetcher.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * Base api fetcher.
+ */
+export default class Fetcher {
+    /**      
+     * @param {Http} http 
+     * @param {string} [territory = &apos;TW&apos;] - [&apos;TW&apos;, &apos;HK&apos;, &apos;SG&apos;, &apos;MY&apos;, &apos;JP&apos;] The territory for the fetcher.
+     */
+    constructor(http, territory = &apos;TW&apos;) {
+        /**
+         * @ignore
+         */
+        this.http = http
+
+        /**
+         * @ignore
+         */
+        this.territory = territory
+    }
+
+    /**
+     * Gets an object&apos;s nested property by path.
+     * @ignore
+     */
+    getPropertyByPath(object, path) {
+        path = path.replace(/\[(\w+)\]/g, &apos;.$1&apos;); // convert indexes to properties
+        path = path.replace(/^\./, &apos;&apos;);           // strip a leading dot
+        var keys = path.split(&apos;.&apos;);
+        for (var i = 0, n = keys.length; i &lt; n; ++i) {
+            var key = keys[i];
+            if (key in object) {
+                object = object[key];
+            } else {
+                return;
+            }
+        }
+        return object;
+    }
+
+    /**
+     * Fetches next page of various paged APIs. 
+     * 
+     * @param {fulfillment} fulfillment - The fulfillment get from Promose&apos;s onFulfillment function 
+     * @param {String} nextUriPath - The next uri&apos;s path. Defaults to &apos;data.paging.next&apos;, 
+     * which means we will get the next uri path from &apos;fulfillment.data.paging.next&apos;. 
+     * The correct next uri path depends on respective api&apos;s response.
+     * @return {Promise}
+     * @example 
+     * api.albumFetcher.setAlbumID(&apos;KmRKnW5qmUrTnGRuxF&apos;).fetchTracks().then(response =&gt; {
+     *      api.albumFetcher.fetchNextPage(response))
+     * })
+     */
+    fetchNextPage(fulfillment, nextUriPath = &apos;data.paging.next&apos;) {
+        var nextUri = this.getPropertyByPath(fulfillment, nextUriPath)
+        if (nextUri != null &amp;&amp; nextUri !== undefined) {
+            return this.http.get(nextUri)
+        }
+        else {
+            return new Promise((resolve, reject) =&gt; {
+                reject(&apos;Cannot fetch next page&apos;)
+            })            
+        }
+    }
+
+    /**
+     * Is next page available for various paged APIs.
+     * @param {fulfillment} fulfillment - The fulfillment get from Promose&apos;s onFulfillment function 
+     * @param {String} nextUriPath - The next uri&apos;s path. Defaults to &apos;data.paging.next&apos;, 
+     * which means we will get the next uri path from &apos;fulfillment.data.paging.next&apos;. 
+     * The correct next uri path depends on respective api&apos;s response.
+     * @return {Boolean}
+     * @example
+     * api.albumFetcher.setAlbumID(&apos;KmRKnW5qmUrTnGRuxF&apos;).fetchTracks().then(response =&gt; {
+     *      if (api.albumFetcher.hasNextPage(response)) {
+     *          // more data available
+     *      }
+     * })
+     */
+    hasNextPage(fulfillment, nextUriPath = &apos;data.paging.next&apos;) {
+        var nextUri = this.getPropertyByPath(fulfillment, nextUriPath)
+        if (nextUri != null &amp;&amp; nextUri !== undefined) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

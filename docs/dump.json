@@ -1,0 +1,4876 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "name": "src/Endpoint.js",
+    "content": "const API_DOMAIN = (() => {\n    return process.env.NODE_ENV === 'staging' ? 'https://api.kkbox-staging.com/v1.1/' : 'https://api.kkbox.com/v1.1/'\n})()\n/**\n * @ignore\n */\nexport const SEARCH = API_DOMAIN + 'search/'\n\n/**\n * @ignore\n */\nexport const TRACKS = API_DOMAIN + 'tracks/'\n\n/**\n * @ignore\n */\nexport const ARTISTS = API_DOMAIN + 'artists/'\n\n/**\n * @ignore\n */\nexport const ALBUMS = API_DOMAIN + 'albums/'\n\n/**\n * @ignore\n */\nexport const SHARED_PLAYLISTS = API_DOMAIN + 'shared-playlists/'\n\n/**\n * @ignore\n */\nexport const MOOD_STATIONS = API_DOMAIN + 'mood-stations/'\n\n/**\n * @ignore\n */\nexport const FEATURED_PLAYLISTS = API_DOMAIN + 'featured-playlists/'\n\n/**\n * @ignore\n */\nexport const FEATURED_PLAYLISTS_CATEGORIES = API_DOMAIN + 'featured-playlist-categories/'\n\n/**\n * @ignore\n */\nexport const NEW_RELEASE_CATEGORIES = API_DOMAIN + 'new-release-categories/'\n\n/**\n * @ignore\n */\nexport const NEW_HITS_PLAYLISTS = API_DOMAIN + 'new-hits-playlists/'\n\n/**\n * @ignore\n */\nexport const GENRE_STATIONS = API_DOMAIN + 'genre-stations/'\n\n/**\n * @ignore\n */\nexport const CHARTS = API_DOMAIN + 'charts/'\n\n/**\n * @ignore\n */\nexport const SEARCH_TYPES = {\n    ARTIST: 'artist',\n    ALBUM: 'album',\n    TRACK: 'track',\n    PLAY_LIST: 'playlist'\n}\n\nconst OAuth_DOMAIN = 'https://account.kkbox.com/oauth2/'\n\n/**\n * @ignore\n */\nexport const Token = OAuth_DOMAIN + 'token/'\n\n/**\n * @ignore\n */\nexport const Authorization = OAuth_DOMAIN + 'authorize/'",
+    "static": true,
+    "longname": "src/Endpoint.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 1,
+    "kind": "variable",
+    "name": "API_DOMAIN",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~API_DOMAIN",
+    "access": null,
+    "export": false,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 2,
+    "kind": "variable",
+    "name": "SEARCH",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~SEARCH",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{SEARCH}",
+    "description": "",
+    "lineNumber": 7,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 3,
+    "kind": "variable",
+    "name": "TRACKS",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~TRACKS",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{TRACKS}",
+    "description": "",
+    "lineNumber": 12,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 4,
+    "kind": "variable",
+    "name": "ARTISTS",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~ARTISTS",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{ARTISTS}",
+    "description": "",
+    "lineNumber": 17,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 5,
+    "kind": "variable",
+    "name": "ALBUMS",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~ALBUMS",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{ALBUMS}",
+    "description": "",
+    "lineNumber": 22,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 6,
+    "kind": "variable",
+    "name": "SHARED_PLAYLISTS",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~SHARED_PLAYLISTS",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{SHARED_PLAYLISTS}",
+    "description": "",
+    "lineNumber": 27,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 7,
+    "kind": "variable",
+    "name": "MOOD_STATIONS",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~MOOD_STATIONS",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{MOOD_STATIONS}",
+    "description": "",
+    "lineNumber": 32,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 8,
+    "kind": "variable",
+    "name": "FEATURED_PLAYLISTS",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~FEATURED_PLAYLISTS",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{FEATURED_PLAYLISTS}",
+    "description": "",
+    "lineNumber": 37,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 9,
+    "kind": "variable",
+    "name": "FEATURED_PLAYLISTS_CATEGORIES",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~FEATURED_PLAYLISTS_CATEGORIES",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{FEATURED_PLAYLISTS_CATEGORIES}",
+    "description": "",
+    "lineNumber": 42,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 10,
+    "kind": "variable",
+    "name": "NEW_RELEASE_CATEGORIES",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~NEW_RELEASE_CATEGORIES",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{NEW_RELEASE_CATEGORIES}",
+    "description": "",
+    "lineNumber": 47,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 11,
+    "kind": "variable",
+    "name": "NEW_HITS_PLAYLISTS",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~NEW_HITS_PLAYLISTS",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{NEW_HITS_PLAYLISTS}",
+    "description": "",
+    "lineNumber": 52,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 12,
+    "kind": "variable",
+    "name": "GENRE_STATIONS",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~GENRE_STATIONS",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{GENRE_STATIONS}",
+    "description": "",
+    "lineNumber": 57,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 13,
+    "kind": "variable",
+    "name": "CHARTS",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~CHARTS",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{CHARTS}",
+    "description": "",
+    "lineNumber": 62,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 14,
+    "kind": "variable",
+    "name": "SEARCH_TYPES",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~SEARCH_TYPES",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{SEARCH_TYPES}",
+    "description": "",
+    "lineNumber": 67,
+    "ignore": true,
+    "type": {
+      "types": [
+        "{\"ARTIST\": string, \"ALBUM\": string, \"TRACK\": string, \"PLAY_LIST\": string}"
+      ]
+    }
+  },
+  {
+    "__docId__": 15,
+    "kind": "variable",
+    "name": "OAuth_DOMAIN",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~OAuth_DOMAIN",
+    "access": null,
+    "export": false,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 74,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 16,
+    "kind": "variable",
+    "name": "Token",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~Token",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{Token}",
+    "description": "",
+    "lineNumber": 79,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 17,
+    "kind": "variable",
+    "name": "Authorization",
+    "memberof": "src/Endpoint.js",
+    "static": true,
+    "longname": "src/Endpoint.js~Authorization",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/Endpoint.js",
+    "importStyle": "{Authorization}",
+    "description": "",
+    "lineNumber": 84,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 18,
+    "kind": "file",
+    "name": "src/SDK.js",
+    "content": "export {default as Auth} from './auth/Auth'\nexport {default as Api} from './api/Api'",
+    "static": true,
+    "longname": "src/SDK.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 19,
+    "kind": "file",
+    "name": "src/api/AlbumFetcher.js",
+    "content": "import {ALBUMS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Fetch metadata and tracks of a album.\n * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/albums\n */\nexport default class AlbumFetcher extends Fetcher {    \n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.album_id = undefined\n    }\n\n    /**\n     * Set the album fetcher.\n     *\n     * @param {string} album_id - The ID of an album.\n     * @return {AlbumFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id\n     */\n    setAlbumID(album_id) {\n        this.album_id = album_id        \n        return this\n    }\n\n    /**\n     * Fetcy metadata of the album you create.\n     *\n     * @return {Promise}\n     * @example api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.album_id, {territory: this.territory})\n    }\n\n    /**\n     * Get KKBOX web widget uri of the album.\n     * @example https://widget.kkbox.com/v1/?id=4qtXcj31wYJTRZbb23&type=album\n     * @return {string}\n     */\n    getWidgetUri(){\n        return `https://widget.kkbox.com/v1/?id=${this.album_id}&type=album`\n    }\n\n    /**\n     * Get tracks in an album. Result will be return with pagination.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchTracks()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id-tracks\n     */\n    fetchTracks(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.album_id + '/tracks', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
+    "static": true,
+    "longname": "src/api/AlbumFetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 20,
+    "kind": "class",
+    "name": "AlbumFetcher",
+    "memberof": "src/api/AlbumFetcher.js",
+    "static": true,
+    "longname": "src/api/AlbumFetcher.js~AlbumFetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/AlbumFetcher.js",
+    "importStyle": "AlbumFetcher",
+    "description": "Fetch metadata and tracks of a album.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/albums"
+    ],
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/api/Fetcher.js~Fetcher"
+    ]
+  },
+  {
+    "__docId__": 21,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/AlbumFetcher.js~AlbumFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/AlbumFetcher.js~AlbumFetcher#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "ignore": true,
+    "params": [
+      {
+        "name": "http",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "territory",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "TW",
+        "defaultValue": "TW"
+      }
+    ]
+  },
+  {
+    "__docId__": 22,
+    "kind": "member",
+    "name": "album_id",
+    "memberof": "src/api/AlbumFetcher.js~AlbumFetcher",
+    "static": false,
+    "longname": "src/api/AlbumFetcher.js~AlbumFetcher#album_id",
+    "access": null,
+    "description": "",
+    "lineNumber": 18,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 23,
+    "kind": "method",
+    "name": "setAlbumID",
+    "memberof": "src/api/AlbumFetcher.js~AlbumFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/AlbumFetcher.js~AlbumFetcher#setAlbumID",
+    "access": null,
+    "description": "Set the album fetcher.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id"
+    ],
+    "lineNumber": 28,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "album_id",
+        "description": "The ID of an album."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "AlbumFetcher"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 24,
+    "kind": "member",
+    "name": "album_id",
+    "memberof": "src/api/AlbumFetcher.js~AlbumFetcher",
+    "static": false,
+    "longname": "src/api/AlbumFetcher.js~AlbumFetcher#album_id",
+    "access": null,
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 25,
+    "kind": "method",
+    "name": "fetchMetadata",
+    "memberof": "src/api/AlbumFetcher.js~AlbumFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/AlbumFetcher.js~AlbumFetcher#fetchMetadata",
+    "access": null,
+    "description": "Fetcy metadata of the album you create.",
+    "examples": [
+      "api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchMetadata()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id"
+    ],
+    "lineNumber": 40,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 26,
+    "kind": "method",
+    "name": "getWidgetUri",
+    "memberof": "src/api/AlbumFetcher.js~AlbumFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/AlbumFetcher.js~AlbumFetcher#getWidgetUri",
+    "access": null,
+    "description": "Get KKBOX web widget uri of the album.",
+    "examples": [
+      "https://widget.kkbox.com/v1/?id=4qtXcj31wYJTRZbb23&type=album"
+    ],
+    "lineNumber": 49,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 27,
+    "kind": "method",
+    "name": "fetchTracks",
+    "memberof": "src/api/AlbumFetcher.js~AlbumFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/AlbumFetcher.js~AlbumFetcher#fetchTracks",
+    "access": null,
+    "description": "Get tracks in an album. Result will be return with pagination.",
+    "examples": [
+      "api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchTracks()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id-tracks"
+    ],
+    "lineNumber": 62,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "limit",
+        "description": "The size for one page."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "offset",
+        "description": "The offset index for first element."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 28,
+    "kind": "file",
+    "name": "src/api/Api.js",
+    "content": "import HttpClient from './HttpClient'\nimport SearchFetcher from './SearchFetcher'\nimport TrackFetcher from './TrackFetcher'\nimport AlbumFetcher from './AlbumFetcher'\nimport ArtistFetcher from './ArtistFetcher'\nimport FeaturedPlaylistFetcher from './FeaturedPlaylistFetcher'\nimport FeaturedPlaylistCategoryFetcher from './FeaturedPlaylistCategoryFetcher'\nimport NewReleaseCategoryFetcher from './NewReleaseCategoryFetcher'\nimport NewHitsPlaylistFetcher from './NewHitsPlaylistFetcher'\nimport GenreStationFetcher from './GenreStationFetcher'\nimport MoodStationFetcher from './MoodStationFetcher'\nimport ChartFetcher from './ChartFetcher'\n\n/**\n * Fetch KKBOX resources.\n */\nexport default class Api {\n    /**\n     * Need access token to initialize.\n     *\n     * @param {string} token - Get via Auth.\n     * @param {string} [territory = 'TW'] - ['TW', 'HK', 'SG', 'MY', 'JP'] The territory for the fetcher.\n     * @example new Api(token)\n     * @example new Api(token, 'TW')\n     */\n    constructor(token, territory = 'TW') {        \n        this.territory = territory\n        this.httpClient = undefined\n        this.setToken(token)\n    }\n\n    /**\n     * Set new token and create fetchers with the new token.\n     *\n     * @param {string} token - Get via Auth.\n     * @example api.setToken(token)\n     */\n    setToken(token) {\n        this.httpClient = new HttpClient(token)\n\n        /**\n         * @type {SearchFetcher}\n         */\n        this.searchFetcher = new SearchFetcher(this.httpClient, this.territory)\n\n        /**\n         * @type {TrackFetcher}\n         */\n        this.trackFetcher = new TrackFetcher(this.httpClient, this.territory)\n\n        /**\n         * @type {AlbumFetcher}\n         */\n        this.albumFetcher = new AlbumFetcher(this.httpClient, this.territory)\n\n        /**\n         * @type {ArtistFetcher}\n         */\n        this.artistFetcher = new ArtistFetcher(this.httpClient, this.territory)\n\n        /**\n         * @type {FeaturedPlaylistFetcher}\n         */\n        this.featuredPlaylistFetcher = new FeaturedPlaylistFetcher(this.httpClient, this.territory)\n\n        /**\n         * @type {FeaturedPlaylistCategoryFetcher}\n         */\n        this.featuredPlaylistCategoryFetcher = new FeaturedPlaylistCategoryFetcher(this.httpClient, this.territory)\n\n        /**\n         * @type {NewReleaseCategoryFetcher}\n         */        \n        this.newReleaseCategoryFetcher = new NewReleaseCategoryFetcher(this.httpClient, this.territory)\n\n        /**\n         * @type {NewHitsPlaylistFetcher}\n         */        \n        this.newHitsPlaylistFetcher = new NewHitsPlaylistFetcher(this.httpClient, this.territory)\n        \n        /**\n         * @type {GenreStationFetcher}\n         */\n        this.genreStationFetcher = new GenreStationFetcher(this.httpClient, this.territory)\n\n        /**\n         * @type {MoodStationFetcher}\n         */\n        this.moodStationFetcher = new MoodStationFetcher(this.httpClient, this.territory)\n\n        /**\n         * @type {ChartFetcher}\n         */\n        this.chartFetcher = new ChartFetcher(this.httpClient, this.territory)        \n    }\n}",
+    "static": true,
+    "longname": "src/api/Api.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 29,
+    "kind": "class",
+    "name": "Api",
+    "memberof": "src/api/Api.js",
+    "static": true,
+    "longname": "src/api/Api.js~Api",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/Api.js",
+    "importStyle": "Api",
+    "description": "Fetch KKBOX resources.",
+    "lineNumber": 17,
+    "interface": false
+  },
+  {
+    "__docId__": 30,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/Api.js~Api",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/Api.js~Api#constructor",
+    "access": null,
+    "description": "Need access token to initialize.",
+    "examples": [
+      "new Api(token)",
+      "new Api(token, 'TW')"
+    ],
+    "lineNumber": 26,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "token",
+        "description": "Get via Auth."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": " 'TW'",
+        "defaultRaw": " 'TW'",
+        "name": "territory",
+        "description": "['TW', 'HK', 'SG', 'MY', 'JP'] The territory for the fetcher."
+      }
+    ]
+  },
+  {
+    "__docId__": 31,
+    "kind": "member",
+    "name": "territory",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#territory",
+    "access": null,
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 32,
+    "kind": "member",
+    "name": "httpClient",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#httpClient",
+    "access": null,
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 33,
+    "kind": "method",
+    "name": "setToken",
+    "memberof": "src/api/Api.js~Api",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/Api.js~Api#setToken",
+    "access": null,
+    "description": "Set new token and create fetchers with the new token.",
+    "examples": [
+      "api.setToken(token)"
+    ],
+    "lineNumber": 38,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "token",
+        "description": "Get via Auth."
+      }
+    ]
+  },
+  {
+    "__docId__": 34,
+    "kind": "member",
+    "name": "httpClient",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#httpClient",
+    "access": null,
+    "description": null,
+    "lineNumber": 39,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 35,
+    "kind": "member",
+    "name": "searchFetcher",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#searchFetcher",
+    "access": null,
+    "description": "",
+    "lineNumber": 44,
+    "type": {
+      "nullable": null,
+      "types": [
+        "SearchFetcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 36,
+    "kind": "member",
+    "name": "trackFetcher",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#trackFetcher",
+    "access": null,
+    "description": "",
+    "lineNumber": 49,
+    "type": {
+      "nullable": null,
+      "types": [
+        "TrackFetcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 37,
+    "kind": "member",
+    "name": "albumFetcher",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#albumFetcher",
+    "access": null,
+    "description": "",
+    "lineNumber": 54,
+    "type": {
+      "nullable": null,
+      "types": [
+        "AlbumFetcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 38,
+    "kind": "member",
+    "name": "artistFetcher",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#artistFetcher",
+    "access": null,
+    "description": "",
+    "lineNumber": 59,
+    "type": {
+      "nullable": null,
+      "types": [
+        "ArtistFetcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 39,
+    "kind": "member",
+    "name": "featuredPlaylistFetcher",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#featuredPlaylistFetcher",
+    "access": null,
+    "description": "",
+    "lineNumber": 64,
+    "type": {
+      "nullable": null,
+      "types": [
+        "FeaturedPlaylistFetcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 40,
+    "kind": "member",
+    "name": "featuredPlaylistCategoryFetcher",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#featuredPlaylistCategoryFetcher",
+    "access": null,
+    "description": "",
+    "lineNumber": 69,
+    "type": {
+      "nullable": null,
+      "types": [
+        "FeaturedPlaylistCategoryFetcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 41,
+    "kind": "member",
+    "name": "newReleaseCategoryFetcher",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#newReleaseCategoryFetcher",
+    "access": null,
+    "description": "",
+    "lineNumber": 74,
+    "type": {
+      "nullable": null,
+      "types": [
+        "NewReleaseCategoryFetcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 42,
+    "kind": "member",
+    "name": "newHitsPlaylistFetcher",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#newHitsPlaylistFetcher",
+    "access": null,
+    "description": "",
+    "lineNumber": 79,
+    "type": {
+      "nullable": null,
+      "types": [
+        "NewHitsPlaylistFetcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 43,
+    "kind": "member",
+    "name": "genreStationFetcher",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#genreStationFetcher",
+    "access": null,
+    "description": "",
+    "lineNumber": 84,
+    "type": {
+      "nullable": null,
+      "types": [
+        "GenreStationFetcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 44,
+    "kind": "member",
+    "name": "moodStationFetcher",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#moodStationFetcher",
+    "access": null,
+    "description": "",
+    "lineNumber": 89,
+    "type": {
+      "nullable": null,
+      "types": [
+        "MoodStationFetcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 45,
+    "kind": "member",
+    "name": "chartFetcher",
+    "memberof": "src/api/Api.js~Api",
+    "static": false,
+    "longname": "src/api/Api.js~Api#chartFetcher",
+    "access": null,
+    "description": "",
+    "lineNumber": 94,
+    "type": {
+      "nullable": null,
+      "types": [
+        "ChartFetcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 46,
+    "kind": "file",
+    "name": "src/api/ArtistFetcher.js",
+    "content": "import {ARTISTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get artist metadata.\n * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists\n */\nexport default class ArtistFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.artist_id = undefined\n    }\n\n    /**\n     * Init the artist object.\n     *\n     * @param {string} artist_id - The ID of an artist.\n     * @return {Artist}\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id\n     */\n    setArtistID(artist_id) {\n        this.artist_id = artist_id\n        return this\n    }\n\n    /**\n     * Fetch metadata of the artist you find.\n     *\n     * @return {Promise}\n     * @example api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.artist_id, {territory: this.territory})\n    }\n\n    /**\n     * Fetch albums belong to an artist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.artistFetcher.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchAlbums()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id-albums\n     */\n    fetchAlbums(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.artist_id + '/albums', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n\n    /**\n     * Fetch top tracks belong to an artist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchTopTracks()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id-top-tracks\n     */\n    fetchTopTracks(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.artist_id + '/top-tracks', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
+    "static": true,
+    "longname": "src/api/ArtistFetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 47,
+    "kind": "class",
+    "name": "ArtistFetcher",
+    "memberof": "src/api/ArtistFetcher.js",
+    "static": true,
+    "longname": "src/api/ArtistFetcher.js~ArtistFetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/ArtistFetcher.js",
+    "importStyle": "ArtistFetcher",
+    "description": "Get artist metadata.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/artists"
+    ],
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/api/Fetcher.js~Fetcher"
+    ]
+  },
+  {
+    "__docId__": 48,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/ArtistFetcher.js~ArtistFetcher#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "ignore": true,
+    "params": [
+      {
+        "name": "http",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "territory",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "TW",
+        "defaultValue": "TW"
+      }
+    ]
+  },
+  {
+    "__docId__": 49,
+    "kind": "member",
+    "name": "artist_id",
+    "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
+    "static": false,
+    "longname": "src/api/ArtistFetcher.js~ArtistFetcher#artist_id",
+    "access": null,
+    "description": "",
+    "lineNumber": 18,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "method",
+    "name": "setArtistID",
+    "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/ArtistFetcher.js~ArtistFetcher#setArtistID",
+    "access": null,
+    "description": "Init the artist object.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id"
+    ],
+    "lineNumber": 28,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "artist_id",
+        "description": "The ID of an artist."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Artist"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 51,
+    "kind": "member",
+    "name": "artist_id",
+    "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
+    "static": false,
+    "longname": "src/api/ArtistFetcher.js~ArtistFetcher#artist_id",
+    "access": null,
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "method",
+    "name": "fetchMetadata",
+    "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/ArtistFetcher.js~ArtistFetcher#fetchMetadata",
+    "access": null,
+    "description": "Fetch metadata of the artist you find.",
+    "examples": [
+      "api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchMetadata()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id"
+    ],
+    "lineNumber": 40,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "method",
+    "name": "fetchAlbums",
+    "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/ArtistFetcher.js~ArtistFetcher#fetchAlbums",
+    "access": null,
+    "description": "Fetch albums belong to an artist.",
+    "examples": [
+      "api.artistFetcher.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchAlbums()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id-albums"
+    ],
+    "lineNumber": 53,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "limit",
+        "description": "The size for one page."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "offset",
+        "description": "The offset index for first element."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "method",
+    "name": "fetchTopTracks",
+    "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/ArtistFetcher.js~ArtistFetcher#fetchTopTracks",
+    "access": null,
+    "description": "Fetch top tracks belong to an artist.",
+    "examples": [
+      "api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchTopTracks()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id-top-tracks"
+    ],
+    "lineNumber": 70,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "limit",
+        "description": "The size for one page."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "offset",
+        "description": "The offset index for first element."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "file",
+    "name": "src/api/ChartFetcher.js",
+    "content": "import {CHARTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * The fetcher that can fetch chart playlists.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/charts\n */\nexport default class ChartFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory = 'TW')\n    }\n\n    /**\n     * Fetch chart playlists.\n     *\n     * @return {Promise}\n     * @example api.chartFetcher.fetchCharts()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/charts/endpoints/get-charts\n     */\n    fetchCharts() {\n        return this.http.get(ENDPOINT, {\n            territory: this.territory\n        })\n    }\n}",
+    "static": true,
+    "longname": "src/api/ChartFetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 56,
+    "kind": "class",
+    "name": "ChartFetcher",
+    "memberof": "src/api/ChartFetcher.js",
+    "static": true,
+    "longname": "src/api/ChartFetcher.js~ChartFetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/ChartFetcher.js",
+    "importStyle": "ChartFetcher",
+    "description": "The fetcher that can fetch chart playlists.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/charts"
+    ],
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/api/Fetcher.js~Fetcher"
+    ]
+  },
+  {
+    "__docId__": 57,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/ChartFetcher.js~ChartFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/ChartFetcher.js~ChartFetcher#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "ignore": true,
+    "params": [
+      {
+        "name": "http",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "territory",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "TW",
+        "defaultValue": "TW"
+      }
+    ]
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "name": "fetchCharts",
+    "memberof": "src/api/ChartFetcher.js~ChartFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/ChartFetcher.js~ChartFetcher#fetchCharts",
+    "access": null,
+    "description": "Fetch chart playlists.",
+    "examples": [
+      "api.chartFetcher.fetchCharts()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/charts/endpoints/get-charts"
+    ],
+    "lineNumber": 23,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "file",
+    "name": "src/api/FeaturedPlaylistCategoryFetcher.js",
+    "content": "import {FEATURED_PLAYLISTS_CATEGORIES as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * List featured playlist categories.\n * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories\n */\nexport default class FeaturedPlaylistCategoryFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.category_id = undefined\n    }\n\n    /**\n     * Fetch all featured playlist categories.\n     *\n     * @return {Promise}\n     * @example api.featuredPlaylistCategoryFetcher.fetchAllFeaturedPlaylistCategories()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories\n     */\n    fetchAllFeaturedPlaylistCategories() {\n        return this.http.get(ENDPOINT, {territory: this.territory})\n    }\n\n    /**\n     * Init the featured playlist category fetcher.\n     *\n     * @param {string} category_id - The category ID.\n     * @return {FeaturedPlaylistCategoryFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories-category_id\n     */\n    setCategoryID(category_id) {\n        this.category_id = category_id        \n        return this\n    }\n\n    /**\n     * Fetch metadata of the category you init.\n     *\n     * @return {Promise}\n     * @example api.featuredPlaylistCategoryFetcher.setCategoryID('LXUR688EBKRRZydAWb').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories-category_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.category_id, {territory: this.territory})\n    }\n\n    /**\n     * Fetch featured playlists of the category with the category fetcher you init. Result will be paged.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.featuredPlaylistCategoryFetcher.setCategoryID('LXUR688EBKRRZydAWb').fetchPlaylists()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories-category_id-playlists\n     */\n    fetchPlaylists(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.category_id + '/playlists', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
+    "static": true,
+    "longname": "src/api/FeaturedPlaylistCategoryFetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 60,
+    "kind": "class",
+    "name": "FeaturedPlaylistCategoryFetcher",
+    "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js",
+    "static": true,
+    "longname": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/FeaturedPlaylistCategoryFetcher.js",
+    "importStyle": "FeaturedPlaylistCategoryFetcher",
+    "description": "List featured playlist categories.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories"
+    ],
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/api/Fetcher.js~Fetcher"
+    ]
+  },
+  {
+    "__docId__": 61,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "ignore": true,
+    "params": [
+      {
+        "name": "http",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "territory",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "TW",
+        "defaultValue": "TW"
+      }
+    ]
+  },
+  {
+    "__docId__": 62,
+    "kind": "member",
+    "name": "category_id",
+    "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
+    "static": false,
+    "longname": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher#category_id",
+    "access": null,
+    "description": "",
+    "lineNumber": 18,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "method",
+    "name": "fetchAllFeaturedPlaylistCategories",
+    "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher#fetchAllFeaturedPlaylistCategories",
+    "access": null,
+    "description": "Fetch all featured playlist categories.",
+    "examples": [
+      "api.featuredPlaylistCategoryFetcher.fetchAllFeaturedPlaylistCategories()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories"
+    ],
+    "lineNumber": 28,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "name": "setCategoryID",
+    "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher#setCategoryID",
+    "access": null,
+    "description": "Init the featured playlist category fetcher.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories-category_id"
+    ],
+    "lineNumber": 39,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "category_id",
+        "description": "The category ID."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "FeaturedPlaylistCategoryFetcher"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "member",
+    "name": "category_id",
+    "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
+    "static": false,
+    "longname": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher#category_id",
+    "access": null,
+    "description": null,
+    "lineNumber": 40,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "method",
+    "name": "fetchMetadata",
+    "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher#fetchMetadata",
+    "access": null,
+    "description": "Fetch metadata of the category you init.",
+    "examples": [
+      "api.featuredPlaylistCategoryFetcher.setCategoryID('LXUR688EBKRRZydAWb').fetchMetadata()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories-category_id"
+    ],
+    "lineNumber": 51,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "fetchPlaylists",
+    "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher#fetchPlaylists",
+    "access": null,
+    "description": "Fetch featured playlists of the category with the category fetcher you init. Result will be paged.",
+    "examples": [
+      "api.featuredPlaylistCategoryFetcher.setCategoryID('LXUR688EBKRRZydAWb').fetchPlaylists()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories-category_id-playlists"
+    ],
+    "lineNumber": 64,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "limit",
+        "description": "The size of one page."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "offset",
+        "description": "The offset index for first element."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "file",
+    "name": "src/api/FeaturedPlaylistFetcher.js",
+    "content": "import {FEATURED_PLAYLISTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * List all featured playlists.\n * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlists\n */\nexport default class FeaturedPlaylistFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n    }\n\n    /**\n     * Fetch all featured playlists. Result will be paged.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.featuredPlaylistFetcher.fetchAllFeaturedPlaylists()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlists/endpoints/get-featured-playlists\n     */\n    fetchAllFeaturedPlaylists(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            limit: limit, \n            offset: offset, \n            territory: this.territory\n        })\n    }\n}",
+    "static": true,
+    "longname": "src/api/FeaturedPlaylistFetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 69,
+    "kind": "class",
+    "name": "FeaturedPlaylistFetcher",
+    "memberof": "src/api/FeaturedPlaylistFetcher.js",
+    "static": true,
+    "longname": "src/api/FeaturedPlaylistFetcher.js~FeaturedPlaylistFetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/FeaturedPlaylistFetcher.js",
+    "importStyle": "FeaturedPlaylistFetcher",
+    "description": "List all featured playlists.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlists"
+    ],
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/api/Fetcher.js~Fetcher"
+    ]
+  },
+  {
+    "__docId__": 70,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/FeaturedPlaylistFetcher.js~FeaturedPlaylistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/FeaturedPlaylistFetcher.js~FeaturedPlaylistFetcher#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "ignore": true,
+    "params": [
+      {
+        "name": "http",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "territory",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "TW",
+        "defaultValue": "TW"
+      }
+    ]
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "fetchAllFeaturedPlaylists",
+    "memberof": "src/api/FeaturedPlaylistFetcher.js~FeaturedPlaylistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/FeaturedPlaylistFetcher.js~FeaturedPlaylistFetcher#fetchAllFeaturedPlaylists",
+    "access": null,
+    "description": "Fetch all featured playlists. Result will be paged.",
+    "examples": [
+      "api.featuredPlaylistFetcher.fetchAllFeaturedPlaylists()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlists/endpoints/get-featured-playlists"
+    ],
+    "lineNumber": 25,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "limit",
+        "description": "The size for one page."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "offset",
+        "description": "The offset index for first element."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "file",
+    "name": "src/api/Fetcher.js",
+    "content": "/**\n * Base api fetcher.\n */\nexport default class Fetcher {\n    /**      \n     * @param {Http} http \n     * @param {string} [territory = 'TW'] - ['TW', 'HK', 'SG', 'MY', 'JP'] The territory for the fetcher.\n     */\n    constructor(http, territory = 'TW') {\n        /**\n         * @ignore\n         */\n        this.http = http\n\n        /**\n         * @ignore\n         */\n        this.territory = territory\n    }\n\n    /**\n     * Gets an object's nested property by path.\n     * @ignore\n     */\n    getPropertyByPath(object, path) {\n        path = path.replace(/\\[(\\w+)\\]/g, '.$1'); // convert indexes to properties\n        path = path.replace(/^\\./, '');           // strip a leading dot\n        var keys = path.split('.');\n        for (var i = 0, n = keys.length; i < n; ++i) {\n            var key = keys[i];\n            if (key in object) {\n                object = object[key];\n            } else {\n                return;\n            }\n        }\n        return object;\n    }\n\n    /**\n     * Fetches next page of various paged APIs. \n     * \n     * @param {fulfillment} fulfillment - The fulfillment get from Promose's onFulfillment function \n     * @param {String} nextUriPath - The next uri's path. Defaults to 'data.paging.next', \n     * which means we will get the next uri path from 'fulfillment.data.paging.next'. \n     * The correct next uri path depends on respective api's response.\n     * @return {Promise}\n     * @example \n     * api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchTracks().then(response => {\n     *      api.albumFetcher.fetchNextPage(response))\n     * })\n     */\n    fetchNextPage(fulfillment, nextUriPath = 'data.paging.next') {\n        var nextUri = this.getPropertyByPath(fulfillment, nextUriPath)\n        if (nextUri != null && nextUri !== undefined) {\n            return this.http.get(nextUri)\n        }\n        else {\n            return new Promise((resolve, reject) => {\n                reject('Cannot fetch next page')\n            })            \n        }\n    }\n\n    /**\n     * Is next page available for various paged APIs.\n     * @param {fulfillment} fulfillment - The fulfillment get from Promose's onFulfillment function \n     * @param {String} nextUriPath - The next uri's path. Defaults to 'data.paging.next', \n     * which means we will get the next uri path from 'fulfillment.data.paging.next'. \n     * The correct next uri path depends on respective api's response.\n     * @return {Boolean}\n     * @example\n     * api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchTracks().then(response => {\n     *      if (api.albumFetcher.hasNextPage(response)) {\n     *          // more data available\n     *      }\n     * })\n     */\n    hasNextPage(fulfillment, nextUriPath = 'data.paging.next') {\n        var nextUri = this.getPropertyByPath(fulfillment, nextUriPath)\n        if (nextUri != null && nextUri !== undefined) {\n            return true\n        }\n        else {\n            return false\n        }\n    }\n}",
+    "static": true,
+    "longname": "src/api/Fetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 73,
+    "kind": "class",
+    "name": "Fetcher",
+    "memberof": "src/api/Fetcher.js",
+    "static": true,
+    "longname": "src/api/Fetcher.js~Fetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/Fetcher.js",
+    "importStyle": "Fetcher",
+    "description": "Base api fetcher.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 74,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/Fetcher.js~Fetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/Fetcher.js~Fetcher#constructor",
+    "access": null,
+    "description": "     ",
+    "lineNumber": 9,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Http"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "http",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": " 'TW'",
+        "defaultRaw": " 'TW'",
+        "name": "territory",
+        "description": "['TW', 'HK', 'SG', 'MY', 'JP'] The territory for the fetcher."
+      }
+    ]
+  },
+  {
+    "__docId__": 75,
+    "kind": "member",
+    "name": "http",
+    "memberof": "src/api/Fetcher.js~Fetcher",
+    "static": false,
+    "longname": "src/api/Fetcher.js~Fetcher#http",
+    "access": null,
+    "description": "",
+    "lineNumber": 13,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "member",
+    "name": "territory",
+    "memberof": "src/api/Fetcher.js~Fetcher",
+    "static": false,
+    "longname": "src/api/Fetcher.js~Fetcher#territory",
+    "access": null,
+    "description": "",
+    "lineNumber": 18,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "method",
+    "name": "getPropertyByPath",
+    "memberof": "src/api/Fetcher.js~Fetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/Fetcher.js~Fetcher#getPropertyByPath",
+    "access": null,
+    "description": "Gets an object's nested property by path.",
+    "lineNumber": 25,
+    "ignore": true,
+    "params": [
+      {
+        "name": "object",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "path",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 78,
+    "kind": "method",
+    "name": "fetchNextPage",
+    "memberof": "src/api/Fetcher.js~Fetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/Fetcher.js~Fetcher#fetchNextPage",
+    "access": null,
+    "description": "Fetches next page of various paged APIs. ",
+    "examples": [
+      "api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchTracks().then(response => {\n     api.albumFetcher.fetchNextPage(response))\n})"
+    ],
+    "lineNumber": 53,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "fulfillment"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fulfillment",
+        "description": "The fulfillment get from Promose's onFulfillment function"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "nextUriPath",
+        "description": "The next uri's path. Defaults to 'data.paging.next', \nwhich means we will get the next uri path from 'fulfillment.data.paging.next'. \nThe correct next uri path depends on respective api's response."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 79,
+    "kind": "method",
+    "name": "hasNextPage",
+    "memberof": "src/api/Fetcher.js~Fetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/Fetcher.js~Fetcher#hasNextPage",
+    "access": null,
+    "description": "Is next page available for various paged APIs.",
+    "examples": [
+      "api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchTracks().then(response => {\n     if (api.albumFetcher.hasNextPage(response)) {\n         // more data available\n     }\n})"
+    ],
+    "lineNumber": 79,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "fulfillment"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fulfillment",
+        "description": "The fulfillment get from Promose's onFulfillment function"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "nextUriPath",
+        "description": "The next uri's path. Defaults to 'data.paging.next', \nwhich means we will get the next uri path from 'fulfillment.data.paging.next'. \nThe correct next uri path depends on respective api's response."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "file",
+    "name": "src/api/GenreStationFetcher.js",
+    "content": "import {GENRE_STATIONS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get genre stations.\n * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations\n */\nexport default class GenreStationFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         *  @ignore\n         */\n        this.genre_station_id = undefined \n    }\n\n    /**\n     * Fetch all genre stations. The result will be paged.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.GenreStation.fetchAllGenreStations()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations\n     */\n    fetchAllGenreStations(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            territory: this.territory,\n            limit: limit,\n            offset: offset            \n        })\n    }\n\n    /**\n     * Init the genre station fetcher.\n     *\n     * @param {string} genre_station_id - The ID of a genre station.\n     * @return {GenreStation}\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations-station_id\n     */\n    setGenreStationID(genre_station_id) {\n        this.genre_station_id = genre_station_id        \n        return this\n    }\n\n    /**\n     * Fetch metadata of the genre station with the genre station fetcher.\n     *\n     * @return {Promise}\n     * @example api.GenreStation.setGenreStationID('TYq3EHFTl-1EOvJM5Y').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations-station_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.genre_station_id, {territory: this.territory})\n    }\n}",
+    "static": true,
+    "longname": "src/api/GenreStationFetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 81,
+    "kind": "class",
+    "name": "GenreStationFetcher",
+    "memberof": "src/api/GenreStationFetcher.js",
+    "static": true,
+    "longname": "src/api/GenreStationFetcher.js~GenreStationFetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/GenreStationFetcher.js",
+    "importStyle": "GenreStationFetcher",
+    "description": "Get genre stations.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations"
+    ],
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/api/Fetcher.js~Fetcher"
+    ]
+  },
+  {
+    "__docId__": 82,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/GenreStationFetcher.js~GenreStationFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/GenreStationFetcher.js~GenreStationFetcher#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "ignore": true,
+    "params": [
+      {
+        "name": "http",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "territory",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "TW",
+        "defaultValue": "TW"
+      }
+    ]
+  },
+  {
+    "__docId__": 83,
+    "kind": "member",
+    "name": "genre_station_id",
+    "memberof": "src/api/GenreStationFetcher.js~GenreStationFetcher",
+    "static": false,
+    "longname": "src/api/GenreStationFetcher.js~GenreStationFetcher#genre_station_id",
+    "access": null,
+    "description": "",
+    "lineNumber": 18,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "method",
+    "name": "fetchAllGenreStations",
+    "memberof": "src/api/GenreStationFetcher.js~GenreStationFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/GenreStationFetcher.js~GenreStationFetcher#fetchAllGenreStations",
+    "access": null,
+    "description": "Fetch all genre stations. The result will be paged.",
+    "examples": [
+      "api.GenreStation.fetchAllGenreStations()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations"
+    ],
+    "lineNumber": 30,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "limit",
+        "description": "The size for one page."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "offset",
+        "description": "The offset index for first element."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 85,
+    "kind": "method",
+    "name": "setGenreStationID",
+    "memberof": "src/api/GenreStationFetcher.js~GenreStationFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/GenreStationFetcher.js~GenreStationFetcher#setGenreStationID",
+    "access": null,
+    "description": "Init the genre station fetcher.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations-station_id"
+    ],
+    "lineNumber": 45,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "genre_station_id",
+        "description": "The ID of a genre station."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "GenreStation"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 86,
+    "kind": "member",
+    "name": "genre_station_id",
+    "memberof": "src/api/GenreStationFetcher.js~GenreStationFetcher",
+    "static": false,
+    "longname": "src/api/GenreStationFetcher.js~GenreStationFetcher#genre_station_id",
+    "access": null,
+    "description": null,
+    "lineNumber": 46,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "method",
+    "name": "fetchMetadata",
+    "memberof": "src/api/GenreStationFetcher.js~GenreStationFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/GenreStationFetcher.js~GenreStationFetcher#fetchMetadata",
+    "access": null,
+    "description": "Fetch metadata of the genre station with the genre station fetcher.",
+    "examples": [
+      "api.GenreStation.setGenreStationID('TYq3EHFTl-1EOvJM5Y').fetchMetadata()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations-station_id"
+    ],
+    "lineNumber": 57,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "file",
+    "name": "src/api/HttpClient.js",
+    "content": "import axios from 'axios'\nimport {apiError} from '../catchError'\n\n/**\n * Do request to open api server with authorization header and error catch.\n */\nexport default class HttpClient {\n    /**\n     * @param {string} token - Need access token to initialize.\n     */\n    constructor(token) {\n        /**\n         * @private\n         * @type {string}\n         */\n        this.token = 'Bearer ' + token\n    }\n\n    /**\n     * Http get method.\n     *\n     * @param {string} endpoint - Uri endpoint.\n     * @param {object} params - Uri parameters.\n     * @return {Promise}\n     */\n    get(endpoint, params = {}) {\n        return axios.get(endpoint, {\n            params: params,\n            headers: {Authorization: this.token, 'User-Agent': 'KKBOX JavaScript SDK'}\n        }).catch(apiError)\n    }\n\n    /**\n     * Http post method.\n     *\n     * @param {string} endpoint - Uri endpoint.\n     * @param {object} data - Body json data.\n     * @return {Promise}\n     */\n    post(endpoint, data = {}) {\n        return axios.post(endpoint, data, {\n            headers: {\n                Authorization: this.token,\n                'User-Agent': 'KKBOX JavaScript SDK'\n            }\n        }).catch(apiError)\n    }\n}",
+    "static": true,
+    "longname": "src/api/HttpClient.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 89,
+    "kind": "class",
+    "name": "HttpClient",
+    "memberof": "src/api/HttpClient.js",
+    "static": true,
+    "longname": "src/api/HttpClient.js~HttpClient",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/HttpClient.js",
+    "importStyle": "HttpClient",
+    "description": "Do request to open api server with authorization header and error catch.",
+    "lineNumber": 7,
+    "interface": false
+  },
+  {
+    "__docId__": 90,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/HttpClient.js~HttpClient",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/HttpClient.js~HttpClient#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 11,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "token",
+        "description": "Need access token to initialize."
+      }
+    ]
+  },
+  {
+    "__docId__": 91,
+    "kind": "member",
+    "name": "token",
+    "memberof": "src/api/HttpClient.js~HttpClient",
+    "static": false,
+    "longname": "src/api/HttpClient.js~HttpClient#token",
+    "access": "private",
+    "description": "",
+    "lineNumber": 16,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 92,
+    "kind": "method",
+    "name": "get",
+    "memberof": "src/api/HttpClient.js~HttpClient",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/HttpClient.js~HttpClient#get",
+    "access": null,
+    "description": "Http get method.",
+    "lineNumber": 26,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "endpoint",
+        "description": "Uri endpoint."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "Uri parameters."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 93,
+    "kind": "method",
+    "name": "post",
+    "memberof": "src/api/HttpClient.js~HttpClient",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/HttpClient.js~HttpClient#post",
+    "access": null,
+    "description": "Http post method.",
+    "lineNumber": 40,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "endpoint",
+        "description": "Uri endpoint."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "Body json data."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 94,
+    "kind": "file",
+    "name": "src/api/MoodStationFetcher.js",
+    "content": "import {MOOD_STATIONS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get mood stations.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/mood-stations\n */\nexport default class MoodStationFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.mood_station_id = undefined\n    }\n\n    /**\n     * Fetch all mood stations.\n     *\n     * @return {Promise}\n     * @example api.moodStationFetcher.fetchAllMoodStations()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/mood-stations/endpoints/get-mood-stations\n     */\n    fetchAllMoodStations() {\n        return this.http.get(ENDPOINT, {territory: this.territory})\n    }\n\n    /**\n     * Init the mood station fetcher.\n     *\n     * @param {string} mood_station_id - The ID of a mood station.\n     * @param {string} [territory = 'TW'] - ['TW', 'HK', 'SG', 'MY', 'JP'] The territory of a mood station.\n     * @return {MoodStation}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/mood-stations/endpoints/get-mood-stations-station_id\n     */\n    setMoodStationID(mood_station_id, territory = 'TW') {\n        this.mood_station_id = mood_station_id\n        this.territory = territory\n        return this\n    }\n\n    /**\n     * Fetch the mood station's metadata.\n     *\n     * @return {Promise}\n     * @example api.moodStationFetcher.setMoodStationID('StGZp2ToWq92diPHS7').fetchMetadata()\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.mood_station_id, {territory: this.territory})\n    }\n}",
+    "static": true,
+    "longname": "src/api/MoodStationFetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 95,
+    "kind": "class",
+    "name": "MoodStationFetcher",
+    "memberof": "src/api/MoodStationFetcher.js",
+    "static": true,
+    "longname": "src/api/MoodStationFetcher.js~MoodStationFetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/MoodStationFetcher.js",
+    "importStyle": "MoodStationFetcher",
+    "description": "Get mood stations.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/mood-stations"
+    ],
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/api/Fetcher.js~Fetcher"
+    ]
+  },
+  {
+    "__docId__": 96,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/MoodStationFetcher.js~MoodStationFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/MoodStationFetcher.js~MoodStationFetcher#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "ignore": true,
+    "params": [
+      {
+        "name": "http",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "territory",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "TW",
+        "defaultValue": "TW"
+      }
+    ]
+  },
+  {
+    "__docId__": 97,
+    "kind": "member",
+    "name": "mood_station_id",
+    "memberof": "src/api/MoodStationFetcher.js~MoodStationFetcher",
+    "static": false,
+    "longname": "src/api/MoodStationFetcher.js~MoodStationFetcher#mood_station_id",
+    "access": null,
+    "description": "",
+    "lineNumber": 18,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 98,
+    "kind": "method",
+    "name": "fetchAllMoodStations",
+    "memberof": "src/api/MoodStationFetcher.js~MoodStationFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/MoodStationFetcher.js~MoodStationFetcher#fetchAllMoodStations",
+    "access": null,
+    "description": "Fetch all mood stations.",
+    "examples": [
+      "api.moodStationFetcher.fetchAllMoodStations()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/mood-stations/endpoints/get-mood-stations"
+    ],
+    "lineNumber": 28,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "method",
+    "name": "setMoodStationID",
+    "memberof": "src/api/MoodStationFetcher.js~MoodStationFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/MoodStationFetcher.js~MoodStationFetcher#setMoodStationID",
+    "access": null,
+    "description": "Init the mood station fetcher.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/mood-stations/endpoints/get-mood-stations-station_id"
+    ],
+    "lineNumber": 40,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "mood_station_id",
+        "description": "The ID of a mood station."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": " 'TW'",
+        "defaultRaw": " 'TW'",
+        "name": "territory",
+        "description": "['TW', 'HK', 'SG', 'MY', 'JP'] The territory of a mood station."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "MoodStation"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 100,
+    "kind": "member",
+    "name": "mood_station_id",
+    "memberof": "src/api/MoodStationFetcher.js~MoodStationFetcher",
+    "static": false,
+    "longname": "src/api/MoodStationFetcher.js~MoodStationFetcher#mood_station_id",
+    "access": null,
+    "description": null,
+    "lineNumber": 41,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 101,
+    "kind": "member",
+    "name": "territory",
+    "memberof": "src/api/MoodStationFetcher.js~MoodStationFetcher",
+    "static": false,
+    "longname": "src/api/MoodStationFetcher.js~MoodStationFetcher#territory",
+    "access": null,
+    "description": null,
+    "lineNumber": 42,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 102,
+    "kind": "method",
+    "name": "fetchMetadata",
+    "memberof": "src/api/MoodStationFetcher.js~MoodStationFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/MoodStationFetcher.js~MoodStationFetcher#fetchMetadata",
+    "access": null,
+    "description": "Fetch the mood station's metadata.",
+    "examples": [
+      "api.moodStationFetcher.setMoodStationID('StGZp2ToWq92diPHS7').fetchMetadata()"
+    ],
+    "lineNumber": 52,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 103,
+    "kind": "file",
+    "name": "src/api/NewHitsPlaylistFetcher.js",
+    "content": "import {NEW_HITS_PLAYLISTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * List new hits playlists.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists\n */\nexport default class NewHitsPlaylistFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.playlist_id = undefined\n    }\n\n    /**\n     * Fetch all new hits playlists.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.newHitsPlaylistFetcher.fetchAllNewHitsPlaylists()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists\n     */\n    fetchAllNewHitsPlaylists(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            territory: this.territory\n        })\n    }\n\n    /**\n     * Init the new hits playlist fetcher.\n     *\n     * @param {string} playlist_id - The playlist ID.\n     * @return {NewHitsPlaylistFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists-playlist_id\n     */\n    setPlaylistID(playlist_id) {\n        this.playlist_id = playlist_id        \n        return this\n    }\n\n    /**\n     * Fetch metadata of the new release category you set.\n     *\n     * @return {Promise}\n     * @example api.newHitsPlaylistFetcher.setPlaylistID('DZrC8m29ciOFY2JAm3').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists-playlist_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.playlist_id, {territory: this.territory})\n    }\n}",
+    "static": true,
+    "longname": "src/api/NewHitsPlaylistFetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 104,
+    "kind": "class",
+    "name": "NewHitsPlaylistFetcher",
+    "memberof": "src/api/NewHitsPlaylistFetcher.js",
+    "static": true,
+    "longname": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/NewHitsPlaylistFetcher.js",
+    "importStyle": "NewHitsPlaylistFetcher",
+    "description": "List new hits playlists.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists"
+    ],
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/api/Fetcher.js~Fetcher"
+    ]
+  },
+  {
+    "__docId__": 105,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "ignore": true,
+    "params": [
+      {
+        "name": "http",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "territory",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "TW",
+        "defaultValue": "TW"
+      }
+    ]
+  },
+  {
+    "__docId__": 106,
+    "kind": "member",
+    "name": "playlist_id",
+    "memberof": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher",
+    "static": false,
+    "longname": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher#playlist_id",
+    "access": null,
+    "description": "",
+    "lineNumber": 18,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 107,
+    "kind": "method",
+    "name": "fetchAllNewHitsPlaylists",
+    "memberof": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher#fetchAllNewHitsPlaylists",
+    "access": null,
+    "description": "Fetch all new hits playlists.",
+    "examples": [
+      "api.newHitsPlaylistFetcher.fetchAllNewHitsPlaylists()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists"
+    ],
+    "lineNumber": 30,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "limit",
+        "description": "The size of one page."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "offset",
+        "description": "The offset index for first element."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 108,
+    "kind": "method",
+    "name": "setPlaylistID",
+    "memberof": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher#setPlaylistID",
+    "access": null,
+    "description": "Init the new hits playlist fetcher.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists-playlist_id"
+    ],
+    "lineNumber": 43,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "playlist_id",
+        "description": "The playlist ID."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "NewHitsPlaylistFetcher"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 109,
+    "kind": "member",
+    "name": "playlist_id",
+    "memberof": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher",
+    "static": false,
+    "longname": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher#playlist_id",
+    "access": null,
+    "description": null,
+    "lineNumber": 44,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 110,
+    "kind": "method",
+    "name": "fetchMetadata",
+    "memberof": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher#fetchMetadata",
+    "access": null,
+    "description": "Fetch metadata of the new release category you set.",
+    "examples": [
+      "api.newHitsPlaylistFetcher.setPlaylistID('DZrC8m29ciOFY2JAm3').fetchMetadata()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists-playlist_id"
+    ],
+    "lineNumber": 55,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 111,
+    "kind": "file",
+    "name": "src/api/NewReleaseCategoryFetcher.js",
+    "content": "import {NEW_RELEASE_CATEGORIES as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * List categories of new release albums.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories\n */\nexport default class NewReleaseCategoryFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.category_id = undefined\n    }\n\n    /**\n     * Fetch all new release categories.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.newReleaseCategoryFetcher.fetchAllNewReleaseCategories()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories\n     */\n    fetchAllNewReleaseCategories(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            limit: limit,\n            offset: offset,\n            territory: this.territory\n        })\n    }\n\n    /**\n     * Init the new release category fetcher.\n     *\n     * @param {string} category_id - The category ID.\n     * @return {NewReleaseCategoryFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id\n     */\n    setCategoryID(category_id) {\n        this.category_id = category_id        \n        return this\n    }\n\n    /**\n     * Fetch metadata of the new release category you set.\n     *\n     * @return {Promise}\n     * @example api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.category_id, {territory: this.territory})\n    }\n\n    /**\n     * Fetch albums of the new release category with the category fetcher you init. Result will be paged.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchAlbums()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id-albums\n     */\n    fetchAlbums(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.category_id + '/albums', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
+    "static": true,
+    "longname": "src/api/NewReleaseCategoryFetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 112,
+    "kind": "class",
+    "name": "NewReleaseCategoryFetcher",
+    "memberof": "src/api/NewReleaseCategoryFetcher.js",
+    "static": true,
+    "longname": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/NewReleaseCategoryFetcher.js",
+    "importStyle": "NewReleaseCategoryFetcher",
+    "description": "List categories of new release albums.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories"
+    ],
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/api/Fetcher.js~Fetcher"
+    ]
+  },
+  {
+    "__docId__": 113,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "ignore": true,
+    "params": [
+      {
+        "name": "http",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "territory",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "TW",
+        "defaultValue": "TW"
+      }
+    ]
+  },
+  {
+    "__docId__": 114,
+    "kind": "member",
+    "name": "category_id",
+    "memberof": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
+    "static": false,
+    "longname": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher#category_id",
+    "access": null,
+    "description": "",
+    "lineNumber": 18,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 115,
+    "kind": "method",
+    "name": "fetchAllNewReleaseCategories",
+    "memberof": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher#fetchAllNewReleaseCategories",
+    "access": null,
+    "description": "Fetch all new release categories.",
+    "examples": [
+      "api.newReleaseCategoryFetcher.fetchAllNewReleaseCategories()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories"
+    ],
+    "lineNumber": 30,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "limit",
+        "description": "The size of one page."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "offset",
+        "description": "The offset index for first element."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 116,
+    "kind": "method",
+    "name": "setCategoryID",
+    "memberof": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher#setCategoryID",
+    "access": null,
+    "description": "Init the new release category fetcher.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id"
+    ],
+    "lineNumber": 45,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "category_id",
+        "description": "The category ID."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "NewReleaseCategoryFetcher"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 117,
+    "kind": "member",
+    "name": "category_id",
+    "memberof": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
+    "static": false,
+    "longname": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher#category_id",
+    "access": null,
+    "description": null,
+    "lineNumber": 46,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 118,
+    "kind": "method",
+    "name": "fetchMetadata",
+    "memberof": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher#fetchMetadata",
+    "access": null,
+    "description": "Fetch metadata of the new release category you set.",
+    "examples": [
+      "api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchMetadata()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id"
+    ],
+    "lineNumber": 57,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 119,
+    "kind": "method",
+    "name": "fetchAlbums",
+    "memberof": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher#fetchAlbums",
+    "access": null,
+    "description": "Fetch albums of the new release category with the category fetcher you init. Result will be paged.",
+    "examples": [
+      "api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchAlbums()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id-albums"
+    ],
+    "lineNumber": 70,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "limit",
+        "description": "The size of one page."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "offset",
+        "description": "The offset index for first element."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 120,
+    "kind": "file",
+    "name": "src/api/SearchFetcher.js",
+    "content": "import {SEARCH as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Search API.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/search\n */\nexport default class SearchFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.filterConditions = undefined\n\n        /**\n         * @ignore\n         */\n        this.q = undefined\n\n        /**\n         * @ignore\n         */\n        this.type = undefined\n    }\n\n    /**\n     * Filter what you don't want when search.\n     *\n     * @param {Object} [conditions] - search conditions.\n     * @param {string} conditions.track - track's name.\n     * @param {string} conditions.album - album's name.\n     * @param {string} conditions.artist - artist's name.\n     * @param {string} conditions.playlist - playlist's title.\n     * @param {string} conditions.available_territory - tracks and albums available territory.\n     * @return {Search}\n     * @example api.searchFetcher.setSearchCriteria('五月天 好好').filter({artist: '五月天'}).fetchSearchResult()\n     */\n    filter(conditions = {\n        track = undefined,\n        album = undefined,\n        artist = undefined,\n        playlist = undefined,\n        available_territory = undefined\n    } = {}) {\n        this.filterConditions = conditions\n        return this\n    }\n\n    /**\n     * Init the search fetcher for the artist, album, track or playlist.\n     *\n     * @param {string} q - The keyword to be searched.\n     * @param {string} [type] - ['artist', 'album', 'track', 'playlist'] The type of search. Default to search all types. If you want to use multiple type at the same time, you may use ',' to separate them.\n     * @return {Search}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/search\n     */\n    setSearchCriteria(q, type = undefined) {\n        this.q = q\n        this.type = type        \n        return this\n    }\n\n    /**\n     * Fetch the search result.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.searchFetcher.setSearchCriteria('五月天 好好').fetchSearchResult()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/search/endpoints/get-search\n     */\n    fetchSearchResult(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            q: this.q,\n            type: this.type,\n            territory: this.territory,\n            limit: limit,\n            offset: offset            \n        }).then(doFilter.bind(this))\n    }\n}\n\nfunction doFilter(response) {\n    if (this.filterConditions !== undefined) {\n        const data = Object.keys(response.data).map(key => {\n            switch (key) {\n                case 'tracks':\n                    return {\n                        [key]: Object.assign(response.data[key], {\n                            data: response.data[key].data\n                                .filter(track => {\n                                    if (this.filterConditions.available_territory !== undefined &&\n                                        !track.available_territories.includes(this.filterConditions.available_territory)) {\n                                        return false\n                                    }\n                                    if (this.filterConditions.track !== undefined &&\n                                        !new RegExp('.*' + this.filterConditions.track + '.*').test(track.name)) {\n                                        return false\n                                    }\n                                    if (this.filterConditions.album !== undefined &&\n                                        !new RegExp('.*' + this.filterConditions.album + '.*').test(track.album.name)) {\n                                        return false\n                                    }\n                                    return !(this.filterConditions.artist !== undefined &&\n                                    !new RegExp('.*' + this.filterConditions.artist + '.*').test(track.album.artist.name))\n                                })\n                        })\n                    }                    \n                case 'albums':\n                    return {\n                        [key]: Object.assign(response.data[key], {\n                            data: response.data[key].data\n                                .filter(album => {\n                                    if (this.filterConditions.available_territory !== undefined &&\n                                        !album.available_territories.includes(this.filterConditions.available_territory)) {\n                                        return false\n                                    }\n                                    if (this.filterConditions.album !== undefined &&\n                                        !new RegExp('.*' + this.filterConditions.album + '.*').test(album.name)) {\n                                        return false\n                                    }\n                                    return !(this.filterConditions.artist !== undefined &&\n                                    !new RegExp('.*' + this.filterConditions.artist + '.*').test(album.artist.name))\n                                })\n                        })\n                    }                    \n                case 'artists':\n                    return {\n                        [key]: Object.assign(response.data[key], {\n                            data: response.data[key].data\n                                .filter(artist => {\n                                    if (this.filterConditions.artist === undefined) {\n                                        return true\n                                    } else {\n                                        return new RegExp('.*' + this.filterConditions.artist + '.*').test(artist.name)\n                                    }\n                                })\n                        })\n                    }                    \n                case 'playlists':\n                    return {\n                        [key]: Object.assign(response.data[key], {\n                            data: response.data[key].data\n                                .filter(playlist => {\n                                    if (this.filterConditions.playlist === undefined) {\n                                        return true\n                                    } else {\n                                        return new RegExp('.*' + this.filterConditions.playlist + '.*').test(playlist.title)\n                                    }\n                                })\n                        })\n                    }                    \n                default:\n                    return {[key]: response.data[key]}\n            }\n        })\n        return Object.assign(response, {data: Object.assign(...data)})\n    } else {\n        return response\n    }\n}",
+    "static": true,
+    "longname": "src/api/SearchFetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 121,
+    "kind": "class",
+    "name": "SearchFetcher",
+    "memberof": "src/api/SearchFetcher.js",
+    "static": true,
+    "longname": "src/api/SearchFetcher.js~SearchFetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/SearchFetcher.js",
+    "importStyle": "SearchFetcher",
+    "description": "Search API.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/search"
+    ],
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/api/Fetcher.js~Fetcher"
+    ]
+  },
+  {
+    "__docId__": 122,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/SearchFetcher.js~SearchFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/SearchFetcher.js~SearchFetcher#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "ignore": true,
+    "params": [
+      {
+        "name": "http",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "territory",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "TW",
+        "defaultValue": "TW"
+      }
+    ]
+  },
+  {
+    "__docId__": 123,
+    "kind": "member",
+    "name": "filterConditions",
+    "memberof": "src/api/SearchFetcher.js~SearchFetcher",
+    "static": false,
+    "longname": "src/api/SearchFetcher.js~SearchFetcher#filterConditions",
+    "access": null,
+    "description": "",
+    "lineNumber": 18,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 124,
+    "kind": "member",
+    "name": "q",
+    "memberof": "src/api/SearchFetcher.js~SearchFetcher",
+    "static": false,
+    "longname": "src/api/SearchFetcher.js~SearchFetcher#q",
+    "access": null,
+    "description": "",
+    "lineNumber": 23,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 125,
+    "kind": "member",
+    "name": "type",
+    "memberof": "src/api/SearchFetcher.js~SearchFetcher",
+    "static": false,
+    "longname": "src/api/SearchFetcher.js~SearchFetcher#type",
+    "access": null,
+    "description": "",
+    "lineNumber": 28,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 126,
+    "kind": "method",
+    "name": "filter",
+    "memberof": "src/api/SearchFetcher.js~SearchFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/SearchFetcher.js~SearchFetcher#filter",
+    "access": null,
+    "description": "Filter what you don't want when search.",
+    "examples": [
+      "api.searchFetcher.setSearchCriteria('五月天 好好').filter({artist: '五月天'}).fetchSearchResult()"
+    ],
+    "lineNumber": 43,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "conditions",
+        "description": "search conditions."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "conditions.track",
+        "description": "track's name."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "conditions.album",
+        "description": "album's name."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "conditions.artist",
+        "description": "artist's name."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "conditions.playlist",
+        "description": "playlist's title."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "conditions.available_territory",
+        "description": "tracks and albums available territory."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Search"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 127,
+    "kind": "member",
+    "name": "filterConditions",
+    "memberof": "src/api/SearchFetcher.js~SearchFetcher",
+    "static": false,
+    "longname": "src/api/SearchFetcher.js~SearchFetcher#filterConditions",
+    "access": null,
+    "description": null,
+    "lineNumber": 50,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 128,
+    "kind": "method",
+    "name": "setSearchCriteria",
+    "memberof": "src/api/SearchFetcher.js~SearchFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/SearchFetcher.js~SearchFetcher#setSearchCriteria",
+    "access": null,
+    "description": "Init the search fetcher for the artist, album, track or playlist.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/search"
+    ],
+    "lineNumber": 62,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "q",
+        "description": "The keyword to be searched."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "type",
+        "description": "['artist', 'album', 'track', 'playlist'] The type of search. Default to search all types. If you want to use multiple type at the same time, you may use ',' to separate them."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Search"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 129,
+    "kind": "member",
+    "name": "q",
+    "memberof": "src/api/SearchFetcher.js~SearchFetcher",
+    "static": false,
+    "longname": "src/api/SearchFetcher.js~SearchFetcher#q",
+    "access": null,
+    "description": null,
+    "lineNumber": 63,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 130,
+    "kind": "member",
+    "name": "type",
+    "memberof": "src/api/SearchFetcher.js~SearchFetcher",
+    "static": false,
+    "longname": "src/api/SearchFetcher.js~SearchFetcher#type",
+    "access": null,
+    "description": null,
+    "lineNumber": 64,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 131,
+    "kind": "method",
+    "name": "fetchSearchResult",
+    "memberof": "src/api/SearchFetcher.js~SearchFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/SearchFetcher.js~SearchFetcher#fetchSearchResult",
+    "access": null,
+    "description": "Fetch the search result.",
+    "examples": [
+      "api.searchFetcher.setSearchCriteria('五月天 好好').fetchSearchResult()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/search/endpoints/get-search"
+    ],
+    "lineNumber": 77,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "limit",
+        "description": "The size of one page."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "offset",
+        "description": "The offset index for first element."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 132,
+    "kind": "function",
+    "name": "doFilter",
+    "memberof": "src/api/SearchFetcher.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/api/SearchFetcher.js~doFilter",
+    "access": null,
+    "export": false,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/SearchFetcher.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 88,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "response",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 133,
+    "kind": "file",
+    "name": "src/api/SharedPlaylistFetcher.js",
+    "content": "import {SHARED_PLAYLISTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get playlist metadata.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists\n */\nexport default class SharedPlaylistFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.playlist_id = undefined\n    }\n\n    /**\n     * Init the shared playlist fetcher.\n     *\n     * @param {string} playlist_id - The ID of a playlist.\n     * @return {SharedPlaylistFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id\n     */\n    setPlaylistID(playlist_id) {\n        this.playlist_id = playlist_id\n        return this\n    }\n\n    /**\n     * Fetch metadata of the shared playlist with the shared playlist fetcher.\n     *\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.playlist_id, {territory: this.territory})\n    }\n\n    /**\n     * Get KKBOX web widget uri of the playlist.\n     * @example https://widget.kkbox.com/v1/?id=KmjwNXizu5MxHFSloP&type=playlist\n     * @return {string}\n     */\n    getWidgetUri(){\n        return `https://widget.kkbox.com/v1/?id=${this.playlist_id}&type=playlist`\n    }\n\n    /**\n     * Fetch track list of a shared playlist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id-tracks\n     */\n    fetchTracks(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.playlist_id + '/tracks', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
+    "static": true,
+    "longname": "src/api/SharedPlaylistFetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 134,
+    "kind": "class",
+    "name": "SharedPlaylistFetcher",
+    "memberof": "src/api/SharedPlaylistFetcher.js",
+    "static": true,
+    "longname": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/SharedPlaylistFetcher.js",
+    "importStyle": "SharedPlaylistFetcher",
+    "description": "Get playlist metadata.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists"
+    ],
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/api/Fetcher.js~Fetcher"
+    ]
+  },
+  {
+    "__docId__": 135,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "ignore": true,
+    "params": [
+      {
+        "name": "http",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "territory",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "TW",
+        "defaultValue": "TW"
+      }
+    ]
+  },
+  {
+    "__docId__": 136,
+    "kind": "member",
+    "name": "playlist_id",
+    "memberof": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
+    "static": false,
+    "longname": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher#playlist_id",
+    "access": null,
+    "description": "",
+    "lineNumber": 18,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 137,
+    "kind": "method",
+    "name": "setPlaylistID",
+    "memberof": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher#setPlaylistID",
+    "access": null,
+    "description": "Init the shared playlist fetcher.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id"
+    ],
+    "lineNumber": 28,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "playlist_id",
+        "description": "The ID of a playlist."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "SharedPlaylistFetcher"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 138,
+    "kind": "member",
+    "name": "playlist_id",
+    "memberof": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
+    "static": false,
+    "longname": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher#playlist_id",
+    "access": null,
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 139,
+    "kind": "method",
+    "name": "fetchMetadata",
+    "memberof": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher#fetchMetadata",
+    "access": null,
+    "description": "Fetch metadata of the shared playlist with the shared playlist fetcher.",
+    "examples": [
+      "api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id"
+    ],
+    "lineNumber": 40,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 140,
+    "kind": "method",
+    "name": "getWidgetUri",
+    "memberof": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher#getWidgetUri",
+    "access": null,
+    "description": "Get KKBOX web widget uri of the playlist.",
+    "examples": [
+      "https://widget.kkbox.com/v1/?id=KmjwNXizu5MxHFSloP&type=playlist"
+    ],
+    "lineNumber": 49,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 141,
+    "kind": "method",
+    "name": "fetchTracks",
+    "memberof": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher#fetchTracks",
+    "access": null,
+    "description": "Fetch track list of a shared playlist.",
+    "examples": [
+      "api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id-tracks"
+    ],
+    "lineNumber": 62,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "limit",
+        "description": "The size for one page."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "offset",
+        "description": "The offset index for first element."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 142,
+    "kind": "file",
+    "name": "src/api/TrackFetcher.js",
+    "content": "import {TRACKS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get metadata of a track.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/tracks\n */\nexport default class TrackFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.track_id = undefined\n    }\n\n    /**\n     * Set the track fetcher's track ID.\n     *\n     * @param {string} track_id - The ID of a track.\n     * @return {Track}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/tracks/endpoints/get-tracks-track_id\n     */\n    setTrackID(track_id) {\n        this.track_id = track_id\n        return this\n    }\n\n    /**\n     * Get metadata of the track with the track fetcher.\n     *\n     * @return {Promise}\n     * @example api.Track.setTrackID('KpnEGVHEsGgkoB0MBk').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/tracks/endpoints/get-tracks-track_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.track_id, {territory: this.territory})\n    }\n\n    /**\n     * Get KKBOX web widget uri of the track.\n     * @example https://widget.kkbox.com/v1/?id=8sD5pE4dV0Zqmmler6&type=song\n     * @return {string}\n     */\n    getWidgetUri(){\n        return `https://widget.kkbox.com/v1/?id=${this.track_id}&type=song`\n    }\n}",
+    "static": true,
+    "longname": "src/api/TrackFetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 143,
+    "kind": "class",
+    "name": "TrackFetcher",
+    "memberof": "src/api/TrackFetcher.js",
+    "static": true,
+    "longname": "src/api/TrackFetcher.js~TrackFetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/api/TrackFetcher.js",
+    "importStyle": "TrackFetcher",
+    "description": "Get metadata of a track.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/tracks"
+    ],
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "src/api/Fetcher.js~Fetcher"
+    ]
+  },
+  {
+    "__docId__": 144,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/api/TrackFetcher.js~TrackFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/TrackFetcher.js~TrackFetcher#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "ignore": true,
+    "params": [
+      {
+        "name": "http",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "territory",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "TW",
+        "defaultValue": "TW"
+      }
+    ]
+  },
+  {
+    "__docId__": 145,
+    "kind": "member",
+    "name": "track_id",
+    "memberof": "src/api/TrackFetcher.js~TrackFetcher",
+    "static": false,
+    "longname": "src/api/TrackFetcher.js~TrackFetcher#track_id",
+    "access": null,
+    "description": "",
+    "lineNumber": 18,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 146,
+    "kind": "method",
+    "name": "setTrackID",
+    "memberof": "src/api/TrackFetcher.js~TrackFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/TrackFetcher.js~TrackFetcher#setTrackID",
+    "access": null,
+    "description": "Set the track fetcher's track ID.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/tracks/endpoints/get-tracks-track_id"
+    ],
+    "lineNumber": 28,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "track_id",
+        "description": "The ID of a track."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Track"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 147,
+    "kind": "member",
+    "name": "track_id",
+    "memberof": "src/api/TrackFetcher.js~TrackFetcher",
+    "static": false,
+    "longname": "src/api/TrackFetcher.js~TrackFetcher#track_id",
+    "access": null,
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 148,
+    "kind": "method",
+    "name": "fetchMetadata",
+    "memberof": "src/api/TrackFetcher.js~TrackFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/TrackFetcher.js~TrackFetcher#fetchMetadata",
+    "access": null,
+    "description": "Get metadata of the track with the track fetcher.",
+    "examples": [
+      "api.Track.setTrackID('KpnEGVHEsGgkoB0MBk').fetchMetadata()"
+    ],
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/resources/tracks/endpoints/get-tracks-track_id"
+    ],
+    "lineNumber": 40,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 149,
+    "kind": "method",
+    "name": "getWidgetUri",
+    "memberof": "src/api/TrackFetcher.js~TrackFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api/TrackFetcher.js~TrackFetcher#getWidgetUri",
+    "access": null,
+    "description": "Get KKBOX web widget uri of the track.",
+    "examples": [
+      "https://widget.kkbox.com/v1/?id=8sD5pE4dV0Zqmmler6&type=song"
+    ],
+    "lineNumber": 49,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 150,
+    "kind": "file",
+    "name": "src/auth/Auth.js",
+    "content": "import ClientCredentialsFlow from './ClientCredentialsFlow'\nimport TokenFetcher from './TokenFetcher'\n\n/**\n * Implements various KKBOX OAuth 2.0 authorization flows.\n */\nexport default class Auth {\n    /**\n     * Initialize the Auth object with client id and client secret.\n     *\n     * @param {string} client_id\n     * @param {string} client_secret\n     * @example new Auth(client_id, client_secret)\n     */\n    constructor(client_id, client_secret) {\n        /**\n         * @type {TokenFetcher}\n         */\n        this.tokenFetcher = new TokenFetcher(client_id, client_secret)\n\n        /**\n         * @type {ClientCredentialsFlow}\n         */\n        this.clientCredentialsFlow = new ClientCredentialsFlow(this.tokenFetcher)\n    }\n}",
+    "static": true,
+    "longname": "src/auth/Auth.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 151,
+    "kind": "class",
+    "name": "Auth",
+    "memberof": "src/auth/Auth.js",
+    "static": true,
+    "longname": "src/auth/Auth.js~Auth",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/auth/Auth.js",
+    "importStyle": "Auth",
+    "description": "Implements various KKBOX OAuth 2.0 authorization flows.",
+    "lineNumber": 7,
+    "interface": false
+  },
+  {
+    "__docId__": 152,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/auth/Auth.js~Auth",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/auth/Auth.js~Auth#constructor",
+    "access": null,
+    "description": "Initialize the Auth object with client id and client secret.",
+    "examples": [
+      "new Auth(client_id, client_secret)"
+    ],
+    "lineNumber": 15,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "client_id",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "client_secret",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 153,
+    "kind": "member",
+    "name": "tokenFetcher",
+    "memberof": "src/auth/Auth.js~Auth",
+    "static": false,
+    "longname": "src/auth/Auth.js~Auth#tokenFetcher",
+    "access": null,
+    "description": "",
+    "lineNumber": 19,
+    "type": {
+      "nullable": null,
+      "types": [
+        "TokenFetcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 154,
+    "kind": "member",
+    "name": "clientCredentialsFlow",
+    "memberof": "src/auth/Auth.js~Auth",
+    "static": false,
+    "longname": "src/auth/Auth.js~Auth#clientCredentialsFlow",
+    "access": null,
+    "description": "",
+    "lineNumber": 24,
+    "type": {
+      "nullable": null,
+      "types": [
+        "ClientCredentialsFlow"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 155,
+    "kind": "file",
+    "name": "src/auth/ClientCredentialsFlow.js",
+    "content": "/**\n * Implements the client credentials flow. Used for accessing APIs that don't need any KKBOX\n * user's personal data.\n * @see https://kkbox.gelato.io/docs/versions/1.1/authentication\n */\nexport default class ClientCredentialsFlow {\n    /**\n     * @ignore\n     */\n    constructor(token) {\n        /**\n         * @ignore\n         */\n        this.token = token\n    }\n\n    /**\n     * Fetch access token.\n     *\n     * @return {Promise}\n     * @example auth.clientCredentialsFlow.fetchAccessToken()\n     */\n    fetchAccessToken() {\n        return this.token.fetchAccessToken({grant_type: 'client_credentials'})\n    }\n}",
+    "static": true,
+    "longname": "src/auth/ClientCredentialsFlow.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 156,
+    "kind": "class",
+    "name": "ClientCredentialsFlow",
+    "memberof": "src/auth/ClientCredentialsFlow.js",
+    "static": true,
+    "longname": "src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/auth/ClientCredentialsFlow.js",
+    "importStyle": "ClientCredentialsFlow",
+    "description": "Implements the client credentials flow. Used for accessing APIs that don't need any KKBOX\nuser's personal data.",
+    "see": [
+      "https://kkbox.gelato.io/docs/versions/1.1/authentication"
+    ],
+    "lineNumber": 6,
+    "interface": false
+  },
+  {
+    "__docId__": 157,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 10,
+    "ignore": true,
+    "params": [
+      {
+        "name": "token",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 158,
+    "kind": "member",
+    "name": "token",
+    "memberof": "src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow",
+    "static": false,
+    "longname": "src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow#token",
+    "access": null,
+    "description": "",
+    "lineNumber": 14,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 159,
+    "kind": "method",
+    "name": "fetchAccessToken",
+    "memberof": "src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow#fetchAccessToken",
+    "access": null,
+    "description": "Fetch access token.",
+    "examples": [
+      "auth.clientCredentialsFlow.fetchAccessToken()"
+    ],
+    "lineNumber": 23,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 160,
+    "kind": "file",
+    "name": "src/auth/TokenFetcher.js",
+    "content": "import axios from 'axios'\nimport {authError} from '../catchError'\nimport querystring from 'querystring'\nimport {Token as ENDPOINT_TOKEN} from '../Endpoint'\n\n/**\n * Fetches access token.\n */\nexport default class TokenFetcher {\n    /**\n     * @ignore\n     */\n    constructor(client_id, client_secret) {\n        /**\n         * @ignore\n         */\n        this.client_id = client_id\n\n        /**\n         * @ignore\n         */\n        this.client_secret = client_secret\n    }\n\n    /**\n     * Fetches access token.\n     *\n     * @param {object} params - Form data.\n     * @return {Promise}\n     */\n    fetchAccessToken(params) {\n        return axios.post(ENDPOINT_TOKEN, querystring.stringify(params), {\n            auth: {\n                username: this.client_id,\n                password: this.client_secret\n            },\n            headers: {'User-Agent': 'KKBOX JavaScript SDK'}\n        }).catch(authError)\n    }\n}",
+    "static": true,
+    "longname": "src/auth/TokenFetcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 161,
+    "kind": "class",
+    "name": "TokenFetcher",
+    "memberof": "src/auth/TokenFetcher.js",
+    "static": true,
+    "longname": "src/auth/TokenFetcher.js~TokenFetcher",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/auth/TokenFetcher.js",
+    "importStyle": "TokenFetcher",
+    "description": "Fetches access token.",
+    "lineNumber": 9,
+    "interface": false
+  },
+  {
+    "__docId__": 162,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/auth/TokenFetcher.js~TokenFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/auth/TokenFetcher.js~TokenFetcher#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 13,
+    "ignore": true,
+    "params": [
+      {
+        "name": "client_id",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "client_secret",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 163,
+    "kind": "member",
+    "name": "client_id",
+    "memberof": "src/auth/TokenFetcher.js~TokenFetcher",
+    "static": false,
+    "longname": "src/auth/TokenFetcher.js~TokenFetcher#client_id",
+    "access": null,
+    "description": "",
+    "lineNumber": 17,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 164,
+    "kind": "member",
+    "name": "client_secret",
+    "memberof": "src/auth/TokenFetcher.js~TokenFetcher",
+    "static": false,
+    "longname": "src/auth/TokenFetcher.js~TokenFetcher#client_secret",
+    "access": null,
+    "description": "",
+    "lineNumber": 22,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 165,
+    "kind": "method",
+    "name": "fetchAccessToken",
+    "memberof": "src/auth/TokenFetcher.js~TokenFetcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/auth/TokenFetcher.js~TokenFetcher#fetchAccessToken",
+    "access": null,
+    "description": "Fetches access token.",
+    "lineNumber": 31,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "Form data."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 166,
+    "kind": "file",
+    "name": "src/catchError.js",
+    "content": "/**\n * @ignore\n */\nexport const apiError = (error) => {\n    if (error.response) {\n        throw new Error(error.response.data.error.message)\n    } else {\n        throw new Error(error.message)\n    }\n}\n\n/**\n * @ignore\n */\nexport const authError = (error) => {\n    throw new Error(error.response.data.error)\n}",
+    "static": true,
+    "longname": "src/catchError.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 167,
+    "kind": "function",
+    "name": "apiError",
+    "memberof": "src/catchError.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/catchError.js~apiError",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/catchError.js",
+    "importStyle": "{apiError}",
+    "description": "",
+    "lineNumber": 4,
+    "ignore": true,
+    "params": [
+      {
+        "name": "error",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 168,
+    "kind": "function",
+    "name": "authError",
+    "memberof": "src/catchError.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/catchError.js~authError",
+    "access": null,
+    "export": true,
+    "importPath": "@kkboxorg/kkbox-javascript-developer-sdk/src/catchError.js",
+    "importStyle": "{authError}",
+    "description": "",
+    "lineNumber": 15,
+    "ignore": true,
+    "params": [
+      {
+        "name": "error",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 170,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Infinity",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 171,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~NaN",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 172,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~undefined",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 173,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~null",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 174,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 175,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 176,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 177,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 178,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 179,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 180,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Symbol",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 181,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Error",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 182,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~EvalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 183,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~InternalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 184,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RangeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 185,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ReferenceError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 186,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~SyntaxError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 187,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~TypeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 188,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~URIError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 189,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 190,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 191,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Date",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 192,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~String",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 193,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~string",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 194,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RegExp",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 195,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 196,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 197,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 198,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8ClampedArray",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 199,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 200,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 201,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 202,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 203,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 204,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float64Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 205,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Map",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 206,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Set",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 207,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakMap",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 208,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakSet",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 209,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ArrayBuffer",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 210,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~DataView",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 211,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~JSON",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 212,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Promise",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 213,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Generator",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 214,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~GeneratorFunction",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 215,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Reflect",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 216,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Proxy",
+    "access": null,
+    "description": "",
+    "lineNumber": 193,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 218,
+    "kind": "external",
+    "name": "CanvasRenderingContext2D",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~CanvasRenderingContext2D",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 219,
+    "kind": "external",
+    "name": "DocumentFragment",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~DocumentFragment",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 220,
+    "kind": "external",
+    "name": "Element",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Element",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 221,
+    "kind": "external",
+    "name": "Event",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Event",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 222,
+    "kind": "external",
+    "name": "Node",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Node",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 223,
+    "kind": "external",
+    "name": "NodeList",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~NodeList",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 224,
+    "kind": "external",
+    "name": "XMLHttpRequest",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 225,
+    "kind": "external",
+    "name": "AudioContext",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~AudioContext",
+    "access": null,
+    "description": "",
+    "lineNumber": 34,
+    "builtinExternal": true
+  }
+]

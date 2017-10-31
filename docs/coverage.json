@@ -1,0 +1,102 @@
+{
+  "coverage": "96.34%",
+  "expectCount": 82,
+  "actualCount": 79,
+  "files": {
+    "src/api/AlbumFetcher.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "src/api/Api.js": {
+      "expectCount": 16,
+      "actualCount": 14,
+      "undocumentLines": [
+        28,
+        27
+      ]
+    },
+    "src/api/ArtistFetcher.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "src/auth/Auth.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/api/ChartFetcher.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/auth/ClientCredentialsFlow.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/api/FeaturedPlaylistCategoryFetcher.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "src/api/FeaturedPlaylistFetcher.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/api/Fetcher.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/api/GenreStationFetcher.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/api/HttpClient.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/api/MoodStationFetcher.js": {
+      "expectCount": 5,
+      "actualCount": 4,
+      "undocumentLines": [
+        42
+      ]
+    },
+    "src/api/NewHitsPlaylistFetcher.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/api/NewReleaseCategoryFetcher.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "src/api/SearchFetcher.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/api/SharedPlaylistFetcher.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "src/auth/TokenFetcher.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/api/TrackFetcher.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    }
+  }
+}
