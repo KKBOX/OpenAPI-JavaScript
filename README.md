@@ -36,6 +36,9 @@ And then we can run the tests.
 npm run test
 ```
 
+### SDK Documentation
+Please browse [https://kkbox.github.io/OpenAPI-JavaScript/](https://kkbox.github.io/OpenAPI-JavaScript/)
+
 ## How to use the SDK
 There are two classes Auth and Api and you should initialize an Auth object by client id and secret.
 
@@ -98,4 +101,23 @@ auth.clientCredentialsFlow.fetchAccessToken().then(response => {
     })
 })
 ```
+### Generate the SDK Documentation
+    npm run build-doc
+Then open the the file `public/index.html`
+
 ### [API Documentation](https://kkbox.gelato.io)
+
+### License
+Copyright 2017 KKBOX Technologies Limited
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
