@@ -1,4 +1,6 @@
 # KKBOX Open API Developer SDK for JavaScript
+[![Build Status](https://travis-ci.org/KKBOX/OpenAPI-JavaScript.svg?branch=master)](https://travis-ci.org/KKBOX/OpenAPI-JavaScript)
+
 The SDK for accessing various metadata of KKBOX tracks, albums, artists, playlists and stations.
 
 ### npm install
