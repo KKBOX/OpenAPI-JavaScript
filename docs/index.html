@@ -73,9 +73,11 @@
 }</code>
 </code></pre><p>And then we can run the tests.</p>
 <pre><code><code class="source-code prettyprint">npm run test</code>
-</code></pre><h2 id="how-to-use-the-sdk">How to use the SDK</h2>
+</code></pre><h3 id="sdk-documentation">SDK Documentation</h3>
+<p>Please browse <a href="https://kkbox.github.io/OpenAPI-JavaScript/">https://kkbox.github.io/OpenAPI-JavaScript/</a></p>
+<h2 id="how-to-use-the-sdk">How to use the SDK</h2>
 <p>There are two classes Auth and Api and you should initialize an Auth object by client id and secret.</p>
-<pre><code><code class="source-code prettyprint">import {Auth} from &apos;kkbox-javascript-developer-sdk&apos;
+<pre><code><code class="source-code prettyprint">import {Auth} from &apos;@kkboxorg/kkbox-javascript-developer-sdk&apos;
 
 const auth = new Auth(client_id, client_secret)</code>
 </code></pre><p>Then use the auth object to get access token.</p>
@@ -83,7 +85,7 @@ const auth = new Auth(client_id, client_secret)</code>
     const access_token = response.data.access_token
 })</code>
 </code></pre><p>After getting access token, use it to initialize Api object.</p>
-<pre><code><code class="source-code prettyprint">import {Api} from &apos;kkbox-javascript-developer-sdk&apos;
+<pre><code><code class="source-code prettyprint">import {Api} from &apos;@kkboxorg/kkbox-javascript-developer-sdk&apos;
 
 const api = new Api(access_token)</code>
 </code></pre><p>Now you can use various fetcher object to fetch data.</p>
@@ -98,8 +100,8 @@ const api = new Api(access_token)</code>
     })
 })</code>
 </code></pre><p>All the code.</p>
-<pre><code><code class="source-code prettyprint">import {Auth} from &apos;kkbox-javascript-developer-sdk&apos;
-import {Api} from &apos;kkbox-javascript-developer-sdk&apos;
+<pre><code><code class="source-code prettyprint">import {Auth} from &apos;@kkboxorg/kkbox-javascript-developer-sdk&apos;
+import {Api} from &apos;@kkboxorg/kkbox-javascript-developer-sdk&apos;
 
 const auth = new Auth(client_id, client_secret)
 auth.clientCredentialsFlow.fetchAccessToken().then(response =&gt; {
@@ -112,7 +114,21 @@ auth.clientCredentialsFlow.fetchAccessToken().then(response =&gt; {
         })        
     })
 })</code>
-</code></pre><h3 id="-api-documentation-https-kkbox-gelato-io-"><a href="https://kkbox.gelato.io">API Documentation</a></h3>
+</code></pre><h3 id="generate-the-sdk-documentation">Generate the SDK Documentation</h3>
+<pre><code><code class="source-code prettyprint">npm run build-doc</code>
+</code></pre><p>Then open the the file <code>docs/index.html</code></p>
+<h3 id="-api-documentation-https-kkbox-gelato-io-"><a href="https://kkbox.gelato.io">API Documentation</a></h3>
+<h3 id="license">License</h3>
+<p>Copyright 2017 KKBOX Technologies Limited</p>
+<p>   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at</p>
+<pre><code><code class="source-code prettyprint">http://www.apache.org/licenses/LICENSE-2.0</code>
+</code></pre><p>   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.</p>
 </div>
 </div>
 

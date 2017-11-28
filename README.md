@@ -103,7 +103,7 @@ auth.clientCredentialsFlow.fetchAccessToken().then(response => {
 ```
 ### Generate the SDK Documentation
     npm run build-doc
-Then open the the file `public/index.html`
+Then open the the file `docs/index.html`
 
 ### [API Documentation](https://kkbox.gelato.io)
 
