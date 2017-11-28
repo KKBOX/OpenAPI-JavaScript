@@ -2,7 +2,5 @@ language: node_js
 node_js:
   - "8"
 before_script:
-  - cd test
-  - rm -f client_secrets.json
-  - echo "{\"kkbox_sdk\": {\"client_id\": \"$CLIENT_ID\",\"client_secret\": \"$CLIENT_SECRET\"}}" >> client_secrets.json
-  - cd ..
+  - |
+    echo -e '{"kkbox_sdk": {"client_id": "$CLIENT_ID", "client_secret": "$CLIENT_SECRET"}}' > test/client_secrets.json
