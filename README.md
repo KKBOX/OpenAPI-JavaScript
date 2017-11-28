@@ -43,7 +43,7 @@ Please browse [https://kkbox.github.io/OpenAPI-JavaScript/](https://kkbox.github
 There are two classes Auth and Api and you should initialize an Auth object by client id and secret.
 
 ```
-import {Auth} from 'kkbox-javascript-developer-sdk'
+import {Auth} from '@kkboxorg/kkbox-javascript-developer-sdk'
 
 const auth = new Auth(client_id, client_secret)
 ```
@@ -59,7 +59,7 @@ auth.clientCredentialsFlow.fetchAccessToken().then(response => {
 After getting access token, use it to initialize Api object.
 
 ```
-import {Api} from 'kkbox-javascript-developer-sdk'
+import {Api} from '@kkboxorg/kkbox-javascript-developer-sdk'
 
 const api = new Api(access_token)
 ```
@@ -86,8 +86,8 @@ api.searchFetcher.setSearchCriteria('五月天 派對動物', 'track').fetchSear
 All the code.
 
 ```
-import {Auth} from 'kkbox-javascript-developer-sdk'
-import {Api} from 'kkbox-javascript-developer-sdk'
+import {Auth} from '@kkboxorg/kkbox-javascript-developer-sdk'
+import {Api} from '@kkboxorg/kkbox-javascript-developer-sdk'
 
 const auth = new Auth(client_id, client_secret)
 auth.clientCredentialsFlow.fetchAccessToken().then(response => {
