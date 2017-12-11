@@ -1,110 +1,110 @@
 window.esdocSearchIndex = [
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/albumfetcher.js~albumfetcher",
+    "@kkbox/kkbox-js-sdk/src/api/albumfetcher.js~albumfetcher",
     "class/src/api/AlbumFetcher.js~AlbumFetcher.html",
-    "<span>AlbumFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/AlbumFetcher.js</span>",
+    "<span>AlbumFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/AlbumFetcher.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/api.js~api",
+    "@kkbox/kkbox-js-sdk/src/api/api.js~api",
     "class/src/api/Api.js~Api.html",
-    "<span>Api</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/Api.js</span>",
+    "<span>Api</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/Api.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/artistfetcher.js~artistfetcher",
+    "@kkbox/kkbox-js-sdk/src/api/artistfetcher.js~artistfetcher",
     "class/src/api/ArtistFetcher.js~ArtistFetcher.html",
-    "<span>ArtistFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/ArtistFetcher.js</span>",
+    "<span>ArtistFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/ArtistFetcher.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/auth/auth.js~auth",
+    "@kkbox/kkbox-js-sdk/src/auth/auth.js~auth",
     "class/src/auth/Auth.js~Auth.html",
-    "<span>Auth</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/auth/Auth.js</span>",
+    "<span>Auth</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/auth/Auth.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/chartfetcher.js~chartfetcher",
+    "@kkbox/kkbox-js-sdk/src/api/chartfetcher.js~chartfetcher",
     "class/src/api/ChartFetcher.js~ChartFetcher.html",
-    "<span>ChartFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/ChartFetcher.js</span>",
+    "<span>ChartFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/ChartFetcher.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/auth/clientcredentialsflow.js~clientcredentialsflow",
+    "@kkbox/kkbox-js-sdk/src/auth/clientcredentialsflow.js~clientcredentialsflow",
     "class/src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow.html",
-    "<span>ClientCredentialsFlow</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/auth/ClientCredentialsFlow.js</span>",
+    "<span>ClientCredentialsFlow</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/auth/ClientCredentialsFlow.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/featuredplaylistcategoryfetcher.js~featuredplaylistcategoryfetcher",
+    "@kkbox/kkbox-js-sdk/src/api/featuredplaylistcategoryfetcher.js~featuredplaylistcategoryfetcher",
     "class/src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher.html",
-    "<span>FeaturedPlaylistCategoryFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/FeaturedPlaylistCategoryFetcher.js</span>",
+    "<span>FeaturedPlaylistCategoryFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/FeaturedPlaylistCategoryFetcher.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/featuredplaylistfetcher.js~featuredplaylistfetcher",
+    "@kkbox/kkbox-js-sdk/src/api/featuredplaylistfetcher.js~featuredplaylistfetcher",
     "class/src/api/FeaturedPlaylistFetcher.js~FeaturedPlaylistFetcher.html",
-    "<span>FeaturedPlaylistFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/FeaturedPlaylistFetcher.js</span>",
+    "<span>FeaturedPlaylistFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/FeaturedPlaylistFetcher.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/fetcher.js~fetcher",
+    "@kkbox/kkbox-js-sdk/src/api/fetcher.js~fetcher",
     "class/src/api/Fetcher.js~Fetcher.html",
-    "<span>Fetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/Fetcher.js</span>",
+    "<span>Fetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/Fetcher.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/genrestationfetcher.js~genrestationfetcher",
+    "@kkbox/kkbox-js-sdk/src/api/genrestationfetcher.js~genrestationfetcher",
     "class/src/api/GenreStationFetcher.js~GenreStationFetcher.html",
-    "<span>GenreStationFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/GenreStationFetcher.js</span>",
+    "<span>GenreStationFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/GenreStationFetcher.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/httpclient.js~httpclient",
+    "@kkbox/kkbox-js-sdk/src/api/httpclient.js~httpclient",
     "class/src/api/HttpClient.js~HttpClient.html",
-    "<span>HttpClient</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/HttpClient.js</span>",
+    "<span>HttpClient</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/HttpClient.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/moodstationfetcher.js~moodstationfetcher",
+    "@kkbox/kkbox-js-sdk/src/api/moodstationfetcher.js~moodstationfetcher",
     "class/src/api/MoodStationFetcher.js~MoodStationFetcher.html",
-    "<span>MoodStationFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/MoodStationFetcher.js</span>",
+    "<span>MoodStationFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/MoodStationFetcher.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/newhitsplaylistfetcher.js~newhitsplaylistfetcher",
+    "@kkbox/kkbox-js-sdk/src/api/newhitsplaylistfetcher.js~newhitsplaylistfetcher",
     "class/src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher.html",
-    "<span>NewHitsPlaylistFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/NewHitsPlaylistFetcher.js</span>",
+    "<span>NewHitsPlaylistFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/NewHitsPlaylistFetcher.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/newreleasecategoryfetcher.js~newreleasecategoryfetcher",
+    "@kkbox/kkbox-js-sdk/src/api/newreleasecategoryfetcher.js~newreleasecategoryfetcher",
     "class/src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher.html",
-    "<span>NewReleaseCategoryFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/NewReleaseCategoryFetcher.js</span>",
+    "<span>NewReleaseCategoryFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/NewReleaseCategoryFetcher.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/searchfetcher.js~searchfetcher",
+    "@kkbox/kkbox-js-sdk/src/api/searchfetcher.js~searchfetcher",
     "class/src/api/SearchFetcher.js~SearchFetcher.html",
-    "<span>SearchFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/SearchFetcher.js</span>",
+    "<span>SearchFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/SearchFetcher.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/sharedplaylistfetcher.js~sharedplaylistfetcher",
+    "@kkbox/kkbox-js-sdk/src/api/sharedplaylistfetcher.js~sharedplaylistfetcher",
     "class/src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher.html",
-    "<span>SharedPlaylistFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/SharedPlaylistFetcher.js</span>",
+    "<span>SharedPlaylistFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/SharedPlaylistFetcher.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/auth/tokenfetcher.js~tokenfetcher",
+    "@kkbox/kkbox-js-sdk/src/auth/tokenfetcher.js~tokenfetcher",
     "class/src/auth/TokenFetcher.js~TokenFetcher.html",
-    "<span>TokenFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/auth/TokenFetcher.js</span>",
+    "<span>TokenFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/auth/TokenFetcher.js</span>",
     "class"
   ],
   [
-    "@kkbox/kkbox-javascript-developer-sdk/src/api/trackfetcher.js~trackfetcher",
+    "@kkbox/kkbox-js-sdk/src/api/trackfetcher.js~trackfetcher",
     "class/src/api/TrackFetcher.js~TrackFetcher.html",
-    "<span>TrackFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-javascript-developer-sdk/src/api/TrackFetcher.js</span>",
+    "<span>TrackFetcher</span> <span class=\"search-result-import-path\">@kkbox/kkbox-js-sdk/src/api/TrackFetcher.js</span>",
     "class"
   ],
   [

@@ -58,7 +58,7 @@
 <p><a href="https://travis-ci.org/KKBOX/OpenAPI-JavaScript"><img src="https://travis-ci.org/KKBOX/OpenAPI-JavaScript.svg?branch=master" alt="Build Status"></a></p>
 <p>The SDK for accessing various metadata of KKBOX tracks, albums, artists, playlists and stations.</p>
 <h3 id="npm-install">npm install</h3>
-<pre><code><code class="source-code prettyprint">npm install @kkbox/kkbox-javascript-developer-sdk</code>
+<pre><code><code class="source-code prettyprint">npm install @kkbox/kkbox-js-sdk</code>
 </code></pre><h3 id="source-install">Source Install</h3>
 <pre><code><code class="source-code prettyprint">npm install</code>
 </code></pre><h3 id="build-sdk">Build SDK</h3>
@@ -78,7 +78,7 @@
 <p>Please browse <a href="https://kkbox.github.io/OpenAPI-JavaScript/">https://kkbox.github.io/OpenAPI-JavaScript/</a></p>
 <h2 id="how-to-use-the-sdk">How to use the SDK</h2>
 <p>There are two classes Auth and Api and you should initialize an Auth object by client id and secret.</p>
-<pre><code><code class="source-code prettyprint">import {Auth} from &apos;@kkbox/kkbox-javascript-developer-sdk&apos;
+<pre><code><code class="source-code prettyprint">import {Auth} from &apos;@kkbox/kkbox-js-sdk&apos;
 
 const auth = new Auth(client_id, client_secret)</code>
 </code></pre><p>Then use the auth object to get access token.</p>
@@ -86,7 +86,7 @@ const auth = new Auth(client_id, client_secret)</code>
     const access_token = response.data.access_token
 })</code>
 </code></pre><p>After getting access token, use it to initialize Api object.</p>
-<pre><code><code class="source-code prettyprint">import {Api} from &apos;@kkbox/kkbox-javascript-developer-sdk&apos;
+<pre><code><code class="source-code prettyprint">import {Api} from &apos;@kkbox/kkbox-js-sdk&apos;
 
 const api = new Api(access_token)</code>
 </code></pre><p>Now you can use various fetcher object to fetch data.</p>
@@ -101,8 +101,8 @@ const api = new Api(access_token)</code>
     })
 })</code>
 </code></pre><p>All the code.</p>
-<pre><code><code class="source-code prettyprint">import {Auth} from &apos;@kkbox/kkbox-javascript-developer-sdk&apos;
-import {Api} from &apos;@kkbox/kkbox-javascript-developer-sdk&apos;
+<pre><code><code class="source-code prettyprint">import {Auth} from &apos;@kkbox/kkbox-js-sdk&apos;
+import {Api} from &apos;@kkbox/kkbox-js-sdk&apos;
 
 const auth = new Auth(client_id, client_secret)
 auth.clientCredentialsFlow.fetchAccessToken().then(response =&gt; {
