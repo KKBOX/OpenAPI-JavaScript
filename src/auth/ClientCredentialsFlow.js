@@ -1,7 +1,7 @@
 /**
  * Implements the client credentials flow. Used for accessing APIs that don't need any KKBOX
  * user's personal data.
- * @see https://kkbox.gelato.io/docs/versions/1.1/authentication
+ * @see https://docs-en.kkbox.codes/docs/getting-started
  */
 export default class ClientCredentialsFlow {
     /**

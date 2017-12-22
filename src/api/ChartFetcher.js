@@ -3,7 +3,7 @@ import Fetcher from './Fetcher'
 
 /**
  * The fetcher that can fetch chart playlists.
- * @see https://kkbox.gelato.io/docs/versions/1.1/resources/charts
+ * @see https://docs-en.kkbox.codes/v1.1/reference#charts
  */
 export default class ChartFetcher extends Fetcher {
     /**
@@ -18,7 +18,7 @@ export default class ChartFetcher extends Fetcher {
      *
      * @return {Promise}
      * @example api.chartFetcher.fetchCharts()
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/charts/endpoints/get-charts
+     * @see https://docs-en.kkbox.codes/v1.1/reference#charts_1
      */
     fetchCharts() {
         return this.http.get(ENDPOINT, {

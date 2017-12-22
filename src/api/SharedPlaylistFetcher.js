@@ -3,7 +3,7 @@ import Fetcher from './Fetcher'
 
 /**
  * Get playlist metadata.
- * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists
+ * @see https://docs-en.kkbox.codes/v1.1/reference#shared-playlists
  */
 export default class SharedPlaylistFetcher extends Fetcher {
     /**
@@ -23,7 +23,7 @@ export default class SharedPlaylistFetcher extends Fetcher {
      *
      * @param {string} playlist_id - The ID of a playlist.
      * @return {SharedPlaylistFetcher}
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id
      */
     setPlaylistID(playlist_id) {
         this.playlist_id = playlist_id
@@ -35,7 +35,7 @@ export default class SharedPlaylistFetcher extends Fetcher {
      *
      * @return {Promise}
      * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id
      */
     fetchMetadata() {
         return this.http.get(ENDPOINT + this.playlist_id, {territory: this.territory})
@@ -57,7 +57,7 @@ export default class SharedPlaylistFetcher extends Fetcher {
      * @param {number} [offset] - The offset index for first element.
      * @return {Promise}
      * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id-tracks
+     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id-tracks
      */
     fetchTracks(limit = undefined, offset = undefined) {
         return this.http.get(ENDPOINT + this.playlist_id + '/tracks', {

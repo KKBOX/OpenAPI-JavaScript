@@ -3,7 +3,7 @@ import Fetcher from './Fetcher'
 
 /**
  * Get artist metadata.
- * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists
+ * @see https://docs-en.kkbox.codes/v1.1/reference#artists
  */
 export default class ArtistFetcher extends Fetcher {
     /**
@@ -23,7 +23,7 @@ export default class ArtistFetcher extends Fetcher {
      *
      * @param {string} artist_id - The ID of an artist.
      * @return {Artist}
-     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id
      */
     setArtistID(artist_id) {
         this.artist_id = artist_id
@@ -35,7 +35,7 @@ export default class ArtistFetcher extends Fetcher {
      *
      * @return {Promise}
      * @example api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchMetadata()
-     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id
      */
     fetchMetadata() {
         return this.http.get(ENDPOINT + this.artist_id, {territory: this.territory})
@@ -48,7 +48,7 @@ export default class ArtistFetcher extends Fetcher {
      * @param {number} [offset] - The offset index for first element.
      * @return {Promise}
      * @example api.artistFetcher.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchAlbums()
-     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id-albums
+     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-albums
      */
     fetchAlbums(limit = undefined, offset = undefined) {
         return this.http.get(ENDPOINT + this.artist_id + '/albums', {
@@ -65,7 +65,7 @@ export default class ArtistFetcher extends Fetcher {
      * @param {number} [offset] - The offset index for first element.
      * @return {Promise}
      * @example api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchTopTracks()
-     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id-top-tracks
+     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-toptracks
      */
     fetchTopTracks(limit = undefined, offset = undefined) {
         return this.http.get(ENDPOINT + this.artist_id + '/top-tracks', {

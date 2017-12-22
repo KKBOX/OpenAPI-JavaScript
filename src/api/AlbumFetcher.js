@@ -3,7 +3,7 @@ import Fetcher from './Fetcher'
 
 /**
  * Fetch metadata and tracks of a album.
- * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/albums
+ * @see https://docs-en.kkbox.codes/v1.1/reference#albums
  */
 export default class AlbumFetcher extends Fetcher {    
     /**
@@ -23,7 +23,7 @@ export default class AlbumFetcher extends Fetcher {
      *
      * @param {string} album_id - The ID of an album.
      * @return {AlbumFetcher}
-     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#albums-album_id
      */
     setAlbumID(album_id) {
         this.album_id = album_id        
@@ -35,7 +35,7 @@ export default class AlbumFetcher extends Fetcher {
      *
      * @return {Promise}
      * @example api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchMetadata()
-     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#albums-album_id
      */
     fetchMetadata() {
         return this.http.get(ENDPOINT + this.album_id, {territory: this.territory})
@@ -57,7 +57,7 @@ export default class AlbumFetcher extends Fetcher {
      * @param {number} [offset] - The offset index for first element.
      * @return {Promise}
      * @example api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchTracks()
-     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id-tracks
+     * @see https://docs-en.kkbox.codes/v1.1/reference#albums-album_id-tracks
      */
     fetchTracks(limit = undefined, offset = undefined) {
         return this.http.get(ENDPOINT + this.album_id + '/tracks', {

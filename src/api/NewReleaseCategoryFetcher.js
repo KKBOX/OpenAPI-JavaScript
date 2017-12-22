@@ -3,7 +3,7 @@ import Fetcher from './Fetcher'
 
 /**
  * List categories of new release albums.
- * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories
+ * @see https://docs-en.kkbox.codes/v1.1/reference#new-release-categories
  */
 export default class NewReleaseCategoryFetcher extends Fetcher {
     /**
@@ -25,7 +25,7 @@ export default class NewReleaseCategoryFetcher extends Fetcher {
      * @param {number} [offset] - The offset index for first element.
      * @return {Promise}
      * @example api.newReleaseCategoryFetcher.fetchAllNewReleaseCategories()
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories
+     * @see https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories
      */
     fetchAllNewReleaseCategories(limit = undefined, offset = undefined) {
         return this.http.get(ENDPOINT, {
@@ -40,7 +40,7 @@ export default class NewReleaseCategoryFetcher extends Fetcher {
      *
      * @param {string} category_id - The category ID.
      * @return {NewReleaseCategoryFetcher}
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id
      */
     setCategoryID(category_id) {
         this.category_id = category_id        
@@ -52,7 +52,7 @@ export default class NewReleaseCategoryFetcher extends Fetcher {
      *
      * @return {Promise}
      * @example api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchMetadata()
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id
      */
     fetchMetadata() {
         return this.http.get(ENDPOINT + this.category_id, {territory: this.territory})
@@ -65,7 +65,7 @@ export default class NewReleaseCategoryFetcher extends Fetcher {
      * @param {number} [offset] - The offset index for first element.
      * @return {Promise}
      * @example api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchAlbums()
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id-albums
+     * @see https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id-albums
      */
     fetchAlbums(limit = undefined, offset = undefined) {
         return this.http.get(ENDPOINT + this.category_id + '/albums', {

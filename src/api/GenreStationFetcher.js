@@ -3,7 +3,7 @@ import Fetcher from './Fetcher'
 
 /**
  * Get genre stations.
- * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations
+ * @see https://docs-en.kkbox.codes/v1.1/reference#genre-stations
  */
 export default class GenreStationFetcher extends Fetcher {
     /**
@@ -25,7 +25,7 @@ export default class GenreStationFetcher extends Fetcher {
      * @param {number} [offset] - The offset index for first element.
      * @return {Promise}
      * @example api.GenreStation.fetchAllGenreStations()
-     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations
+     * @see https://docs-en.kkbox.codes/v1.1/reference#genrestations
      */
     fetchAllGenreStations(limit = undefined, offset = undefined) {
         return this.http.get(ENDPOINT, {
@@ -40,7 +40,7 @@ export default class GenreStationFetcher extends Fetcher {
      *
      * @param {string} genre_station_id - The ID of a genre station.
      * @return {GenreStation}
-     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations-station_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#genrestations-station_id
      */
     setGenreStationID(genre_station_id) {
         this.genre_station_id = genre_station_id        
@@ -52,7 +52,7 @@ export default class GenreStationFetcher extends Fetcher {
      *
      * @return {Promise}
      * @example api.GenreStation.setGenreStationID('TYq3EHFTl-1EOvJM5Y').fetchMetadata()
-     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations-station_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#genrestations-station_id
      */
     fetchMetadata() {
         return this.http.get(ENDPOINT + this.genre_station_id, {territory: this.territory})
