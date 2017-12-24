@@ -34,7 +34,7 @@ export default class TrackFetcher extends Fetcher {
      * Get metadata of the track with the track fetcher.
      *
      * @return {Promise}
-     * @example api.Track.setTrackID('KpnEGVHEsGgkoB0MBk').fetchMetadata()
+     * @example api.trackFetcher.setTrackID('KpnEGVHEsGgkoB0MBk').fetchMetadata()
      * @see https://kkbox.gelato.io/docs/versions/1.1/resources/tracks/endpoints/get-tracks-track_id
      */
     fetchMetadata() {
