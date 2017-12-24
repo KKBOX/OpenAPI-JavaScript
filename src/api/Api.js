@@ -10,6 +10,7 @@ import NewHitsPlaylistFetcher from './NewHitsPlaylistFetcher'
 import GenreStationFetcher from './GenreStationFetcher'
 import MoodStationFetcher from './MoodStationFetcher'
 import ChartFetcher from './ChartFetcher'
+import SharedPlaylistFetcher from './SharedPlaylistFetcher'
 
 /**
  * Fetch KKBOX resources.
@@ -91,6 +92,11 @@ export default class Api {
         /**
          * @type {ChartFetcher}
          */
-        this.chartFetcher = new ChartFetcher(this.httpClient, this.territory)        
+        this.chartFetcher = new ChartFetcher(this.httpClient, this.territory)
+        
+        /**
+         * @type {SharedPlaylistFetcher}
+         */
+        this.sharedPlaylistFetcher = new SharedPlaylistFetcher(this.httpClient, this.territory)
     }
 }
