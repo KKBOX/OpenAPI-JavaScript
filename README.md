@@ -107,7 +107,7 @@ auth.clientCredentialsFlow.fetchAccessToken().then(response => {
     npm run build-doc
 Then open the the file `docs/index.html`
 
-### [API Documentation](https://kkbox.gelato.io)
+### [API Documentation](https://docs-en.kkbox.codes/)
 
 ### License
 Copyright 2017 KKBOX Technologies Limited

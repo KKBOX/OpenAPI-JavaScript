@@ -3,7 +3,7 @@ import Fetcher from './Fetcher'
 
 /**
  * List new hits playlists.
- * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists
+ * @see https://docs-en.kkbox.codes/v1.1/reference#new-hits-playlists
  */
 export default class NewHitsPlaylistFetcher extends Fetcher {
     /**
@@ -25,7 +25,7 @@ export default class NewHitsPlaylistFetcher extends Fetcher {
      * @param {number} [offset] - The offset index for first element.
      * @return {Promise}
      * @example api.newHitsPlaylistFetcher.fetchAllNewHitsPlaylists()
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists
+     * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists
      */
     fetchAllNewHitsPlaylists(limit = undefined, offset = undefined) {
         return this.http.get(ENDPOINT, {
@@ -38,7 +38,7 @@ export default class NewHitsPlaylistFetcher extends Fetcher {
      *
      * @param {string} playlist_id - The playlist ID.
      * @return {NewHitsPlaylistFetcher}
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists-playlist_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists-playlist_id
      */
     setPlaylistID(playlist_id) {
         this.playlist_id = playlist_id        
@@ -50,7 +50,7 @@ export default class NewHitsPlaylistFetcher extends Fetcher {
      *
      * @return {Promise}
      * @example api.newHitsPlaylistFetcher.setPlaylistID('DZrC8m29ciOFY2JAm3').fetchMetadata()
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists-playlist_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists-playlist_id
      */
     fetchMetadata() {
         return this.http.get(ENDPOINT + this.playlist_id, {territory: this.territory})

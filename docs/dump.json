@@ -377,7 +377,7 @@
     "__docId__": 19,
     "kind": "file",
     "name": "src/api/AlbumFetcher.js",
-    "content": "import {ALBUMS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Fetch metadata and tracks of a album.\n * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/albums\n */\nexport default class AlbumFetcher extends Fetcher {    \n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.album_id = undefined\n    }\n\n    /**\n     * Set the album fetcher.\n     *\n     * @param {string} album_id - The ID of an album.\n     * @return {AlbumFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id\n     */\n    setAlbumID(album_id) {\n        this.album_id = album_id        \n        return this\n    }\n\n    /**\n     * Fetcy metadata of the album you create.\n     *\n     * @return {Promise}\n     * @example api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.album_id, {territory: this.territory})\n    }\n\n    /**\n     * Get KKBOX web widget uri of the album.\n     * @example https://widget.kkbox.com/v1/?id=4qtXcj31wYJTRZbb23&type=album\n     * @return {string}\n     */\n    getWidgetUri(){\n        return `https://widget.kkbox.com/v1/?id=${this.album_id}&type=album`\n    }\n\n    /**\n     * Get tracks in an album. Result will be return with pagination.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchTracks()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id-tracks\n     */\n    fetchTracks(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.album_id + '/tracks', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
+    "content": "import {ALBUMS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Fetch metadata and tracks of a album.\n * @see https://docs-en.kkbox.codes/v1.1/reference#albums\n */\nexport default class AlbumFetcher extends Fetcher {    \n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.album_id = undefined\n    }\n\n    /**\n     * Set the album fetcher.\n     *\n     * @param {string} album_id - The ID of an album.\n     * @return {AlbumFetcher}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#albums-album_id\n     */\n    setAlbumID(album_id) {\n        this.album_id = album_id        \n        return this\n    }\n\n    /**\n     * Fetcy metadata of the album you create.\n     *\n     * @return {Promise}\n     * @example api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchMetadata()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#albums-album_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.album_id, {territory: this.territory})\n    }\n\n    /**\n     * Get KKBOX web widget uri of the album.\n     * @example https://widget.kkbox.com/v1/?id=4qtXcj31wYJTRZbb23&type=album\n     * @return {string}\n     */\n    getWidgetUri(){\n        return `https://widget.kkbox.com/v1/?id=${this.album_id}&type=album`\n    }\n\n    /**\n     * Get tracks in an album. Result will be return with pagination.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchTracks()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#albums-album_id-tracks\n     */\n    fetchTracks(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.album_id + '/tracks', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
     "static": true,
     "longname": "src/api/AlbumFetcher.js",
     "access": null,
@@ -397,7 +397,7 @@
     "importStyle": "AlbumFetcher",
     "description": "Fetch metadata and tracks of a album.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/albums"
+      "https://docs-en.kkbox.codes/v1.1/reference#albums"
     ],
     "lineNumber": 8,
     "interface": false,
@@ -465,7 +465,7 @@
     "access": null,
     "description": "Set the album fetcher.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#albums-album_id"
     ],
     "lineNumber": 28,
     "params": [
@@ -527,7 +527,7 @@
       "api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchMetadata()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#albums-album_id"
     ],
     "lineNumber": 40,
     "params": [],
@@ -580,7 +580,7 @@
       "api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchTracks()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/albums/endpoints/get-albums-album_id-tracks"
+      "https://docs-en.kkbox.codes/v1.1/reference#albums-album_id-tracks"
     ],
     "lineNumber": 62,
     "params": [
@@ -991,7 +991,7 @@
     "__docId__": 46,
     "kind": "file",
     "name": "src/api/ArtistFetcher.js",
-    "content": "import {ARTISTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get artist metadata.\n * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists\n */\nexport default class ArtistFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.artist_id = undefined\n    }\n\n    /**\n     * Init the artist object.\n     *\n     * @param {string} artist_id - The ID of an artist.\n     * @return {Artist}\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id\n     */\n    setArtistID(artist_id) {\n        this.artist_id = artist_id\n        return this\n    }\n\n    /**\n     * Fetch metadata of the artist you find.\n     *\n     * @return {Promise}\n     * @example api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.artist_id, {territory: this.territory})\n    }\n\n    /**\n     * Fetch albums belong to an artist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.artistFetcher.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchAlbums()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id-albums\n     */\n    fetchAlbums(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.artist_id + '/albums', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n\n    /**\n     * Fetch top tracks belong to an artist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchTopTracks()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id-top-tracks\n     */\n    fetchTopTracks(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.artist_id + '/top-tracks', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
+    "content": "import {ARTISTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get artist metadata.\n * @see https://docs-en.kkbox.codes/v1.1/reference#artists\n */\nexport default class ArtistFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.artist_id = undefined\n    }\n\n    /**\n     * Init the artist object.\n     *\n     * @param {string} artist_id - The ID of an artist.\n     * @return {Artist}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id\n     */\n    setArtistID(artist_id) {\n        this.artist_id = artist_id\n        return this\n    }\n\n    /**\n     * Fetch metadata of the artist you find.\n     *\n     * @return {Promise}\n     * @example api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchMetadata()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.artist_id, {territory: this.territory})\n    }\n\n    /**\n     * Fetch albums belong to an artist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.artistFetcher.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchAlbums()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-albums\n     */\n    fetchAlbums(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.artist_id + '/albums', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n\n    /**\n     * Fetch top tracks belong to an artist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchTopTracks()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-toptracks\n     */\n    fetchTopTracks(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.artist_id + '/top-tracks', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
     "static": true,
     "longname": "src/api/ArtistFetcher.js",
     "access": null,
@@ -1011,7 +1011,7 @@
     "importStyle": "ArtistFetcher",
     "description": "Get artist metadata.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/artists"
+      "https://docs-en.kkbox.codes/v1.1/reference#artists"
     ],
     "lineNumber": 8,
     "interface": false,
@@ -1079,7 +1079,7 @@
     "access": null,
     "description": "Init the artist object.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id"
     ],
     "lineNumber": 28,
     "params": [
@@ -1141,7 +1141,7 @@
       "api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchMetadata()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id"
     ],
     "lineNumber": 40,
     "params": [],
@@ -1169,7 +1169,7 @@
       "api.artistFetcher.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchAlbums()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id-albums"
+      "https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-albums"
     ],
     "lineNumber": 53,
     "params": [
@@ -1218,7 +1218,7 @@
       "api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchTopTracks()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/artists/endpoints/get-artists-artist_id-top-tracks"
+      "https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-toptracks"
     ],
     "lineNumber": 70,
     "params": [
@@ -1256,7 +1256,7 @@
     "__docId__": 55,
     "kind": "file",
     "name": "src/api/ChartFetcher.js",
-    "content": "import {CHARTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * The fetcher that can fetch chart playlists.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/charts\n */\nexport default class ChartFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory = 'TW')\n    }\n\n    /**\n     * Fetch chart playlists.\n     *\n     * @return {Promise}\n     * @example api.chartFetcher.fetchCharts()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/charts/endpoints/get-charts\n     */\n    fetchCharts() {\n        return this.http.get(ENDPOINT, {\n            territory: this.territory\n        })\n    }\n}",
+    "content": "import {CHARTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * The fetcher that can fetch chart playlists.\n * @see https://docs-en.kkbox.codes/v1.1/reference#charts\n */\nexport default class ChartFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory = 'TW')\n    }\n\n    /**\n     * Fetch chart playlists.\n     *\n     * @return {Promise}\n     * @example api.chartFetcher.fetchCharts()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#charts_1\n     */\n    fetchCharts() {\n        return this.http.get(ENDPOINT, {\n            territory: this.territory\n        })\n    }\n}",
     "static": true,
     "longname": "src/api/ChartFetcher.js",
     "access": null,
@@ -1276,7 +1276,7 @@
     "importStyle": "ChartFetcher",
     "description": "The fetcher that can fetch chart playlists.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/charts"
+      "https://docs-en.kkbox.codes/v1.1/reference#charts"
     ],
     "lineNumber": 8,
     "interface": false,
@@ -1330,7 +1330,7 @@
       "api.chartFetcher.fetchCharts()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/charts/endpoints/get-charts"
+      "https://docs-en.kkbox.codes/v1.1/reference#charts_1"
     ],
     "lineNumber": 23,
     "params": [],
@@ -1347,7 +1347,7 @@
     "__docId__": 59,
     "kind": "file",
     "name": "src/api/FeaturedPlaylistCategoryFetcher.js",
-    "content": "import {FEATURED_PLAYLISTS_CATEGORIES as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * List featured playlist categories.\n * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories\n */\nexport default class FeaturedPlaylistCategoryFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.category_id = undefined\n    }\n\n    /**\n     * Fetch all featured playlist categories.\n     *\n     * @return {Promise}\n     * @example api.featuredPlaylistCategoryFetcher.fetchAllFeaturedPlaylistCategories()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories\n     */\n    fetchAllFeaturedPlaylistCategories() {\n        return this.http.get(ENDPOINT, {territory: this.territory})\n    }\n\n    /**\n     * Init the featured playlist category fetcher.\n     *\n     * @param {string} category_id - The category ID.\n     * @return {FeaturedPlaylistCategoryFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories-category_id\n     */\n    setCategoryID(category_id) {\n        this.category_id = category_id        \n        return this\n    }\n\n    /**\n     * Fetch metadata of the category you init.\n     *\n     * @return {Promise}\n     * @example api.featuredPlaylistCategoryFetcher.setCategoryID('LXUR688EBKRRZydAWb').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories-category_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.category_id, {territory: this.territory})\n    }\n\n    /**\n     * Fetch featured playlists of the category with the category fetcher you init. Result will be paged.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.featuredPlaylistCategoryFetcher.setCategoryID('LXUR688EBKRRZydAWb').fetchPlaylists()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories-category_id-playlists\n     */\n    fetchPlaylists(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.category_id + '/playlists', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
+    "content": "import {FEATURED_PLAYLISTS_CATEGORIES as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * List featured playlist categories.\n * @see https://docs-en.kkbox.codes/v1.1/reference#featured-playlist-categories\n */\nexport default class FeaturedPlaylistCategoryFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.category_id = undefined\n    }\n\n    /**\n     * Fetch all featured playlist categories.\n     *\n     * @return {Promise}\n     * @example api.featuredPlaylistCategoryFetcher.fetchAllFeaturedPlaylistCategories()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories\n     */\n    fetchAllFeaturedPlaylistCategories() {\n        return this.http.get(ENDPOINT, {territory: this.territory})\n    }\n\n    /**\n     * Init the featured playlist category fetcher.\n     *\n     * @param {string} category_id - The category ID.\n     * @return {FeaturedPlaylistCategoryFetcher}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id\n     */\n    setCategoryID(category_id) {\n        this.category_id = category_id        \n        return this\n    }\n\n    /**\n     * Fetch metadata of the category you init.\n     *\n     * @return {Promise}\n     * @example api.featuredPlaylistCategoryFetcher.setCategoryID('LXUR688EBKRRZydAWb').fetchMetadata()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.category_id, {territory: this.territory})\n    }\n\n    /**\n     * Fetch featured playlists of the category with the category fetcher you init. Result will be paged.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.featuredPlaylistCategoryFetcher.setCategoryID('LXUR688EBKRRZydAWb').fetchPlaylists()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id-playlists\n     */\n    fetchPlaylists(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.category_id + '/playlists', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
     "static": true,
     "longname": "src/api/FeaturedPlaylistCategoryFetcher.js",
     "access": null,
@@ -1367,7 +1367,7 @@
     "importStyle": "FeaturedPlaylistCategoryFetcher",
     "description": "List featured playlist categories.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories"
+      "https://docs-en.kkbox.codes/v1.1/reference#featured-playlist-categories"
     ],
     "lineNumber": 8,
     "interface": false,
@@ -1438,7 +1438,7 @@
       "api.featuredPlaylistCategoryFetcher.fetchAllFeaturedPlaylistCategories()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories"
+      "https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories"
     ],
     "lineNumber": 28,
     "params": [],
@@ -1463,7 +1463,7 @@
     "access": null,
     "description": "Init the featured playlist category fetcher.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories-category_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id"
     ],
     "lineNumber": 39,
     "params": [
@@ -1525,7 +1525,7 @@
       "api.featuredPlaylistCategoryFetcher.setCategoryID('LXUR688EBKRRZydAWb').fetchMetadata()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories-category_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id"
     ],
     "lineNumber": 51,
     "params": [],
@@ -1553,7 +1553,7 @@
       "api.featuredPlaylistCategoryFetcher.setCategoryID('LXUR688EBKRRZydAWb').fetchPlaylists()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlist-categories/endpoints/get-featured-playlist-categories-category_id-playlists"
+      "https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id-playlists"
     ],
     "lineNumber": 64,
     "params": [
@@ -1591,7 +1591,7 @@
     "__docId__": 68,
     "kind": "file",
     "name": "src/api/FeaturedPlaylistFetcher.js",
-    "content": "import {FEATURED_PLAYLISTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * List all featured playlists.\n * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlists\n */\nexport default class FeaturedPlaylistFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n    }\n\n    /**\n     * Fetch all featured playlists. Result will be paged.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.featuredPlaylistFetcher.fetchAllFeaturedPlaylists()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlists/endpoints/get-featured-playlists\n     */\n    fetchAllFeaturedPlaylists(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            limit: limit, \n            offset: offset, \n            territory: this.territory\n        })\n    }\n}",
+    "content": "import {FEATURED_PLAYLISTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * List all featured playlists.\n * @see https://docs-en.kkbox.codes/v1.1/reference#featured-playlists\n */\nexport default class FeaturedPlaylistFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n    }\n\n    /**\n     * Fetch all featured playlists. Result will be paged.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.featuredPlaylistFetcher.fetchAllFeaturedPlaylists()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylists\n     */\n    fetchAllFeaturedPlaylists(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            limit: limit, \n            offset: offset, \n            territory: this.territory\n        })\n    }\n}",
     "static": true,
     "longname": "src/api/FeaturedPlaylistFetcher.js",
     "access": null,
@@ -1611,7 +1611,7 @@
     "importStyle": "FeaturedPlaylistFetcher",
     "description": "List all featured playlists.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlists"
+      "https://docs-en.kkbox.codes/v1.1/reference#featured-playlists"
     ],
     "lineNumber": 8,
     "interface": false,
@@ -1665,7 +1665,7 @@
       "api.featuredPlaylistFetcher.fetchAllFeaturedPlaylists()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/featured-playlists/endpoints/get-featured-playlists"
+      "https://docs-en.kkbox.codes/v1.1/reference#featuredplaylists"
     ],
     "lineNumber": 25,
     "params": [
@@ -1925,7 +1925,7 @@
     "__docId__": 80,
     "kind": "file",
     "name": "src/api/GenreStationFetcher.js",
-    "content": "import {GENRE_STATIONS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get genre stations.\n * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations\n */\nexport default class GenreStationFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         *  @ignore\n         */\n        this.genre_station_id = undefined \n    }\n\n    /**\n     * Fetch all genre stations. The result will be paged.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.GenreStation.fetchAllGenreStations()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations\n     */\n    fetchAllGenreStations(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            territory: this.territory,\n            limit: limit,\n            offset: offset            \n        })\n    }\n\n    /**\n     * Init the genre station fetcher.\n     *\n     * @param {string} genre_station_id - The ID of a genre station.\n     * @return {GenreStation}\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations-station_id\n     */\n    setGenreStationID(genre_station_id) {\n        this.genre_station_id = genre_station_id        \n        return this\n    }\n\n    /**\n     * Fetch metadata of the genre station with the genre station fetcher.\n     *\n     * @return {Promise}\n     * @example api.GenreStation.setGenreStationID('TYq3EHFTl-1EOvJM5Y').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations-station_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.genre_station_id, {territory: this.territory})\n    }\n}",
+    "content": "import {GENRE_STATIONS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get genre stations.\n * @see https://docs-en.kkbox.codes/v1.1/reference#genre-stations\n */\nexport default class GenreStationFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         *  @ignore\n         */\n        this.genre_station_id = undefined \n    }\n\n    /**\n     * Fetch all genre stations. The result will be paged.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.GenreStation.fetchAllGenreStations()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#genrestations\n     */\n    fetchAllGenreStations(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            territory: this.territory,\n            limit: limit,\n            offset: offset            \n        })\n    }\n\n    /**\n     * Init the genre station fetcher.\n     *\n     * @param {string} genre_station_id - The ID of a genre station.\n     * @return {GenreStation}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#genrestations-station_id\n     */\n    setGenreStationID(genre_station_id) {\n        this.genre_station_id = genre_station_id        \n        return this\n    }\n\n    /**\n     * Fetch metadata of the genre station with the genre station fetcher.\n     *\n     * @return {Promise}\n     * @example api.GenreStation.setGenreStationID('TYq3EHFTl-1EOvJM5Y').fetchMetadata()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#genrestations-station_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.genre_station_id, {territory: this.territory})\n    }\n}",
     "static": true,
     "longname": "src/api/GenreStationFetcher.js",
     "access": null,
@@ -1945,7 +1945,7 @@
     "importStyle": "GenreStationFetcher",
     "description": "Get genre stations.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations"
+      "https://docs-en.kkbox.codes/v1.1/reference#genre-stations"
     ],
     "lineNumber": 8,
     "interface": false,
@@ -2016,7 +2016,7 @@
       "api.GenreStation.fetchAllGenreStations()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations"
+      "https://docs-en.kkbox.codes/v1.1/reference#genrestations"
     ],
     "lineNumber": 30,
     "params": [
@@ -2062,7 +2062,7 @@
     "access": null,
     "description": "Init the genre station fetcher.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations-station_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#genrestations-station_id"
     ],
     "lineNumber": 45,
     "params": [
@@ -2124,7 +2124,7 @@
       "api.GenreStation.setGenreStationID('TYq3EHFTl-1EOvJM5Y').fetchMetadata()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/v1.1/resources/genre-stations/endpoints/get-genre-stations-station_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#genrestations-station_id"
     ],
     "lineNumber": 57,
     "params": [],
@@ -2297,7 +2297,7 @@
     "__docId__": 94,
     "kind": "file",
     "name": "src/api/MoodStationFetcher.js",
-    "content": "import {MOOD_STATIONS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get mood stations.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/mood-stations\n */\nexport default class MoodStationFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.mood_station_id = undefined\n    }\n\n    /**\n     * Fetch all mood stations.\n     *\n     * @return {Promise}\n     * @example api.moodStationFetcher.fetchAllMoodStations()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/mood-stations/endpoints/get-mood-stations\n     */\n    fetchAllMoodStations() {\n        return this.http.get(ENDPOINT, {territory: this.territory})\n    }\n\n    /**\n     * Init the mood station fetcher.\n     *\n     * @param {string} mood_station_id - The ID of a mood station.\n     * @param {string} [territory = 'TW'] - ['TW', 'HK', 'SG', 'MY', 'JP'] The territory of a mood station.\n     * @return {MoodStation}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/mood-stations/endpoints/get-mood-stations-station_id\n     */\n    setMoodStationID(mood_station_id, territory = 'TW') {\n        this.mood_station_id = mood_station_id\n        this.territory = territory\n        return this\n    }\n\n    /**\n     * Fetch the mood station's metadata.\n     *\n     * @return {Promise}\n     * @example api.moodStationFetcher.setMoodStationID('StGZp2ToWq92diPHS7').fetchMetadata()\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.mood_station_id, {territory: this.territory})\n    }\n}",
+    "content": "import {MOOD_STATIONS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get mood stations.\n * @see https://docs-en.kkbox.codes/v1.1/reference#mood-stations\n */\nexport default class MoodStationFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.mood_station_id = undefined\n    }\n\n    /**\n     * Fetch all mood stations.\n     *\n     * @return {Promise}\n     * @example api.moodStationFetcher.fetchAllMoodStations()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#moodstations\n     */\n    fetchAllMoodStations() {\n        return this.http.get(ENDPOINT, {territory: this.territory})\n    }\n\n    /**\n     * Init the mood station fetcher.\n     *\n     * @param {string} mood_station_id - The ID of a mood station.\n     * @param {string} [territory = 'TW'] - ['TW', 'HK', 'SG', 'MY', 'JP'] The territory of a mood station.\n     * @return {MoodStation}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#moodstations-station_id\n     */\n    setMoodStationID(mood_station_id, territory = 'TW') {\n        this.mood_station_id = mood_station_id\n        this.territory = territory\n        return this\n    }\n\n    /**\n     * Fetch the mood station's metadata.\n     *\n     * @return {Promise}\n     * @example api.moodStationFetcher.setMoodStationID('StGZp2ToWq92diPHS7').fetchMetadata()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#moodstations-station_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.mood_station_id, {territory: this.territory})\n    }\n}",
     "static": true,
     "longname": "src/api/MoodStationFetcher.js",
     "access": null,
@@ -2317,7 +2317,7 @@
     "importStyle": "MoodStationFetcher",
     "description": "Get mood stations.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/mood-stations"
+      "https://docs-en.kkbox.codes/v1.1/reference#mood-stations"
     ],
     "lineNumber": 8,
     "interface": false,
@@ -2388,7 +2388,7 @@
       "api.moodStationFetcher.fetchAllMoodStations()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/mood-stations/endpoints/get-mood-stations"
+      "https://docs-en.kkbox.codes/v1.1/reference#moodstations"
     ],
     "lineNumber": 28,
     "params": [],
@@ -2413,7 +2413,7 @@
     "access": null,
     "description": "Init the mood station fetcher.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/mood-stations/endpoints/get-mood-stations-station_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#moodstations-station_id"
     ],
     "lineNumber": 40,
     "params": [
@@ -2509,7 +2509,10 @@
     "examples": [
       "api.moodStationFetcher.setMoodStationID('StGZp2ToWq92diPHS7').fetchMetadata()"
     ],
-    "lineNumber": 52,
+    "see": [
+      "https://docs-en.kkbox.codes/v1.1/reference#moodstations-station_id"
+    ],
+    "lineNumber": 53,
     "params": [],
     "return": {
       "nullable": null,
@@ -2524,7 +2527,7 @@
     "__docId__": 103,
     "kind": "file",
     "name": "src/api/NewHitsPlaylistFetcher.js",
-    "content": "import {NEW_HITS_PLAYLISTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * List new hits playlists.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists\n */\nexport default class NewHitsPlaylistFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.playlist_id = undefined\n    }\n\n    /**\n     * Fetch all new hits playlists.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.newHitsPlaylistFetcher.fetchAllNewHitsPlaylists()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists\n     */\n    fetchAllNewHitsPlaylists(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            territory: this.territory\n        })\n    }\n\n    /**\n     * Init the new hits playlist fetcher.\n     *\n     * @param {string} playlist_id - The playlist ID.\n     * @return {NewHitsPlaylistFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists-playlist_id\n     */\n    setPlaylistID(playlist_id) {\n        this.playlist_id = playlist_id        \n        return this\n    }\n\n    /**\n     * Fetch metadata of the new release category you set.\n     *\n     * @return {Promise}\n     * @example api.newHitsPlaylistFetcher.setPlaylistID('DZrC8m29ciOFY2JAm3').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists-playlist_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.playlist_id, {territory: this.territory})\n    }\n}",
+    "content": "import {NEW_HITS_PLAYLISTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * List new hits playlists.\n * @see https://docs-en.kkbox.codes/v1.1/reference#new-hits-playlists\n */\nexport default class NewHitsPlaylistFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.playlist_id = undefined\n    }\n\n    /**\n     * Fetch all new hits playlists.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.newHitsPlaylistFetcher.fetchAllNewHitsPlaylists()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists\n     */\n    fetchAllNewHitsPlaylists(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            territory: this.territory\n        })\n    }\n\n    /**\n     * Init the new hits playlist fetcher.\n     *\n     * @param {string} playlist_id - The playlist ID.\n     * @return {NewHitsPlaylistFetcher}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists-playlist_id\n     */\n    setPlaylistID(playlist_id) {\n        this.playlist_id = playlist_id        \n        return this\n    }\n\n    /**\n     * Fetch metadata of the new release category you set.\n     *\n     * @return {Promise}\n     * @example api.newHitsPlaylistFetcher.setPlaylistID('DZrC8m29ciOFY2JAm3').fetchMetadata()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists-playlist_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.playlist_id, {territory: this.territory})\n    }\n}",
     "static": true,
     "longname": "src/api/NewHitsPlaylistFetcher.js",
     "access": null,
@@ -2544,7 +2547,7 @@
     "importStyle": "NewHitsPlaylistFetcher",
     "description": "List new hits playlists.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists"
+      "https://docs-en.kkbox.codes/v1.1/reference#new-hits-playlists"
     ],
     "lineNumber": 8,
     "interface": false,
@@ -2615,7 +2618,7 @@
       "api.newHitsPlaylistFetcher.fetchAllNewHitsPlaylists()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists"
+      "https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists"
     ],
     "lineNumber": 30,
     "params": [
@@ -2661,7 +2664,7 @@
     "access": null,
     "description": "Init the new hits playlist fetcher.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists-playlist_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists-playlist_id"
     ],
     "lineNumber": 43,
     "params": [
@@ -2723,7 +2726,7 @@
       "api.newHitsPlaylistFetcher.setPlaylistID('DZrC8m29ciOFY2JAm3').fetchMetadata()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-hits-playlists/endpoints/get-new-hits-playlists-playlist_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists-playlist_id"
     ],
     "lineNumber": 55,
     "params": [],
@@ -2740,7 +2743,7 @@
     "__docId__": 111,
     "kind": "file",
     "name": "src/api/NewReleaseCategoryFetcher.js",
-    "content": "import {NEW_RELEASE_CATEGORIES as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * List categories of new release albums.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories\n */\nexport default class NewReleaseCategoryFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.category_id = undefined\n    }\n\n    /**\n     * Fetch all new release categories.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.newReleaseCategoryFetcher.fetchAllNewReleaseCategories()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories\n     */\n    fetchAllNewReleaseCategories(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            limit: limit,\n            offset: offset,\n            territory: this.territory\n        })\n    }\n\n    /**\n     * Init the new release category fetcher.\n     *\n     * @param {string} category_id - The category ID.\n     * @return {NewReleaseCategoryFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id\n     */\n    setCategoryID(category_id) {\n        this.category_id = category_id        \n        return this\n    }\n\n    /**\n     * Fetch metadata of the new release category you set.\n     *\n     * @return {Promise}\n     * @example api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.category_id, {territory: this.territory})\n    }\n\n    /**\n     * Fetch albums of the new release category with the category fetcher you init. Result will be paged.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchAlbums()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id-albums\n     */\n    fetchAlbums(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.category_id + '/albums', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
+    "content": "import {NEW_RELEASE_CATEGORIES as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * List categories of new release albums.\n * @see https://docs-en.kkbox.codes/v1.1/reference#new-release-categories\n */\nexport default class NewReleaseCategoryFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.category_id = undefined\n    }\n\n    /**\n     * Fetch all new release categories.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.newReleaseCategoryFetcher.fetchAllNewReleaseCategories()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories\n     */\n    fetchAllNewReleaseCategories(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            limit: limit,\n            offset: offset,\n            territory: this.territory\n        })\n    }\n\n    /**\n     * Init the new release category fetcher.\n     *\n     * @param {string} category_id - The category ID.\n     * @return {NewReleaseCategoryFetcher}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id\n     */\n    setCategoryID(category_id) {\n        this.category_id = category_id        \n        return this\n    }\n\n    /**\n     * Fetch metadata of the new release category you set.\n     *\n     * @return {Promise}\n     * @example api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchMetadata()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.category_id, {territory: this.territory})\n    }\n\n    /**\n     * Fetch albums of the new release category with the category fetcher you init. Result will be paged.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchAlbums()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id-albums\n     */\n    fetchAlbums(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.category_id + '/albums', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
     "static": true,
     "longname": "src/api/NewReleaseCategoryFetcher.js",
     "access": null,
@@ -2760,7 +2763,7 @@
     "importStyle": "NewReleaseCategoryFetcher",
     "description": "List categories of new release albums.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories"
+      "https://docs-en.kkbox.codes/v1.1/reference#new-release-categories"
     ],
     "lineNumber": 8,
     "interface": false,
@@ -2831,7 +2834,7 @@
       "api.newReleaseCategoryFetcher.fetchAllNewReleaseCategories()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories"
+      "https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories"
     ],
     "lineNumber": 30,
     "params": [
@@ -2877,7 +2880,7 @@
     "access": null,
     "description": "Init the new release category fetcher.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id"
     ],
     "lineNumber": 45,
     "params": [
@@ -2939,7 +2942,7 @@
       "api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchMetadata()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id"
     ],
     "lineNumber": 57,
     "params": [],
@@ -2967,7 +2970,7 @@
       "api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchAlbums()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/new-release-categories/endpoints/get-new-release-categories-category_id-albums"
+      "https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id-albums"
     ],
     "lineNumber": 70,
     "params": [
@@ -3005,7 +3008,7 @@
     "__docId__": 120,
     "kind": "file",
     "name": "src/api/SearchFetcher.js",
-    "content": "import {SEARCH as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Search API.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/search\n */\nexport default class SearchFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.filterConditions = undefined\n\n        /**\n         * @ignore\n         */\n        this.q = undefined\n\n        /**\n         * @ignore\n         */\n        this.type = undefined\n    }\n\n    /**\n     * Filter what you don't want when search.\n     *\n     * @param {Object} [conditions] - search conditions.\n     * @param {string} conditions.track - track's name.\n     * @param {string} conditions.album - album's name.\n     * @param {string} conditions.artist - artist's name.\n     * @param {string} conditions.playlist - playlist's title.\n     * @param {string} conditions.available_territory - tracks and albums available territory.\n     * @return {Search}\n     * @example api.searchFetcher.setSearchCriteria('五月天 好好').filter({artist: '五月天'}).fetchSearchResult()\n     */\n    filter(conditions = {\n        track = undefined,\n        album = undefined,\n        artist = undefined,\n        playlist = undefined,\n        available_territory = undefined\n    } = {}) {\n        this.filterConditions = conditions\n        return this\n    }\n\n    /**\n     * Init the search fetcher for the artist, album, track or playlist.\n     *\n     * @param {string} q - The keyword to be searched.\n     * @param {string} [type] - ['artist', 'album', 'track', 'playlist'] The type of search. Default to search all types. If you want to use multiple type at the same time, you may use ',' to separate them.\n     * @return {Search}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/search\n     */\n    setSearchCriteria(q, type = undefined) {\n        this.q = q\n        this.type = type        \n        return this\n    }\n\n    /**\n     * Fetch the search result.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.searchFetcher.setSearchCriteria('五月天 好好').fetchSearchResult()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/search/endpoints/get-search\n     */\n    fetchSearchResult(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            q: this.q,\n            type: this.type,\n            territory: this.territory,\n            limit: limit,\n            offset: offset            \n        }).then(doFilter.bind(this))\n    }\n}\n\nfunction doFilter(response) {\n    if (this.filterConditions !== undefined) {\n        const data = Object.keys(response.data).map(key => {\n            switch (key) {\n                case 'tracks':\n                    return {\n                        [key]: Object.assign(response.data[key], {\n                            data: response.data[key].data\n                                .filter(track => {\n                                    if (this.filterConditions.available_territory !== undefined &&\n                                        !track.available_territories.includes(this.filterConditions.available_territory)) {\n                                        return false\n                                    }\n                                    if (this.filterConditions.track !== undefined &&\n                                        !new RegExp('.*' + this.filterConditions.track + '.*').test(track.name)) {\n                                        return false\n                                    }\n                                    if (this.filterConditions.album !== undefined &&\n                                        !new RegExp('.*' + this.filterConditions.album + '.*').test(track.album.name)) {\n                                        return false\n                                    }\n                                    return !(this.filterConditions.artist !== undefined &&\n                                    !new RegExp('.*' + this.filterConditions.artist + '.*').test(track.album.artist.name))\n                                })\n                        })\n                    }                    \n                case 'albums':\n                    return {\n                        [key]: Object.assign(response.data[key], {\n                            data: response.data[key].data\n                                .filter(album => {\n                                    if (this.filterConditions.available_territory !== undefined &&\n                                        !album.available_territories.includes(this.filterConditions.available_territory)) {\n                                        return false\n                                    }\n                                    if (this.filterConditions.album !== undefined &&\n                                        !new RegExp('.*' + this.filterConditions.album + '.*').test(album.name)) {\n                                        return false\n                                    }\n                                    return !(this.filterConditions.artist !== undefined &&\n                                    !new RegExp('.*' + this.filterConditions.artist + '.*').test(album.artist.name))\n                                })\n                        })\n                    }                    \n                case 'artists':\n                    return {\n                        [key]: Object.assign(response.data[key], {\n                            data: response.data[key].data\n                                .filter(artist => {\n                                    if (this.filterConditions.artist === undefined) {\n                                        return true\n                                    } else {\n                                        return new RegExp('.*' + this.filterConditions.artist + '.*').test(artist.name)\n                                    }\n                                })\n                        })\n                    }                    \n                case 'playlists':\n                    return {\n                        [key]: Object.assign(response.data[key], {\n                            data: response.data[key].data\n                                .filter(playlist => {\n                                    if (this.filterConditions.playlist === undefined) {\n                                        return true\n                                    } else {\n                                        return new RegExp('.*' + this.filterConditions.playlist + '.*').test(playlist.title)\n                                    }\n                                })\n                        })\n                    }                    \n                default:\n                    return {[key]: response.data[key]}\n            }\n        })\n        return Object.assign(response, {data: Object.assign(...data)})\n    } else {\n        return response\n    }\n}",
+    "content": "import {SEARCH as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Search API.\n * @see https://docs-en.kkbox.codes/v1.1/reference#search\n */\nexport default class SearchFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.filterConditions = undefined\n\n        /**\n         * @ignore\n         */\n        this.q = undefined\n\n        /**\n         * @ignore\n         */\n        this.type = undefined\n    }\n\n    /**\n     * Filter what you don't want when search.\n     *\n     * @param {Object} [conditions] - search conditions.\n     * @param {string} conditions.track - track's name.\n     * @param {string} conditions.album - album's name.\n     * @param {string} conditions.artist - artist's name.\n     * @param {string} conditions.playlist - playlist's title.\n     * @param {string} conditions.available_territory - tracks and albums available territory.\n     * @return {Search}\n     * @example api.searchFetcher.setSearchCriteria('五月天 好好').filter({artist: '五月天'}).fetchSearchResult()\n     */\n    filter(conditions = {\n        track = undefined,\n        album = undefined,\n        artist = undefined,\n        playlist = undefined,\n        available_territory = undefined\n    } = {}) {\n        this.filterConditions = conditions\n        return this\n    }\n\n    /**\n     * Init the search fetcher for the artist, album, track or playlist.\n     *\n     * @param {string} q - The keyword to be searched.\n     * @param {string} [type] - ['artist', 'album', 'track', 'playlist'] The type of search. Default to search all types. If you want to use multiple type at the same time, you may use ',' to separate them.\n     * @return {Search}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#search_1\n     */\n    setSearchCriteria(q, type = undefined) {\n        this.q = q\n        this.type = type        \n        return this\n    }\n\n    /**\n     * Fetch the search result.\n     *\n     * @param {number} [limit] - The size of one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.searchFetcher.setSearchCriteria('五月天 好好').fetchSearchResult()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#search_1\n     */\n    fetchSearchResult(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT, {\n            q: this.q,\n            type: this.type,\n            territory: this.territory,\n            limit: limit,\n            offset: offset            \n        }).then(doFilter.bind(this))\n    }\n}\n\nfunction doFilter(response) {\n    if (this.filterConditions !== undefined) {\n        const data = Object.keys(response.data).map(key => {\n            switch (key) {\n                case 'tracks':\n                    return {\n                        [key]: Object.assign(response.data[key], {\n                            data: response.data[key].data\n                                .filter(track => {\n                                    if (this.filterConditions.available_territory !== undefined &&\n                                        !track.available_territories.includes(this.filterConditions.available_territory)) {\n                                        return false\n                                    }\n                                    if (this.filterConditions.track !== undefined &&\n                                        !new RegExp('.*' + this.filterConditions.track + '.*').test(track.name)) {\n                                        return false\n                                    }\n                                    if (this.filterConditions.album !== undefined &&\n                                        !new RegExp('.*' + this.filterConditions.album + '.*').test(track.album.name)) {\n                                        return false\n                                    }\n                                    return !(this.filterConditions.artist !== undefined &&\n                                    !new RegExp('.*' + this.filterConditions.artist + '.*').test(track.album.artist.name))\n                                })\n                        })\n                    }                    \n                case 'albums':\n                    return {\n                        [key]: Object.assign(response.data[key], {\n                            data: response.data[key].data\n                                .filter(album => {\n                                    if (this.filterConditions.available_territory !== undefined &&\n                                        !album.available_territories.includes(this.filterConditions.available_territory)) {\n                                        return false\n                                    }\n                                    if (this.filterConditions.album !== undefined &&\n                                        !new RegExp('.*' + this.filterConditions.album + '.*').test(album.name)) {\n                                        return false\n                                    }\n                                    return !(this.filterConditions.artist !== undefined &&\n                                    !new RegExp('.*' + this.filterConditions.artist + '.*').test(album.artist.name))\n                                })\n                        })\n                    }                    \n                case 'artists':\n                    return {\n                        [key]: Object.assign(response.data[key], {\n                            data: response.data[key].data\n                                .filter(artist => {\n                                    if (this.filterConditions.artist === undefined) {\n                                        return true\n                                    } else {\n                                        return new RegExp('.*' + this.filterConditions.artist + '.*').test(artist.name)\n                                    }\n                                })\n                        })\n                    }                    \n                case 'playlists':\n                    return {\n                        [key]: Object.assign(response.data[key], {\n                            data: response.data[key].data\n                                .filter(playlist => {\n                                    if (this.filterConditions.playlist === undefined) {\n                                        return true\n                                    } else {\n                                        return new RegExp('.*' + this.filterConditions.playlist + '.*').test(playlist.title)\n                                    }\n                                })\n                        })\n                    }                    \n                default:\n                    return {[key]: response.data[key]}\n            }\n        })\n        return Object.assign(response, {data: Object.assign(...data)})\n    } else {\n        return response\n    }\n}",
     "static": true,
     "longname": "src/api/SearchFetcher.js",
     "access": null,
@@ -3025,7 +3028,7 @@
     "importStyle": "SearchFetcher",
     "description": "Search API.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/search"
+      "https://docs-en.kkbox.codes/v1.1/reference#search"
     ],
     "lineNumber": 8,
     "interface": false,
@@ -3236,7 +3239,7 @@
     "access": null,
     "description": "Init the search fetcher for the artist, album, track or playlist.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/search"
+      "https://docs-en.kkbox.codes/v1.1/reference#search_1"
     ],
     "lineNumber": 62,
     "params": [
@@ -3331,7 +3334,7 @@
       "api.searchFetcher.setSearchCriteria('五月天 好好').fetchSearchResult()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/search/endpoints/get-search"
+      "https://docs-en.kkbox.codes/v1.1/reference#search_1"
     ],
     "lineNumber": 77,
     "params": [
@@ -3405,7 +3408,7 @@
     "__docId__": 133,
     "kind": "file",
     "name": "src/api/SharedPlaylistFetcher.js",
-    "content": "import {SHARED_PLAYLISTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get playlist metadata.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists\n */\nexport default class SharedPlaylistFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.playlist_id = undefined\n    }\n\n    /**\n     * Init the shared playlist fetcher.\n     *\n     * @param {string} playlist_id - The ID of a playlist.\n     * @return {SharedPlaylistFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id\n     */\n    setPlaylistID(playlist_id) {\n        this.playlist_id = playlist_id\n        return this\n    }\n\n    /**\n     * Fetch metadata of the shared playlist with the shared playlist fetcher.\n     *\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.playlist_id, {territory: this.territory})\n    }\n\n    /**\n     * Get KKBOX web widget uri of the playlist.\n     * @example https://widget.kkbox.com/v1/?id=KmjwNXizu5MxHFSloP&type=playlist\n     * @return {string}\n     */\n    getWidgetUri(){\n        return `https://widget.kkbox.com/v1/?id=${this.playlist_id}&type=playlist`\n    }\n\n    /**\n     * Fetch track list of a shared playlist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id-tracks\n     */\n    fetchTracks(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.playlist_id + '/tracks', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
+    "content": "import {SHARED_PLAYLISTS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get playlist metadata.\n * @see https://docs-en.kkbox.codes/v1.1/reference#shared-playlists\n */\nexport default class SharedPlaylistFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.playlist_id = undefined\n    }\n\n    /**\n     * Init the shared playlist fetcher.\n     *\n     * @param {string} playlist_id - The ID of a playlist.\n     * @return {SharedPlaylistFetcher}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id\n     */\n    setPlaylistID(playlist_id) {\n        this.playlist_id = playlist_id\n        return this\n    }\n\n    /**\n     * Fetch metadata of the shared playlist with the shared playlist fetcher.\n     *\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.playlist_id, {territory: this.territory})\n    }\n\n    /**\n     * Get KKBOX web widget uri of the playlist.\n     * @example https://widget.kkbox.com/v1/?id=KmjwNXizu5MxHFSloP&type=playlist\n     * @return {string}\n     */\n    getWidgetUri(){\n        return `https://widget.kkbox.com/v1/?id=${this.playlist_id}&type=playlist`\n    }\n\n    /**\n     * Fetch track list of a shared playlist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id-tracks\n     */\n    fetchTracks(limit = undefined, offset = undefined) {\n        return this.http.get(ENDPOINT + this.playlist_id + '/tracks', {\n            territory: this.territory,\n            limit: limit,\n            offset: offset\n        })\n    }\n}",
     "static": true,
     "longname": "src/api/SharedPlaylistFetcher.js",
     "access": null,
@@ -3425,7 +3428,7 @@
     "importStyle": "SharedPlaylistFetcher",
     "description": "Get playlist metadata.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists"
+      "https://docs-en.kkbox.codes/v1.1/reference#shared-playlists"
     ],
     "lineNumber": 8,
     "interface": false,
@@ -3493,7 +3496,7 @@
     "access": null,
     "description": "Init the shared playlist fetcher.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id"
     ],
     "lineNumber": 28,
     "params": [
@@ -3555,7 +3558,7 @@
       "api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id"
     ],
     "lineNumber": 40,
     "params": [],
@@ -3608,7 +3611,7 @@
       "api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id-tracks"
+      "https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id-tracks"
     ],
     "lineNumber": 62,
     "params": [
@@ -3646,7 +3649,7 @@
     "__docId__": 142,
     "kind": "file",
     "name": "src/api/TrackFetcher.js",
-    "content": "import {TRACKS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get metadata of a track.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/tracks\n */\nexport default class TrackFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.track_id = undefined\n    }\n\n    /**\n     * Set the track fetcher's track ID.\n     *\n     * @param {string} track_id - The ID of a track.\n     * @return {Track}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/tracks/endpoints/get-tracks-track_id\n     */\n    setTrackID(track_id) {\n        this.track_id = track_id\n        return this\n    }\n\n    /**\n     * Get metadata of the track with the track fetcher.\n     *\n     * @return {Promise}\n     * @example api.Track.setTrackID('KpnEGVHEsGgkoB0MBk').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/tracks/endpoints/get-tracks-track_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.track_id, {territory: this.territory})\n    }\n\n    /**\n     * Get KKBOX web widget uri of the track.\n     * @example https://widget.kkbox.com/v1/?id=8sD5pE4dV0Zqmmler6&type=song\n     * @return {string}\n     */\n    getWidgetUri(){\n        return `https://widget.kkbox.com/v1/?id=${this.track_id}&type=song`\n    }\n}",
+    "content": "import {TRACKS as ENDPOINT} from '../Endpoint'\nimport Fetcher from './Fetcher'\n\n/**\n * Get metadata of a track.\n * @see https://docs-en.kkbox.codes/v1.1/reference#tracks\n */\nexport default class TrackFetcher extends Fetcher {\n    /**\n     * @ignore\n     */\n    constructor(http, territory = 'TW') {\n        super(http, territory)\n\n        /**\n         * @ignore\n         */\n        this.track_id = undefined\n    }\n\n    /**\n     * Set the track fetcher's track ID.\n     *\n     * @param {string} track_id - The ID of a track.\n     * @return {Track}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id\n     */\n    setTrackID(track_id) {\n        this.track_id = track_id\n        return this\n    }\n\n    /**\n     * Get metadata of the track with the track fetcher.\n     *\n     * @return {Promise}\n     * @example api.Track.setTrackID('KpnEGVHEsGgkoB0MBk').fetchMetadata()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id\n     */\n    fetchMetadata() {\n        return this.http.get(ENDPOINT + this.track_id, {territory: this.territory})\n    }\n\n    /**\n     * Get KKBOX web widget uri of the track.\n     * @example https://widget.kkbox.com/v1/?id=8sD5pE4dV0Zqmmler6&type=song\n     * @return {string}\n     */\n    getWidgetUri(){\n        return `https://widget.kkbox.com/v1/?id=${this.track_id}&type=song`\n    }\n}",
     "static": true,
     "longname": "src/api/TrackFetcher.js",
     "access": null,
@@ -3666,7 +3669,7 @@
     "importStyle": "TrackFetcher",
     "description": "Get metadata of a track.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/tracks"
+      "https://docs-en.kkbox.codes/v1.1/reference#tracks"
     ],
     "lineNumber": 8,
     "interface": false,
@@ -3734,7 +3737,7 @@
     "access": null,
     "description": "Set the track fetcher's track ID.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/tracks/endpoints/get-tracks-track_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id"
     ],
     "lineNumber": 28,
     "params": [
@@ -3796,7 +3799,7 @@
       "api.Track.setTrackID('KpnEGVHEsGgkoB0MBk').fetchMetadata()"
     ],
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/resources/tracks/endpoints/get-tracks-track_id"
+      "https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id"
     ],
     "lineNumber": 40,
     "params": [],
@@ -3940,7 +3943,7 @@
     "__docId__": 155,
     "kind": "file",
     "name": "src/auth/ClientCredentialsFlow.js",
-    "content": "/**\n * Implements the client credentials flow. Used for accessing APIs that don't need any KKBOX\n * user's personal data.\n * @see https://kkbox.gelato.io/docs/versions/1.1/authentication\n */\nexport default class ClientCredentialsFlow {\n    /**\n     * @ignore\n     */\n    constructor(token) {\n        /**\n         * @ignore\n         */\n        this.token = token\n    }\n\n    /**\n     * Fetch access token.\n     *\n     * @return {Promise}\n     * @example auth.clientCredentialsFlow.fetchAccessToken()\n     */\n    fetchAccessToken() {\n        return this.token.fetchAccessToken({grant_type: 'client_credentials'})\n    }\n}",
+    "content": "/**\n * Implements the client credentials flow. Used for accessing APIs that don't need any KKBOX\n * user's personal data.\n * @see https://docs-en.kkbox.codes/docs/getting-started\n */\nexport default class ClientCredentialsFlow {\n    /**\n     * @ignore\n     */\n    constructor(token) {\n        /**\n         * @ignore\n         */\n        this.token = token\n    }\n\n    /**\n     * Fetch access token.\n     *\n     * @return {Promise}\n     * @example auth.clientCredentialsFlow.fetchAccessToken()\n     */\n    fetchAccessToken() {\n        return this.token.fetchAccessToken({grant_type: 'client_credentials'})\n    }\n}",
     "static": true,
     "longname": "src/auth/ClientCredentialsFlow.js",
     "access": null,
@@ -3960,7 +3963,7 @@
     "importStyle": "ClientCredentialsFlow",
     "description": "Implements the client credentials flow. Used for accessing APIs that don't need any KKBOX\nuser's personal data.",
     "see": [
-      "https://kkbox.gelato.io/docs/versions/1.1/authentication"
+      "https://docs-en.kkbox.codes/docs/getting-started"
     ],
     "lineNumber": 6,
     "interface": false
