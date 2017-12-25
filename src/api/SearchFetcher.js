@@ -3,7 +3,7 @@ import Fetcher from './Fetcher'
 
 /**
  * Search API.
- * @see https://kkbox.gelato.io/docs/versions/1.1/resources/search
+ * @see https://docs-en.kkbox.codes/v1.1/reference#search
  */
 export default class SearchFetcher extends Fetcher {
     /**
@@ -57,7 +57,7 @@ export default class SearchFetcher extends Fetcher {
      * @param {string} q - The keyword to be searched.
      * @param {string} [type] - ['artist', 'album', 'track', 'playlist'] The type of search. Default to search all types. If you want to use multiple type at the same time, you may use ',' to separate them.
      * @return {Search}
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/search
+     * @see https://docs-en.kkbox.codes/v1.1/reference#search_1
      */
     setSearchCriteria(q, type = undefined) {
         this.q = q
@@ -72,7 +72,7 @@ export default class SearchFetcher extends Fetcher {
      * @param {number} [offset] - The offset index for first element.
      * @return {Promise}
      * @example api.searchFetcher.setSearchCriteria('五月天 好好').fetchSearchResult()
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/search/endpoints/get-search
+     * @see https://docs-en.kkbox.codes/v1.1/reference#search_1
      */
     fetchSearchResult(limit = undefined, offset = undefined) {
         return this.http.get(ENDPOINT, {

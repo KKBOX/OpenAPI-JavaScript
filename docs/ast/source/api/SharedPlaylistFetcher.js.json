@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 2262,
+  "end": 2130,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 2262,
+    "end": 2130,
     "loc": {
       "start": {
         "line": 1,
@@ -187,9 +187,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Get playlist metadata.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists\n ",
+            "value": "*\n * Get playlist metadata.\n * @see https://docs-en.kkbox.codes/v1.1/reference#shared-playlists\n ",
             "start": 90,
-            "end": 200,
+            "end": 191,
             "loc": {
               "start": {
                 "line": 4,
@@ -205,8 +205,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 201,
-        "end": 2262,
+        "start": 192,
+        "end": 2130,
         "loc": {
           "start": {
             "line": 8,
@@ -219,8 +219,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 216,
-          "end": 2262,
+          "start": 207,
+          "end": 2130,
           "loc": {
             "start": {
               "line": 8,
@@ -233,8 +233,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 222,
-            "end": 243,
+            "start": 213,
+            "end": 234,
             "loc": {
               "start": {
                 "line": 8,
@@ -251,8 +251,8 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 252,
-            "end": 259,
+            "start": 243,
+            "end": 250,
             "loc": {
               "start": {
                 "line": 8,
@@ -268,8 +268,8 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 260,
-            "end": 2262,
+            "start": 251,
+            "end": 2130,
             "loc": {
               "start": {
                 "line": 8,
@@ -283,8 +283,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 297,
-                "end": 452,
+                "start": 288,
+                "end": 443,
                 "loc": {
                   "start": {
                     "line": 12,
@@ -298,8 +298,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 297,
-                  "end": 308,
+                  "start": 288,
+                  "end": 299,
                   "loc": {
                     "start": {
                       "line": 12,
@@ -323,8 +323,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 309,
-                    "end": 313,
+                    "start": 300,
+                    "end": 304,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -340,8 +340,8 @@
                   },
                   {
                     "type": "AssignmentPattern",
-                    "start": 315,
-                    "end": 331,
+                    "start": 306,
+                    "end": 322,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -354,8 +354,8 @@
                     },
                     "left": {
                       "type": "Identifier",
-                      "start": 315,
-                      "end": 324,
+                      "start": 306,
+                      "end": 315,
                       "loc": {
                         "start": {
                           "line": 12,
@@ -371,8 +371,8 @@
                     },
                     "right": {
                       "type": "StringLiteral",
-                      "start": 327,
-                      "end": 331,
+                      "start": 318,
+                      "end": 322,
                       "loc": {
                         "start": {
                           "line": 12,
@@ -393,8 +393,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 333,
-                  "end": 452,
+                  "start": 324,
+                  "end": 443,
                   "loc": {
                     "start": {
                       "line": 12,
@@ -408,8 +408,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 343,
-                      "end": 365,
+                      "start": 334,
+                      "end": 356,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -422,8 +422,8 @@
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 343,
-                        "end": 365,
+                        "start": 334,
+                        "end": 356,
                         "loc": {
                           "start": {
                             "line": 13,
@@ -436,8 +436,8 @@
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 343,
-                          "end": 348,
+                          "start": 334,
+                          "end": 339,
                           "loc": {
                             "start": {
                               "line": 13,
@@ -452,8 +452,8 @@
                         "arguments": [
                           {
                             "type": "Identifier",
-                            "start": 349,
-                            "end": 353,
+                            "start": 340,
+                            "end": 344,
                             "loc": {
                               "start": {
                                 "line": 13,
@@ -469,8 +469,8 @@
                           },
                           {
                             "type": "Identifier",
-                            "start": 355,
-                            "end": 364,
+                            "start": 346,
+                            "end": 355,
                             "loc": {
                               "start": {
                                 "line": 13,
@@ -491,8 +491,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n         * @ignore\n         ",
-                          "start": 375,
-                          "end": 409,
+                          "start": 366,
+                          "end": 400,
                           "loc": {
                             "start": {
                               "line": 15,
@@ -508,8 +508,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 418,
-                      "end": 446,
+                      "start": 409,
+                      "end": 437,
                       "loc": {
                         "start": {
                           "line": 18,
@@ -522,8 +522,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 418,
-                        "end": 446,
+                        "start": 409,
+                        "end": 437,
                         "loc": {
                           "start": {
                             "line": 18,
@@ -537,8 +537,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 418,
-                          "end": 434,
+                          "start": 409,
+                          "end": 425,
                           "loc": {
                             "start": {
                               "line": 18,
@@ -551,8 +551,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 418,
-                            "end": 422,
+                            "start": 409,
+                            "end": 413,
                             "loc": {
                               "start": {
                                 "line": 18,
@@ -567,8 +567,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 423,
-                            "end": 434,
+                            "start": 414,
+                            "end": 425,
                             "loc": {
                               "start": {
                                 "line": 18,
@@ -587,8 +587,8 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 437,
-                          "end": 446,
+                          "start": 428,
+                          "end": 437,
                           "loc": {
                             "start": {
                               "line": 18,
@@ -608,8 +608,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n         * @ignore\n         ",
-                          "start": 375,
-                          "end": 409,
+                          "start": 366,
+                          "end": 400,
                           "loc": {
                             "start": {
                               "line": 15,
@@ -631,8 +631,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n     * @ignore\n     ",
-                    "start": 266,
-                    "end": 292,
+                    "start": 257,
+                    "end": 283,
                     "loc": {
                       "start": {
                         "line": 9,
@@ -648,9 +648,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Init the shared playlist fetcher.\n     *\n     * @param {string} playlist_id - The ID of a playlist.\n     * @return {SharedPlaylistFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id\n     ",
-                    "start": 458,
-                    "end": 739,
+                    "value": "*\n     * Init the shared playlist fetcher.\n     *\n     * @param {string} playlist_id - The ID of a playlist.\n     * @return {SharedPlaylistFetcher}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id\n     ",
+                    "start": 449,
+                    "end": 689,
                     "loc": {
                       "start": {
                         "line": 21,
@@ -666,8 +666,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 744,
-                "end": 837,
+                "start": 694,
+                "end": 787,
                 "loc": {
                   "start": {
                     "line": 28,
@@ -681,8 +681,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 744,
-                  "end": 757,
+                  "start": 694,
+                  "end": 707,
                   "loc": {
                     "start": {
                       "line": 28,
@@ -706,8 +706,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 758,
-                    "end": 769,
+                    "start": 708,
+                    "end": 719,
                     "loc": {
                       "start": {
                         "line": 28,
@@ -724,8 +724,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 771,
-                  "end": 837,
+                  "start": 721,
+                  "end": 787,
                   "loc": {
                     "start": {
                       "line": 28,
@@ -739,8 +739,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 781,
-                      "end": 811,
+                      "start": 731,
+                      "end": 761,
                       "loc": {
                         "start": {
                           "line": 29,
@@ -753,8 +753,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 781,
-                        "end": 811,
+                        "start": 731,
+                        "end": 761,
                         "loc": {
                           "start": {
                             "line": 29,
@@ -768,8 +768,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 781,
-                          "end": 797,
+                          "start": 731,
+                          "end": 747,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -782,8 +782,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 781,
-                            "end": 785,
+                            "start": 731,
+                            "end": 735,
                             "loc": {
                               "start": {
                                 "line": 29,
@@ -797,8 +797,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 786,
-                            "end": 797,
+                            "start": 736,
+                            "end": 747,
                             "loc": {
                               "start": {
                                 "line": 29,
@@ -816,8 +816,8 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 800,
-                          "end": 811,
+                          "start": 750,
+                          "end": 761,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -835,8 +835,8 @@
                     },
                     {
                       "type": "ReturnStatement",
-                      "start": 820,
-                      "end": 831,
+                      "start": 770,
+                      "end": 781,
                       "loc": {
                         "start": {
                           "line": 30,
@@ -849,8 +849,8 @@
                       },
                       "argument": {
                         "type": "ThisExpression",
-                        "start": 827,
-                        "end": 831,
+                        "start": 777,
+                        "end": 781,
                         "loc": {
                           "start": {
                             "line": 30,
@@ -870,9 +870,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Init the shared playlist fetcher.\n     *\n     * @param {string} playlist_id - The ID of a playlist.\n     * @return {SharedPlaylistFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id\n     ",
-                    "start": 458,
-                    "end": 739,
+                    "value": "*\n     * Init the shared playlist fetcher.\n     *\n     * @param {string} playlist_id - The ID of a playlist.\n     * @return {SharedPlaylistFetcher}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id\n     ",
+                    "start": 449,
+                    "end": 689,
                     "loc": {
                       "start": {
                         "line": 21,
@@ -888,9 +888,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Fetch metadata of the shared playlist with the shared playlist fetcher.\n     *\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id\n     ",
-                    "start": 843,
-                    "end": 1183,
+                    "value": "*\n     * Fetch metadata of the shared playlist with the shared playlist fetcher.\n     *\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id\n     ",
+                    "start": 793,
+                    "end": 1092,
                     "loc": {
                       "start": {
                         "line": 33,
@@ -906,8 +906,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1188,
-                "end": 1298,
+                "start": 1097,
+                "end": 1207,
                 "loc": {
                   "start": {
                     "line": 40,
@@ -921,8 +921,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1188,
-                  "end": 1201,
+                  "start": 1097,
+                  "end": 1110,
                   "loc": {
                     "start": {
                       "line": 40,
@@ -946,8 +946,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1204,
-                  "end": 1298,
+                  "start": 1113,
+                  "end": 1207,
                   "loc": {
                     "start": {
                       "line": 40,
@@ -961,8 +961,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1214,
-                      "end": 1292,
+                      "start": 1123,
+                      "end": 1201,
                       "loc": {
                         "start": {
                           "line": 41,
@@ -975,8 +975,8 @@
                       },
                       "argument": {
                         "type": "CallExpression",
-                        "start": 1221,
-                        "end": 1292,
+                        "start": 1130,
+                        "end": 1201,
                         "loc": {
                           "start": {
                             "line": 41,
@@ -989,8 +989,8 @@
                         },
                         "callee": {
                           "type": "MemberExpression",
-                          "start": 1221,
-                          "end": 1234,
+                          "start": 1130,
+                          "end": 1143,
                           "loc": {
                             "start": {
                               "line": 41,
@@ -1003,8 +1003,8 @@
                           },
                           "object": {
                             "type": "MemberExpression",
-                            "start": 1221,
-                            "end": 1230,
+                            "start": 1130,
+                            "end": 1139,
                             "loc": {
                               "start": {
                                 "line": 41,
@@ -1017,8 +1017,8 @@
                             },
                             "object": {
                               "type": "ThisExpression",
-                              "start": 1221,
-                              "end": 1225,
+                              "start": 1130,
+                              "end": 1134,
                               "loc": {
                                 "start": {
                                   "line": 41,
@@ -1032,8 +1032,8 @@
                             },
                             "property": {
                               "type": "Identifier",
-                              "start": 1226,
-                              "end": 1230,
+                              "start": 1135,
+                              "end": 1139,
                               "loc": {
                                 "start": {
                                   "line": 41,
@@ -1051,8 +1051,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1231,
-                            "end": 1234,
+                            "start": 1140,
+                            "end": 1143,
                             "loc": {
                               "start": {
                                 "line": 41,
@@ -1071,8 +1071,8 @@
                         "arguments": [
                           {
                             "type": "BinaryExpression",
-                            "start": 1235,
-                            "end": 1262,
+                            "start": 1144,
+                            "end": 1171,
                             "loc": {
                               "start": {
                                 "line": 41,
@@ -1085,8 +1085,8 @@
                             },
                             "left": {
                               "type": "Identifier",
-                              "start": 1235,
-                              "end": 1243,
+                              "start": 1144,
+                              "end": 1152,
                               "loc": {
                                 "start": {
                                   "line": 41,
@@ -1103,8 +1103,8 @@
                             "operator": "+",
                             "right": {
                               "type": "MemberExpression",
-                              "start": 1246,
-                              "end": 1262,
+                              "start": 1155,
+                              "end": 1171,
                               "loc": {
                                 "start": {
                                   "line": 41,
@@ -1117,8 +1117,8 @@
                               },
                               "object": {
                                 "type": "ThisExpression",
-                                "start": 1246,
-                                "end": 1250,
+                                "start": 1155,
+                                "end": 1159,
                                 "loc": {
                                   "start": {
                                     "line": 41,
@@ -1132,8 +1132,8 @@
                               },
                               "property": {
                                 "type": "Identifier",
-                                "start": 1251,
-                                "end": 1262,
+                                "start": 1160,
+                                "end": 1171,
                                 "loc": {
                                   "start": {
                                     "line": 41,
@@ -1152,8 +1152,8 @@
                           },
                           {
                             "type": "ObjectExpression",
-                            "start": 1264,
-                            "end": 1291,
+                            "start": 1173,
+                            "end": 1200,
                             "loc": {
                               "start": {
                                 "line": 41,
@@ -1167,8 +1167,8 @@
                             "properties": [
                               {
                                 "type": "ObjectProperty",
-                                "start": 1265,
-                                "end": 1290,
+                                "start": 1174,
+                                "end": 1199,
                                 "loc": {
                                   "start": {
                                     "line": 41,
@@ -1184,8 +1184,8 @@
                                 "computed": false,
                                 "key": {
                                   "type": "Identifier",
-                                  "start": 1265,
-                                  "end": 1274,
+                                  "start": 1174,
+                                  "end": 1183,
                                   "loc": {
                                     "start": {
                                       "line": 41,
@@ -1201,8 +1201,8 @@
                                 },
                                 "value": {
                                   "type": "MemberExpression",
-                                  "start": 1276,
-                                  "end": 1290,
+                                  "start": 1185,
+                                  "end": 1199,
                                   "loc": {
                                     "start": {
                                       "line": 41,
@@ -1215,8 +1215,8 @@
                                   },
                                   "object": {
                                     "type": "ThisExpression",
-                                    "start": 1276,
-                                    "end": 1280,
+                                    "start": 1185,
+                                    "end": 1189,
                                     "loc": {
                                       "start": {
                                         "line": 41,
@@ -1230,8 +1230,8 @@
                                   },
                                   "property": {
                                     "type": "Identifier",
-                                    "start": 1281,
-                                    "end": 1290,
+                                    "start": 1190,
+                                    "end": 1199,
                                     "loc": {
                                       "start": {
                                         "line": 41,
@@ -1260,9 +1260,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Fetch metadata of the shared playlist with the shared playlist fetcher.\n     *\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id\n     ",
-                    "start": 843,
-                    "end": 1183,
+                    "value": "*\n     * Fetch metadata of the shared playlist with the shared playlist fetcher.\n     *\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id\n     ",
+                    "start": 793,
+                    "end": 1092,
                     "loc": {
                       "start": {
                         "line": 33,
@@ -1279,8 +1279,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n     * Get KKBOX web widget uri of the playlist.\n     * @example https://widget.kkbox.com/v1/?id=KmjwNXizu5MxHFSloP&type=playlist\n     * @return {string}\n     ",
-                    "start": 1304,
-                    "end": 1469,
+                    "start": 1213,
+                    "end": 1378,
                     "loc": {
                       "start": {
                         "line": 44,
@@ -1296,8 +1296,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1474,
-                "end": 1578,
+                "start": 1383,
+                "end": 1487,
                 "loc": {
                   "start": {
                     "line": 49,
@@ -1311,8 +1311,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1474,
-                  "end": 1486,
+                  "start": 1383,
+                  "end": 1395,
                   "loc": {
                     "start": {
                       "line": 49,
@@ -1336,8 +1336,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1488,
-                  "end": 1578,
+                  "start": 1397,
+                  "end": 1487,
                   "loc": {
                     "start": {
                       "line": 49,
@@ -1351,8 +1351,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1498,
-                      "end": 1572,
+                      "start": 1407,
+                      "end": 1481,
                       "loc": {
                         "start": {
                           "line": 50,
@@ -1365,8 +1365,8 @@
                       },
                       "argument": {
                         "type": "TemplateLiteral",
-                        "start": 1505,
-                        "end": 1572,
+                        "start": 1414,
+                        "end": 1481,
                         "loc": {
                           "start": {
                             "line": 50,
@@ -1380,8 +1380,8 @@
                         "expressions": [
                           {
                             "type": "MemberExpression",
-                            "start": 1540,
-                            "end": 1556,
+                            "start": 1449,
+                            "end": 1465,
                             "loc": {
                               "start": {
                                 "line": 50,
@@ -1394,8 +1394,8 @@
                             },
                             "object": {
                               "type": "ThisExpression",
-                              "start": 1540,
-                              "end": 1544,
+                              "start": 1449,
+                              "end": 1453,
                               "loc": {
                                 "start": {
                                   "line": 50,
@@ -1409,8 +1409,8 @@
                             },
                             "property": {
                               "type": "Identifier",
-                              "start": 1545,
-                              "end": 1556,
+                              "start": 1454,
+                              "end": 1465,
                               "loc": {
                                 "start": {
                                   "line": 50,
@@ -1430,8 +1430,8 @@
                         "quasis": [
                           {
                             "type": "TemplateElement",
-                            "start": 1506,
-                            "end": 1538,
+                            "start": 1415,
+                            "end": 1447,
                             "loc": {
                               "start": {
                                 "line": 50,
@@ -1450,8 +1450,8 @@
                           },
                           {
                             "type": "TemplateElement",
-                            "start": 1557,
-                            "end": 1571,
+                            "start": 1466,
+                            "end": 1480,
                             "loc": {
                               "start": {
                                 "line": 50,
@@ -1479,8 +1479,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n     * Get KKBOX web widget uri of the playlist.\n     * @example https://widget.kkbox.com/v1/?id=KmjwNXizu5MxHFSloP&type=playlist\n     * @return {string}\n     ",
-                    "start": 1304,
-                    "end": 1469,
+                    "start": 1213,
+                    "end": 1378,
                     "loc": {
                       "start": {
                         "line": 44,
@@ -1496,9 +1496,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Fetch track list of a shared playlist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id-tracks\n     ",
-                    "start": 1584,
-                    "end": 2022,
+                    "value": "*\n     * Fetch track list of a shared playlist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id-tracks\n     ",
+                    "start": 1493,
+                    "end": 1890,
                     "loc": {
                       "start": {
                         "line": 53,
@@ -1514,8 +1514,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2027,
-                "end": 2260,
+                "start": 1895,
+                "end": 2128,
                 "loc": {
                   "start": {
                     "line": 62,
@@ -1529,8 +1529,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2027,
-                  "end": 2038,
+                  "start": 1895,
+                  "end": 1906,
                   "loc": {
                     "start": {
                       "line": 62,
@@ -1554,8 +1554,8 @@
                 "params": [
                   {
                     "type": "AssignmentPattern",
-                    "start": 2039,
-                    "end": 2056,
+                    "start": 1907,
+                    "end": 1924,
                     "loc": {
                       "start": {
                         "line": 62,
@@ -1568,8 +1568,8 @@
                     },
                     "left": {
                       "type": "Identifier",
-                      "start": 2039,
-                      "end": 2044,
+                      "start": 1907,
+                      "end": 1912,
                       "loc": {
                         "start": {
                           "line": 62,
@@ -1585,8 +1585,8 @@
                     },
                     "right": {
                       "type": "Identifier",
-                      "start": 2047,
-                      "end": 2056,
+                      "start": 1915,
+                      "end": 1924,
                       "loc": {
                         "start": {
                           "line": 62,
@@ -1603,8 +1603,8 @@
                   },
                   {
                     "type": "AssignmentPattern",
-                    "start": 2058,
-                    "end": 2076,
+                    "start": 1926,
+                    "end": 1944,
                     "loc": {
                       "start": {
                         "line": 62,
@@ -1617,8 +1617,8 @@
                     },
                     "left": {
                       "type": "Identifier",
-                      "start": 2058,
-                      "end": 2064,
+                      "start": 1926,
+                      "end": 1932,
                       "loc": {
                         "start": {
                           "line": 62,
@@ -1634,8 +1634,8 @@
                     },
                     "right": {
                       "type": "Identifier",
-                      "start": 2067,
-                      "end": 2076,
+                      "start": 1935,
+                      "end": 1944,
                       "loc": {
                         "start": {
                           "line": 62,
@@ -1653,8 +1653,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2078,
-                  "end": 2260,
+                  "start": 1946,
+                  "end": 2128,
                   "loc": {
                     "start": {
                       "line": 62,
@@ -1668,8 +1668,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 2088,
-                      "end": 2254,
+                      "start": 1956,
+                      "end": 2122,
                       "loc": {
                         "start": {
                           "line": 63,
@@ -1682,8 +1682,8 @@
                       },
                       "argument": {
                         "type": "CallExpression",
-                        "start": 2095,
-                        "end": 2254,
+                        "start": 1963,
+                        "end": 2122,
                         "loc": {
                           "start": {
                             "line": 63,
@@ -1696,8 +1696,8 @@
                         },
                         "callee": {
                           "type": "MemberExpression",
-                          "start": 2095,
-                          "end": 2108,
+                          "start": 1963,
+                          "end": 1976,
                           "loc": {
                             "start": {
                               "line": 63,
@@ -1710,8 +1710,8 @@
                           },
                           "object": {
                             "type": "MemberExpression",
-                            "start": 2095,
-                            "end": 2104,
+                            "start": 1963,
+                            "end": 1972,
                             "loc": {
                               "start": {
                                 "line": 63,
@@ -1724,8 +1724,8 @@
                             },
                             "object": {
                               "type": "ThisExpression",
-                              "start": 2095,
-                              "end": 2099,
+                              "start": 1963,
+                              "end": 1967,
                               "loc": {
                                 "start": {
                                   "line": 63,
@@ -1739,8 +1739,8 @@
                             },
                             "property": {
                               "type": "Identifier",
-                              "start": 2100,
-                              "end": 2104,
+                              "start": 1968,
+                              "end": 1972,
                               "loc": {
                                 "start": {
                                   "line": 63,
@@ -1758,8 +1758,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2105,
-                            "end": 2108,
+                            "start": 1973,
+                            "end": 1976,
                             "loc": {
                               "start": {
                                 "line": 63,
@@ -1778,8 +1778,8 @@
                         "arguments": [
                           {
                             "type": "BinaryExpression",
-                            "start": 2109,
-                            "end": 2148,
+                            "start": 1977,
+                            "end": 2016,
                             "loc": {
                               "start": {
                                 "line": 63,
@@ -1792,8 +1792,8 @@
                             },
                             "left": {
                               "type": "BinaryExpression",
-                              "start": 2109,
-                              "end": 2136,
+                              "start": 1977,
+                              "end": 2004,
                               "loc": {
                                 "start": {
                                   "line": 63,
@@ -1806,8 +1806,8 @@
                               },
                               "left": {
                                 "type": "Identifier",
-                                "start": 2109,
-                                "end": 2117,
+                                "start": 1977,
+                                "end": 1985,
                                 "loc": {
                                   "start": {
                                     "line": 63,
@@ -1824,8 +1824,8 @@
                               "operator": "+",
                               "right": {
                                 "type": "MemberExpression",
-                                "start": 2120,
-                                "end": 2136,
+                                "start": 1988,
+                                "end": 2004,
                                 "loc": {
                                   "start": {
                                     "line": 63,
@@ -1838,8 +1838,8 @@
                                 },
                                 "object": {
                                   "type": "ThisExpression",
-                                  "start": 2120,
-                                  "end": 2124,
+                                  "start": 1988,
+                                  "end": 1992,
                                   "loc": {
                                     "start": {
                                       "line": 63,
@@ -1853,8 +1853,8 @@
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "start": 2125,
-                                  "end": 2136,
+                                  "start": 1993,
+                                  "end": 2004,
                                   "loc": {
                                     "start": {
                                       "line": 63,
@@ -1874,8 +1874,8 @@
                             "operator": "+",
                             "right": {
                               "type": "StringLiteral",
-                              "start": 2139,
-                              "end": 2148,
+                              "start": 2007,
+                              "end": 2016,
                               "loc": {
                                 "start": {
                                   "line": 63,
@@ -1895,8 +1895,8 @@
                           },
                           {
                             "type": "ObjectExpression",
-                            "start": 2150,
-                            "end": 2253,
+                            "start": 2018,
+                            "end": 2121,
                             "loc": {
                               "start": {
                                 "line": 63,
@@ -1910,8 +1910,8 @@
                             "properties": [
                               {
                                 "type": "ObjectProperty",
-                                "start": 2164,
-                                "end": 2189,
+                                "start": 2032,
+                                "end": 2057,
                                 "loc": {
                                   "start": {
                                     "line": 64,
@@ -1927,8 +1927,8 @@
                                 "computed": false,
                                 "key": {
                                   "type": "Identifier",
-                                  "start": 2164,
-                                  "end": 2173,
+                                  "start": 2032,
+                                  "end": 2041,
                                   "loc": {
                                     "start": {
                                       "line": 64,
@@ -1944,8 +1944,8 @@
                                 },
                                 "value": {
                                   "type": "MemberExpression",
-                                  "start": 2175,
-                                  "end": 2189,
+                                  "start": 2043,
+                                  "end": 2057,
                                   "loc": {
                                     "start": {
                                       "line": 64,
@@ -1958,8 +1958,8 @@
                                   },
                                   "object": {
                                     "type": "ThisExpression",
-                                    "start": 2175,
-                                    "end": 2179,
+                                    "start": 2043,
+                                    "end": 2047,
                                     "loc": {
                                       "start": {
                                         "line": 64,
@@ -1973,8 +1973,8 @@
                                   },
                                   "property": {
                                     "type": "Identifier",
-                                    "start": 2180,
-                                    "end": 2189,
+                                    "start": 2048,
+                                    "end": 2057,
                                     "loc": {
                                       "start": {
                                         "line": 64,
@@ -1993,8 +1993,8 @@
                               },
                               {
                                 "type": "ObjectProperty",
-                                "start": 2203,
-                                "end": 2215,
+                                "start": 2071,
+                                "end": 2083,
                                 "loc": {
                                   "start": {
                                     "line": 65,
@@ -2010,8 +2010,8 @@
                                 "computed": false,
                                 "key": {
                                   "type": "Identifier",
-                                  "start": 2203,
-                                  "end": 2208,
+                                  "start": 2071,
+                                  "end": 2076,
                                   "loc": {
                                     "start": {
                                       "line": 65,
@@ -2027,8 +2027,8 @@
                                 },
                                 "value": {
                                   "type": "Identifier",
-                                  "start": 2210,
-                                  "end": 2215,
+                                  "start": 2078,
+                                  "end": 2083,
                                   "loc": {
                                     "start": {
                                       "line": 65,
@@ -2045,8 +2045,8 @@
                               },
                               {
                                 "type": "ObjectProperty",
-                                "start": 2229,
-                                "end": 2243,
+                                "start": 2097,
+                                "end": 2111,
                                 "loc": {
                                   "start": {
                                     "line": 66,
@@ -2062,8 +2062,8 @@
                                 "computed": false,
                                 "key": {
                                   "type": "Identifier",
-                                  "start": 2229,
-                                  "end": 2235,
+                                  "start": 2097,
+                                  "end": 2103,
                                   "loc": {
                                     "start": {
                                       "line": 66,
@@ -2079,8 +2079,8 @@
                                 },
                                 "value": {
                                   "type": "Identifier",
-                                  "start": 2237,
-                                  "end": 2243,
+                                  "start": 2105,
+                                  "end": 2111,
                                   "loc": {
                                     "start": {
                                       "line": 66,
@@ -2106,9 +2106,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Fetch track list of a shared playlist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id-tracks\n     ",
-                    "start": 1584,
-                    "end": 2022,
+                    "value": "*\n     * Fetch track list of a shared playlist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id-tracks\n     ",
+                    "start": 1493,
+                    "end": 1890,
                     "loc": {
                       "start": {
                         "line": 53,
@@ -2127,9 +2127,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Get playlist metadata.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists\n ",
+              "value": "*\n * Get playlist metadata.\n * @see https://docs-en.kkbox.codes/v1.1/reference#shared-playlists\n ",
               "start": 90,
-              "end": 200,
+              "end": 191,
               "loc": {
                 "start": {
                   "line": 4,
@@ -2147,9 +2147,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Get playlist metadata.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists\n ",
+            "value": "*\n * Get playlist metadata.\n * @see https://docs-en.kkbox.codes/v1.1/reference#shared-playlists\n ",
             "start": 90,
-            "end": 200,
+            "end": 191,
             "loc": {
               "start": {
                 "line": 4,
@@ -2169,9 +2169,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Get playlist metadata.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists\n ",
+      "value": "*\n * Get playlist metadata.\n * @see https://docs-en.kkbox.codes/v1.1/reference#shared-playlists\n ",
       "start": 90,
-      "end": 200,
+      "end": 191,
       "loc": {
         "start": {
           "line": 4,
@@ -2186,8 +2186,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * @ignore\n     ",
-      "start": 266,
-      "end": 292,
+      "start": 257,
+      "end": 283,
       "loc": {
         "start": {
           "line": 9,
@@ -2202,8 +2202,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n         * @ignore\n         ",
-      "start": 375,
-      "end": 409,
+      "start": 366,
+      "end": 400,
       "loc": {
         "start": {
           "line": 15,
@@ -2217,9 +2217,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Init the shared playlist fetcher.\n     *\n     * @param {string} playlist_id - The ID of a playlist.\n     * @return {SharedPlaylistFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id\n     ",
-      "start": 458,
-      "end": 739,
+      "value": "*\n     * Init the shared playlist fetcher.\n     *\n     * @param {string} playlist_id - The ID of a playlist.\n     * @return {SharedPlaylistFetcher}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id\n     ",
+      "start": 449,
+      "end": 689,
       "loc": {
         "start": {
           "line": 21,
@@ -2233,9 +2233,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Fetch metadata of the shared playlist with the shared playlist fetcher.\n     *\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id\n     ",
-      "start": 843,
-      "end": 1183,
+      "value": "*\n     * Fetch metadata of the shared playlist with the shared playlist fetcher.\n     *\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id\n     ",
+      "start": 793,
+      "end": 1092,
       "loc": {
         "start": {
           "line": 33,
@@ -2250,8 +2250,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * Get KKBOX web widget uri of the playlist.\n     * @example https://widget.kkbox.com/v1/?id=KmjwNXizu5MxHFSloP&type=playlist\n     * @return {string}\n     ",
-      "start": 1304,
-      "end": 1469,
+      "start": 1213,
+      "end": 1378,
       "loc": {
         "start": {
           "line": 44,
@@ -2265,9 +2265,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Fetch track list of a shared playlist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id-tracks\n     ",
-      "start": 1584,
-      "end": 2022,
+      "value": "*\n     * Fetch track list of a shared playlist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id-tracks\n     ",
+      "start": 1493,
+      "end": 1890,
       "loc": {
         "start": {
           "line": 53,
@@ -2599,9 +2599,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Get playlist metadata.\n * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists\n ",
+      "value": "*\n * Get playlist metadata.\n * @see https://docs-en.kkbox.codes/v1.1/reference#shared-playlists\n ",
       "start": 90,
-      "end": 200,
+      "end": 191,
       "loc": {
         "start": {
           "line": 4,
@@ -2628,8 +2628,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 201,
-      "end": 207,
+      "start": 192,
+      "end": 198,
       "loc": {
         "start": {
           "line": 8,
@@ -2656,8 +2656,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 208,
-      "end": 215,
+      "start": 199,
+      "end": 206,
       "loc": {
         "start": {
           "line": 8,
@@ -2684,8 +2684,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 216,
-      "end": 221,
+      "start": 207,
+      "end": 212,
       "loc": {
         "start": {
           "line": 8,
@@ -2710,8 +2710,8 @@
         "binop": null
       },
       "value": "SharedPlaylistFetcher",
-      "start": 222,
-      "end": 243,
+      "start": 213,
+      "end": 234,
       "loc": {
         "start": {
           "line": 8,
@@ -2738,8 +2738,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 244,
-      "end": 251,
+      "start": 235,
+      "end": 242,
       "loc": {
         "start": {
           "line": 8,
@@ -2764,8 +2764,8 @@
         "binop": null
       },
       "value": "Fetcher",
-      "start": 252,
-      "end": 259,
+      "start": 243,
+      "end": 250,
       "loc": {
         "start": {
           "line": 8,
@@ -2789,8 +2789,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 260,
-      "end": 261,
+      "start": 251,
+      "end": 252,
       "loc": {
         "start": {
           "line": 8,
@@ -2805,8 +2805,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * @ignore\n     ",
-      "start": 266,
-      "end": 292,
+      "start": 257,
+      "end": 283,
       "loc": {
         "start": {
           "line": 9,
@@ -2831,8 +2831,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 297,
-      "end": 308,
+      "start": 288,
+      "end": 299,
       "loc": {
         "start": {
           "line": 12,
@@ -2856,8 +2856,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 308,
-      "end": 309,
+      "start": 299,
+      "end": 300,
       "loc": {
         "start": {
           "line": 12,
@@ -2882,8 +2882,8 @@
         "binop": null
       },
       "value": "http",
-      "start": 309,
-      "end": 313,
+      "start": 300,
+      "end": 304,
       "loc": {
         "start": {
           "line": 12,
@@ -2908,8 +2908,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 313,
-      "end": 314,
+      "start": 304,
+      "end": 305,
       "loc": {
         "start": {
           "line": 12,
@@ -2934,8 +2934,8 @@
         "binop": null
       },
       "value": "territory",
-      "start": 315,
-      "end": 324,
+      "start": 306,
+      "end": 315,
       "loc": {
         "start": {
           "line": 12,
@@ -2961,8 +2961,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 325,
-      "end": 326,
+      "start": 316,
+      "end": 317,
       "loc": {
         "start": {
           "line": 12,
@@ -2988,8 +2988,8 @@
         "updateContext": null
       },
       "value": "TW",
-      "start": 327,
-      "end": 331,
+      "start": 318,
+      "end": 322,
       "loc": {
         "start": {
           "line": 12,
@@ -3013,8 +3013,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 331,
-      "end": 332,
+      "start": 322,
+      "end": 323,
       "loc": {
         "start": {
           "line": 12,
@@ -3038,8 +3038,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 333,
-      "end": 334,
+      "start": 324,
+      "end": 325,
       "loc": {
         "start": {
           "line": 12,
@@ -3066,8 +3066,8 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 343,
-      "end": 348,
+      "start": 334,
+      "end": 339,
       "loc": {
         "start": {
           "line": 13,
@@ -3091,8 +3091,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 348,
-      "end": 349,
+      "start": 339,
+      "end": 340,
       "loc": {
         "start": {
           "line": 13,
@@ -3117,8 +3117,8 @@
         "binop": null
       },
       "value": "http",
-      "start": 349,
-      "end": 353,
+      "start": 340,
+      "end": 344,
       "loc": {
         "start": {
           "line": 13,
@@ -3143,8 +3143,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 353,
-      "end": 354,
+      "start": 344,
+      "end": 345,
       "loc": {
         "start": {
           "line": 13,
@@ -3169,8 +3169,8 @@
         "binop": null
       },
       "value": "territory",
-      "start": 355,
-      "end": 364,
+      "start": 346,
+      "end": 355,
       "loc": {
         "start": {
           "line": 13,
@@ -3194,8 +3194,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 364,
-      "end": 365,
+      "start": 355,
+      "end": 356,
       "loc": {
         "start": {
           "line": 13,
@@ -3210,8 +3210,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n         * @ignore\n         ",
-      "start": 375,
-      "end": 409,
+      "start": 366,
+      "end": 400,
       "loc": {
         "start": {
           "line": 15,
@@ -3238,8 +3238,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 418,
-      "end": 422,
+      "start": 409,
+      "end": 413,
       "loc": {
         "start": {
           "line": 18,
@@ -3264,8 +3264,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 422,
-      "end": 423,
+      "start": 413,
+      "end": 414,
       "loc": {
         "start": {
           "line": 18,
@@ -3290,8 +3290,8 @@
         "binop": null
       },
       "value": "playlist_id",
-      "start": 423,
-      "end": 434,
+      "start": 414,
+      "end": 425,
       "loc": {
         "start": {
           "line": 18,
@@ -3317,8 +3317,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 435,
-      "end": 436,
+      "start": 426,
+      "end": 427,
       "loc": {
         "start": {
           "line": 18,
@@ -3343,8 +3343,8 @@
         "binop": null
       },
       "value": "undefined",
-      "start": 437,
-      "end": 446,
+      "start": 428,
+      "end": 437,
       "loc": {
         "start": {
           "line": 18,
@@ -3368,8 +3368,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 451,
-      "end": 452,
+      "start": 442,
+      "end": 443,
       "loc": {
         "start": {
           "line": 19,
@@ -3383,9 +3383,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Init the shared playlist fetcher.\n     *\n     * @param {string} playlist_id - The ID of a playlist.\n     * @return {SharedPlaylistFetcher}\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id\n     ",
-      "start": 458,
-      "end": 739,
+      "value": "*\n     * Init the shared playlist fetcher.\n     *\n     * @param {string} playlist_id - The ID of a playlist.\n     * @return {SharedPlaylistFetcher}\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id\n     ",
+      "start": 449,
+      "end": 689,
       "loc": {
         "start": {
           "line": 21,
@@ -3410,8 +3410,8 @@
         "binop": null
       },
       "value": "setPlaylistID",
-      "start": 744,
-      "end": 757,
+      "start": 694,
+      "end": 707,
       "loc": {
         "start": {
           "line": 28,
@@ -3435,8 +3435,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 757,
-      "end": 758,
+      "start": 707,
+      "end": 708,
       "loc": {
         "start": {
           "line": 28,
@@ -3461,8 +3461,8 @@
         "binop": null
       },
       "value": "playlist_id",
-      "start": 758,
-      "end": 769,
+      "start": 708,
+      "end": 719,
       "loc": {
         "start": {
           "line": 28,
@@ -3486,8 +3486,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 769,
-      "end": 770,
+      "start": 719,
+      "end": 720,
       "loc": {
         "start": {
           "line": 28,
@@ -3511,8 +3511,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 771,
-      "end": 772,
+      "start": 721,
+      "end": 722,
       "loc": {
         "start": {
           "line": 28,
@@ -3539,8 +3539,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 781,
-      "end": 785,
+      "start": 731,
+      "end": 735,
       "loc": {
         "start": {
           "line": 29,
@@ -3565,8 +3565,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 785,
-      "end": 786,
+      "start": 735,
+      "end": 736,
       "loc": {
         "start": {
           "line": 29,
@@ -3591,8 +3591,8 @@
         "binop": null
       },
       "value": "playlist_id",
-      "start": 786,
-      "end": 797,
+      "start": 736,
+      "end": 747,
       "loc": {
         "start": {
           "line": 29,
@@ -3618,8 +3618,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 798,
-      "end": 799,
+      "start": 748,
+      "end": 749,
       "loc": {
         "start": {
           "line": 29,
@@ -3644,8 +3644,8 @@
         "binop": null
       },
       "value": "playlist_id",
-      "start": 800,
-      "end": 811,
+      "start": 750,
+      "end": 761,
       "loc": {
         "start": {
           "line": 29,
@@ -3672,8 +3672,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 820,
-      "end": 826,
+      "start": 770,
+      "end": 776,
       "loc": {
         "start": {
           "line": 30,
@@ -3700,8 +3700,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 827,
-      "end": 831,
+      "start": 777,
+      "end": 781,
       "loc": {
         "start": {
           "line": 30,
@@ -3725,8 +3725,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 836,
-      "end": 837,
+      "start": 786,
+      "end": 787,
       "loc": {
         "start": {
           "line": 31,
@@ -3740,9 +3740,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Fetch metadata of the shared playlist with the shared playlist fetcher.\n     *\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id\n     ",
-      "start": 843,
-      "end": 1183,
+      "value": "*\n     * Fetch metadata of the shared playlist with the shared playlist fetcher.\n     *\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id\n     ",
+      "start": 793,
+      "end": 1092,
       "loc": {
         "start": {
           "line": 33,
@@ -3767,8 +3767,8 @@
         "binop": null
       },
       "value": "fetchMetadata",
-      "start": 1188,
-      "end": 1201,
+      "start": 1097,
+      "end": 1110,
       "loc": {
         "start": {
           "line": 40,
@@ -3792,8 +3792,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1201,
-      "end": 1202,
+      "start": 1110,
+      "end": 1111,
       "loc": {
         "start": {
           "line": 40,
@@ -3817,8 +3817,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1202,
-      "end": 1203,
+      "start": 1111,
+      "end": 1112,
       "loc": {
         "start": {
           "line": 40,
@@ -3842,8 +3842,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1204,
-      "end": 1205,
+      "start": 1113,
+      "end": 1114,
       "loc": {
         "start": {
           "line": 40,
@@ -3870,8 +3870,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1214,
-      "end": 1220,
+      "start": 1123,
+      "end": 1129,
       "loc": {
         "start": {
           "line": 41,
@@ -3898,8 +3898,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1221,
-      "end": 1225,
+      "start": 1130,
+      "end": 1134,
       "loc": {
         "start": {
           "line": 41,
@@ -3924,8 +3924,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1225,
-      "end": 1226,
+      "start": 1134,
+      "end": 1135,
       "loc": {
         "start": {
           "line": 41,
@@ -3950,8 +3950,8 @@
         "binop": null
       },
       "value": "http",
-      "start": 1226,
-      "end": 1230,
+      "start": 1135,
+      "end": 1139,
       "loc": {
         "start": {
           "line": 41,
@@ -3976,8 +3976,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1230,
-      "end": 1231,
+      "start": 1139,
+      "end": 1140,
       "loc": {
         "start": {
           "line": 41,
@@ -4002,8 +4002,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 1231,
-      "end": 1234,
+      "start": 1140,
+      "end": 1143,
       "loc": {
         "start": {
           "line": 41,
@@ -4027,8 +4027,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1234,
-      "end": 1235,
+      "start": 1143,
+      "end": 1144,
       "loc": {
         "start": {
           "line": 41,
@@ -4053,8 +4053,8 @@
         "binop": null
       },
       "value": "ENDPOINT",
-      "start": 1235,
-      "end": 1243,
+      "start": 1144,
+      "end": 1152,
       "loc": {
         "start": {
           "line": 41,
@@ -4080,8 +4080,8 @@
         "updateContext": null
       },
       "value": "+",
-      "start": 1244,
-      "end": 1245,
+      "start": 1153,
+      "end": 1154,
       "loc": {
         "start": {
           "line": 41,
@@ -4108,8 +4108,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1246,
-      "end": 1250,
+      "start": 1155,
+      "end": 1159,
       "loc": {
         "start": {
           "line": 41,
@@ -4134,8 +4134,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1250,
-      "end": 1251,
+      "start": 1159,
+      "end": 1160,
       "loc": {
         "start": {
           "line": 41,
@@ -4160,8 +4160,8 @@
         "binop": null
       },
       "value": "playlist_id",
-      "start": 1251,
-      "end": 1262,
+      "start": 1160,
+      "end": 1171,
       "loc": {
         "start": {
           "line": 41,
@@ -4186,8 +4186,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1262,
-      "end": 1263,
+      "start": 1171,
+      "end": 1172,
       "loc": {
         "start": {
           "line": 41,
@@ -4211,8 +4211,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1264,
-      "end": 1265,
+      "start": 1173,
+      "end": 1174,
       "loc": {
         "start": {
           "line": 41,
@@ -4237,8 +4237,8 @@
         "binop": null
       },
       "value": "territory",
-      "start": 1265,
-      "end": 1274,
+      "start": 1174,
+      "end": 1183,
       "loc": {
         "start": {
           "line": 41,
@@ -4263,8 +4263,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1274,
-      "end": 1275,
+      "start": 1183,
+      "end": 1184,
       "loc": {
         "start": {
           "line": 41,
@@ -4291,8 +4291,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1276,
-      "end": 1280,
+      "start": 1185,
+      "end": 1189,
       "loc": {
         "start": {
           "line": 41,
@@ -4317,8 +4317,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1280,
-      "end": 1281,
+      "start": 1189,
+      "end": 1190,
       "loc": {
         "start": {
           "line": 41,
@@ -4343,8 +4343,8 @@
         "binop": null
       },
       "value": "territory",
-      "start": 1281,
-      "end": 1290,
+      "start": 1190,
+      "end": 1199,
       "loc": {
         "start": {
           "line": 41,
@@ -4368,8 +4368,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1290,
-      "end": 1291,
+      "start": 1199,
+      "end": 1200,
       "loc": {
         "start": {
           "line": 41,
@@ -4393,8 +4393,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1291,
-      "end": 1292,
+      "start": 1200,
+      "end": 1201,
       "loc": {
         "start": {
           "line": 41,
@@ -4418,8 +4418,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1297,
-      "end": 1298,
+      "start": 1206,
+      "end": 1207,
       "loc": {
         "start": {
           "line": 42,
@@ -4434,8 +4434,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * Get KKBOX web widget uri of the playlist.\n     * @example https://widget.kkbox.com/v1/?id=KmjwNXizu5MxHFSloP&type=playlist\n     * @return {string}\n     ",
-      "start": 1304,
-      "end": 1469,
+      "start": 1213,
+      "end": 1378,
       "loc": {
         "start": {
           "line": 44,
@@ -4460,8 +4460,8 @@
         "binop": null
       },
       "value": "getWidgetUri",
-      "start": 1474,
-      "end": 1486,
+      "start": 1383,
+      "end": 1395,
       "loc": {
         "start": {
           "line": 49,
@@ -4485,8 +4485,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1486,
-      "end": 1487,
+      "start": 1395,
+      "end": 1396,
       "loc": {
         "start": {
           "line": 49,
@@ -4510,8 +4510,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1487,
-      "end": 1488,
+      "start": 1396,
+      "end": 1397,
       "loc": {
         "start": {
           "line": 49,
@@ -4535,8 +4535,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1488,
-      "end": 1489,
+      "start": 1397,
+      "end": 1398,
       "loc": {
         "start": {
           "line": 49,
@@ -4563,8 +4563,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1498,
-      "end": 1504,
+      "start": 1407,
+      "end": 1413,
       "loc": {
         "start": {
           "line": 50,
@@ -4588,8 +4588,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1505,
-      "end": 1506,
+      "start": 1414,
+      "end": 1415,
       "loc": {
         "start": {
           "line": 50,
@@ -4615,8 +4615,8 @@
         "updateContext": null
       },
       "value": "https://widget.kkbox.com/v1/?id=",
-      "start": 1506,
-      "end": 1538,
+      "start": 1415,
+      "end": 1447,
       "loc": {
         "start": {
           "line": 50,
@@ -4640,8 +4640,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1538,
-      "end": 1540,
+      "start": 1447,
+      "end": 1449,
       "loc": {
         "start": {
           "line": 50,
@@ -4668,8 +4668,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1540,
-      "end": 1544,
+      "start": 1449,
+      "end": 1453,
       "loc": {
         "start": {
           "line": 50,
@@ -4694,8 +4694,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1544,
-      "end": 1545,
+      "start": 1453,
+      "end": 1454,
       "loc": {
         "start": {
           "line": 50,
@@ -4720,8 +4720,8 @@
         "binop": null
       },
       "value": "playlist_id",
-      "start": 1545,
-      "end": 1556,
+      "start": 1454,
+      "end": 1465,
       "loc": {
         "start": {
           "line": 50,
@@ -4745,8 +4745,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1556,
-      "end": 1557,
+      "start": 1465,
+      "end": 1466,
       "loc": {
         "start": {
           "line": 50,
@@ -4772,8 +4772,8 @@
         "updateContext": null
       },
       "value": "&type=playlist",
-      "start": 1557,
-      "end": 1571,
+      "start": 1466,
+      "end": 1480,
       "loc": {
         "start": {
           "line": 50,
@@ -4797,8 +4797,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1571,
-      "end": 1572,
+      "start": 1480,
+      "end": 1481,
       "loc": {
         "start": {
           "line": 50,
@@ -4822,8 +4822,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1577,
-      "end": 1578,
+      "start": 1486,
+      "end": 1487,
       "loc": {
         "start": {
           "line": 51,
@@ -4837,9 +4837,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Fetch track list of a shared playlist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()\n     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/shared-playlists/endpoints/get-shared-playlists-playlist_id-tracks\n     ",
-      "start": 1584,
-      "end": 2022,
+      "value": "*\n     * Fetch track list of a shared playlist.\n     *\n     * @param {number} [limit] - The size for one page.\n     * @param {number} [offset] - The offset index for first element.\n     * @return {Promise}\n     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()\n     * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id-tracks\n     ",
+      "start": 1493,
+      "end": 1890,
       "loc": {
         "start": {
           "line": 53,
@@ -4864,8 +4864,8 @@
         "binop": null
       },
       "value": "fetchTracks",
-      "start": 2027,
-      "end": 2038,
+      "start": 1895,
+      "end": 1906,
       "loc": {
         "start": {
           "line": 62,
@@ -4889,8 +4889,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2038,
-      "end": 2039,
+      "start": 1906,
+      "end": 1907,
       "loc": {
         "start": {
           "line": 62,
@@ -4915,8 +4915,8 @@
         "binop": null
       },
       "value": "limit",
-      "start": 2039,
-      "end": 2044,
+      "start": 1907,
+      "end": 1912,
       "loc": {
         "start": {
           "line": 62,
@@ -4942,8 +4942,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2045,
-      "end": 2046,
+      "start": 1913,
+      "end": 1914,
       "loc": {
         "start": {
           "line": 62,
@@ -4968,8 +4968,8 @@
         "binop": null
       },
       "value": "undefined",
-      "start": 2047,
-      "end": 2056,
+      "start": 1915,
+      "end": 1924,
       "loc": {
         "start": {
           "line": 62,
@@ -4994,8 +4994,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2056,
-      "end": 2057,
+      "start": 1924,
+      "end": 1925,
       "loc": {
         "start": {
           "line": 62,
@@ -5020,8 +5020,8 @@
         "binop": null
       },
       "value": "offset",
-      "start": 2058,
-      "end": 2064,
+      "start": 1926,
+      "end": 1932,
       "loc": {
         "start": {
           "line": 62,
@@ -5047,8 +5047,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2065,
-      "end": 2066,
+      "start": 1933,
+      "end": 1934,
       "loc": {
         "start": {
           "line": 62,
@@ -5073,8 +5073,8 @@
         "binop": null
       },
       "value": "undefined",
-      "start": 2067,
-      "end": 2076,
+      "start": 1935,
+      "end": 1944,
       "loc": {
         "start": {
           "line": 62,
@@ -5098,8 +5098,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2076,
-      "end": 2077,
+      "start": 1944,
+      "end": 1945,
       "loc": {
         "start": {
           "line": 62,
@@ -5123,8 +5123,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2078,
-      "end": 2079,
+      "start": 1946,
+      "end": 1947,
       "loc": {
         "start": {
           "line": 62,
@@ -5151,8 +5151,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 2088,
-      "end": 2094,
+      "start": 1956,
+      "end": 1962,
       "loc": {
         "start": {
           "line": 63,
@@ -5179,8 +5179,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2095,
-      "end": 2099,
+      "start": 1963,
+      "end": 1967,
       "loc": {
         "start": {
           "line": 63,
@@ -5205,8 +5205,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2099,
-      "end": 2100,
+      "start": 1967,
+      "end": 1968,
       "loc": {
         "start": {
           "line": 63,
@@ -5231,8 +5231,8 @@
         "binop": null
       },
       "value": "http",
-      "start": 2100,
-      "end": 2104,
+      "start": 1968,
+      "end": 1972,
       "loc": {
         "start": {
           "line": 63,
@@ -5257,8 +5257,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2104,
-      "end": 2105,
+      "start": 1972,
+      "end": 1973,
       "loc": {
         "start": {
           "line": 63,
@@ -5283,8 +5283,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 2105,
-      "end": 2108,
+      "start": 1973,
+      "end": 1976,
       "loc": {
         "start": {
           "line": 63,
@@ -5308,8 +5308,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2108,
-      "end": 2109,
+      "start": 1976,
+      "end": 1977,
       "loc": {
         "start": {
           "line": 63,
@@ -5334,8 +5334,8 @@
         "binop": null
       },
       "value": "ENDPOINT",
-      "start": 2109,
-      "end": 2117,
+      "start": 1977,
+      "end": 1985,
       "loc": {
         "start": {
           "line": 63,
@@ -5361,8 +5361,8 @@
         "updateContext": null
       },
       "value": "+",
-      "start": 2118,
-      "end": 2119,
+      "start": 1986,
+      "end": 1987,
       "loc": {
         "start": {
           "line": 63,
@@ -5389,8 +5389,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2120,
-      "end": 2124,
+      "start": 1988,
+      "end": 1992,
       "loc": {
         "start": {
           "line": 63,
@@ -5415,8 +5415,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2124,
-      "end": 2125,
+      "start": 1992,
+      "end": 1993,
       "loc": {
         "start": {
           "line": 63,
@@ -5441,8 +5441,8 @@
         "binop": null
       },
       "value": "playlist_id",
-      "start": 2125,
-      "end": 2136,
+      "start": 1993,
+      "end": 2004,
       "loc": {
         "start": {
           "line": 63,
@@ -5468,8 +5468,8 @@
         "updateContext": null
       },
       "value": "+",
-      "start": 2137,
-      "end": 2138,
+      "start": 2005,
+      "end": 2006,
       "loc": {
         "start": {
           "line": 63,
@@ -5495,8 +5495,8 @@
         "updateContext": null
       },
       "value": "/tracks",
-      "start": 2139,
-      "end": 2148,
+      "start": 2007,
+      "end": 2016,
       "loc": {
         "start": {
           "line": 63,
@@ -5521,8 +5521,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2148,
-      "end": 2149,
+      "start": 2016,
+      "end": 2017,
       "loc": {
         "start": {
           "line": 63,
@@ -5546,8 +5546,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2150,
-      "end": 2151,
+      "start": 2018,
+      "end": 2019,
       "loc": {
         "start": {
           "line": 63,
@@ -5572,8 +5572,8 @@
         "binop": null
       },
       "value": "territory",
-      "start": 2164,
-      "end": 2173,
+      "start": 2032,
+      "end": 2041,
       "loc": {
         "start": {
           "line": 64,
@@ -5598,8 +5598,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2173,
-      "end": 2174,
+      "start": 2041,
+      "end": 2042,
       "loc": {
         "start": {
           "line": 64,
@@ -5626,8 +5626,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2175,
-      "end": 2179,
+      "start": 2043,
+      "end": 2047,
       "loc": {
         "start": {
           "line": 64,
@@ -5652,8 +5652,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2179,
-      "end": 2180,
+      "start": 2047,
+      "end": 2048,
       "loc": {
         "start": {
           "line": 64,
@@ -5678,8 +5678,8 @@
         "binop": null
       },
       "value": "territory",
-      "start": 2180,
-      "end": 2189,
+      "start": 2048,
+      "end": 2057,
       "loc": {
         "start": {
           "line": 64,
@@ -5704,8 +5704,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2189,
-      "end": 2190,
+      "start": 2057,
+      "end": 2058,
       "loc": {
         "start": {
           "line": 64,
@@ -5730,8 +5730,8 @@
         "binop": null
       },
       "value": "limit",
-      "start": 2203,
-      "end": 2208,
+      "start": 2071,
+      "end": 2076,
       "loc": {
         "start": {
           "line": 65,
@@ -5756,8 +5756,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2208,
-      "end": 2209,
+      "start": 2076,
+      "end": 2077,
       "loc": {
         "start": {
           "line": 65,
@@ -5782,8 +5782,8 @@
         "binop": null
       },
       "value": "limit",
-      "start": 2210,
-      "end": 2215,
+      "start": 2078,
+      "end": 2083,
       "loc": {
         "start": {
           "line": 65,
@@ -5808,8 +5808,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2215,
-      "end": 2216,
+      "start": 2083,
+      "end": 2084,
       "loc": {
         "start": {
           "line": 65,
@@ -5834,8 +5834,8 @@
         "binop": null
       },
       "value": "offset",
-      "start": 2229,
-      "end": 2235,
+      "start": 2097,
+      "end": 2103,
       "loc": {
         "start": {
           "line": 66,
@@ -5860,8 +5860,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2235,
-      "end": 2236,
+      "start": 2103,
+      "end": 2104,
       "loc": {
         "start": {
           "line": 66,
@@ -5886,8 +5886,8 @@
         "binop": null
       },
       "value": "offset",
-      "start": 2237,
-      "end": 2243,
+      "start": 2105,
+      "end": 2111,
       "loc": {
         "start": {
           "line": 66,
@@ -5911,8 +5911,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2252,
-      "end": 2253,
+      "start": 2120,
+      "end": 2121,
       "loc": {
         "start": {
           "line": 67,
@@ -5936,8 +5936,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2253,
-      "end": 2254,
+      "start": 2121,
+      "end": 2122,
       "loc": {
         "start": {
           "line": 67,
@@ -5961,8 +5961,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2259,
-      "end": 2260,
+      "start": 2127,
+      "end": 2128,
       "loc": {
         "start": {
           "line": 68,
@@ -5986,8 +5986,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2261,
-      "end": 2262,
+      "start": 2129,
+      "end": 2130,
       "loc": {
         "start": {
           "line": 69,
@@ -6012,8 +6012,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2262,
-      "end": 2262,
+      "start": 2130,
+      "end": 2130,
       "loc": {
         "start": {
           "line": 69,

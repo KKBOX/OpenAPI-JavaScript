@@ -3,7 +3,7 @@ import Fetcher from './Fetcher'
 
 /**
  * Get metadata of a track.
- * @see https://kkbox.gelato.io/docs/versions/1.1/resources/tracks
+ * @see https://docs-en.kkbox.codes/v1.1/reference#tracks
  */
 export default class TrackFetcher extends Fetcher {
     /**
@@ -23,7 +23,7 @@ export default class TrackFetcher extends Fetcher {
      *
      * @param {string} track_id - The ID of a track.
      * @return {Track}
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/tracks/endpoints/get-tracks-track_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id
      */
     setTrackID(track_id) {
         this.track_id = track_id
@@ -35,7 +35,7 @@ export default class TrackFetcher extends Fetcher {
      *
      * @return {Promise}
      * @example api.trackFetcher.setTrackID('KpnEGVHEsGgkoB0MBk').fetchMetadata()
-     * @see https://kkbox.gelato.io/docs/versions/1.1/resources/tracks/endpoints/get-tracks-track_id
+     * @see https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id
      */
     fetchMetadata() {
         return this.http.get(ENDPOINT + this.track_id, {territory: this.territory})
