@@ -564,6 +564,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/api/api.js~api#sharedplaylistfetcher",
+    "class/src/api/Api.js~Api.html#instance-member-sharedPlaylistFetcher",
+    "src/api/Api.js~Api#sharedPlaylistFetcher",
+    "member"
+  ],
+  [
     "src/api/api.js~api#territory",
     "class/src/api/Api.js~Api.html#instance-member-territory",
     "src/api/Api.js~Api#territory",

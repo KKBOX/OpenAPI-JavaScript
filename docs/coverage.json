@@ -1,7 +1,7 @@
 {
-  "coverage": "96.34%",
-  "expectCount": 82,
-  "actualCount": 79,
+  "coverage": "96.38%",
+  "expectCount": 83,
+  "actualCount": 80,
   "files": {
     "src/api/AlbumFetcher.js": {
       "expectCount": 5,
@@ -9,11 +9,11 @@
       "undocumentLines": []
     },
     "src/api/Api.js": {
-      "expectCount": 16,
-      "actualCount": 14,
+      "expectCount": 17,
+      "actualCount": 15,
       "undocumentLines": [
-        28,
-        27
+        29,
+        28
       ]
     },
     "src/api/ArtistFetcher.js": {
