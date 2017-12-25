@@ -101,6 +101,15 @@ describe('SDK Begin to Test', () => {
                             return api.newHitsPlaylistFetcher.fetchAllNewHitsPlaylists().then(response => response.status.should.be.exactly(200))
                         })
                     })
+
+                    describe('Shared Playlist', () => {
+                        it('should response status 200', () => {
+                            return api.sharedPlaylistFetcher.setPlaylistID('KsOjSf4whgbL45hRfl').fetchMetadata().then(response => response.status.should.be.exactly(200))
+                        })
+                        it('should response status 200', () => {
+                            return api.sharedPlaylistFetcher.setPlaylistID('KsOjSf4whgbL45hRfl').fetchTracks().then(response => response.status.should.be.exactly(200))
+                        })
+                    })
                 })
             })
         })
