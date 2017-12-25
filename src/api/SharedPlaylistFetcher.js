@@ -34,7 +34,7 @@ export default class SharedPlaylistFetcher extends Fetcher {
      * Fetch metadata of the shared playlist with the shared playlist fetcher.
      *
      * @return {Promise}
-     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()
+     * @example api.sharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchMetadata()
      * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id
      */
     fetchMetadata() {
@@ -56,7 +56,7 @@ export default class SharedPlaylistFetcher extends Fetcher {
      * @param {number} [limit] - The size for one page.
      * @param {number} [offset] - The offset index for first element.
      * @return {Promise}
-     * @example api.SharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()
+     * @example api.sharedPlaylistFetcher.setPlaylistID('4nUZM-TY2aVxZ2xaA-').fetchTracks()
      * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id-tracks
      */
     fetchTracks(limit = undefined, offset = undefined) {

@@ -24,7 +24,7 @@ export default class GenreStationFetcher extends Fetcher {
      * @param {number} [limit] - The size for one page.
      * @param {number} [offset] - The offset index for first element.
      * @return {Promise}
-     * @example api.GenreStation.fetchAllGenreStations()
+     * @example api.genreStationFetcher.fetchAllGenreStations()
      * @see https://docs-en.kkbox.codes/v1.1/reference#genrestations
      */
     fetchAllGenreStations(limit = undefined, offset = undefined) {
@@ -51,7 +51,7 @@ export default class GenreStationFetcher extends Fetcher {
      * Fetch metadata of the genre station with the genre station fetcher.
      *
      * @return {Promise}
-     * @example api.GenreStation.setGenreStationID('TYq3EHFTl-1EOvJM5Y').fetchMetadata()
+     * @example api.genreStationFetcher.setGenreStationID('TYq3EHFTl-1EOvJM5Y').fetchMetadata()
      * @see https://docs-en.kkbox.codes/v1.1/reference#genrestations-station_id
      */
     fetchMetadata() {

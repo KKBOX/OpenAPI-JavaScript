@@ -34,7 +34,7 @@ export default class ArtistFetcher extends Fetcher {
      * Fetch metadata of the artist you find.
      *
      * @return {Promise}
-     * @example api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchMetadata()
+     * @example api.artistFetcher.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchMetadata()
      * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id
      */
     fetchMetadata() {
@@ -64,7 +64,7 @@ export default class ArtistFetcher extends Fetcher {
      * @param {number} [limit] - The size for one page.
      * @param {number} [offset] - The offset index for first element.
      * @return {Promise}
-     * @example api.Artist.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchTopTracks()
+     * @example api.artistFetcher.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchTopTracks()
      * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-toptracks
      */
     fetchTopTracks(limit = undefined, offset = undefined) {
