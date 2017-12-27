@@ -1,6 +1,7 @@
 # KKBOX Open API Developer SDK for JavaScript
 [![npm (scoped)](https://img.shields.io/npm/v/@kkbox/kkbox-js-sdk.svg)](https://www.npmjs.com/package/@kkbox/kkbox-js-sdk)
 [![Build Status](https://travis-ci.org/KKBOX/OpenAPI-JavaScript.svg?branch=master)](https://travis-ci.org/KKBOX/OpenAPI-JavaScript)
+[![License Apache](https://img.shields.io/badge/license-Apache-green.svg?style=flat)](https://raw.githubusercontent.com/KKBOX/OpenAPI-ObjectiveC/blob/master/LICENSE)
 
 The SDK for accessing various metadata of KKBOX tracks, albums, artists, playlists and stations.
 
