@@ -419,7 +419,13 @@ describe('Api Begin to Test', () => {
                                 return f.fetchMetadata().then(response => response.status.should.be.exactly(200), reject => should.not.exists(reject)).catch(error => should.not.exsits(error))
                             })
                         })
-                    })                    
+
+                        describe('#fetchTracks()', () => {
+                            it('should succeed', () => {
+                                return f.fetchTracks().then(response => response.status.should.be.exactly(200), reject => should.not.exists(reject)).catch(error => should.not.exsits(error))
+                            })
+                        })
+                    })
                 }, reject => should.not.exists(reject))
             })
         })
