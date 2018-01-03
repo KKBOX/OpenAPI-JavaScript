@@ -358,6 +358,20 @@ describe('Api Begin to Test', () => {
                                 })
                             })
                         })
+
+                        describe('#fetchMetadata()', () => {
+                            it('should succeed', (done) => {
+                                chartFetcher.setPlaylistID('4mJSYXvueA8t0odsny').fetchMetadata()
+                                    .then(response => response.status.should.be.exactly(200), reject => should.not.exists(reject))
+                            })
+                        })
+
+                        describe('#fetchTracks()', () => {
+                            it('should succeed', (done) => {
+                                chartFetcher.setPlaylistID('4mJSYXvueA8t0odsny').fetchTracks()
+                                    .then(response => response.status.should.be.exactly(200), reject => should.not.exists(reject))
+                            })
+                        })
                     })
                     
                     describe('New Release Category', () => {
