@@ -218,6 +218,12 @@ describe('Api Begin to Test', () => {
                                 artistFetcher.fetchTopTracks().then(response => response.status.should.be.exactly(200), reject => should.not.exists(reject))
                             })
                         })
+
+                        describe('#fetchRelatedArtists()', () => {
+                            it('should response status 200', (done) => {
+                                artistFetcher.fetchRelatedArtists().then(response => response.status.should.be.exactly(200), reject => should.not.exists(reject))
+                            })
+                        })
                     })
 
                     describe('Artist fetch album tests', () => {
