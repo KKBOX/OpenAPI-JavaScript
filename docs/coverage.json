@@ -1,7 +1,7 @@
 {
-  "coverage": "96.38%",
-  "expectCount": 83,
-  "actualCount": 80,
+  "coverage": "96.59%",
+  "expectCount": 88,
+  "actualCount": 85,
   "files": {
     "src/api/AlbumFetcher.js": {
       "expectCount": 5,
@@ -17,8 +17,8 @@
       ]
     },
     "src/api/ArtistFetcher.js": {
-      "expectCount": 5,
-      "actualCount": 5,
+      "expectCount": 6,
+      "actualCount": 6,
       "undocumentLines": []
     },
     "src/auth/Auth.js": {
@@ -27,8 +27,8 @@
       "undocumentLines": []
     },
     "src/api/ChartFetcher.js": {
-      "expectCount": 2,
-      "actualCount": 2,
+      "expectCount": 5,
+      "actualCount": 5,
       "undocumentLines": []
     },
     "src/auth/ClientCredentialsFlow.js": {
@@ -69,8 +69,8 @@
       ]
     },
     "src/api/NewHitsPlaylistFetcher.js": {
-      "expectCount": 4,
-      "actualCount": 4,
+      "expectCount": 5,
+      "actualCount": 5,
       "undocumentLines": []
     },
     "src/api/NewReleaseCategoryFetcher.js": {

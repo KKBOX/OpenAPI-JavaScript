@@ -600,6 +600,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/api/artistfetcher.js~artistfetcher#fetchrelatedartists",
+    "class/src/api/ArtistFetcher.js~ArtistFetcher.html#instance-method-fetchRelatedArtists",
+    "src/api/ArtistFetcher.js~ArtistFetcher#fetchRelatedArtists",
+    "method"
+  ],
+  [
     "src/api/artistfetcher.js~artistfetcher#fetchtoptracks",
     "class/src/api/ArtistFetcher.js~ArtistFetcher.html#instance-method-fetchTopTracks",
     "src/api/ArtistFetcher.js~ArtistFetcher#fetchTopTracks",
@@ -621,6 +627,24 @@ window.esdocSearchIndex = [
     "src/api/chartfetcher.js~chartfetcher#fetchcharts",
     "class/src/api/ChartFetcher.js~ChartFetcher.html#instance-method-fetchCharts",
     "src/api/ChartFetcher.js~ChartFetcher#fetchCharts",
+    "method"
+  ],
+  [
+    "src/api/chartfetcher.js~chartfetcher#fetchmetadata",
+    "class/src/api/ChartFetcher.js~ChartFetcher.html#instance-method-fetchMetadata",
+    "src/api/ChartFetcher.js~ChartFetcher#fetchMetadata",
+    "method"
+  ],
+  [
+    "src/api/chartfetcher.js~chartfetcher#fetchtracks",
+    "class/src/api/ChartFetcher.js~ChartFetcher.html#instance-method-fetchTracks",
+    "src/api/ChartFetcher.js~ChartFetcher#fetchTracks",
+    "method"
+  ],
+  [
+    "src/api/chartfetcher.js~chartfetcher#setplaylistid",
+    "class/src/api/ChartFetcher.js~ChartFetcher.html#instance-method-setPlaylistID",
+    "src/api/ChartFetcher.js~ChartFetcher#setPlaylistID",
     "method"
   ],
   [
@@ -783,6 +807,12 @@ window.esdocSearchIndex = [
     "src/api/newhitsplaylistfetcher.js~newhitsplaylistfetcher#fetchmetadata",
     "class/src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher.html#instance-method-fetchMetadata",
     "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher#fetchMetadata",
+    "method"
+  ],
+  [
+    "src/api/newhitsplaylistfetcher.js~newhitsplaylistfetcher#fetchtracks",
+    "class/src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher.html#instance-method-fetchTracks",
+    "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher#fetchTracks",
     "method"
   ],
   [
