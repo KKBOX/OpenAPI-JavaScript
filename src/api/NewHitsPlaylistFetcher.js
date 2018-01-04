@@ -46,7 +46,7 @@ export default class NewHitsPlaylistFetcher extends Fetcher {
     }
 
     /**
-     * Fetch metadata of the new release category you set.
+     * Fetch metadata of the new hits playlist you set.
      *
      * @return {Promise}
      * @example api.newHitsPlaylistFetcher.setPlaylistID('DZrC8m29ciOFY2JAm3').fetchMetadata()
@@ -54,5 +54,22 @@ export default class NewHitsPlaylistFetcher extends Fetcher {
      */
     fetchMetadata() {
         return this.http.get(ENDPOINT + this.playlist_id, {territory: this.territory})
+    }
+
+    /**
+     * Fetch tracks of the new hits playlist you set. Result will be paged.
+     *
+     * @param {number} [limit] - The size of one page.
+     * @param {number} [offset] - The offset index for first element.
+     * @return {Promise}
+     * @example api.newHitsPlaylistFetcher.setPlaylistID('DZrC8m29ciOFY2JAm3').fetchTracks()
+     * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists-playlist_id-tracks
+     */
+    fetchTracks(limit = undefined, offset = undefined) {
+        return this.http.get(ENDPOINT + this.playlist_id + '/tracks', {
+            territory: this.territory,
+            limit: limit,
+            offset: offset
+        })
     }
 }

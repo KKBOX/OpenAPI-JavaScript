@@ -74,4 +74,21 @@ export default class ArtistFetcher extends Fetcher {
             offset: offset
         })
     }
+
+    /**
+     * Fetch related artists
+     *
+     * @param {number} [limit] - The size for one page.
+     * @param {number} [offset] - The offset index for first element.
+     * @return {Promise}
+     * @example api.artistFetcher.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchRelatedArtists()
+     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-relatedartists
+     */
+    fetchRelatedArtists(limit = undefined, offset = undefined) {
+        return this.http.get(ENDPOINT + this.artist_id + '/related-artists', {
+            territory: this.territory,
+            limit: limit,
+            offset: offset
+        })
+    }
 }
