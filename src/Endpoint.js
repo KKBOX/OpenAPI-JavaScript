@@ -1,5 +1,5 @@
 const API_DOMAIN = (() => {
-    return process.env.NODE_ENV === 'staging' ? 'https://api.kkbox-staging.com/v1.1/' : 'https://api.kkbox.com/v1.1/'
+    return 'https://api.kkbox.com/v1.1/'
 })()
 /**
  * @ignore
