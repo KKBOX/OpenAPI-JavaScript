@@ -3,14 +3,12 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl">
-  <title data-ice="title">API Document</title>
+  <title data-ice="title">Home | @kkbox/kkbox-js-sdk</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
-  
-  
   <script src="script/manual.js"></script>
-</head>
+<meta name="description" content="KKBOX Open API developer SDK for JavaScript. Use it to easily access KKBOX open API to get various metadata about KKBOX&apos;s tracks, albums, artists, playlists and stations. "><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@kkbox/kkbox-js-sdk"><meta property="twitter:description" content="KKBOX Open API developer SDK for JavaScript. Use it to easily access KKBOX open API to get various metadata about KKBOX&apos;s tracks, albums, artists, playlists and stations. "></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -19,7 +17,6 @@
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   
-  <a data-ice="repoURL" href="https://github.com/KKBOX/OpenAPI-JavaScript" class="repo-url-github">Repository</a>
   <div class="search-box">
   <span>
     <img src="./image/search.png">
@@ -27,12 +24,12 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-</header>
+<a style="position:relative; top:3px;" href="https://github.com/KKBOX/OpenAPI-JavaScript"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">api</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/AlbumFetcher.js~AlbumFetcher.html">AlbumFetcher</a></span></span></li>
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api">api</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/AlbumFetcher.js~AlbumFetcher.html">AlbumFetcher</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/Api.js~Api.html">Api</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ArtistFetcher.js~ArtistFetcher.html">ArtistFetcher</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ChartFetcher.js~ChartFetcher.html">ChartFetcher</a></span></span></li>
@@ -47,26 +44,21 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SearchFetcher.js~SearchFetcher.html">SearchFetcher</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher.html">SharedPlaylistFetcher</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/TrackFetcher.js~TrackFetcher.html">TrackFetcher</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">auth</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/Auth.js~Auth.html">Auth</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#auth">auth</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/Auth.js~Auth.html">Auth</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow.html">ClientCredentialsFlow</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/TokenFetcher.js~TokenFetcher.html">TokenFetcher</a></span></span></li>
 </ul>
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="kkbox-open-api-developer-sdk-for-javascript">KKBOX Open API Developer SDK for JavaScript</h1>
-<p><a href="https://www.npmjs.com/package/@kkbox/kkbox-js-sdk"><img src="https://img.shields.io/npm/v/@kkbox/kkbox-js-sdk.svg" alt="npm (scoped)"></a>
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="kkbox-open-api-developer-sdk-for-javascript">KKBOX Open API Developer SDK for JavaScript</h1><p><a href="https://www.npmjs.com/package/@kkbox/kkbox-js-sdk"><img src="https://img.shields.io/npm/v/@kkbox/kkbox-js-sdk.svg" alt="npm (scoped)"></a>
 <a href="https://travis-ci.org/KKBOX/OpenAPI-JavaScript"><img src="https://travis-ci.org/KKBOX/OpenAPI-JavaScript.svg?branch=master" alt="Build Status"></a>
 <a href="https://raw.githubusercontent.com/KKBOX/OpenAPI-ObjectiveC/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache-green.svg?style=flat" alt="License Apache"></a></p>
 <p>The SDK for accessing various metadata of KKBOX tracks, albums, artists, playlists and stations.</p>
-<h3 id="npm-install">npm install</h3>
-<pre><code><code class="source-code prettyprint">npm install @kkbox/kkbox-js-sdk</code>
-</code></pre><h3 id="source-install">Source Install</h3>
-<pre><code><code class="source-code prettyprint">npm install</code>
-</code></pre><h3 id="build-sdk">Build SDK</h3>
-<pre><code><code class="source-code prettyprint">npm run build</code>
-</code></pre><h3 id="test">Test</h3>
-<p>For testing, you should first browse <a href="https://developer.kkbox.com/">https://developer.kkbox.com/</a> and create an developer account, then create an app to get client id and client secret for that account.</p>
+<h3 id="npm-install">npm install</h3><pre><code><code class="source-code prettyprint">npm install @kkbox/kkbox-js-sdk</code>
+</code></pre><h3 id="source-install">Source Install</h3><pre><code><code class="source-code prettyprint">npm install</code>
+</code></pre><h3 id="build-sdk">Build SDK</h3><pre><code><code class="source-code prettyprint">npm run build</code>
+</code></pre><h3 id="test">Test</h3><p>For testing, you should first browse <a href="https://developer.kkbox.com/">https://developer.kkbox.com/</a> and create an developer account, then create an app to get client id and client secret for that account.</p>
 <p>Then, create a file name <code>client_secrets.json</code>, put it in the <code>test</code> directory and write the client id and client secret in it. The content will be like:</p>
 <pre><code><code class="source-code prettyprint">{
     &quot;kkbox_sdk&quot;: {
@@ -76,10 +68,8 @@
 }</code>
 </code></pre><p>And then we can run the tests.</p>
 <pre><code><code class="source-code prettyprint">npm run test</code>
-</code></pre><h3 id="sdk-documentation">SDK Documentation</h3>
-<p>Please browse <a href="https://kkbox.github.io/OpenAPI-JavaScript/">https://kkbox.github.io/OpenAPI-JavaScript/</a></p>
-<h2 id="how-to-use-the-sdk">How to use the SDK</h2>
-<p>There are two classes Auth and Api and you should initialize an Auth object by client id and secret.</p>
+</code></pre><h3 id="sdk-documentation">SDK Documentation</h3><p>Please browse <a href="https://kkbox.github.io/OpenAPI-JavaScript/">https://kkbox.github.io/OpenAPI-JavaScript/</a></p>
+<h2 id="how-to-use-the-sdk">How to use the SDK</h2><p>There are two classes Auth and Api and you should initialize an Auth object by client id and secret.</p>
 <pre><code><code class="source-code prettyprint">import {Auth} from &apos;@kkbox/kkbox-js-sdk&apos;
 
 const auth = new Auth(client_id, client_secret)</code>
@@ -117,12 +107,9 @@ auth.clientCredentialsFlow.fetchAccessToken().then(response =&gt; {
         })        
     })
 })</code>
-</code></pre><h3 id="generate-the-sdk-documentation">Generate the SDK Documentation</h3>
-<pre><code><code class="source-code prettyprint">npm run build-doc</code>
+</code></pre><h3 id="generate-the-sdk-documentation">Generate the SDK Documentation</h3><pre><code><code class="source-code prettyprint">npm run build-doc</code>
 </code></pre><p>Then open the the file <code>docs/index.html</code></p>
-<h3 id="-api-documentation-https-docs-en-kkbox-codes-"><a href="https://docs-en.kkbox.codes/">API Documentation</a></h3>
-<h3 id="license">License</h3>
-<p>Copyright 2017 KKBOX Technologies Limited</p>
+<h3 id="-a-href--https---docs-en-kkbox-codes---api-documentation--a-"><a href="https://docs-en.kkbox.codes/">API Documentation</a></h3><h3 id="license">License</h3><p>Copyright 2017 KKBOX Technologies Limited</p>
 <p>   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at</p>
@@ -136,7 +123,7 @@ auth.clientCredentialsFlow.fetchAccessToken().then(response =&gt; {
 </div>
 
 <footer class="footer">
-  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
 </footer>
 
 <script src="script/search_index.js"></script>

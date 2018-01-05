@@ -1,22 +1,94 @@
 {
-  "coverage": "96.59%",
-  "expectCount": 88,
-  "actualCount": 85,
+  "coverage": "95.77%",
+  "expectCount": 142,
+  "actualCount": 136,
   "files": {
+    "src/Endpoint.js": {
+      "expectCount": 17,
+      "actualCount": 15,
+      "undocumentLines": [
+        1,
+        74
+      ]
+    },
     "src/api/AlbumFetcher.js": {
-      "expectCount": 5,
-      "actualCount": 5,
+      "expectCount": 7,
+      "actualCount": 7,
       "undocumentLines": []
     },
     "src/api/Api.js": {
       "expectCount": 17,
       "actualCount": 15,
       "undocumentLines": [
-        29,
-        28
+        28,
+        29
       ]
     },
     "src/api/ArtistFetcher.js": {
+      "expectCount": 8,
+      "actualCount": 8,
+      "undocumentLines": []
+    },
+    "src/api/ChartFetcher.js": {
+      "expectCount": 7,
+      "actualCount": 7,
+      "undocumentLines": []
+    },
+    "src/api/FeaturedPlaylistCategoryFetcher.js": {
+      "expectCount": 7,
+      "actualCount": 7,
+      "undocumentLines": []
+    },
+    "src/api/FeaturedPlaylistFetcher.js": {
+      "expectCount": 3,
+      "actualCount": 3,
+      "undocumentLines": []
+    },
+    "src/api/Fetcher.js": {
+      "expectCount": 7,
+      "actualCount": 7,
+      "undocumentLines": []
+    },
+    "src/api/GenreStationFetcher.js": {
+      "expectCount": 6,
+      "actualCount": 6,
+      "undocumentLines": []
+    },
+    "src/api/HttpClient.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "src/api/MoodStationFetcher.js": {
+      "expectCount": 7,
+      "actualCount": 6,
+      "undocumentLines": [
+        42
+      ]
+    },
+    "src/api/NewHitsPlaylistFetcher.js": {
+      "expectCount": 7,
+      "actualCount": 7,
+      "undocumentLines": []
+    },
+    "src/api/NewReleaseCategoryFetcher.js": {
+      "expectCount": 7,
+      "actualCount": 7,
+      "undocumentLines": []
+    },
+    "src/api/SearchFetcher.js": {
+      "expectCount": 9,
+      "actualCount": 8,
+      "undocumentLines": [
+        88
+      ]
+    },
+    "src/api/SharedPlaylistFetcher.js": {
+      "expectCount": 7,
+      "actualCount": 7,
+      "undocumentLines": []
+    },
+    "src/api/TrackFetcher.js": {
       "expectCount": 6,
       "actualCount": 6,
       "undocumentLines": []
@@ -26,76 +98,19 @@
       "actualCount": 4,
       "undocumentLines": []
     },
-    "src/api/ChartFetcher.js": {
-      "expectCount": 5,
-      "actualCount": 5,
-      "undocumentLines": []
-    },
     "src/auth/ClientCredentialsFlow.js": {
-      "expectCount": 2,
-      "actualCount": 2,
-      "undocumentLines": []
-    },
-    "src/api/FeaturedPlaylistCategoryFetcher.js": {
-      "expectCount": 5,
-      "actualCount": 5,
-      "undocumentLines": []
-    },
-    "src/api/FeaturedPlaylistFetcher.js": {
-      "expectCount": 2,
-      "actualCount": 2,
-      "undocumentLines": []
-    },
-    "src/api/Fetcher.js": {
       "expectCount": 4,
       "actualCount": 4,
-      "undocumentLines": []
-    },
-    "src/api/GenreStationFetcher.js": {
-      "expectCount": 4,
-      "actualCount": 4,
-      "undocumentLines": []
-    },
-    "src/api/HttpClient.js": {
-      "expectCount": 4,
-      "actualCount": 4,
-      "undocumentLines": []
-    },
-    "src/api/MoodStationFetcher.js": {
-      "expectCount": 5,
-      "actualCount": 4,
-      "undocumentLines": [
-        42
-      ]
-    },
-    "src/api/NewHitsPlaylistFetcher.js": {
-      "expectCount": 5,
-      "actualCount": 5,
-      "undocumentLines": []
-    },
-    "src/api/NewReleaseCategoryFetcher.js": {
-      "expectCount": 5,
-      "actualCount": 5,
-      "undocumentLines": []
-    },
-    "src/api/SearchFetcher.js": {
-      "expectCount": 4,
-      "actualCount": 4,
-      "undocumentLines": []
-    },
-    "src/api/SharedPlaylistFetcher.js": {
-      "expectCount": 5,
-      "actualCount": 5,
       "undocumentLines": []
     },
     "src/auth/TokenFetcher.js": {
-      "expectCount": 2,
-      "actualCount": 2,
+      "expectCount": 5,
+      "actualCount": 5,
       "undocumentLines": []
     },
-    "src/api/TrackFetcher.js": {
-      "expectCount": 4,
-      "actualCount": 4,
+    "src/catchError.js": {
+      "expectCount": 2,
+      "actualCount": 2,
       "undocumentLines": []
     }
   }
