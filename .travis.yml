@@ -1,9 +1,6 @@
 language: node_js
 node_js:
   - "8"
-before_install:
-  - |
-    grep -ir "sha1-fPJf8iUmMvP+JAa94ljpTu6SdRk=" ~/.npm
 before_script:
   - |
     echo -e "{\"kkbox_sdk\": {\"client_id\": \"$CLIENT_ID\", \"client_secret\": \"$CLIENT_SECRET\"}}" > test/client_secrets.json
