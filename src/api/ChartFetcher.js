@@ -10,8 +10,8 @@ export default class ChartFetcher extends Fetcher {
      * @ignore
      */
     constructor(http, territory = 'TW') {
-        super(http, territory = 'TW')
-
+        super(http, territory)
+        
         /**
          * @ignore
          */
