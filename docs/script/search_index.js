@@ -666,6 +666,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/api/fetcher.js~fetcher#setterritory",
+    "class/src/api/Fetcher.js~Fetcher.html#instance-method-setTerritory",
+    "src/api/Fetcher.js~Fetcher#setTerritory",
+    "method"
+  ],
+  [
     "src/api/genrestationfetcher.js",
     "file/src/api/GenreStationFetcher.js.html",
     "src/api/GenreStationFetcher.js",

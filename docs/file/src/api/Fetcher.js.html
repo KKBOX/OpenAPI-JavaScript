@@ -73,6 +73,16 @@ export default class Fetcher {
     }
 
     /**
+     * Set the fetcher&apos;s territory.      
+     * @param {string} [territory = &apos;TW&apos;] - [&apos;TW&apos;, &apos;HK&apos;, &apos;SG&apos;, &apos;MY&apos;, &apos;JP&apos;] The territory for the fetcher.
+     * @return {Fetcher}
+     */
+    setTerritory(territory) {
+        this.territory = territory
+        return this
+    }
+
+    /**
      * Gets an object&apos;s nested property by path.
      * @ignore
      */

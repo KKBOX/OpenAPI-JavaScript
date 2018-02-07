@@ -1,7 +1,7 @@
 {
-  "coverage": "95.77%",
-  "expectCount": 142,
-  "actualCount": 136,
+  "coverage": "95.8%",
+  "expectCount": 143,
+  "actualCount": 137,
   "files": {
     "src/Endpoint.js": {
       "expectCount": 17,
@@ -45,8 +45,8 @@
       "undocumentLines": []
     },
     "src/api/Fetcher.js": {
-      "expectCount": 7,
-      "actualCount": 7,
+      "expectCount": 8,
+      "actualCount": 8,
       "undocumentLines": []
     },
     "src/api/GenreStationFetcher.js": {
