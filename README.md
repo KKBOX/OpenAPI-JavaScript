@@ -53,7 +53,7 @@ npm run test
 
 Please browse [https://kkbox.github.io/OpenAPI-JavaScript/](https://kkbox.github.io/OpenAPI-JavaScript/)
 
-## How to use the SDK
+## Usage
 
 There are two classes Auth and Api and you should initialize an Auth object by client id and secret.
 
@@ -114,6 +114,27 @@ auth.clientCredentialsFlow.fetchAccessToken().then(response => {
             console.log(response.data)
         })
     })
+})
+```
+
+### Use the SDK in Web Browsers
+
+The SDK plays fine with Node.js, but works partially in web browsers.
+
+You can use the SDK in your Web and [Electron](https://electronjs.org) apps, but you need to prepare a middle man server to help you to obtain access tokens. That's because KKBOX's Open API server supports [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), but the Auth server does not.
+
+In other words, your JavaScript code hosted on your own website could access data from KKBOX, but direct access to the Auth server is forbidden by the security policy of modern web browsers.
+
+When developing an Electron app, you can choose to turn web security off to make you app able to fetch access tokens. You can do this while creating browser windows.
+
+```js
+mainWindow = new BrowserWindow({
+    width: 500,
+    height: 500,
+    useContentSize: true,
+    webPreferences: {
+        webSecurity: false
+    }
 })
 ```
 
