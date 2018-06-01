@@ -8,15 +8,15 @@ export default class Auth {
     /**
      * Initialize the Auth object with client id and client secret.
      *
-     * @param {string} client_id
-     * @param {string} client_secret
-     * @example new Auth(client_id, client_secret)
+     * @param {string} clientID
+     * @param {string} clientSecret
+     * @example new Auth(clientID, clientSecret)
      */
-    constructor(client_id, client_secret) {
+    constructor(clientID, clientSecret) {
         /**
          * @type {TokenFetcher}
          */
-        this.tokenFetcher = new TokenFetcher(client_id, client_secret)
+        this.tokenFetcher = new TokenFetcher(clientID, clientSecret)
 
         /**
          * @type {ClientCredentialsFlow}

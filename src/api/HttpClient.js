@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {apiError} from '../catchError'
+import { apiError } from '../catchError'
 
 /**
  * Do request to open api server with authorization header and error catch.
@@ -26,7 +26,9 @@ export default class HttpClient {
     get(endpoint, params = {}) {
         return axios.get(endpoint, {
             params: params,
-            headers: {Authorization: this.token, 'User-Agent': 'KKBOX JavaScript SDK'}
+            headers: {
+                Authorization: this.token
+            }
         }).catch(apiError)
     }
 
@@ -40,8 +42,7 @@ export default class HttpClient {
     post(endpoint, data = {}) {
         return axios.post(endpoint, data, {
             headers: {
-                Authorization: this.token,
-                'User-Agent': 'KKBOX JavaScript SDK'
+                Authorization: this.token
             }
         }).catch(apiError)
     }

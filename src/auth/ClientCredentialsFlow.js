@@ -21,6 +21,8 @@ export default class ClientCredentialsFlow {
      * @example auth.clientCredentialsFlow.fetchAccessToken()
      */
     fetchAccessToken() {
-        return this.token.fetchAccessToken({grant_type: 'client_credentials'})
+        return this.token.fetchAccessToken({
+            grant_type: 'client_credentials'
+        })
     }
 }

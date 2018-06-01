@@ -1,4 +1,4 @@
-import {CHARTS as ENDPOINT} from '../Endpoint'
+import { CHARTS as ENDPOINT } from '../Endpoint'
 import Fetcher from './Fetcher'
 
 /**
@@ -11,11 +11,11 @@ export default class ChartFetcher extends Fetcher {
      */
     constructor(http, territory = 'TW') {
         super(http, territory)
-        
+
         /**
          * @ignore
          */
-        this.playlist_id = undefined
+        this.playlistID = undefined
     }
 
     /**
@@ -34,12 +34,12 @@ export default class ChartFetcher extends Fetcher {
     /**
      * Init the chart fetcher.
      *
-     * @param {string} playlist_id - The playlist ID.
+     * @param {string} playlistID - The playlist ID.
      * @return {ChartFetcher}
      * @see https://docs-en.kkbox.codes/v1.1/reference#charts-playlist_id
      */
-    setPlaylistID(playlist_id) {
-        this.playlist_id = playlist_id        
+    setPlaylistID(playlistID) {
+        this.playlistID = playlistID
         return this
     }
 
@@ -51,7 +51,9 @@ export default class ChartFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#charts-playlist_id
      */
     fetchMetadata() {
-        return this.http.get(ENDPOINT + this.playlist_id, {territory: this.territory})
+        return this.http.get(ENDPOINT + '/' + this.playlistID, {
+            territory: this.territory
+        })
     }
 
     /**
@@ -64,7 +66,7 @@ export default class ChartFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#charts-playlist_id-tracks
      */
     fetchTracks(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT + this.playlist_id + '/tracks', {
+        return this.http.get(ENDPOINT + '/' + this.playlistID + '/tracks', {
             territory: this.territory,
             limit: limit,
             offset: offset

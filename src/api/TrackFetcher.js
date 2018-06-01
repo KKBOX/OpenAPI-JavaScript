@@ -1,4 +1,4 @@
-import {TRACKS as ENDPOINT} from '../Endpoint'
+import { TRACKS as ENDPOINT } from '../Endpoint'
 import Fetcher from './Fetcher'
 
 /**
@@ -15,18 +15,18 @@ export default class TrackFetcher extends Fetcher {
         /**
          * @ignore
          */
-        this.track_id = undefined
+        this.trackID = undefined
     }
 
     /**
      * Set the track fetcher's track ID.
      *
-     * @param {string} track_id - The ID of a track.
+     * @param {string} trackID - The ID of a track.
      * @return {Track}
      * @see https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id
      */
-    setTrackID(track_id) {
-        this.track_id = track_id
+    setTrackID(trackID) {
+        this.trackID = trackID
         return this
     }
 
@@ -38,7 +38,9 @@ export default class TrackFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id
      */
     fetchMetadata() {
-        return this.http.get(ENDPOINT + this.track_id, {territory: this.territory})
+        return this.http.get(ENDPOINT + '/' + this.trackID, {
+            territory: this.territory
+        })
     }
 
     /**
@@ -46,7 +48,7 @@ export default class TrackFetcher extends Fetcher {
      * @example https://widget.kkbox.com/v1/?id=8sD5pE4dV0Zqmmler6&type=song
      * @return {string}
      */
-    getWidgetUri(){
-        return `https://widget.kkbox.com/v1/?id=${this.track_id}&type=song`
+    getWidgetUri() {
+        return `https://widget.kkbox.com/v1/?id=${this.trackID}&type=song`
     }
 }

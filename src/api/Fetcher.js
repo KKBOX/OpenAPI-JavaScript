@@ -2,8 +2,8 @@
  * Base api fetcher.
  */
 export default class Fetcher {
-    /**      
-     * @param {Http} http 
+    /**
+     * @param {Http} http
      * @param {string} [territory = 'TW'] - ['TW', 'HK', 'SG', 'MY', 'JP'] The territory for the fetcher.
      */
     constructor(http, territory = 'TW') {
@@ -19,7 +19,7 @@ export default class Fetcher {
     }
 
     /**
-     * Set the fetcher's territory.      
+     * Set the fetcher's territory.
      * @param {string} [territory = 'TW'] - ['TW', 'HK', 'SG', 'MY', 'JP'] The territory for the fetcher.
      * @return {Fetcher}
      */
@@ -33,29 +33,29 @@ export default class Fetcher {
      * @ignore
      */
     getPropertyByPath(object, path) {
-        path = path.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
-        path = path.replace(/^\./, '');           // strip a leading dot
-        var keys = path.split('.');
+        path = path.replace(/\[(\w+)\]/g, '.$1') // convert indexes to properties
+        path = path.replace(/^\./, '') // strip a leading dot
+        var keys = path.split('.')
         for (var i = 0, n = keys.length; i < n; ++i) {
-            var key = keys[i];
+            var key = keys[i]
             if (key in object) {
-                object = object[key];
+                object = object[key]
             } else {
-                return;
+                return
             }
         }
-        return object;
+        return object
     }
 
     /**
-     * Fetches next page of various paged APIs. 
-     * 
-     * @param {fulfillment} fulfillment - The fulfillment get from Promose's onFulfillment function 
-     * @param {String} nextUriPath - The next uri's path. Defaults to 'data.paging.next', 
-     * which means we will get the next uri path from 'fulfillment.data.paging.next'. 
+     * Fetches next page of various paged APIs.
+     *
+     * @param {fulfillment} fulfillment - The fulfillment get from Promose's onFulfillment function
+     * @param {String} nextUriPath - The next uri's path. Defaults to 'data.paging.next',
+     * which means we will get the next uri path from 'fulfillment.data.paging.next'.
      * The correct next uri path depends on respective api's response.
      * @return {Promise}
-     * @example 
+     * @example
      * api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchTracks().then(response => {
      *      api.albumFetcher.fetchNextPage(response))
      * })
@@ -64,19 +64,18 @@ export default class Fetcher {
         var nextUri = this.getPropertyByPath(fulfillment, nextUriPath)
         if (nextUri != null && nextUri !== undefined) {
             return this.http.get(nextUri)
-        }
-        else {
+        } else {
             return new Promise((resolve, reject) => {
-                reject('Cannot fetch next page')
-            })            
+                reject(new Error('Cannot fetch next page'))
+            })
         }
     }
 
     /**
      * Is next page available for various paged APIs.
-     * @param {fulfillment} fulfillment - The fulfillment get from Promose's onFulfillment function 
-     * @param {String} nextUriPath - The next uri's path. Defaults to 'data.paging.next', 
-     * which means we will get the next uri path from 'fulfillment.data.paging.next'. 
+     * @param {fulfillment} fulfillment - The fulfillment get from Promose's onFulfillment function
+     * @param {String} nextUriPath - The next uri's path. Defaults to 'data.paging.next',
+     * which means we will get the next uri path from 'fulfillment.data.paging.next'.
      * The correct next uri path depends on respective api's response.
      * @return {Boolean}
      * @example
@@ -88,11 +87,6 @@ export default class Fetcher {
      */
     hasNextPage(fulfillment, nextUriPath = 'data.paging.next') {
         var nextUri = this.getPropertyByPath(fulfillment, nextUriPath)
-        if (nextUri != null && nextUri !== undefined) {
-            return true
-        }
-        else {
-            return false
-        }
+        return (nextUri != null && nextUri !== undefined)
     }
 }

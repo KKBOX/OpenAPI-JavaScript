@@ -1,4 +1,4 @@
-import {ARTISTS as ENDPOINT} from '../Endpoint'
+import { ARTISTS as ENDPOINT } from '../Endpoint'
 import Fetcher from './Fetcher'
 
 /**
@@ -15,18 +15,18 @@ export default class ArtistFetcher extends Fetcher {
         /**
          * @ignore
          */
-        this.artist_id = undefined
+        this.artistID = undefined
     }
 
     /**
      * Init the artist object.
      *
-     * @param {string} artist_id - The ID of an artist.
+     * @param {string} artistID - The ID of an artist.
      * @return {Artist}
      * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id
      */
-    setArtistID(artist_id) {
-        this.artist_id = artist_id
+    setArtistID(artistID) {
+        this.artistID = artistID
         return this
     }
 
@@ -38,7 +38,9 @@ export default class ArtistFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id
      */
     fetchMetadata() {
-        return this.http.get(ENDPOINT + this.artist_id, {territory: this.territory})
+        return this.http.get(ENDPOINT + '/' + this.artistID, {
+            territory: this.territory
+        })
     }
 
     /**
@@ -51,7 +53,7 @@ export default class ArtistFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-albums
      */
     fetchAlbums(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT + this.artist_id + '/albums', {
+        return this.http.get(ENDPOINT + '/' + this.artistID + '/albums', {
             territory: this.territory,
             limit: limit,
             offset: offset
@@ -68,7 +70,7 @@ export default class ArtistFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-toptracks
      */
     fetchTopTracks(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT + this.artist_id + '/top-tracks', {
+        return this.http.get(ENDPOINT + '/' + this.artistID + '/top-tracks', {
             territory: this.territory,
             limit: limit,
             offset: offset
@@ -85,7 +87,7 @@ export default class ArtistFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-relatedartists
      */
     fetchRelatedArtists(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT + this.artist_id + '/related-artists', {
+        return this.http.get(ENDPOINT + '/' + this.artistID + '/related-artists', {
             territory: this.territory,
             limit: limit,
             offset: offset

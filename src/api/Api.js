@@ -24,7 +24,7 @@ export default class Api {
      * @example new Api(token)
      * @example new Api(token, 'TW')
      */
-    constructor(token, territory = 'TW') {        
+    constructor(token, territory = 'TW') {
         this.territory = territory
         this.httpClient = undefined
         this.setToken(token)
@@ -71,14 +71,14 @@ export default class Api {
 
         /**
          * @type {NewReleaseCategoryFetcher}
-         */        
+         */
         this.newReleaseCategoryFetcher = new NewReleaseCategoryFetcher(this.httpClient, this.territory)
 
         /**
          * @type {NewHitsPlaylistFetcher}
-         */        
+         */
         this.newHitsPlaylistFetcher = new NewHitsPlaylistFetcher(this.httpClient, this.territory)
-        
+
         /**
          * @type {GenreStationFetcher}
          */
@@ -93,7 +93,7 @@ export default class Api {
          * @type {ChartFetcher}
          */
         this.chartFetcher = new ChartFetcher(this.httpClient, this.territory)
-        
+
         /**
          * @type {SharedPlaylistFetcher}
          */

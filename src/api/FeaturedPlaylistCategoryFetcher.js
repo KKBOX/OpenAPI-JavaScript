@@ -1,4 +1,4 @@
-import {FEATURED_PLAYLISTS_CATEGORIES as ENDPOINT} from '../Endpoint'
+import { FEATURED_PLAYLISTS_CATEGORIES as ENDPOINT } from '../Endpoint'
 import Fetcher from './Fetcher'
 
 /**
@@ -15,7 +15,7 @@ export default class FeaturedPlaylistCategoryFetcher extends Fetcher {
         /**
          * @ignore
          */
-        this.category_id = undefined
+        this.categoryID = undefined
     }
 
     /**
@@ -26,18 +26,20 @@ export default class FeaturedPlaylistCategoryFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories
      */
     fetchAllFeaturedPlaylistCategories() {
-        return this.http.get(ENDPOINT, {territory: this.territory})
+        return this.http.get(ENDPOINT, {
+            territory: this.territory
+        })
     }
 
     /**
      * Init the featured playlist category fetcher.
      *
-     * @param {string} category_id - The category ID.
+     * @param {string} categoryID - The category ID.
      * @return {FeaturedPlaylistCategoryFetcher}
      * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id
      */
-    setCategoryID(category_id) {
-        this.category_id = category_id        
+    setCategoryID(categoryID) {
+        this.categoryID = categoryID
         return this
     }
 
@@ -49,7 +51,9 @@ export default class FeaturedPlaylistCategoryFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id
      */
     fetchMetadata() {
-        return this.http.get(ENDPOINT + this.category_id, {territory: this.territory})
+        return this.http.get(ENDPOINT + '/' + this.categoryID, {
+            territory: this.territory
+        })
     }
 
     /**
@@ -62,7 +66,7 @@ export default class FeaturedPlaylistCategoryFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id-playlists
      */
     fetchPlaylists(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT + this.category_id + '/playlists', {
+        return this.http.get(ENDPOINT + '/' + this.categoryID + '/playlists', {
             territory: this.territory,
             limit: limit,
             offset: offset

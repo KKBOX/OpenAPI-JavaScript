@@ -1,4 +1,4 @@
-import {NEW_HITS_PLAYLISTS as ENDPOINT} from '../Endpoint'
+import { NEW_HITS_PLAYLISTS as ENDPOINT } from '../Endpoint'
 import Fetcher from './Fetcher'
 
 /**
@@ -15,7 +15,7 @@ export default class NewHitsPlaylistFetcher extends Fetcher {
         /**
          * @ignore
          */
-        this.playlist_id = undefined
+        this.playlistID = undefined
     }
 
     /**
@@ -36,12 +36,12 @@ export default class NewHitsPlaylistFetcher extends Fetcher {
     /**
      * Init the new hits playlist fetcher.
      *
-     * @param {string} playlist_id - The playlist ID.
+     * @param {string} playlistID - The playlist ID.
      * @return {NewHitsPlaylistFetcher}
      * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists-playlist_id
      */
-    setPlaylistID(playlist_id) {
-        this.playlist_id = playlist_id        
+    setPlaylistID(playlistID) {
+        this.playlistID = playlistID
         return this
     }
 
@@ -53,7 +53,9 @@ export default class NewHitsPlaylistFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists-playlist_id
      */
     fetchMetadata() {
-        return this.http.get(ENDPOINT + this.playlist_id, {territory: this.territory})
+        return this.http.get(ENDPOINT + '/' + this.playlistID, {
+            territory: this.territory
+        })
     }
 
     /**
@@ -66,7 +68,7 @@ export default class NewHitsPlaylistFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists-playlist_id-tracks
      */
     fetchTracks(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT + this.playlist_id + '/tracks', {
+        return this.http.get(ENDPOINT + '/' + this.playlistID + '/tracks', {
             territory: this.territory,
             limit: limit,
             offset: offset

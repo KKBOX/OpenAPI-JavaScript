@@ -1,4 +1,4 @@
-import {SEARCH as ENDPOINT} from '../Endpoint'
+import { SEARCH as ENDPOINT } from '../Endpoint'
 import Fetcher from './Fetcher'
 
 /**
@@ -36,20 +36,25 @@ export default class SearchFetcher extends Fetcher {
      * @param {string} conditions.album - album's name.
      * @param {string} conditions.artist - artist's name.
      * @param {string} conditions.playlist - playlist's title.
-     * @param {string} conditions.available_territory - tracks and albums available territory.
+     * @param {string} conditions.availableTerritory - tracks and albums available territory.
      * @return {Search}
      * @example api.searchFetcher.setSearchCriteria('五月天 好好').filter({artist: '五月天'}).fetchSearchResult()
      */
-    filter(conditions = {
-        track = undefined,
-        album = undefined,
-        artist = undefined,
-        playlist = undefined,
-        available_territory = undefined
-    } = {}) {
+    filter(conditions = {}) {
         this.filterConditions = conditions
         return this
     }
+
+    // filter (conditions = {
+    //   track = undefined,
+    //   album = undefined,
+    //   artist = undefined,
+    //   playlist = undefined,
+    //   availableTerritory = undefined
+    // } = {}) {
+    //   this.filterConditions = conditions
+    //   return this
+    // }
 
     /**
      * Init the search fetcher for the artist, album, track or playlist.
@@ -61,7 +66,7 @@ export default class SearchFetcher extends Fetcher {
      */
     setSearchCriteria(q, type = undefined) {
         this.q = q
-        this.type = type        
+        this.type = type
         return this
     }
 
@@ -80,7 +85,7 @@ export default class SearchFetcher extends Fetcher {
             type: this.type,
             territory: this.territory,
             limit: limit,
-            offset: offset            
+            offset: offset
         }).then(doFilter.bind(this))
     }
 }
@@ -94,8 +99,8 @@ function doFilter(response) {
                         [key]: Object.assign(response.data[key], {
                             data: response.data[key].data
                                 .filter(track => {
-                                    if (this.filterConditions.available_territory !== undefined &&
-                                        !track.available_territories.includes(this.filterConditions.available_territory)) {
+                                    if (this.filterConditions.availableTerritory !== undefined &&
+                                        !track.available_territories.includes(this.filterConditions.availableTerritory)) {
                                         return false
                                     }
                                     if (this.filterConditions.track !== undefined &&
@@ -107,17 +112,17 @@ function doFilter(response) {
                                         return false
                                     }
                                     return !(this.filterConditions.artist !== undefined &&
-                                    !new RegExp('.*' + this.filterConditions.artist + '.*').test(track.album.artist.name))
+                                        !new RegExp('.*' + this.filterConditions.artist + '.*').test(track.album.artist.name))
                                 })
                         })
-                    }                    
+                    }
                 case 'albums':
                     return {
                         [key]: Object.assign(response.data[key], {
                             data: response.data[key].data
                                 .filter(album => {
-                                    if (this.filterConditions.available_territory !== undefined &&
-                                        !album.available_territories.includes(this.filterConditions.available_territory)) {
+                                    if (this.filterConditions.availableTerritory !== undefined &&
+                                        !album.available_territories.includes(this.filterConditions.availableTerritory)) {
                                         return false
                                     }
                                     if (this.filterConditions.album !== undefined &&
@@ -125,10 +130,10 @@ function doFilter(response) {
                                         return false
                                     }
                                     return !(this.filterConditions.artist !== undefined &&
-                                    !new RegExp('.*' + this.filterConditions.artist + '.*').test(album.artist.name))
+                                        !new RegExp('.*' + this.filterConditions.artist + '.*').test(album.artist.name))
                                 })
                         })
-                    }                    
+                    }
                 case 'artists':
                     return {
                         [key]: Object.assign(response.data[key], {
@@ -141,7 +146,7 @@ function doFilter(response) {
                                     }
                                 })
                         })
-                    }                    
+                    }
                 case 'playlists':
                     return {
                         [key]: Object.assign(response.data[key], {
@@ -154,12 +159,16 @@ function doFilter(response) {
                                     }
                                 })
                         })
-                    }                    
+                    }
                 default:
-                    return {[key]: response.data[key]}
+                    return {
+                        [key]: response.data[key]
+                    }
             }
         })
-        return Object.assign(response, {data: Object.assign(...data)})
+        return Object.assign(response, {
+            data: Object.assign(...data)
+        })
     } else {
         return response
     }
