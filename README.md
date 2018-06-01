@@ -10,7 +10,7 @@ The SDK helps to access various metadata from KKBOX, including tracks, albums, a
 
 You can install the SDK using [npm](https://www.npmjs.com) by running
 
-```
+```bash
 npm install @kkbox/kkbox-js-sdk
 ```
 
@@ -18,13 +18,13 @@ npm install @kkbox/kkbox-js-sdk
 
 Download the SDK and then input the following command under command line
 
-```
+```bash
 npm install
 ```
 
 ### Build
 
-```
+```bash
 npm run build
 ```
 
@@ -34,7 +34,7 @@ To test or start using the SDK, a valid client ID and client secret are required
 
 Then, create a file named `client_secrets.json`, put it into the `test` directory, and fill your client ID and client secret into it. It may look like
 
-```
+```json
 {
     "kkbox_sdk": {
         "client_id": "YOUR CLIENT ID",
@@ -45,7 +45,7 @@ Then, create a file named `client_secrets.json`, put it into the `test` director
 
 And then we could run the tests by calling
 
-```
+``` bash
 npm run test
 ```
 
@@ -57,7 +57,7 @@ Please browse [https://kkbox.github.io/OpenAPI-JavaScript/](https://kkbox.github
 
 There are two classes Auth and Api and you should initialize an Auth object by client id and secret.
 
-```
+```js
 import {Auth} from '@kkbox/kkbox-js-sdk'
 
 const auth = new Auth(client_id, client_secret)
@@ -65,7 +65,7 @@ const auth = new Auth(client_id, client_secret)
 
 Then use the auth object to get access token.
 
-```
+```js
 auth.clientCredentialsFlow.fetchAccessToken().then(response => {
     const access_token = response.data.access_token
 })
@@ -73,7 +73,7 @@ auth.clientCredentialsFlow.fetchAccessToken().then(response => {
 
 After getting access token, use it to initialize Api object.
 
-```
+```js
 import {Api} from '@kkbox/kkbox-js-sdk'
 
 const api = new Api(access_token)
@@ -81,18 +81,18 @@ const api = new Api(access_token)
 
 Now you can use various fetcher object to fetch data.
 
-```
+```js
 api.searchFetcher.setSearchCriteria('五月天 派對動物', 'track').fetchSearchResult().then(response => {
-	console.log(response.data)
+    console.log(response.data)
 })
 ```
 
 Most methods return paged result and we can use the `fetchNextPage` method to get the next page of result.
 
-```
+```js
 api.searchFetcher.setSearchCriteria('五月天 派對動物', 'track').fetchSearchResult().then(response => {
     console.log(response.data)
-	api.searchFetcher.fetchNextPage(response).then(response => {
+    api.searchFetcher.fetchNextPage(response).then(response => {
         console.log(response.data)
     })
 })
@@ -100,7 +100,7 @@ api.searchFetcher.setSearchCriteria('五月天 派對動物', 'track').fetchSear
 
 All the code.
 
-```
+```js
 import {Auth} from '@kkbox/kkbox-js-sdk'
 import {Api} from '@kkbox/kkbox-js-sdk'
 
@@ -109,7 +109,7 @@ auth.clientCredentialsFlow.fetchAccessToken().then(response => {
     const access_token = response.data.access_token
     const api = new Api(access_token)
     api.searchFetcher.setSearchCriteria('五月天 派對動物', 'track').fetchSearchResult().then(response => {
-	    console.log(response.data)
+        console.log(response.data)
         api.searchFetcher.fetchNextPage(response).then(response => {
             console.log(response.data)
         })
@@ -119,7 +119,9 @@ auth.clientCredentialsFlow.fetchAccessToken().then(response => {
 
 ### Generate SDK Documentation
 
-    npm run build-doc
+``` bash
+npm run build-doc
+```
 
 Then open the the file `docs/index.html`
 
