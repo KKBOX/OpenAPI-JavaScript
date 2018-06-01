@@ -63,7 +63,7 @@
       "expectCount": 7,
       "actualCount": 6,
       "undocumentLines": [
-        42
+        44
       ]
     },
     "src/api/NewHitsPlaylistFetcher.js": {
@@ -80,7 +80,7 @@
       "expectCount": 9,
       "actualCount": 8,
       "undocumentLines": [
-        88
+        93
       ]
     },
     "src/api/SharedPlaylistFetcher.js": {

@@ -52,7 +52,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/TrackFetcher.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {TRACKS as ENDPOINT} from &apos;../Endpoint&apos;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { TRACKS as ENDPOINT } from &apos;../Endpoint&apos;
 import Fetcher from &apos;./Fetcher&apos;
 
 /**
@@ -69,18 +69,18 @@ export default class TrackFetcher extends Fetcher {
         /**
          * @ignore
          */
-        this.track_id = undefined
+        this.trackID = undefined
     }
 
     /**
      * Set the track fetcher&apos;s track ID.
      *
-     * @param {string} track_id - The ID of a track.
+     * @param {string} trackID - The ID of a track.
      * @return {Track}
      * @see https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id
      */
-    setTrackID(track_id) {
-        this.track_id = track_id
+    setTrackID(trackID) {
+        this.trackID = trackID
         return this
     }
 
@@ -92,7 +92,9 @@ export default class TrackFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id
      */
     fetchMetadata() {
-        return this.http.get(ENDPOINT + this.track_id, {territory: this.territory})
+        return this.http.get(ENDPOINT + &apos;/&apos; + this.trackID, {
+            territory: this.territory
+        })
     }
 
     /**
@@ -100,10 +102,11 @@ export default class TrackFetcher extends Fetcher {
      * @example https://widget.kkbox.com/v1/?id=8sD5pE4dV0Zqmmler6&amp;type=song
      * @return {string}
      */
-    getWidgetUri(){
-        return `https://widget.kkbox.com/v1/?id=${this.track_id}&amp;type=song`
+    getWidgetUri() {
+        return `https://widget.kkbox.com/v1/?id=${this.trackID}&amp;type=song`
     }
-}</code></pre>
+}
+</code></pre>
 
 </div>
 

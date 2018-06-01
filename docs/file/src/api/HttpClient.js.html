@@ -53,7 +53,7 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/HttpClient.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import axios from &apos;axios&apos;
-import {apiError} from &apos;../catchError&apos;
+import { apiError } from &apos;../catchError&apos;
 
 /**
  * Do request to open api server with authorization header and error catch.
@@ -80,7 +80,9 @@ export default class HttpClient {
     get(endpoint, params = {}) {
         return axios.get(endpoint, {
             params: params,
-            headers: {Authorization: this.token, &apos;User-Agent&apos;: &apos;KKBOX JavaScript SDK&apos;}
+            headers: {
+                Authorization: this.token
+            }
         }).catch(apiError)
     }
 
@@ -94,12 +96,12 @@ export default class HttpClient {
     post(endpoint, data = {}) {
         return axios.post(endpoint, data, {
             headers: {
-                Authorization: this.token,
-                &apos;User-Agent&apos;: &apos;KKBOX JavaScript SDK&apos;
+                Authorization: this.token
             }
         }).catch(apiError)
     }
-}</code></pre>
+}
+</code></pre>
 
 </div>
 

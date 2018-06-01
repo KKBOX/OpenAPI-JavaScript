@@ -56,8 +56,8 @@
  * Base api fetcher.
  */
 export default class Fetcher {
-    /**      
-     * @param {Http} http 
+    /**
+     * @param {Http} http
      * @param {string} [territory = &apos;TW&apos;] - [&apos;TW&apos;, &apos;HK&apos;, &apos;SG&apos;, &apos;MY&apos;, &apos;JP&apos;] The territory for the fetcher.
      */
     constructor(http, territory = &apos;TW&apos;) {
@@ -73,7 +73,7 @@ export default class Fetcher {
     }
 
     /**
-     * Set the fetcher&apos;s territory.      
+     * Set the fetcher&apos;s territory.
      * @param {string} [territory = &apos;TW&apos;] - [&apos;TW&apos;, &apos;HK&apos;, &apos;SG&apos;, &apos;MY&apos;, &apos;JP&apos;] The territory for the fetcher.
      * @return {Fetcher}
      */
@@ -87,29 +87,29 @@ export default class Fetcher {
      * @ignore
      */
     getPropertyByPath(object, path) {
-        path = path.replace(/\[(\w+)\]/g, &apos;.$1&apos;); // convert indexes to properties
-        path = path.replace(/^\./, &apos;&apos;);           // strip a leading dot
-        var keys = path.split(&apos;.&apos;);
+        path = path.replace(/\[(\w+)\]/g, &apos;.$1&apos;) // convert indexes to properties
+        path = path.replace(/^\./, &apos;&apos;) // strip a leading dot
+        var keys = path.split(&apos;.&apos;)
         for (var i = 0, n = keys.length; i &lt; n; ++i) {
-            var key = keys[i];
+            var key = keys[i]
             if (key in object) {
-                object = object[key];
+                object = object[key]
             } else {
-                return;
+                return
             }
         }
-        return object;
+        return object
     }
 
     /**
-     * Fetches next page of various paged APIs. 
-     * 
-     * @param {fulfillment} fulfillment - The fulfillment get from Promose&apos;s onFulfillment function 
-     * @param {String} nextUriPath - The next uri&apos;s path. Defaults to &apos;data.paging.next&apos;, 
-     * which means we will get the next uri path from &apos;fulfillment.data.paging.next&apos;. 
+     * Fetches next page of various paged APIs.
+     *
+     * @param {fulfillment} fulfillment - The fulfillment get from Promose&apos;s onFulfillment function
+     * @param {String} nextUriPath - The next uri&apos;s path. Defaults to &apos;data.paging.next&apos;,
+     * which means we will get the next uri path from &apos;fulfillment.data.paging.next&apos;.
      * The correct next uri path depends on respective api&apos;s response.
      * @return {Promise}
-     * @example 
+     * @example
      * api.albumFetcher.setAlbumID(&apos;KmRKnW5qmUrTnGRuxF&apos;).fetchTracks().then(response =&gt; {
      *      api.albumFetcher.fetchNextPage(response))
      * })
@@ -118,19 +118,18 @@ export default class Fetcher {
         var nextUri = this.getPropertyByPath(fulfillment, nextUriPath)
         if (nextUri != null &amp;&amp; nextUri !== undefined) {
             return this.http.get(nextUri)
-        }
-        else {
+        } else {
             return new Promise((resolve, reject) =&gt; {
-                reject(&apos;Cannot fetch next page&apos;)
-            })            
+                reject(new Error(&apos;Cannot fetch next page&apos;))
+            })
         }
     }
 
     /**
      * Is next page available for various paged APIs.
-     * @param {fulfillment} fulfillment - The fulfillment get from Promose&apos;s onFulfillment function 
-     * @param {String} nextUriPath - The next uri&apos;s path. Defaults to &apos;data.paging.next&apos;, 
-     * which means we will get the next uri path from &apos;fulfillment.data.paging.next&apos;. 
+     * @param {fulfillment} fulfillment - The fulfillment get from Promose&apos;s onFulfillment function
+     * @param {String} nextUriPath - The next uri&apos;s path. Defaults to &apos;data.paging.next&apos;,
+     * which means we will get the next uri path from &apos;fulfillment.data.paging.next&apos;.
      * The correct next uri path depends on respective api&apos;s response.
      * @return {Boolean}
      * @example
@@ -142,14 +141,10 @@ export default class Fetcher {
      */
     hasNextPage(fulfillment, nextUriPath = &apos;data.paging.next&apos;) {
         var nextUri = this.getPropertyByPath(fulfillment, nextUriPath)
-        if (nextUri != null &amp;&amp; nextUri !== undefined) {
-            return true
-        }
-        else {
-            return false
-        }
+        return (nextUri != null &amp;&amp; nextUri !== undefined)
     }
-}</code></pre>
+}
+</code></pre>
 
 </div>
 
