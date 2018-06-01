@@ -56,46 +56,56 @@
 <a href="https://raw.githubusercontent.com/KKBOX/OpenAPI-ObjectiveC/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache-green.svg?style=flat" alt="License Apache"></a></p>
 <p>The SDK helps to access various metadata from KKBOX, including tracks, albums, artists, playlists and stations.</p>
 <h3 id="install-using-npm">Install Using npm</h3><p>You can install the SDK using <a href="https://www.npmjs.com">npm</a> by running</p>
-<pre><code><code class="source-code prettyprint">npm install @kkbox/kkbox-js-sdk</code>
-</code></pre><h3 id="install-from-source-code">Install from Source Code</h3><p>Download the SDK and then input the following command under command line</p>
-<pre><code><code class="source-code prettyprint">npm install</code>
-</code></pre><h3 id="build">Build</h3><pre><code><code class="source-code prettyprint">npm run build</code>
-</code></pre><h3 id="test">Test</h3><p>To test or start using the SDK, a valid client ID and client secret are required. Please visit <a href="https://developer.kkbox.com/">https://developer.kkbox.com/</a>, create a new developer account, and obtain the client ID and client secret of your app.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm install @kkbox/kkbox-js-sdk</code>
+</code></pre>
+<h3 id="install-from-source-code">Install from Source Code</h3><p>Download the SDK and then input the following command under command line</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm install</code>
+</code></pre>
+<h3 id="build">Build</h3><pre><code class="lang-bash"><code class="source-code prettyprint">npm run build</code>
+</code></pre>
+<h3 id="test">Test</h3><p>To test or start using the SDK, a valid client ID and client secret are required. Please visit <a href="https://developer.kkbox.com/">https://developer.kkbox.com/</a>, create a new developer account, and obtain the client ID and client secret of your app.</p>
 <p>Then, create a file named <code>client_secrets.json</code>, put it into the <code>test</code> directory, and fill your client ID and client secret into it. It may look like</p>
-<pre><code><code class="source-code prettyprint">{
+<pre><code class="lang-json"><code class="source-code prettyprint">{
     &quot;kkbox_sdk&quot;: {
         &quot;client_id&quot;: &quot;YOUR CLIENT ID&quot;,
         &quot;client_secret&quot;: &quot;YOUR CLIENT SECRET&quot;
     }
 }</code>
-</code></pre><p>And then we could run the tests by calling</p>
-<pre><code><code class="source-code prettyprint">npm run test</code>
-</code></pre><h3 id="sdk-documentation">SDK Documentation</h3><p>Please browse <a href="https://kkbox.github.io/OpenAPI-JavaScript/">https://kkbox.github.io/OpenAPI-JavaScript/</a></p>
-<h2 id="how-to-use-the-sdk">How to use the SDK</h2><p>There are two classes Auth and Api and you should initialize an Auth object by client id and secret.</p>
-<pre><code><code class="source-code prettyprint">import {Auth} from &apos;@kkbox/kkbox-js-sdk&apos;
+</code></pre>
+<p>And then we could run the tests by calling</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm run test</code>
+</code></pre>
+<h3 id="sdk-documentation">SDK Documentation</h3><p>Please browse <a href="https://kkbox.github.io/OpenAPI-JavaScript/">https://kkbox.github.io/OpenAPI-JavaScript/</a></p>
+<h2 id="usage">Usage</h2><p>There are two classes Auth and Api and you should initialize an Auth object by client id and secret.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import {Auth} from &apos;@kkbox/kkbox-js-sdk&apos;
 
 const auth = new Auth(client_id, client_secret)</code>
-</code></pre><p>Then use the auth object to get access token.</p>
-<pre><code><code class="source-code prettyprint">auth.clientCredentialsFlow.fetchAccessToken().then(response =&gt; {
+</code></pre>
+<p>Then use the auth object to get access token.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">auth.clientCredentialsFlow.fetchAccessToken().then(response =&gt; {
     const access_token = response.data.access_token
 })</code>
-</code></pre><p>After getting access token, use it to initialize Api object.</p>
-<pre><code><code class="source-code prettyprint">import {Api} from &apos;@kkbox/kkbox-js-sdk&apos;
+</code></pre>
+<p>After getting access token, use it to initialize Api object.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import {Api} from &apos;@kkbox/kkbox-js-sdk&apos;
 
 const api = new Api(access_token)</code>
-</code></pre><p>Now you can use various fetcher object to fetch data.</p>
-<pre><code><code class="source-code prettyprint">api.searchFetcher.setSearchCriteria(&apos;&#x4E94;&#x6708;&#x5929; &#x6D3E;&#x5C0D;&#x52D5;&#x7269;&apos;, &apos;track&apos;).fetchSearchResult().then(response =&gt; {
+</code></pre>
+<p>Now you can use various fetcher object to fetch data.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">api.searchFetcher.setSearchCriteria(&apos;&#x4E94;&#x6708;&#x5929; &#x6D3E;&#x5C0D;&#x52D5;&#x7269;&apos;, &apos;track&apos;).fetchSearchResult().then(response =&gt; {
     console.log(response.data)
 })</code>
-</code></pre><p>Most methods return paged result and we can use the <code>fetchNextPage</code> method to get the next page of result.</p>
-<pre><code><code class="source-code prettyprint">api.searchFetcher.setSearchCriteria(&apos;&#x4E94;&#x6708;&#x5929; &#x6D3E;&#x5C0D;&#x52D5;&#x7269;&apos;, &apos;track&apos;).fetchSearchResult().then(response =&gt; {
+</code></pre>
+<p>Most methods return paged result and we can use the <code>fetchNextPage</code> method to get the next page of result.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">api.searchFetcher.setSearchCriteria(&apos;&#x4E94;&#x6708;&#x5929; &#x6D3E;&#x5C0D;&#x52D5;&#x7269;&apos;, &apos;track&apos;).fetchSearchResult().then(response =&gt; {
     console.log(response.data)
     api.searchFetcher.fetchNextPage(response).then(response =&gt; {
         console.log(response.data)
     })
 })</code>
-</code></pre><p>All the code.</p>
-<pre><code><code class="source-code prettyprint">import {Auth} from &apos;@kkbox/kkbox-js-sdk&apos;
+</code></pre>
+<p>All the code.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import {Auth} from &apos;@kkbox/kkbox-js-sdk&apos;
 import {Api} from &apos;@kkbox/kkbox-js-sdk&apos;
 
 const auth = new Auth(client_id, client_secret)
@@ -109,8 +119,23 @@ auth.clientCredentialsFlow.fetchAccessToken().then(response =&gt; {
         })
     })
 })</code>
-</code></pre><h3 id="generate-sdk-documentation">Generate SDK Documentation</h3><pre><code><code class="source-code prettyprint">npm run build-doc</code>
-</code></pre><p>Then open the the file <code>docs/index.html</code></p>
+</code></pre>
+<h3 id="use-the-sdk-in-web-browsers">Use the SDK in Web Browsers</h3><p>The SDK plays fine with Node.js, but works partially in web browsers.</p>
+<p>You can use the SDK in your Web and <a href="https://electronjs.org">Electron</a> apps, but you need to prepare a middle man server to help you to obtain access tokens. That&apos;s because KKBOX&apos;s Open API server supports <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a>, but the Auth server does not.</p>
+<p>In other words, your JavaScript code hosted on your own website could access data from KKBOX, but direct access to the Auth server is forbidden by the security policy of modern web browsers.</p>
+<p>When developing an Electron app, you can choose to turn web security off to make you app able to fetch access tokens. You can do this while creating browser windows.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">mainWindow = new BrowserWindow({
+    width: 500,
+    height: 500,
+    useContentSize: true,
+    webPreferences: {
+        webSecurity: false
+    }
+})</code>
+</code></pre>
+<h3 id="generate-sdk-documentation">Generate SDK Documentation</h3><pre><code class="lang-bash"><code class="source-code prettyprint">npm run build-doc</code>
+</code></pre>
+<p>Then open the the file <code>docs/index.html</code></p>
 <h3 id="-a-href--https---docs-en-kkbox-codes---api-documentation--a-"><a href="https://docs-en.kkbox.codes/">API Documentation</a></h3><h3 id="license">License</h3><p>Copyright 2017 KKBOX Technologies Limited</p>
 <p>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 you may not use this file except in compliance with the License.
