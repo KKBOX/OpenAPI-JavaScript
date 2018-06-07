@@ -52,7 +52,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/MoodStationFetcher.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {MOOD_STATIONS as ENDPOINT} from &apos;../Endpoint&apos;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { MOOD_STATIONS as ENDPOINT } from &apos;../Endpoint&apos;
 import Fetcher from &apos;./Fetcher&apos;
 
 /**
@@ -69,7 +69,7 @@ export default class MoodStationFetcher extends Fetcher {
         /**
          * @ignore
          */
-        this.mood_station_id = undefined
+        this.moodStationID = undefined
     }
 
     /**
@@ -80,19 +80,21 @@ export default class MoodStationFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#moodstations
      */
     fetchAllMoodStations() {
-        return this.http.get(ENDPOINT, {territory: this.territory})
+        return this.http.get(ENDPOINT, {
+            territory: this.territory
+        })
     }
 
     /**
      * Init the mood station fetcher.
      *
-     * @param {string} mood_station_id - The ID of a mood station.
+     * @param {string} moodStationID - The ID of a mood station.
      * @param {string} [territory = &apos;TW&apos;] - [&apos;TW&apos;, &apos;HK&apos;, &apos;SG&apos;, &apos;MY&apos;, &apos;JP&apos;] The territory of a mood station.
      * @return {MoodStation}
      * @see https://docs-en.kkbox.codes/v1.1/reference#moodstations-station_id
      */
-    setMoodStationID(mood_station_id, territory = &apos;TW&apos;) {
-        this.mood_station_id = mood_station_id
+    setMoodStationID(moodStationID, territory = &apos;TW&apos;) {
+        this.moodStationID = moodStationID
         this.territory = territory
         return this
     }
@@ -105,9 +107,12 @@ export default class MoodStationFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#moodstations-station_id
      */
     fetchMetadata() {
-        return this.http.get(ENDPOINT + this.mood_station_id, {territory: this.territory})
+        return this.http.get(ENDPOINT + &apos;/&apos; + this.moodStationID, {
+            territory: this.territory
+        })
     }
-}</code></pre>
+}
+</code></pre>
 
 </div>
 

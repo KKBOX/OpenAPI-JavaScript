@@ -1,4 +1,4 @@
-import {MOOD_STATIONS as ENDPOINT} from '../Endpoint'
+import { MOOD_STATIONS as ENDPOINT } from '../Endpoint'
 import Fetcher from './Fetcher'
 
 /**
@@ -15,7 +15,7 @@ export default class MoodStationFetcher extends Fetcher {
         /**
          * @ignore
          */
-        this.mood_station_id = undefined
+        this.moodStationID = undefined
     }
 
     /**
@@ -26,19 +26,21 @@ export default class MoodStationFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#moodstations
      */
     fetchAllMoodStations() {
-        return this.http.get(ENDPOINT, {territory: this.territory})
+        return this.http.get(ENDPOINT, {
+            territory: this.territory
+        })
     }
 
     /**
      * Init the mood station fetcher.
      *
-     * @param {string} mood_station_id - The ID of a mood station.
+     * @param {string} moodStationID - The ID of a mood station.
      * @param {string} [territory = 'TW'] - ['TW', 'HK', 'SG', 'MY', 'JP'] The territory of a mood station.
      * @return {MoodStation}
      * @see https://docs-en.kkbox.codes/v1.1/reference#moodstations-station_id
      */
-    setMoodStationID(mood_station_id, territory = 'TW') {
-        this.mood_station_id = mood_station_id
+    setMoodStationID(moodStationID, territory = 'TW') {
+        this.moodStationID = moodStationID
         this.territory = territory
         return this
     }
@@ -51,6 +53,8 @@ export default class MoodStationFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#moodstations-station_id
      */
     fetchMetadata() {
-        return this.http.get(ENDPOINT + this.mood_station_id, {territory: this.territory})
+        return this.http.get(ENDPOINT + '/' + this.moodStationID, {
+            territory: this.territory
+        })
     }
 }

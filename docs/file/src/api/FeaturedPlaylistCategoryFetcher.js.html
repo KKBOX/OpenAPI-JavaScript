@@ -52,7 +52,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/FeaturedPlaylistCategoryFetcher.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {FEATURED_PLAYLISTS_CATEGORIES as ENDPOINT} from &apos;../Endpoint&apos;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { FEATURED_PLAYLISTS_CATEGORIES as ENDPOINT } from &apos;../Endpoint&apos;
 import Fetcher from &apos;./Fetcher&apos;
 
 /**
@@ -69,7 +69,7 @@ export default class FeaturedPlaylistCategoryFetcher extends Fetcher {
         /**
          * @ignore
          */
-        this.category_id = undefined
+        this.categoryID = undefined
     }
 
     /**
@@ -80,18 +80,20 @@ export default class FeaturedPlaylistCategoryFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories
      */
     fetchAllFeaturedPlaylistCategories() {
-        return this.http.get(ENDPOINT, {territory: this.territory})
+        return this.http.get(ENDPOINT, {
+            territory: this.territory
+        })
     }
 
     /**
      * Init the featured playlist category fetcher.
      *
-     * @param {string} category_id - The category ID.
+     * @param {string} categoryID - The category ID.
      * @return {FeaturedPlaylistCategoryFetcher}
      * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id
      */
-    setCategoryID(category_id) {
-        this.category_id = category_id        
+    setCategoryID(categoryID) {
+        this.categoryID = categoryID
         return this
     }
 
@@ -103,7 +105,9 @@ export default class FeaturedPlaylistCategoryFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id
      */
     fetchMetadata() {
-        return this.http.get(ENDPOINT + this.category_id, {territory: this.territory})
+        return this.http.get(ENDPOINT + &apos;/&apos; + this.categoryID, {
+            territory: this.territory
+        })
     }
 
     /**
@@ -116,13 +120,14 @@ export default class FeaturedPlaylistCategoryFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id-playlists
      */
     fetchPlaylists(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT + this.category_id + &apos;/playlists&apos;, {
+        return this.http.get(ENDPOINT + &apos;/&apos; + this.categoryID + &apos;/playlists&apos;, {
             territory: this.territory,
             limit: limit,
             offset: offset
         })
     }
-}</code></pre>
+}
+</code></pre>
 
 </div>
 

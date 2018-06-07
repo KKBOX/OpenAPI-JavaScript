@@ -1,4 +1,4 @@
-import {GENRE_STATIONS as ENDPOINT} from '../Endpoint'
+import { GENRE_STATIONS as ENDPOINT } from '../Endpoint'
 import Fetcher from './Fetcher'
 
 /**
@@ -15,7 +15,7 @@ export default class GenreStationFetcher extends Fetcher {
         /**
          *  @ignore
          */
-        this.genre_station_id = undefined 
+        this.genreStationID = undefined
     }
 
     /**
@@ -31,19 +31,19 @@ export default class GenreStationFetcher extends Fetcher {
         return this.http.get(ENDPOINT, {
             territory: this.territory,
             limit: limit,
-            offset: offset            
+            offset: offset
         })
     }
 
     /**
      * Init the genre station fetcher.
      *
-     * @param {string} genre_station_id - The ID of a genre station.
+     * @param {string} genreStationID - The ID of a genre station.
      * @return {GenreStation}
      * @see https://docs-en.kkbox.codes/v1.1/reference#genrestations-station_id
      */
-    setGenreStationID(genre_station_id) {
-        this.genre_station_id = genre_station_id        
+    setGenreStationID(genreStationID) {
+        this.genreStationID = genreStationID
         return this
     }
 
@@ -55,6 +55,8 @@ export default class GenreStationFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#genrestations-station_id
      */
     fetchMetadata() {
-        return this.http.get(ENDPOINT + this.genre_station_id, {territory: this.territory})
+        return this.http.get(ENDPOINT + '/' + this.genreStationID, {
+            territory: this.territory
+        })
     }
 }

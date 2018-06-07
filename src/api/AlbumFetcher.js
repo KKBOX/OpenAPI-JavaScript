@@ -1,11 +1,11 @@
-import {ALBUMS as ENDPOINT} from '../Endpoint'
+import { ALBUMS as ENDPOINT } from '../Endpoint'
 import Fetcher from './Fetcher'
 
 /**
  * Fetch metadata and tracks of a album.
  * @see https://docs-en.kkbox.codes/v1.1/reference#albums
  */
-export default class AlbumFetcher extends Fetcher {    
+export default class AlbumFetcher extends Fetcher {
     /**
      * @ignore
      */
@@ -15,30 +15,32 @@ export default class AlbumFetcher extends Fetcher {
         /**
          * @ignore
          */
-        this.album_id = undefined
+        this.albumID = undefined
     }
 
     /**
      * Set the album fetcher.
      *
-     * @param {string} album_id - The ID of an album.
+     * @param {string} albumID - The ID of an album.
      * @return {AlbumFetcher}
      * @see https://docs-en.kkbox.codes/v1.1/reference#albums-album_id
      */
-    setAlbumID(album_id) {
-        this.album_id = album_id        
+    setAlbumID(albumID) {
+        this.albumID = albumID
         return this
     }
 
     /**
-     * Fetcy metadata of the album you create.
+     * Fetch metadata of the album you create.
      *
      * @return {Promise}
      * @example api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchMetadata()
      * @see https://docs-en.kkbox.codes/v1.1/reference#albums-album_id
      */
     fetchMetadata() {
-        return this.http.get(ENDPOINT + this.album_id, {territory: this.territory})
+        return this.http.get(ENDPOINT + '/' + this.albumID, {
+            territory: this.territory
+        })
     }
 
     /**
@@ -46,8 +48,8 @@ export default class AlbumFetcher extends Fetcher {
      * @example https://widget.kkbox.com/v1/?id=4qtXcj31wYJTRZbb23&type=album
      * @return {string}
      */
-    getWidgetUri(){
-        return `https://widget.kkbox.com/v1/?id=${this.album_id}&type=album`
+    getWidgetUri() {
+        return `https://widget.kkbox.com/v1/?id=${this.albumID}&type=album`
     }
 
     /**
@@ -60,7 +62,7 @@ export default class AlbumFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#albums-album_id-tracks
      */
     fetchTracks(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT + this.album_id + '/tracks', {
+        return this.http.get(ENDPOINT + '/' + this.albumID + '/tracks', {
             territory: this.territory,
             limit: limit,
             offset: offset

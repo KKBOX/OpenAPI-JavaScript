@@ -52,7 +52,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/SharedPlaylistFetcher.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {SHARED_PLAYLISTS as ENDPOINT} from &apos;../Endpoint&apos;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { SHARED_PLAYLISTS as ENDPOINT } from &apos;../Endpoint&apos;
 import Fetcher from &apos;./Fetcher&apos;
 
 /**
@@ -69,18 +69,18 @@ export default class SharedPlaylistFetcher extends Fetcher {
         /**
          * @ignore
          */
-        this.playlist_id = undefined
+        this.playlistID = undefined
     }
 
     /**
      * Init the shared playlist fetcher.
      *
-     * @param {string} playlist_id - The ID of a playlist.
+     * @param {string} playlistID - The ID of a playlist.
      * @return {SharedPlaylistFetcher}
      * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id
      */
-    setPlaylistID(playlist_id) {
-        this.playlist_id = playlist_id
+    setPlaylistID(playlistID) {
+        this.playlistID = playlistID
         return this
     }
 
@@ -92,7 +92,9 @@ export default class SharedPlaylistFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id
      */
     fetchMetadata() {
-        return this.http.get(ENDPOINT + this.playlist_id, {territory: this.territory})
+        return this.http.get(ENDPOINT + &apos;/&apos; + this.playlistID, {
+            territory: this.territory
+        })
     }
 
     /**
@@ -100,8 +102,8 @@ export default class SharedPlaylistFetcher extends Fetcher {
      * @example https://widget.kkbox.com/v1/?id=KmjwNXizu5MxHFSloP&amp;type=playlist
      * @return {string}
      */
-    getWidgetUri(){
-        return `https://widget.kkbox.com/v1/?id=${this.playlist_id}&amp;type=playlist`
+    getWidgetUri() {
+        return `https://widget.kkbox.com/v1/?id=${this.playlistID}&amp;type=playlist`
     }
 
     /**
@@ -114,13 +116,14 @@ export default class SharedPlaylistFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id-tracks
      */
     fetchTracks(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT + this.playlist_id + &apos;/tracks&apos;, {
+        return this.http.get(ENDPOINT + &apos;/&apos; + this.playlistID + &apos;/tracks&apos;, {
             territory: this.territory,
             limit: limit,
             offset: offset
         })
     }
-}</code></pre>
+}
+</code></pre>
 
 </div>
 

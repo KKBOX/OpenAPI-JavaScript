@@ -1,4 +1,4 @@
-import {SHARED_PLAYLISTS as ENDPOINT} from '../Endpoint'
+import { SHARED_PLAYLISTS as ENDPOINT } from '../Endpoint'
 import Fetcher from './Fetcher'
 
 /**
@@ -15,18 +15,18 @@ export default class SharedPlaylistFetcher extends Fetcher {
         /**
          * @ignore
          */
-        this.playlist_id = undefined
+        this.playlistID = undefined
     }
 
     /**
      * Init the shared playlist fetcher.
      *
-     * @param {string} playlist_id - The ID of a playlist.
+     * @param {string} playlistID - The ID of a playlist.
      * @return {SharedPlaylistFetcher}
      * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id
      */
-    setPlaylistID(playlist_id) {
-        this.playlist_id = playlist_id
+    setPlaylistID(playlistID) {
+        this.playlistID = playlistID
         return this
     }
 
@@ -38,7 +38,9 @@ export default class SharedPlaylistFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id
      */
     fetchMetadata() {
-        return this.http.get(ENDPOINT + this.playlist_id, {territory: this.territory})
+        return this.http.get(ENDPOINT + '/' + this.playlistID, {
+            territory: this.territory
+        })
     }
 
     /**
@@ -46,8 +48,8 @@ export default class SharedPlaylistFetcher extends Fetcher {
      * @example https://widget.kkbox.com/v1/?id=KmjwNXizu5MxHFSloP&type=playlist
      * @return {string}
      */
-    getWidgetUri(){
-        return `https://widget.kkbox.com/v1/?id=${this.playlist_id}&type=playlist`
+    getWidgetUri() {
+        return `https://widget.kkbox.com/v1/?id=${this.playlistID}&type=playlist`
     }
 
     /**
@@ -60,7 +62,7 @@ export default class SharedPlaylistFetcher extends Fetcher {
      * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id-tracks
      */
     fetchTracks(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT + this.playlist_id + '/tracks', {
+        return this.http.get(ENDPOINT + '/' + this.playlistID + '/tracks', {
             territory: this.territory,
             limit: limit,
             offset: offset

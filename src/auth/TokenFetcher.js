@@ -1,7 +1,7 @@
 import axios from 'axios'
-import {authError} from '../catchError'
+import { authError } from '../catchError'
 import querystring from 'querystring'
-import {Token as ENDPOINT_TOKEN} from '../Endpoint'
+import { Token as ENDPOINT_TOKEN } from '../Endpoint'
 
 /**
  * Fetches access token.
@@ -10,16 +10,16 @@ export default class TokenFetcher {
     /**
      * @ignore
      */
-    constructor(client_id, client_secret) {
+    constructor(clientID, clientSecret) {
         /**
          * @ignore
          */
-        this.client_id = client_id
+        this.clientID = clientID
 
         /**
          * @ignore
          */
-        this.client_secret = client_secret
+        this.clientSecret = clientSecret
     }
 
     /**
@@ -31,10 +31,10 @@ export default class TokenFetcher {
     fetchAccessToken(params) {
         return axios.post(ENDPOINT_TOKEN, querystring.stringify(params), {
             auth: {
-                username: this.client_id,
-                password: this.client_secret
+                username: this.clientID,
+                password: this.clientSecret
             },
-            headers: {'User-Agent': 'KKBOX JavaScript SDK'}
+            headers: {}
         }).catch(authError)
     }
 }

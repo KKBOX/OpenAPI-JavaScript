@@ -1,4 +1,4 @@
-import {FEATURED_PLAYLISTS as ENDPOINT} from '../Endpoint'
+import { FEATURED_PLAYLISTS as ENDPOINT } from '../Endpoint'
 import Fetcher from './Fetcher'
 
 /**
@@ -24,8 +24,8 @@ export default class FeaturedPlaylistFetcher extends Fetcher {
      */
     fetchAllFeaturedPlaylists(limit = undefined, offset = undefined) {
         return this.http.get(ENDPOINT, {
-            limit: limit, 
-            offset: offset, 
+            limit: limit,
+            offset: offset,
             territory: this.territory
         })
     }

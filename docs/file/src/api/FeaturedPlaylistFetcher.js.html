@@ -52,7 +52,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/FeaturedPlaylistFetcher.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {FEATURED_PLAYLISTS as ENDPOINT} from &apos;../Endpoint&apos;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { FEATURED_PLAYLISTS as ENDPOINT } from &apos;../Endpoint&apos;
 import Fetcher from &apos;./Fetcher&apos;
 
 /**
@@ -78,12 +78,13 @@ export default class FeaturedPlaylistFetcher extends Fetcher {
      */
     fetchAllFeaturedPlaylists(limit = undefined, offset = undefined) {
         return this.http.get(ENDPOINT, {
-            limit: limit, 
-            offset: offset, 
+            limit: limit,
+            offset: offset,
             territory: this.territory
         })
     }
-}</code></pre>
+}
+</code></pre>
 
 </div>
 

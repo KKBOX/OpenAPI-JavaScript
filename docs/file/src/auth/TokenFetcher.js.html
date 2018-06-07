@@ -53,9 +53,9 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/auth/TokenFetcher.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import axios from &apos;axios&apos;
-import {authError} from &apos;../catchError&apos;
+import { authError } from &apos;../catchError&apos;
 import querystring from &apos;querystring&apos;
-import {Token as ENDPOINT_TOKEN} from &apos;../Endpoint&apos;
+import { Token as ENDPOINT_TOKEN } from &apos;../Endpoint&apos;
 
 /**
  * Fetches access token.
@@ -64,16 +64,16 @@ export default class TokenFetcher {
     /**
      * @ignore
      */
-    constructor(client_id, client_secret) {
+    constructor(clientID, clientSecret) {
         /**
          * @ignore
          */
-        this.client_id = client_id
+        this.clientID = clientID
 
         /**
          * @ignore
          */
-        this.client_secret = client_secret
+        this.clientSecret = clientSecret
     }
 
     /**
@@ -85,13 +85,14 @@ export default class TokenFetcher {
     fetchAccessToken(params) {
         return axios.post(ENDPOINT_TOKEN, querystring.stringify(params), {
             auth: {
-                username: this.client_id,
-                password: this.client_secret
+                username: this.clientID,
+                password: this.clientSecret
             },
-            headers: {&apos;User-Agent&apos;: &apos;KKBOX JavaScript SDK&apos;}
+            headers: {}
         }).catch(authError)
     }
-}</code></pre>
+}
+</code></pre>
 
 </div>
 

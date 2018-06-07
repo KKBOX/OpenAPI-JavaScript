@@ -4,62 +4,62 @@ const API_DOMAIN = (() => {
 /**
  * @ignore
  */
-export const SEARCH = API_DOMAIN + 'search/'
+export const SEARCH = API_DOMAIN + 'search'
 
 /**
  * @ignore
  */
-export const TRACKS = API_DOMAIN + 'tracks/'
+export const TRACKS = API_DOMAIN + 'tracks'
 
 /**
  * @ignore
  */
-export const ARTISTS = API_DOMAIN + 'artists/'
+export const ARTISTS = API_DOMAIN + 'artists'
 
 /**
  * @ignore
  */
-export const ALBUMS = API_DOMAIN + 'albums/'
+export const ALBUMS = API_DOMAIN + 'albums'
 
 /**
  * @ignore
  */
-export const SHARED_PLAYLISTS = API_DOMAIN + 'shared-playlists/'
+export const SHARED_PLAYLISTS = API_DOMAIN + 'shared-playlists'
 
 /**
  * @ignore
  */
-export const MOOD_STATIONS = API_DOMAIN + 'mood-stations/'
+export const MOOD_STATIONS = API_DOMAIN + 'mood-stations'
 
 /**
  * @ignore
  */
-export const FEATURED_PLAYLISTS = API_DOMAIN + 'featured-playlists/'
+export const FEATURED_PLAYLISTS = API_DOMAIN + 'featured-playlists'
 
 /**
  * @ignore
  */
-export const FEATURED_PLAYLISTS_CATEGORIES = API_DOMAIN + 'featured-playlist-categories/'
+export const FEATURED_PLAYLISTS_CATEGORIES = API_DOMAIN + 'featured-playlist-categories'
 
 /**
  * @ignore
  */
-export const NEW_RELEASE_CATEGORIES = API_DOMAIN + 'new-release-categories/'
+export const NEW_RELEASE_CATEGORIES = API_DOMAIN + 'new-release-categories'
 
 /**
  * @ignore
  */
-export const NEW_HITS_PLAYLISTS = API_DOMAIN + 'new-hits-playlists/'
+export const NEW_HITS_PLAYLISTS = API_DOMAIN + 'new-hits-playlists'
 
 /**
  * @ignore
  */
-export const GENRE_STATIONS = API_DOMAIN + 'genre-stations/'
+export const GENRE_STATIONS = API_DOMAIN + 'genre-stations'
 
 /**
  * @ignore
  */
-export const CHARTS = API_DOMAIN + 'charts/'
+export const CHARTS = API_DOMAIN + 'charts'
 
 /**
  * @ignore
@@ -71,14 +71,14 @@ export const SEARCH_TYPES = {
     PLAY_LIST: 'playlist'
 }
 
-const OAuth_DOMAIN = 'https://account.kkbox.com/oauth2/'
+const OAUTH_DOMAIN = 'https://account.kkbox.com/oauth2/'
 
 /**
  * @ignore
  */
-export const Token = OAuth_DOMAIN + 'token/'
+export const Token = OAUTH_DOMAIN + 'token/'
 
 /**
  * @ignore
  */
-export const Authorization = OAuth_DOMAIN + 'authorize/'
+export const Authorization = OAUTH_DOMAIN + 'authorize/'
