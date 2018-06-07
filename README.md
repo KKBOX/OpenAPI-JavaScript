@@ -36,10 +36,10 @@ Then, create a file named `client_secrets.json`, put it into the `test` director
 
 ```json
 {
-    "kkbox_sdk": {
-        "client_id": "YOUR CLIENT ID",
-        "client_secret": "YOUR CLIENT SECRET"
-    }
+  "kkbox_sdk": {
+    "client_id": "YOUR CLIENT ID",
+    "client_secret": "YOUR CLIENT SECRET"
+  }
 }
 ```
 
@@ -58,63 +58,71 @@ Please browse [https://kkbox.github.io/OpenAPI-JavaScript/](https://kkbox.github
 There are two classes Auth and Api and you should initialize an Auth object by client id and secret.
 
 ```js
-import {Auth} from '@kkbox/kkbox-js-sdk'
-
-const auth = new Auth(client_id, client_secret)
+import { Auth } from '@kkbox/kkbox-js-sdk';
+const auth = new Auth(client_id, client_secret);
 ```
 
 Then use the auth object to get access token.
 
 ```js
-auth.clientCredentialsFlow.fetchAccessToken().then(response => {
-    const access_token = response.data.access_token
-})
+auth.clientCredentialsFlow.fetchAccessToken()
+  .then(response => {
+    const access_token = response.data.access_token;
+  });
 ```
 
 After getting access token, use it to initialize Api object.
 
 ```js
-import {Api} from '@kkbox/kkbox-js-sdk'
-
-const api = new Api(access_token)
+import { Api } from '@kkbox/kkbox-js-sdk';
+const api = new Api(access_token);
 ```
 
 Now you can use various fetcher object to fetch data.
 
 ```js
-api.searchFetcher.setSearchCriteria('五月天 派對動物', 'track').fetchSearchResult().then(response => {
-    console.log(response.data)
-})
+api.searchFetcher
+  .setSearchCriteria('五月天 派對動物', 'track')
+  .fetchSearchResult()
+  .then(response => {
+    console.log(response.data);
+  });
 ```
 
 Most methods return paged result and we can use the `fetchNextPage` method to get the next page of result.
 
 ```js
-api.searchFetcher.setSearchCriteria('五月天 派對動物', 'track').fetchSearchResult().then(response => {
-    console.log(response.data)
+api.searchFetcher
+  .setSearchCriteria('五月天 派對動物', 'track')
+  .fetchSearchResult()
+  .then(response => {
+    console.log(response.data);
     api.searchFetcher.fetchNextPage(response).then(response => {
-        console.log(response.data)
-    })
-})
+      console.log(response.data);
+    });
+  });
 ```
 
 All the code.
 
 ```js
-import {Auth} from '@kkbox/kkbox-js-sdk'
-import {Api} from '@kkbox/kkbox-js-sdk'
+import { Auth } from '@kkbox/kkbox-js-sdk';
+import { Api } from '@kkbox/kkbox-js-sdk';
 
-const auth = new Auth(client_id, client_secret)
+const auth = new Auth(client_id, client_secret);
 auth.clientCredentialsFlow.fetchAccessToken().then(response => {
-    const access_token = response.data.access_token
-    const api = new Api(access_token)
-    api.searchFetcher.setSearchCriteria('五月天 派對動物', 'track').fetchSearchResult().then(response => {
-        console.log(response.data)
-        api.searchFetcher.fetchNextPage(response).then(response => {
-            console.log(response.data)
-        })
-    })
-})
+  const access_token = response.data.access_token;
+  const api = new Api(access_token);
+  api.searchFetcher
+    .setSearchCriteria('五月天 派對動物', 'track')
+    .fetchSearchResult()
+    .then(response => {
+      console.log(response.data);
+      api.searchFetcher.fetchNextPage(response).then(response => {
+        console.log(response.data);
+      });
+    });
+});
 ```
 
 ### Use the SDK in Web Browsers
@@ -129,13 +137,13 @@ When developing an Electron app, you can choose to turn web security off to make
 
 ```js
 mainWindow = new BrowserWindow({
-    width: 500,
-    height: 500,
-    useContentSize: true,
-    webPreferences: {
-        webSecurity: false
-    }
-})
+  width: 500,
+  height: 500,
+  useContentSize: true,
+  webPreferences: {
+    webSecurity: false
+  }
+});
 ```
 
 ### Generate SDK Documentation

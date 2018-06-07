@@ -4,25 +4,25 @@
  * @see https://docs-en.kkbox.codes/docs/getting-started
  */
 export default class ClientCredentialsFlow {
+  /**
+   * @ignore
+   */
+  constructor(token) {
     /**
      * @ignore
      */
-    constructor(token) {
-        /**
-         * @ignore
-         */
-        this.token = token
-    }
+    this.token = token;
+  }
 
-    /**
-     * Fetch access token.
-     *
-     * @return {Promise}
-     * @example auth.clientCredentialsFlow.fetchAccessToken()
-     */
-    fetchAccessToken() {
-        return this.token.fetchAccessToken({
-            grant_type: 'client_credentials'
-        })
-    }
+  /**
+   * Fetch access token.
+   *
+   * @return {Promise}
+   * @example auth.clientCredentialsFlow.fetchAccessToken();
+   */
+  fetchAccessToken() {
+    return this.token.fetchAccessToken({
+      grant_type: 'client_credentials'
+    });
+  }
 }
