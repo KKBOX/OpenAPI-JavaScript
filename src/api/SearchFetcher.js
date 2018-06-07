@@ -45,17 +45,6 @@ export default class SearchFetcher extends Fetcher {
         return this
     }
 
-    // filter (conditions = {
-    //   track = undefined,
-    //   album = undefined,
-    //   artist = undefined,
-    //   playlist = undefined,
-    //   availableTerritory = undefined
-    // } = {}) {
-    //   this.filterConditions = conditions
-    //   return this
-    // }
-
     /**
      * Init the search fetcher for the artist, album, track or playlist.
      *
