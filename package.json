@@ -11,8 +11,7 @@
     "build-webpack": "webpack -p",
     "build": "babel src --presets babel-preset-es2015 --out-dir dist",
     "prepublishOnly": "npm run build",
-    "doc": "./node_modules/.bin/esdoc && open ./docs/index.html",
-    "build-doc": "./node_modules/.bin/esdoc"
+    "doc": "esdoc"
   },
   "author": "KKBOX",
   "repository": {
