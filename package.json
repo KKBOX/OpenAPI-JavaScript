@@ -39,9 +39,9 @@
     "esdoc": "^1.0.4",
     "esdoc-standard-plugin": "^1.0.0",
     "jenkins-mocha": "^4.1.2",
-    "mocha": "^3.2.0",
     "mocha-ci-slack-reporter": "^1.0.1",
     "mocha-jenkins-reporter": "^0.3.8",
+    "mocha": "^5.2.0",
     "should": "^11.2.1",
     "webpack": "^2.3.3"
   },
