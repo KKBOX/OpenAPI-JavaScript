@@ -11,7 +11,7 @@ The SDK helps you to access various metadata from KKBOX, including tracks, album
 Install the SDK using npm
 
 ```bash
-npm install @kkbox/kkbox-js-sdk
+$ npm install @kkbox/kkbox-js-sdk
 ```
 
 ### Usage example
@@ -35,6 +35,7 @@ auth.clientCredentialsFlow
       .setSearchCriteria('五月天 派對動物', 'track')
       .fetchSearchResult()
       .then(response => {
+
         // Content from the KKBOX Open API
         console.log(response.data);
 
@@ -42,6 +43,7 @@ auth.clientCredentialsFlow
         api.searchFetcher.fetchNextPage(response).then(response => {
           console.log(response.data);
         });
+
       });
   });
 ```
@@ -67,7 +69,7 @@ It may look like
 
 Run the test:
 ``` bash
-npm run test
+$ npm test
 ```
 
 ### Documentation
