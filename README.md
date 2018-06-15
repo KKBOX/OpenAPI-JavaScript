@@ -6,7 +6,7 @@
 
 The SDK helps you to access various metadata from KKBOX, including tracks, albums, artists, playlists and stations.
 
-### Getting Started
+## Getting Started
 
 Install the SDK using npm
 
@@ -14,7 +14,7 @@ Install the SDK using npm
 $ npm install @kkbox/kkbox-js-sdk
 ```
 
-### Usage example
+## Usage example
 ```js
 import { Auth, Api } from '@kkbox/kkbox-js-sdk';
 
@@ -48,7 +48,7 @@ auth.clientCredentialsFlow
   });
 ```
 
-### Test
+## Test
 
 To test the SDK, a valid client ID and client secret are required.
 
@@ -72,11 +72,11 @@ Run the test:
 $ npm test
 ```
 
-### Documentation
+## Documentation
 
 See [https://kkbox.github.io/OpenAPI-JavaScript/](https://kkbox.github.io/OpenAPI-JavaScript/) for full documentation.
 
-### Use the SDK in Web Browsers
+## Use the SDK in Web Browsers
 
 The SDK plays fine with Node.js, but works partially in web browsers.
 
@@ -97,7 +97,7 @@ mainWindow = new BrowserWindow({
 });
 ```
 
-### License
+## License
 
 Copyright 2018 KKBOX Technologies Limited
 
