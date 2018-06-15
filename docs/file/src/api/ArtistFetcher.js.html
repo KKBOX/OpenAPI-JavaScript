@@ -52,108 +52,108 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/ArtistFetcher.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { ARTISTS as ENDPOINT } from &apos;../Endpoint&apos;
-import Fetcher from &apos;./Fetcher&apos;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { ARTISTS as ENDPOINT } from &apos;../Endpoint&apos;;
+import Fetcher from &apos;./Fetcher&apos;;
 
 /**
  * Get artist metadata.
  * @see https://docs-en.kkbox.codes/v1.1/reference#artists
  */
 export default class ArtistFetcher extends Fetcher {
+  /**
+   * @ignore
+   */
+  constructor(http, territory = &apos;TW&apos;) {
+    super(http, territory);
+
     /**
      * @ignore
      */
-    constructor(http, territory = &apos;TW&apos;) {
-        super(http, territory)
+    this.artistID = undefined;
+  }
 
-        /**
-         * @ignore
-         */
-        this.artistID = undefined
-    }
+  /**
+   * Init the artist object.
+   *
+   * @param {string} artistID - The ID of an artist.
+   * @return {Artist}
+   * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id
+   */
+  setArtistID(artistID) {
+    this.artistID = artistID;
+    return this;
+  }
 
-    /**
-     * Init the artist object.
-     *
-     * @param {string} artistID - The ID of an artist.
-     * @return {Artist}
-     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id
-     */
-    setArtistID(artistID) {
-        this.artistID = artistID
-        return this
-    }
+  /**
+   * Fetch metadata of the artist you find.
+   *
+   * @return {Promise}
+   * @example api.artistFetcher.setArtistID(&apos;Cnv_K6i5Ft4y41SxLy&apos;).fetchMetadata();
+   * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id
+   */
+  fetchMetadata() {
+    return this.http.get(ENDPOINT + &apos;/&apos; + this.artistID, {
+      territory: this.territory
+    });
+  }
 
-    /**
-     * Fetch metadata of the artist you find.
-     *
-     * @return {Promise}
-     * @example api.artistFetcher.setArtistID(&apos;Cnv_K6i5Ft4y41SxLy&apos;).fetchMetadata()
-     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id
-     */
-    fetchMetadata() {
-        return this.http.get(ENDPOINT + &apos;/&apos; + this.artistID, {
-            territory: this.territory
-        })
-    }
+  /**
+   * Fetch albums belong to an artist.
+   *
+   * @param {number} [limit] - The size for one page.
+   * @param {number} [offset] - The offset index for first element.
+   * @return {Promise}
+   * @example api.artistFetcher.setArtistID(&apos;Cnv_K6i5Ft4y41SxLy&apos;).fetchAlbums();
+   * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-albums
+   */
+  fetchAlbums(limit = undefined, offset = undefined) {
+    return this.http.get(ENDPOINT + &apos;/&apos; + this.artistID + &apos;/albums&apos;, {
+      territory: this.territory,
+      limit: limit,
+      offset: offset
+    });
+  }
 
-    /**
-     * Fetch albums belong to an artist.
-     *
-     * @param {number} [limit] - The size for one page.
-     * @param {number} [offset] - The offset index for first element.
-     * @return {Promise}
-     * @example api.artistFetcher.setArtistID(&apos;Cnv_K6i5Ft4y41SxLy&apos;).fetchAlbums()
-     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-albums
-     */
-    fetchAlbums(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT + &apos;/&apos; + this.artistID + &apos;/albums&apos;, {
-            territory: this.territory,
-            limit: limit,
-            offset: offset
-        })
-    }
+  /**
+   * Fetch top tracks belong to an artist.
+   *
+   * @param {number} [limit] - The size for one page.
+   * @param {number} [offset] - The offset index for first element.
+   * @return {Promise}
+   * @example api.artistFetcher.setArtistID(&apos;Cnv_K6i5Ft4y41SxLy&apos;).fetchTopTracks();
+   * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-toptracks
+   */
+  fetchTopTracks(limit = undefined, offset = undefined) {
+    return this.http.get(ENDPOINT + &apos;/&apos; + this.artistID + &apos;/top-tracks&apos;, {
+      territory: this.territory,
+      limit: limit,
+      offset: offset
+    });
+  }
 
-    /**
-     * Fetch top tracks belong to an artist.
-     *
-     * @param {number} [limit] - The size for one page.
-     * @param {number} [offset] - The offset index for first element.
-     * @return {Promise}
-     * @example api.artistFetcher.setArtistID(&apos;Cnv_K6i5Ft4y41SxLy&apos;).fetchTopTracks()
-     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-toptracks
-     */
-    fetchTopTracks(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT + &apos;/&apos; + this.artistID + &apos;/top-tracks&apos;, {
-            territory: this.territory,
-            limit: limit,
-            offset: offset
-        })
-    }
-
-    /**
-     * Fetch related artists
-     *
-     * @param {number} [limit] - The size for one page.
-     * @param {number} [offset] - The offset index for first element.
-     * @return {Promise}
-     * @example api.artistFetcher.setArtistID(&apos;Cnv_K6i5Ft4y41SxLy&apos;).fetchRelatedArtists()
-     * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-relatedartists
-     */
-    fetchRelatedArtists(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT + &apos;/&apos; + this.artistID + &apos;/related-artists&apos;, {
-            territory: this.territory,
-            limit: limit,
-            offset: offset
-        })
-    }
+  /**
+   * Fetch related artists
+   *
+   * @param {number} [limit] - The size for one page.
+   * @param {number} [offset] - The offset index for first element.
+   * @return {Promise}
+   * @example api.artistFetcher.setArtistID(&apos;Cnv_K6i5Ft4y41SxLy&apos;).fetchRelatedArtists();
+   * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-relatedartists
+   */
+  fetchRelatedArtists(limit = undefined, offset = undefined) {
+    return this.http.get(ENDPOINT + &apos;/&apos; + this.artistID + &apos;/related-artists&apos;, {
+      territory: this.territory,
+      limit: limit,
+      offset: offset
+    });
+  }
 }
 </code></pre>
 
 </div>
 
 <footer class="footer">
-  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
 </footer>
 
 <script src="script/search_index.js"></script>

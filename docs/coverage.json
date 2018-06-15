@@ -8,7 +8,7 @@
       "actualCount": 15,
       "undocumentLines": [
         1,
-        74
+        75
       ]
     },
     "src/api/AlbumFetcher.js": {
@@ -80,7 +80,7 @@
       "expectCount": 9,
       "actualCount": 8,
       "undocumentLines": [
-        82
+        91
       ]
     },
     "src/api/SharedPlaylistFetcher.js": {

@@ -56,100 +56,106 @@
  * Base api fetcher.
  */
 export default class Fetcher {
+  /**
+   * @param {Http} http
+   * @param {string} [territory = &apos;TW&apos;] - [&apos;TW&apos;, &apos;HK&apos;, &apos;SG&apos;, &apos;MY&apos;, &apos;JP&apos;] The territory for the fetcher.
+   */
+  constructor(http, territory = &apos;TW&apos;) {
     /**
-     * @param {Http} http
-     * @param {string} [territory = &apos;TW&apos;] - [&apos;TW&apos;, &apos;HK&apos;, &apos;SG&apos;, &apos;MY&apos;, &apos;JP&apos;] The territory for the fetcher.
-     */
-    constructor(http, territory = &apos;TW&apos;) {
-        /**
-         * @ignore
-         */
-        this.http = http
-
-        /**
-         * @ignore
-         */
-        this.territory = territory
-    }
-
-    /**
-     * Set the fetcher&apos;s territory.
-     * @param {string} [territory = &apos;TW&apos;] - [&apos;TW&apos;, &apos;HK&apos;, &apos;SG&apos;, &apos;MY&apos;, &apos;JP&apos;] The territory for the fetcher.
-     * @return {Fetcher}
-     */
-    setTerritory(territory) {
-        this.territory = territory
-        return this
-    }
-
-    /**
-     * Gets an object&apos;s nested property by path.
      * @ignore
      */
-    getPropertyByPath(object, path) {
-        path = path.replace(/\[(\w+)\]/g, &apos;.$1&apos;) // convert indexes to properties
-        path = path.replace(/^\./, &apos;&apos;) // strip a leading dot
-        var keys = path.split(&apos;.&apos;)
-        for (var i = 0, n = keys.length; i &lt; n; ++i) {
-            var key = keys[i]
-            if (key in object) {
-                object = object[key]
-            } else {
-                return
-            }
-        }
-        return object
-    }
+    this.http = http;
 
     /**
-     * Fetches next page of various paged APIs.
-     *
-     * @param {fulfillment} fulfillment - The fulfillment get from Promose&apos;s onFulfillment function
-     * @param {String} nextUriPath - The next uri&apos;s path. Defaults to &apos;data.paging.next&apos;,
-     * which means we will get the next uri path from &apos;fulfillment.data.paging.next&apos;.
-     * The correct next uri path depends on respective api&apos;s response.
-     * @return {Promise}
-     * @example
-     * api.albumFetcher.setAlbumID(&apos;KmRKnW5qmUrTnGRuxF&apos;).fetchTracks().then(response =&gt; {
-     *      api.albumFetcher.fetchNextPage(response))
-     * })
+     * @ignore
      */
-    fetchNextPage(fulfillment, nextUriPath = &apos;data.paging.next&apos;) {
-        var nextUri = this.getPropertyByPath(fulfillment, nextUriPath)
-        if (nextUri != null &amp;&amp; nextUri !== undefined) {
-            return this.http.get(nextUri)
-        } else {
-            return new Promise((resolve, reject) =&gt; {
-                reject(new Error(&apos;Cannot fetch next page&apos;))
-            })
-        }
-    }
+    this.territory = territory;
+  }
 
-    /**
-     * Is next page available for various paged APIs.
-     * @param {fulfillment} fulfillment - The fulfillment get from Promose&apos;s onFulfillment function
-     * @param {String} nextUriPath - The next uri&apos;s path. Defaults to &apos;data.paging.next&apos;,
-     * which means we will get the next uri path from &apos;fulfillment.data.paging.next&apos;.
-     * The correct next uri path depends on respective api&apos;s response.
-     * @return {Boolean}
-     * @example
-     * api.albumFetcher.setAlbumID(&apos;KmRKnW5qmUrTnGRuxF&apos;).fetchTracks().then(response =&gt; {
-     *      if (api.albumFetcher.hasNextPage(response)) {
-     *          // more data available
-     *      }
-     * })
-     */
-    hasNextPage(fulfillment, nextUriPath = &apos;data.paging.next&apos;) {
-        var nextUri = this.getPropertyByPath(fulfillment, nextUriPath)
-        return (nextUri != null &amp;&amp; nextUri !== undefined)
+  /**
+   * Set the fetcher&apos;s territory.
+   * @param {string} [territory = &apos;TW&apos;] - [&apos;TW&apos;, &apos;HK&apos;, &apos;SG&apos;, &apos;MY&apos;, &apos;JP&apos;] The territory for the fetcher.
+   * @return {Fetcher}
+   */
+  setTerritory(territory) {
+    this.territory = territory;
+    return this;
+  }
+
+  /**
+   * Gets an object&apos;s nested property by path.
+   * @ignore
+   */
+  getPropertyByPath(object, path) {
+    path = path.replace(/\[(\w+)\]/g, &apos;.$1&apos;); // convert indexes to properties
+    path = path.replace(/^\./, &apos;&apos;); // strip a leading dot
+    var keys = path.split(&apos;.&apos;);
+    for (var i = 0, n = keys.length; i &lt; n; ++i) {
+      var key = keys[i];
+      if (key in object) {
+        object = object[key];
+      } else {
+        return;
+      }
     }
+    return object;
+  }
+
+  /**
+   * Fetches next page of various paged APIs.
+   *
+   * @param {fulfillment} fulfillment - The fulfillment get from Promose&apos;s onFulfillment function
+   * @param {String} nextUriPath - The next uri&apos;s path. Defaults to &apos;data.paging.next&apos;,
+   * which means we will get the next uri path from &apos;fulfillment.data.paging.next&apos;.
+   * The correct next uri path depends on respective api&apos;s response.
+   * @return {Promise}
+   * @example
+   * api.albumFetcher
+   *   .setAlbumID(&apos;KmRKnW5qmUrTnGRuxF&apos;)
+   *   .fetchTracks()
+   *   .then(response =&gt; {
+   *     api.albumFetcher.fetchNextPage(response));
+   *   });
+   */
+  fetchNextPage(fulfillment, nextUriPath = &apos;data.paging.next&apos;) {
+    var nextUri = this.getPropertyByPath(fulfillment, nextUriPath);
+    if (nextUri != null &amp;&amp; nextUri !== undefined) {
+      return this.http.get(nextUri);
+    } else {
+      return new Promise((resolve, reject) =&gt; {
+        reject(new Error(&apos;Cannot fetch next page&apos;));
+      });
+    }
+  }
+
+  /**
+   * Is next page available for various paged APIs.
+   * @param {fulfillment} fulfillment - The fulfillment get from Promose&apos;s onFulfillment function
+   * @param {String} nextUriPath - The next uri&apos;s path. Defaults to &apos;data.paging.next&apos;,
+   * which means we will get the next uri path from &apos;fulfillment.data.paging.next&apos;.
+   * The correct next uri path depends on respective api&apos;s response.
+   * @return {Boolean}
+   * @example
+   * api.albumFetcher
+   *   .setAlbumID(&apos;KmRKnW5qmUrTnGRuxF&apos;)
+   *   .fetchTracks()
+   *   .then(response =&gt; {
+   *     if (api.albumFetcher.hasNextPage(response)) {
+   *       // more data available
+   *     }
+   *   });
+   */
+  hasNextPage(fulfillment, nextUriPath = &apos;data.paging.next&apos;) {
+    var nextUri = this.getPropertyByPath(fulfillment, nextUriPath);
+    return nextUri != null &amp;&amp; nextUri !== undefined;
+  }
 }
 </code></pre>
 
 </div>
 
 <footer class="footer">
-  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
 </footer>
 
 <script src="script/search_index.js"></script>

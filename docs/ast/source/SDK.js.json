@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 89,
+  "end": 91,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 89,
+    "end": 91,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 0,
-        "end": 45,
+        "end": 46,
         "loc": {
           "start": {
             "line": 1,
@@ -39,7 +39,7 @@
           },
           "end": {
             "line": 1,
-            "column": 45
+            "column": 46
           }
         },
         "declaration": null,
@@ -117,8 +117,8 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 46,
-        "end": 88,
+        "start": 47,
+        "end": 90,
         "loc": {
           "start": {
             "line": 2,
@@ -126,15 +126,15 @@
           },
           "end": {
             "line": 2,
-            "column": 42
+            "column": 43
           }
         },
         "declaration": null,
         "specifiers": [
           {
             "type": "ExportSpecifier",
-            "start": 55,
-            "end": 69,
+            "start": 56,
+            "end": 70,
             "loc": {
               "start": {
                 "line": 2,
@@ -147,8 +147,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 55,
-              "end": 62,
+              "start": 56,
+              "end": 63,
               "loc": {
                 "start": {
                   "line": 2,
@@ -164,8 +164,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 66,
-              "end": 69,
+              "start": 67,
+              "end": 70,
               "loc": {
                 "start": {
                   "line": 2,
@@ -183,8 +183,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 77,
-          "end": 88,
+          "start": 78,
+          "end": 89,
           "loc": {
             "start": {
               "line": 2,
@@ -420,6 +420,32 @@
     },
     {
       "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 45,
+      "end": 46,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 45
+        },
+        "end": {
+          "line": 1,
+          "column": 46
+        }
+      }
+    },
+    {
+      "type": {
         "label": "export",
         "keyword": "export",
         "beforeExpr": false,
@@ -433,8 +459,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 46,
-      "end": 52,
+      "start": 47,
+      "end": 53,
       "loc": {
         "start": {
           "line": 2,
@@ -458,8 +484,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 53,
-      "end": 54,
+      "start": 54,
+      "end": 55,
       "loc": {
         "start": {
           "line": 2,
@@ -486,8 +512,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 55,
-      "end": 62,
+      "start": 56,
+      "end": 63,
       "loc": {
         "start": {
           "line": 2,
@@ -512,8 +538,8 @@
         "binop": null
       },
       "value": "as",
-      "start": 63,
-      "end": 65,
+      "start": 64,
+      "end": 66,
       "loc": {
         "start": {
           "line": 2,
@@ -538,8 +564,8 @@
         "binop": null
       },
       "value": "Api",
-      "start": 66,
-      "end": 69,
+      "start": 67,
+      "end": 70,
       "loc": {
         "start": {
           "line": 2,
@@ -563,8 +589,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 70,
-      "end": 71,
+      "start": 71,
+      "end": 72,
       "loc": {
         "start": {
           "line": 2,
@@ -589,8 +615,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 72,
-      "end": 76,
+      "start": 73,
+      "end": 77,
       "loc": {
         "start": {
           "line": 2,
@@ -616,8 +642,8 @@
         "updateContext": null
       },
       "value": "./api/Api",
-      "start": 77,
-      "end": 88,
+      "start": 78,
+      "end": 89,
       "loc": {
         "start": {
           "line": 2,
@@ -626,6 +652,32 @@
         "end": {
           "line": 2,
           "column": 42
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 89,
+      "end": 90,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 42
+        },
+        "end": {
+          "line": 2,
+          "column": 43
         }
       }
     },
@@ -642,8 +694,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 89,
-      "end": 89,
+      "start": 91,
+      "end": 91,
       "loc": {
         "start": {
           "line": 3,

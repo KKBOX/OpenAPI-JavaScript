@@ -52,176 +52,213 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/SearchFetcher.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { SEARCH as ENDPOINT } from &apos;../Endpoint&apos;
-import Fetcher from &apos;./Fetcher&apos;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { SEARCH as ENDPOINT } from &apos;../Endpoint&apos;;
+import Fetcher from &apos;./Fetcher&apos;;
 
 /**
  * Search API.
  * @see https://docs-en.kkbox.codes/v1.1/reference#search
  */
 export default class SearchFetcher extends Fetcher {
+  /**
+   * @ignore
+   */
+  constructor(http, territory = &apos;TW&apos;) {
+    super(http, territory);
+
     /**
      * @ignore
      */
-    constructor(http, territory = &apos;TW&apos;) {
-        super(http, territory)
-
-        /**
-         * @ignore
-         */
-        this.filterConditions = undefined
-
-        /**
-         * @ignore
-         */
-        this.q = undefined
-
-        /**
-         * @ignore
-         */
-        this.type = undefined
-    }
+    this.filterConditions = undefined;
 
     /**
-     * Filter what you don&apos;t want when search.
-     *
-     * @param {Object} [conditions] - search conditions.
-     * @param {string} conditions.track - track&apos;s name.
-     * @param {string} conditions.album - album&apos;s name.
-     * @param {string} conditions.artist - artist&apos;s name.
-     * @param {string} conditions.playlist - playlist&apos;s title.
-     * @param {string} conditions.availableTerritory - tracks and albums available territory.
-     * @return {Search}
-     * @example api.searchFetcher.setSearchCriteria(&apos;&#x4E94;&#x6708;&#x5929; &#x597D;&#x597D;&apos;).filter({artist: &apos;&#x4E94;&#x6708;&#x5929;&apos;}).fetchSearchResult()
+     * @ignore
      */
-    filter(conditions = {}) {
-        this.filterConditions = conditions
-        return this
-    }
+    this.q = undefined;
 
     /**
-     * Init the search fetcher for the artist, album, track or playlist.
-     *
-     * @param {string} q - The keyword to be searched.
-     * @param {string} [type] - [&apos;artist&apos;, &apos;album&apos;, &apos;track&apos;, &apos;playlist&apos;] The type of search. Default to search all types. If you want to use multiple type at the same time, you may use &apos;,&apos; to separate them.
-     * @return {Search}
-     * @see https://docs-en.kkbox.codes/v1.1/reference#search_1
+     * @ignore
      */
-    setSearchCriteria(q, type = undefined) {
-        this.q = q
-        this.type = type
-        return this
-    }
+    this.type = undefined;
+  }
 
-    /**
-     * Fetch the search result.
-     *
-     * @param {number} [limit] - The size of one page.
-     * @param {number} [offset] - The offset index for first element.
-     * @return {Promise}
-     * @example api.searchFetcher.setSearchCriteria(&apos;&#x4E94;&#x6708;&#x5929; &#x597D;&#x597D;&apos;).fetchSearchResult()
-     * @see https://docs-en.kkbox.codes/v1.1/reference#search_1
-     */
-    fetchSearchResult(limit = undefined, offset = undefined) {
-        return this.http.get(ENDPOINT, {
-            q: this.q,
-            type: this.type,
-            territory: this.territory,
-            limit: limit,
-            offset: offset
-        }).then(doFilter.bind(this))
-    }
+  /**
+   * Filter what you don&apos;t want when search.
+   *
+   * @param {Object} [conditions] - search conditions.
+   * @param {string} conditions.track - track&apos;s name.
+   * @param {string} conditions.album - album&apos;s name.
+   * @param {string} conditions.artist - artist&apos;s name.
+   * @param {string} conditions.playlist - playlist&apos;s title.
+   * @param {string} conditions.availableTerritory - tracks and albums available territory.
+   * @return {Search}
+   * @example
+   * api.searchFetcher
+   *  .setSearchCriteria(&apos;&#x4E94;&#x6708;&#x5929; &#x597D;&#x597D;&apos;)
+   *  .filter({artist: &apos;&#x4E94;&#x6708;&#x5929;&apos;})
+   *  .fetchSearchResult();
+   */
+  filter(conditions = {}) {
+    this.filterConditions = conditions;
+    return this;
+  }
+
+  /**
+   * Init the search fetcher for the artist, album, track or playlist.
+   *
+   * @param {string} q - The keyword to be searched.
+   * @param {string} [type] - [&apos;artist&apos;, &apos;album&apos;, &apos;track&apos;, &apos;playlist&apos;] The type of search. Default to search all types. If you want to use multiple type at the same time, you may use &apos;,&apos; to separate them.
+   * @return {Search}
+   * @see https://docs-en.kkbox.codes/v1.1/reference#search_1
+   */
+  setSearchCriteria(q, type = undefined) {
+    this.q = q;
+    this.type = type;
+    return this;
+  }
+
+  /**
+   * Fetch the search result.
+   *
+   * @param {number} [limit] - The size of one page.
+   * @param {number} [offset] - The offset index for first element.
+   * @return {Promise}
+   * @example
+   * api.searchFetcher
+   *  .setSearchCriteria(&apos;&#x4E94;&#x6708;&#x5929; &#x597D;&#x597D;&apos;)
+   *  .fetchSearchResult();
+   * @see https://docs-en.kkbox.codes/v1.1/reference#search_1
+   */
+  fetchSearchResult(limit = undefined, offset = undefined) {
+    return this.http
+      .get(ENDPOINT, {
+        q: this.q,
+        type: this.type,
+        territory: this.territory,
+        limit: limit,
+        offset: offset
+      })
+      .then(doFilter.bind(this));
+  }
 }
 
 function doFilter(response) {
-    if (this.filterConditions !== undefined) {
-        const data = Object.keys(response.data).map(key =&gt; {
-            switch (key) {
-                case &apos;tracks&apos;:
-                    return {
-                        [key]: Object.assign(response.data[key], {
-                            data: response.data[key].data
-                                .filter(track =&gt; {
-                                    if (this.filterConditions.availableTerritory !== undefined &amp;&amp;
-                                        !track.available_territories.includes(this.filterConditions.availableTerritory)) {
-                                        return false
-                                    }
-                                    if (this.filterConditions.track !== undefined &amp;&amp;
-                                        !new RegExp(&apos;.*&apos; + this.filterConditions.track + &apos;.*&apos;).test(track.name)) {
-                                        return false
-                                    }
-                                    if (this.filterConditions.album !== undefined &amp;&amp;
-                                        !new RegExp(&apos;.*&apos; + this.filterConditions.album + &apos;.*&apos;).test(track.album.name)) {
-                                        return false
-                                    }
-                                    return !(this.filterConditions.artist !== undefined &amp;&amp;
-                                        !new RegExp(&apos;.*&apos; + this.filterConditions.artist + &apos;.*&apos;).test(track.album.artist.name))
-                                })
-                        })
-                    }
-                case &apos;albums&apos;:
-                    return {
-                        [key]: Object.assign(response.data[key], {
-                            data: response.data[key].data
-                                .filter(album =&gt; {
-                                    if (this.filterConditions.availableTerritory !== undefined &amp;&amp;
-                                        !album.available_territories.includes(this.filterConditions.availableTerritory)) {
-                                        return false
-                                    }
-                                    if (this.filterConditions.album !== undefined &amp;&amp;
-                                        !new RegExp(&apos;.*&apos; + this.filterConditions.album + &apos;.*&apos;).test(album.name)) {
-                                        return false
-                                    }
-                                    return !(this.filterConditions.artist !== undefined &amp;&amp;
-                                        !new RegExp(&apos;.*&apos; + this.filterConditions.artist + &apos;.*&apos;).test(album.artist.name))
-                                })
-                        })
-                    }
-                case &apos;artists&apos;:
-                    return {
-                        [key]: Object.assign(response.data[key], {
-                            data: response.data[key].data
-                                .filter(artist =&gt; {
-                                    if (this.filterConditions.artist === undefined) {
-                                        return true
-                                    } else {
-                                        return new RegExp(&apos;.*&apos; + this.filterConditions.artist + &apos;.*&apos;).test(artist.name)
-                                    }
-                                })
-                        })
-                    }
-                case &apos;playlists&apos;:
-                    return {
-                        [key]: Object.assign(response.data[key], {
-                            data: response.data[key].data
-                                .filter(playlist =&gt; {
-                                    if (this.filterConditions.playlist === undefined) {
-                                        return true
-                                    } else {
-                                        return new RegExp(&apos;.*&apos; + this.filterConditions.playlist + &apos;.*&apos;).test(playlist.title)
-                                    }
-                                })
-                        })
-                    }
-                default:
-                    return {
-                        [key]: response.data[key]
-                    }
-            }
-        })
-        return Object.assign(response, {
-            data: Object.assign(...data)
-        })
-    } else {
-        return response
-    }
+  if (this.filterConditions !== undefined) {
+    const data = Object.keys(response.data).map(key =&gt; {
+      switch (key) {
+        case &apos;tracks&apos;:
+          return {
+            [key]: Object.assign(response.data[key], {
+              data: response.data[key].data.filter(track =&gt; {
+                if (
+                  this.filterConditions.availableTerritory !== undefined &amp;&amp;
+                  !track.available_territories.includes(
+                    this.filterConditions.availableTerritory
+                  )
+                ) {
+                  return false;
+                }
+                if (
+                  this.filterConditions.track !== undefined &amp;&amp;
+                  !new RegExp(&apos;.*&apos; + this.filterConditions.track + &apos;.*&apos;).test(
+                    track.name
+                  )
+                ) {
+                  return false;
+                }
+                if (
+                  this.filterConditions.album !== undefined &amp;&amp;
+                  !new RegExp(&apos;.*&apos; + this.filterConditions.album + &apos;.*&apos;).test(
+                    track.album.name
+                  )
+                ) {
+                  return false;
+                }
+                return !(
+                  this.filterConditions.artist !== undefined &amp;&amp;
+                  !new RegExp(&apos;.*&apos; + this.filterConditions.artist + &apos;.*&apos;).test(
+                    track.album.artist.name
+                  )
+                );
+              })
+            })
+          };
+        case &apos;albums&apos;:
+          return {
+            [key]: Object.assign(response.data[key], {
+              data: response.data[key].data.filter(album =&gt; {
+                if (
+                  this.filterConditions.availableTerritory !== undefined &amp;&amp;
+                  !album.available_territories.includes(
+                    this.filterConditions.availableTerritory
+                  )
+                ) {
+                  return false;
+                }
+                if (
+                  this.filterConditions.album !== undefined &amp;&amp;
+                  !new RegExp(&apos;.*&apos; + this.filterConditions.album + &apos;.*&apos;).test(
+                    album.name
+                  )
+                ) {
+                  return false;
+                }
+                return !(
+                  this.filterConditions.artist !== undefined &amp;&amp;
+                  !new RegExp(&apos;.*&apos; + this.filterConditions.artist + &apos;.*&apos;).test(
+                    album.artist.name
+                  )
+                );
+              })
+            })
+          };
+        case &apos;artists&apos;:
+          return {
+            [key]: Object.assign(response.data[key], {
+              data: response.data[key].data.filter(artist =&gt; {
+                if (this.filterConditions.artist === undefined) {
+                  return true;
+                } else {
+                  return new RegExp(
+                    &apos;.*&apos; + this.filterConditions.artist + &apos;.*&apos;
+                  ).test(artist.name);
+                }
+              })
+            })
+          };
+        case &apos;playlists&apos;:
+          return {
+            [key]: Object.assign(response.data[key], {
+              data: response.data[key].data.filter(playlist =&gt; {
+                if (this.filterConditions.playlist === undefined) {
+                  return true;
+                } else {
+                  return new RegExp(
+                    &apos;.*&apos; + this.filterConditions.playlist + &apos;.*&apos;
+                  ).test(playlist.title);
+                }
+              })
+            })
+          };
+        default:
+          return {
+            [key]: response.data[key]
+          };
+      }
+    });
+    return Object.assign(response, {
+      data: Object.assign(...data)
+    });
+  } else {
+    return response;
+  }
 }
 </code></pre>
 
 </div>
 
 <footer class="footer">
-  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
 </footer>
 
 <script src="script/search_index.js"></script>
