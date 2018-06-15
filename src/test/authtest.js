@@ -1,7 +1,8 @@
 import should from 'should';
-import TokenFetcher from '../src/auth/TokenFetcher';
-import ClientCredentialsFlow from '../src/auth/ClientCredentialsFlow';
-import { kkbox_sdk } from './client_secrets.json';
+import TokenFetcher from '../auth/TokenFetcher';
+import ClientCredentialsFlow from '../auth/ClientCredentialsFlow';
+import { kkbox_sdk } from '../../client_secrets.json';
+
 const CLIENT_ID = kkbox_sdk.client_id;
 const CLIENT_SECRET = kkbox_sdk.client_secret;
 

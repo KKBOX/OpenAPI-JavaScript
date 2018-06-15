@@ -1,6 +1,10 @@
 language: node_js
 node_js:
+  - "6"
+  - "7"
   - "8"
+  - "9"
+  - "10"
 before_script:
   - |
-    echo -e "{\"kkbox_sdk\": {\"client_id\": \"$CLIENT_ID\", \"client_secret\": \"$CLIENT_SECRET\"}}" > test/client_secrets.json
+    echo -e "{\"kkbox_sdk\": {\"client_id\": \"$CLIENT_ID\", \"client_secret\": \"$CLIENT_SECRET\"}}" > client_secrets.json

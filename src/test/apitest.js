@@ -1,20 +1,20 @@
 import should from 'should';
-import HttpClient from '../src/api/HttpClient';
-import SearchFetcher from '../src/api/SearchFetcher';
-import AlbumFetcher from '../src/api/AlbumFetcher';
-import ArtistFetcher from '../src/api/ArtistFetcher';
-import FeaturedPlaylistFetcher from '../src/api/FeaturedPlaylistFetcher';
-import FeaturedPlaylistCategoryFetcher from '../src/api/FeaturedPlaylistCategoryFetcher';
-import NewReleaseCategoryFetcher from '../src/api/NewReleaseCategoryFetcher';
-import NewHitsPlaylistFetcher from '../src/api/NewHitsPlaylistFetcher';
-import SharedPlaylistFetcher from '../src/api/SharedPlaylistFetcher';
-import MoodStationFetcher from '../src/api/MoodStationFetcher';
-import GenreStationFetcher from '../src/api/GenreStationFetcher';
-import ChartFetcher from '../src/api/ChartFetcher';
-import TrackFetcher from '../src/api/TrackFetcher';
-import TokenFetcher from '../src/auth/TokenFetcher';
-import ClientCredentials from '../src/auth/ClientCredentialsFlow';
-import { kkbox_sdk } from './client_secrets.json';
+import HttpClient from '../api/HttpClient';
+import SearchFetcher from '../api/SearchFetcher';
+import AlbumFetcher from '../api/AlbumFetcher';
+import ArtistFetcher from '../api/ArtistFetcher';
+import FeaturedPlaylistFetcher from '../api/FeaturedPlaylistFetcher';
+import FeaturedPlaylistCategoryFetcher from '../api/FeaturedPlaylistCategoryFetcher';
+import NewReleaseCategoryFetcher from '../api/NewReleaseCategoryFetcher';
+import NewHitsPlaylistFetcher from '../api/NewHitsPlaylistFetcher';
+import SharedPlaylistFetcher from '../api/SharedPlaylistFetcher';
+import MoodStationFetcher from '../api/MoodStationFetcher';
+import GenreStationFetcher from '../api/GenreStationFetcher';
+import ChartFetcher from '../api/ChartFetcher';
+import TrackFetcher from '../api/TrackFetcher';
+import TokenFetcher from '../auth/TokenFetcher';
+import ClientCredentials from '../auth/ClientCredentialsFlow';
+import { kkbox_sdk } from '../../client_secrets.json';
 const CLIENT_ID = kkbox_sdk.client_id;
 const CLIENT_SECRET = kkbox_sdk.client_secret;
 
@@ -92,7 +92,7 @@ describe('Api Begin to Test', () => {
                 album_id
               );
               describe('#fetchMetadata()', () => {
-                it('should response status 200', done => {
+                it('should response status 200', () => {
                   return albumFetcher.fetchMetadata().then(
                     response => {
                       response.status.should.be.exactly(200);
@@ -287,23 +287,31 @@ describe('Api Begin to Test', () => {
 
               describe('#fetchTopTracks()', () => {
                 it('should response status 200', done => {
-                  artistFetcher
-                    .fetchTopTracks()
-                    .then(
-                      response => response.status.should.be.exactly(200),
-                      reject => should.not.exists(reject)
-                    );
+                  artistFetcher.fetchTopTracks().then(
+                    response => {
+                      response.status.should.be.exactly(200);
+                      done();
+                    },
+                    reject => {
+                      should.not.exists(reject);
+                      done();
+                    }
+                  );
                 });
               });
 
               describe('#fetchRelatedArtists()', () => {
                 it('should response status 200', done => {
-                  artistFetcher
-                    .fetchRelatedArtists()
-                    .then(
-                      response => response.status.should.be.exactly(200),
-                      reject => should.not.exists(reject)
-                    );
+                  artistFetcher.fetchRelatedArtists().then(
+                    response => {
+                      response.status.should.be.exactly(200);
+                      done();
+                    },
+                    reject => {
+                      should.not.exists(reject);
+                      done();
+                    }
+                  );
                 });
               });
             });
@@ -504,8 +512,14 @@ describe('Api Begin to Test', () => {
                     .setPlaylistID('4mJSYXvueA8t0odsny')
                     .fetchMetadata()
                     .then(
-                      response => response.status.should.be.exactly(200),
-                      reject => should.not.exists(reject)
+                      response => {
+                        response.status.should.be.exactly(200);
+                        done();
+                      },
+                      reject => {
+                        should.not.exists(reject);
+                        done();
+                      }
                     );
                 });
               });
@@ -516,8 +530,14 @@ describe('Api Begin to Test', () => {
                     .setPlaylistID('4mJSYXvueA8t0odsny')
                     .fetchTracks()
                     .then(
-                      response => response.status.should.be.exactly(200),
-                      reject => should.not.exists(reject)
+                      response => {
+                        response.status.should.be.exactly(200);
+                        done();
+                      },
+                      reject => {
+                        should.not.exists(reject);
+                        done();
+                      }
                     );
                 });
               });

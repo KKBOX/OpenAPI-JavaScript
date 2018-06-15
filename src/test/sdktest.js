@@ -1,7 +1,7 @@
 import should from 'should';
-import { Auth } from '../dist/kkbox-server-sdk';
-import { Api } from '../dist/kkbox-server-sdk';
-import { kkbox_sdk } from './client_secrets.json';
+import { Auth, Api } from '../';
+import { kkbox_sdk } from '../../client_secrets.json';
+
 const CLIENT_ID = kkbox_sdk.client_id;
 const CLIENT_SECRET = kkbox_sdk.client_secret;
 
