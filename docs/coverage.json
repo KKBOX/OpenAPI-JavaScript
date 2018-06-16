@@ -1,14 +1,14 @@
 {
-  "coverage": "95.8%",
-  "expectCount": 143,
-  "actualCount": 137,
+  "coverage": "91.04%",
+  "expectCount": 134,
+  "actualCount": 122,
   "files": {
     "src/Endpoint.js": {
-      "expectCount": 17,
-      "actualCount": 15,
+      "expectCount": 2,
+      "actualCount": 0,
       "undocumentLines": [
         1,
-        75
+        2
       ]
     },
     "src/api/AlbumFetcher.js": {
@@ -112,6 +112,30 @@
       "expectCount": 2,
       "actualCount": 2,
       "undocumentLines": []
+    },
+    "src/test/apitest.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        18,
+        19
+      ]
+    },
+    "src/test/authtest.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        6,
+        7
+      ]
+    },
+    "src/test/sdktest.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        5,
+        6
+      ]
     }
   }
 }
