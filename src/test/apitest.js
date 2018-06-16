@@ -12,19 +12,17 @@ import MoodStationFetcher from '../api/MoodStationFetcher';
 import GenreStationFetcher from '../api/GenreStationFetcher';
 import ChartFetcher from '../api/ChartFetcher';
 import TrackFetcher from '../api/TrackFetcher';
-import TokenFetcher from '../auth/TokenFetcher';
-import ClientCredentials from '../auth/ClientCredentialsFlow';
+import Auth from '../auth/';
 import { kkbox_sdk } from '../../client_secrets.json';
 const CLIENT_ID = kkbox_sdk.client_id;
 const CLIENT_SECRET = kkbox_sdk.client_secret;
 
 describe('Api Begin to Test', () => {
-  describe('ClientCredentials', () => {
+  describe('Auth', () => {
     describe('#fetch the access token()', () => {
       it('should fetch access token', () => {
-        const tokenFetcher = new TokenFetcher(CLIENT_ID, CLIENT_SECRET);
-        const clientCredentials = new ClientCredentials(tokenFetcher);
-        return clientCredentials.fetchAccessToken().then(
+        const auth = new Auth(CLIENT_ID, CLIENT_SECRET);
+        return auth.fetchAccessToken().then(
           response => {
             const access_token = response.data.access_token;
             access_token.should.be.ok;
