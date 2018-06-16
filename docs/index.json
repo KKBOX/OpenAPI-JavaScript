@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/Endpoint.js",
-    "content": "const API_DOMAIN = (() => {\n  return 'https://api.kkbox.com/v1.1/';\n})();\n/**\n * @ignore\n */\nexport const SEARCH = API_DOMAIN + 'search';\n\n/**\n * @ignore\n */\nexport const TRACKS = API_DOMAIN + 'tracks';\n\n/**\n * @ignore\n */\nexport const ARTISTS = API_DOMAIN + 'artists';\n\n/**\n * @ignore\n */\nexport const ALBUMS = API_DOMAIN + 'albums';\n\n/**\n * @ignore\n */\nexport const SHARED_PLAYLISTS = API_DOMAIN + 'shared-playlists';\n\n/**\n * @ignore\n */\nexport const MOOD_STATIONS = API_DOMAIN + 'mood-stations';\n\n/**\n * @ignore\n */\nexport const FEATURED_PLAYLISTS = API_DOMAIN + 'featured-playlists';\n\n/**\n * @ignore\n */\nexport const FEATURED_PLAYLISTS_CATEGORIES =\n  API_DOMAIN + 'featured-playlist-categories';\n\n/**\n * @ignore\n */\nexport const NEW_RELEASE_CATEGORIES = API_DOMAIN + 'new-release-categories';\n\n/**\n * @ignore\n */\nexport const NEW_HITS_PLAYLISTS = API_DOMAIN + 'new-hits-playlists';\n\n/**\n * @ignore\n */\nexport const GENRE_STATIONS = API_DOMAIN + 'genre-stations';\n\n/**\n * @ignore\n */\nexport const CHARTS = API_DOMAIN + 'charts';\n\n/**\n * @ignore\n */\nexport const SEARCH_TYPES = {\n  ARTIST: 'artist',\n  ALBUM: 'album',\n  TRACK: 'track',\n  PLAY_LIST: 'playlist'\n};\n\nconst OAUTH_DOMAIN = 'https://account.kkbox.com/oauth2/';\n\n/**\n * @ignore\n */\nexport const Token = OAUTH_DOMAIN + 'token/';\n\n/**\n * @ignore\n */\nexport const Authorization = OAUTH_DOMAIN + 'authorize/';\n",
+    "content": "const API_DOMAIN = 'https://api.kkbox.com/v1.1/';\nconst OAUTH_DOMAIN = 'https://account.kkbox.com/oauth2/';\n\nmodule.exports = {\n  SEARCH: API_DOMAIN + 'search',\n  TRACKS: API_DOMAIN + 'tracks',\n  ARTISTS: API_DOMAIN + 'artists',\n  ALBUMS: API_DOMAIN + 'albums',\n  SHARED_PLAYLISTS: API_DOMAIN + 'shared-playlists',\n  MOOD_STATIONS: API_DOMAIN + 'mood-stations',\n  FEATURED_PLAYLISTS: API_DOMAIN + 'featured-playlists',\n  FEATURED_PLAYLISTS_CATEGORIES: API_DOMAIN + 'featured-playlist-categories',\n  NEW_RELEASE_CATEGORIES: API_DOMAIN + 'new-release-categories',\n  NEW_HITS_PLAYLISTS: API_DOMAIN + 'new-hits-playlists',\n  GENRE_STATIONS: API_DOMAIN + 'genre-stations',\n  CHARTS: API_DOMAIN + 'charts',\n  Token: OAUTH_DOMAIN + 'token/',\n  Authorization: OAUTH_DOMAIN + 'authorize/'\n};\n",
     "static": true,
     "longname": "/Users/ajhsu/Git/kkcorp/OpenAPI-JavaScript/src/Endpoint.js",
     "access": "public",
@@ -590,273 +590,13 @@
     "undocument": true,
     "type": {
       "types": [
-        "*"
+        "string"
       ]
     },
     "ignore": true
   },
   {
     "__docId__": 50,
-    "kind": "variable",
-    "name": "SEARCH",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~SEARCH",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{SEARCH}",
-    "description": "",
-    "lineNumber": 7,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 51,
-    "kind": "variable",
-    "name": "TRACKS",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~TRACKS",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{TRACKS}",
-    "description": "",
-    "lineNumber": 12,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 52,
-    "kind": "variable",
-    "name": "ARTISTS",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~ARTISTS",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{ARTISTS}",
-    "description": "",
-    "lineNumber": 17,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 53,
-    "kind": "variable",
-    "name": "ALBUMS",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~ALBUMS",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{ALBUMS}",
-    "description": "",
-    "lineNumber": 22,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 54,
-    "kind": "variable",
-    "name": "SHARED_PLAYLISTS",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~SHARED_PLAYLISTS",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{SHARED_PLAYLISTS}",
-    "description": "",
-    "lineNumber": 27,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 55,
-    "kind": "variable",
-    "name": "MOOD_STATIONS",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~MOOD_STATIONS",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{MOOD_STATIONS}",
-    "description": "",
-    "lineNumber": 32,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 56,
-    "kind": "variable",
-    "name": "FEATURED_PLAYLISTS",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~FEATURED_PLAYLISTS",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{FEATURED_PLAYLISTS}",
-    "description": "",
-    "lineNumber": 37,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 57,
-    "kind": "variable",
-    "name": "FEATURED_PLAYLISTS_CATEGORIES",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~FEATURED_PLAYLISTS_CATEGORIES",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{FEATURED_PLAYLISTS_CATEGORIES}",
-    "description": "",
-    "lineNumber": 42,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 58,
-    "kind": "variable",
-    "name": "NEW_RELEASE_CATEGORIES",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~NEW_RELEASE_CATEGORIES",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{NEW_RELEASE_CATEGORIES}",
-    "description": "",
-    "lineNumber": 48,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 59,
-    "kind": "variable",
-    "name": "NEW_HITS_PLAYLISTS",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~NEW_HITS_PLAYLISTS",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{NEW_HITS_PLAYLISTS}",
-    "description": "",
-    "lineNumber": 53,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 60,
-    "kind": "variable",
-    "name": "GENRE_STATIONS",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~GENRE_STATIONS",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{GENRE_STATIONS}",
-    "description": "",
-    "lineNumber": 58,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 61,
-    "kind": "variable",
-    "name": "CHARTS",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~CHARTS",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{CHARTS}",
-    "description": "",
-    "lineNumber": 63,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 62,
-    "kind": "variable",
-    "name": "SEARCH_TYPES",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~SEARCH_TYPES",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{SEARCH_TYPES}",
-    "description": "",
-    "lineNumber": 68,
-    "ignore": true,
-    "type": {
-      "types": [
-        "{\"ARTIST\": string, \"ALBUM\": string, \"TRACK\": string, \"PLAY_LIST\": string}"
-      ]
-    }
-  },
-  {
-    "__docId__": 63,
     "kind": "variable",
     "name": "OAUTH_DOMAIN",
     "memberof": "src/Endpoint.js",
@@ -867,7 +607,7 @@
     "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 75,
+    "lineNumber": 2,
     "undocument": true,
     "type": {
       "types": [
@@ -877,58 +617,7 @@
     "ignore": true
   },
   {
-    "__docId__": 64,
-    "kind": "variable",
-    "name": "Token",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~Token",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{Token}",
-    "description": "",
-    "lineNumber": 80,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 65,
-    "kind": "variable",
-    "name": "Authorization",
-    "memberof": "src/Endpoint.js",
-    "static": true,
-    "longname": "src/Endpoint.js~Authorization",
-    "access": "public",
-    "export": true,
-    "importPath": "@kkbox/kkbox-js-sdk/src/Endpoint.js",
-    "importStyle": "{Authorization}",
-    "description": "",
-    "lineNumber": 85,
-    "ignore": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 66,
-    "kind": "file",
-    "name": "src/SDK.js",
-    "content": "export { default as Auth } from './auth/Auth';\nexport { default as Api } from './api/Api';\n",
-    "static": true,
-    "longname": "/Users/ajhsu/Git/kkcorp/OpenAPI-JavaScript/src/SDK.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 67,
+    "__docId__": 51,
     "kind": "file",
     "name": "src/api/AlbumFetcher.js",
     "content": "import { ALBUMS as ENDPOINT } from '../Endpoint';\nimport Fetcher from './Fetcher';\n\n/**\n * Fetch metadata and tracks of a album.\n * @see https://docs-en.kkbox.codes/v1.1/reference#albums\n */\nexport default class AlbumFetcher extends Fetcher {\n  /**\n   * @ignore\n   */\n  constructor(http, territory = 'TW') {\n    super(http, territory);\n\n    /**\n     * @ignore\n     */\n    this.albumID = undefined;\n  }\n\n  /**\n   * Set the album fetcher.\n   *\n   * @param {string} albumID - The ID of an album.\n   * @return {AlbumFetcher}\n   * @see https://docs-en.kkbox.codes/v1.1/reference#albums-album_id\n   */\n  setAlbumID(albumID) {\n    this.albumID = albumID;\n    return this;\n  }\n\n  /**\n   * Fetch metadata of the album you create.\n   *\n   * @return {Promise}\n   * @example api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchMetadata();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#albums-album_id\n   */\n  fetchMetadata() {\n    return this.http.get(ENDPOINT + '/' + this.albumID, {\n      territory: this.territory\n    });\n  }\n\n  /**\n   * Get KKBOX web widget uri of the album.\n   * @example https://widget.kkbox.com/v1/?id=4qtXcj31wYJTRZbb23&type=album\n   * @return {string}\n   */\n  getWidgetUri() {\n    return `https://widget.kkbox.com/v1/?id=${this.albumID}&type=album`;\n  }\n\n  /**\n   * Get tracks in an album. Result will be return with pagination.\n   *\n   * @param {number} [limit] - The size for one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example api.albumFetcher.setAlbumID('KmRKnW5qmUrTnGRuxF').fetchTracks();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#albums-album_id-tracks\n   */\n  fetchTracks(limit = undefined, offset = undefined) {\n    return this.http.get(ENDPOINT + '/' + this.albumID + '/tracks', {\n      territory: this.territory,\n      limit: limit,\n      offset: offset\n    });\n  }\n}\n",
@@ -939,7 +628,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 68,
+    "__docId__": 52,
     "kind": "class",
     "name": "AlbumFetcher",
     "memberof": "src/api/AlbumFetcher.js",
@@ -960,7 +649,7 @@
     ]
   },
   {
-    "__docId__": 69,
+    "__docId__": 53,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/AlbumFetcher.js~AlbumFetcher",
@@ -974,7 +663,7 @@
     "ignore": true
   },
   {
-    "__docId__": 70,
+    "__docId__": 54,
     "kind": "member",
     "name": "albumID",
     "memberof": "src/api/AlbumFetcher.js~AlbumFetcher",
@@ -991,7 +680,7 @@
     }
   },
   {
-    "__docId__": 71,
+    "__docId__": 55,
     "kind": "method",
     "name": "setAlbumID",
     "memberof": "src/api/AlbumFetcher.js~AlbumFetcher",
@@ -1027,7 +716,7 @@
     }
   },
   {
-    "__docId__": 73,
+    "__docId__": 57,
     "kind": "method",
     "name": "fetchMetadata",
     "memberof": "src/api/AlbumFetcher.js~AlbumFetcher",
@@ -1055,7 +744,7 @@
     "params": []
   },
   {
-    "__docId__": 74,
+    "__docId__": 58,
     "kind": "method",
     "name": "getWidgetUri",
     "memberof": "src/api/AlbumFetcher.js~AlbumFetcher",
@@ -1080,7 +769,7 @@
     "params": []
   },
   {
-    "__docId__": 75,
+    "__docId__": 59,
     "kind": "method",
     "name": "fetchTracks",
     "memberof": "src/api/AlbumFetcher.js~AlbumFetcher",
@@ -1129,7 +818,7 @@
     }
   },
   {
-    "__docId__": 76,
+    "__docId__": 60,
     "kind": "file",
     "name": "src/api/Api.js",
     "content": "import HttpClient from './HttpClient';\nimport SearchFetcher from './SearchFetcher';\nimport TrackFetcher from './TrackFetcher';\nimport AlbumFetcher from './AlbumFetcher';\nimport ArtistFetcher from './ArtistFetcher';\nimport FeaturedPlaylistFetcher from './FeaturedPlaylistFetcher';\nimport FeaturedPlaylistCategoryFetcher from './FeaturedPlaylistCategoryFetcher';\nimport NewReleaseCategoryFetcher from './NewReleaseCategoryFetcher';\nimport NewHitsPlaylistFetcher from './NewHitsPlaylistFetcher';\nimport GenreStationFetcher from './GenreStationFetcher';\nimport MoodStationFetcher from './MoodStationFetcher';\nimport ChartFetcher from './ChartFetcher';\nimport SharedPlaylistFetcher from './SharedPlaylistFetcher';\n\n/**\n * Fetch KKBOX resources.\n */\nexport default class Api {\n  /**\n   * Need access token to initialize.\n   *\n   * @param {string} token - Get via Auth.\n   * @param {string} [territory = 'TW'] - ['TW', 'HK', 'SG', 'MY', 'JP'] The territory for the fetcher.\n   * @example new Api(token);\n   * @example new Api(token, 'TW');\n   */\n  constructor(token, territory = 'TW') {\n    this.territory = territory;\n    this.httpClient = undefined;\n    this.setToken(token);\n  }\n\n  /**\n   * Set new token and create fetchers with the new token.\n   *\n   * @param {string} token - Get via Auth.\n   * @example api.setToken(token);\n   */\n  setToken(token) {\n    this.httpClient = new HttpClient(token);\n\n    /**\n     * @type {SearchFetcher}\n     */\n    this.searchFetcher = new SearchFetcher(this.httpClient, this.territory);\n\n    /**\n     * @type {TrackFetcher}\n     */\n    this.trackFetcher = new TrackFetcher(this.httpClient, this.territory);\n\n    /**\n     * @type {AlbumFetcher}\n     */\n    this.albumFetcher = new AlbumFetcher(this.httpClient, this.territory);\n\n    /**\n     * @type {ArtistFetcher}\n     */\n    this.artistFetcher = new ArtistFetcher(this.httpClient, this.territory);\n\n    /**\n     * @type {FeaturedPlaylistFetcher}\n     */\n    this.featuredPlaylistFetcher = new FeaturedPlaylistFetcher(\n      this.httpClient,\n      this.territory\n    );\n\n    /**\n     * @type {FeaturedPlaylistCategoryFetcher}\n     */\n    this.featuredPlaylistCategoryFetcher = new FeaturedPlaylistCategoryFetcher(\n      this.httpClient,\n      this.territory\n    );\n\n    /**\n     * @type {NewReleaseCategoryFetcher}\n     */\n    this.newReleaseCategoryFetcher = new NewReleaseCategoryFetcher(\n      this.httpClient,\n      this.territory\n    );\n\n    /**\n     * @type {NewHitsPlaylistFetcher}\n     */\n    this.newHitsPlaylistFetcher = new NewHitsPlaylistFetcher(\n      this.httpClient,\n      this.territory\n    );\n\n    /**\n     * @type {GenreStationFetcher}\n     */\n    this.genreStationFetcher = new GenreStationFetcher(\n      this.httpClient,\n      this.territory\n    );\n\n    /**\n     * @type {MoodStationFetcher}\n     */\n    this.moodStationFetcher = new MoodStationFetcher(\n      this.httpClient,\n      this.territory\n    );\n\n    /**\n     * @type {ChartFetcher}\n     */\n    this.chartFetcher = new ChartFetcher(this.httpClient, this.territory);\n\n    /**\n     * @type {SharedPlaylistFetcher}\n     */\n    this.sharedPlaylistFetcher = new SharedPlaylistFetcher(\n      this.httpClient,\n      this.territory\n    );\n  }\n}\n",
@@ -1140,7 +829,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 77,
+    "__docId__": 61,
     "kind": "class",
     "name": "Api",
     "memberof": "src/api/Api.js",
@@ -1155,7 +844,7 @@
     "interface": false
   },
   {
-    "__docId__": 78,
+    "__docId__": 62,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/Api.js~Api",
@@ -1196,7 +885,7 @@
     ]
   },
   {
-    "__docId__": 79,
+    "__docId__": 63,
     "kind": "member",
     "name": "territory",
     "memberof": "src/api/Api.js~Api",
@@ -1213,7 +902,7 @@
     }
   },
   {
-    "__docId__": 80,
+    "__docId__": 64,
     "kind": "member",
     "name": "httpClient",
     "memberof": "src/api/Api.js~Api",
@@ -1230,7 +919,7 @@
     }
   },
   {
-    "__docId__": 81,
+    "__docId__": 65,
     "kind": "method",
     "name": "setToken",
     "memberof": "src/api/Api.js~Api",
@@ -1259,7 +948,7 @@
     "return": null
   },
   {
-    "__docId__": 83,
+    "__docId__": 67,
     "kind": "member",
     "name": "searchFetcher",
     "memberof": "src/api/Api.js~Api",
@@ -1278,7 +967,7 @@
     }
   },
   {
-    "__docId__": 84,
+    "__docId__": 68,
     "kind": "member",
     "name": "trackFetcher",
     "memberof": "src/api/Api.js~Api",
@@ -1297,7 +986,7 @@
     }
   },
   {
-    "__docId__": 85,
+    "__docId__": 69,
     "kind": "member",
     "name": "albumFetcher",
     "memberof": "src/api/Api.js~Api",
@@ -1316,7 +1005,7 @@
     }
   },
   {
-    "__docId__": 86,
+    "__docId__": 70,
     "kind": "member",
     "name": "artistFetcher",
     "memberof": "src/api/Api.js~Api",
@@ -1335,7 +1024,7 @@
     }
   },
   {
-    "__docId__": 87,
+    "__docId__": 71,
     "kind": "member",
     "name": "featuredPlaylistFetcher",
     "memberof": "src/api/Api.js~Api",
@@ -1354,7 +1043,7 @@
     }
   },
   {
-    "__docId__": 88,
+    "__docId__": 72,
     "kind": "member",
     "name": "featuredPlaylistCategoryFetcher",
     "memberof": "src/api/Api.js~Api",
@@ -1373,7 +1062,7 @@
     }
   },
   {
-    "__docId__": 89,
+    "__docId__": 73,
     "kind": "member",
     "name": "newReleaseCategoryFetcher",
     "memberof": "src/api/Api.js~Api",
@@ -1392,7 +1081,7 @@
     }
   },
   {
-    "__docId__": 90,
+    "__docId__": 74,
     "kind": "member",
     "name": "newHitsPlaylistFetcher",
     "memberof": "src/api/Api.js~Api",
@@ -1411,7 +1100,7 @@
     }
   },
   {
-    "__docId__": 91,
+    "__docId__": 75,
     "kind": "member",
     "name": "genreStationFetcher",
     "memberof": "src/api/Api.js~Api",
@@ -1430,7 +1119,7 @@
     }
   },
   {
-    "__docId__": 92,
+    "__docId__": 76,
     "kind": "member",
     "name": "moodStationFetcher",
     "memberof": "src/api/Api.js~Api",
@@ -1449,7 +1138,7 @@
     }
   },
   {
-    "__docId__": 93,
+    "__docId__": 77,
     "kind": "member",
     "name": "chartFetcher",
     "memberof": "src/api/Api.js~Api",
@@ -1468,7 +1157,7 @@
     }
   },
   {
-    "__docId__": 94,
+    "__docId__": 78,
     "kind": "member",
     "name": "sharedPlaylistFetcher",
     "memberof": "src/api/Api.js~Api",
@@ -1487,7 +1176,7 @@
     }
   },
   {
-    "__docId__": 95,
+    "__docId__": 79,
     "kind": "file",
     "name": "src/api/ArtistFetcher.js",
     "content": "import { ARTISTS as ENDPOINT } from '../Endpoint';\nimport Fetcher from './Fetcher';\n\n/**\n * Get artist metadata.\n * @see https://docs-en.kkbox.codes/v1.1/reference#artists\n */\nexport default class ArtistFetcher extends Fetcher {\n  /**\n   * @ignore\n   */\n  constructor(http, territory = 'TW') {\n    super(http, territory);\n\n    /**\n     * @ignore\n     */\n    this.artistID = undefined;\n  }\n\n  /**\n   * Init the artist object.\n   *\n   * @param {string} artistID - The ID of an artist.\n   * @return {Artist}\n   * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id\n   */\n  setArtistID(artistID) {\n    this.artistID = artistID;\n    return this;\n  }\n\n  /**\n   * Fetch metadata of the artist you find.\n   *\n   * @return {Promise}\n   * @example api.artistFetcher.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchMetadata();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id\n   */\n  fetchMetadata() {\n    return this.http.get(ENDPOINT + '/' + this.artistID, {\n      territory: this.territory\n    });\n  }\n\n  /**\n   * Fetch albums belong to an artist.\n   *\n   * @param {number} [limit] - The size for one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example api.artistFetcher.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchAlbums();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-albums\n   */\n  fetchAlbums(limit = undefined, offset = undefined) {\n    return this.http.get(ENDPOINT + '/' + this.artistID + '/albums', {\n      territory: this.territory,\n      limit: limit,\n      offset: offset\n    });\n  }\n\n  /**\n   * Fetch top tracks belong to an artist.\n   *\n   * @param {number} [limit] - The size for one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example api.artistFetcher.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchTopTracks();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-toptracks\n   */\n  fetchTopTracks(limit = undefined, offset = undefined) {\n    return this.http.get(ENDPOINT + '/' + this.artistID + '/top-tracks', {\n      territory: this.territory,\n      limit: limit,\n      offset: offset\n    });\n  }\n\n  /**\n   * Fetch related artists\n   *\n   * @param {number} [limit] - The size for one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example api.artistFetcher.setArtistID('Cnv_K6i5Ft4y41SxLy').fetchRelatedArtists();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-relatedartists\n   */\n  fetchRelatedArtists(limit = undefined, offset = undefined) {\n    return this.http.get(ENDPOINT + '/' + this.artistID + '/related-artists', {\n      territory: this.territory,\n      limit: limit,\n      offset: offset\n    });\n  }\n}\n",
@@ -1498,7 +1187,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 96,
+    "__docId__": 80,
     "kind": "class",
     "name": "ArtistFetcher",
     "memberof": "src/api/ArtistFetcher.js",
@@ -1519,7 +1208,7 @@
     ]
   },
   {
-    "__docId__": 97,
+    "__docId__": 81,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
@@ -1533,7 +1222,7 @@
     "ignore": true
   },
   {
-    "__docId__": 98,
+    "__docId__": 82,
     "kind": "member",
     "name": "artistID",
     "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
@@ -1550,7 +1239,7 @@
     }
   },
   {
-    "__docId__": 99,
+    "__docId__": 83,
     "kind": "method",
     "name": "setArtistID",
     "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
@@ -1586,7 +1275,7 @@
     }
   },
   {
-    "__docId__": 101,
+    "__docId__": 85,
     "kind": "method",
     "name": "fetchMetadata",
     "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
@@ -1614,7 +1303,7 @@
     "params": []
   },
   {
-    "__docId__": 102,
+    "__docId__": 86,
     "kind": "method",
     "name": "fetchAlbums",
     "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
@@ -1663,7 +1352,7 @@
     }
   },
   {
-    "__docId__": 103,
+    "__docId__": 87,
     "kind": "method",
     "name": "fetchTopTracks",
     "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
@@ -1712,7 +1401,7 @@
     }
   },
   {
-    "__docId__": 104,
+    "__docId__": 88,
     "kind": "method",
     "name": "fetchRelatedArtists",
     "memberof": "src/api/ArtistFetcher.js~ArtistFetcher",
@@ -1761,7 +1450,7 @@
     }
   },
   {
-    "__docId__": 105,
+    "__docId__": 89,
     "kind": "file",
     "name": "src/api/ChartFetcher.js",
     "content": "import { CHARTS as ENDPOINT } from '../Endpoint';\nimport Fetcher from './Fetcher';\n\n/**\n * The fetcher that can fetch chart playlists.\n * @see https://docs-en.kkbox.codes/v1.1/reference#charts\n */\nexport default class ChartFetcher extends Fetcher {\n  /**\n   * @ignore\n   */\n  constructor(http, territory = 'TW') {\n    super(http, territory);\n\n    /**\n     * @ignore\n     */\n    this.playlistID = undefined;\n  }\n\n  /**\n   * Fetch chart playlists.\n   *\n   * @return {Promise}\n   * @example api.chartFetcher.fetchCharts();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#charts_1\n   */\n  fetchCharts() {\n    return this.http.get(ENDPOINT, {\n      territory: this.territory\n    });\n  }\n\n  /**\n   * Init the chart fetcher.\n   *\n   * @param {string} playlistID - The playlist ID.\n   * @return {ChartFetcher}\n   * @see https://docs-en.kkbox.codes/v1.1/reference#charts-playlist_id\n   */\n  setPlaylistID(playlistID) {\n    this.playlistID = playlistID;\n    return this;\n  }\n\n  /**\n   * Fetch playlist of the chart you set.\n   *\n   * @return {Promise}\n   * @example api.chartFetcher.setPlaylistID('4mJSYXvueA8t0odsny').fetchMetadata();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#charts-playlist_id\n   */\n  fetchMetadata() {\n    return this.http.get(ENDPOINT + '/' + this.playlistID, {\n      territory: this.territory\n    });\n  }\n\n  /**\n   * Fetch tracks of the playlist with the chart fetcher you init. Result will be paged.\n   *\n   * @param {number} [limit] - The size of one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example api.chartFetcher.setPlaylistID('4mJSYXvueA8t0odsny').fetchTracks();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#charts-playlist_id-tracks\n   */\n  fetchTracks(limit = undefined, offset = undefined) {\n    return this.http.get(ENDPOINT + '/' + this.playlistID + '/tracks', {\n      territory: this.territory,\n      limit: limit,\n      offset: offset\n    });\n  }\n}\n",
@@ -1772,7 +1461,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 106,
+    "__docId__": 90,
     "kind": "class",
     "name": "ChartFetcher",
     "memberof": "src/api/ChartFetcher.js",
@@ -1793,7 +1482,7 @@
     ]
   },
   {
-    "__docId__": 107,
+    "__docId__": 91,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/ChartFetcher.js~ChartFetcher",
@@ -1807,7 +1496,7 @@
     "ignore": true
   },
   {
-    "__docId__": 108,
+    "__docId__": 92,
     "kind": "member",
     "name": "playlistID",
     "memberof": "src/api/ChartFetcher.js~ChartFetcher",
@@ -1824,7 +1513,7 @@
     }
   },
   {
-    "__docId__": 109,
+    "__docId__": 93,
     "kind": "method",
     "name": "fetchCharts",
     "memberof": "src/api/ChartFetcher.js~ChartFetcher",
@@ -1852,7 +1541,7 @@
     "params": []
   },
   {
-    "__docId__": 110,
+    "__docId__": 94,
     "kind": "method",
     "name": "setPlaylistID",
     "memberof": "src/api/ChartFetcher.js~ChartFetcher",
@@ -1888,7 +1577,7 @@
     }
   },
   {
-    "__docId__": 112,
+    "__docId__": 96,
     "kind": "method",
     "name": "fetchMetadata",
     "memberof": "src/api/ChartFetcher.js~ChartFetcher",
@@ -1916,7 +1605,7 @@
     "params": []
   },
   {
-    "__docId__": 113,
+    "__docId__": 97,
     "kind": "method",
     "name": "fetchTracks",
     "memberof": "src/api/ChartFetcher.js~ChartFetcher",
@@ -1965,7 +1654,7 @@
     }
   },
   {
-    "__docId__": 114,
+    "__docId__": 98,
     "kind": "file",
     "name": "src/api/FeaturedPlaylistCategoryFetcher.js",
     "content": "import { FEATURED_PLAYLISTS_CATEGORIES as ENDPOINT } from '../Endpoint';\nimport Fetcher from './Fetcher';\n\n/**\n * List featured playlist categories.\n * @see https://docs-en.kkbox.codes/v1.1/reference#featured-playlist-categories\n */\nexport default class FeaturedPlaylistCategoryFetcher extends Fetcher {\n  /**\n   * @ignore\n   */\n  constructor(http, territory = 'TW') {\n    super(http, territory);\n\n    /**\n     * @ignore\n     */\n    this.categoryID = undefined;\n  }\n\n  /**\n   * Fetch all featured playlist categories.\n   *\n   * @return {Promise}\n   * @example api.featuredPlaylistCategoryFetcher.fetchAllFeaturedPlaylistCategories();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories\n   */\n  fetchAllFeaturedPlaylistCategories() {\n    return this.http.get(ENDPOINT, {\n      territory: this.territory\n    });\n  }\n\n  /**\n   * Init the featured playlist category fetcher.\n   *\n   * @param {string} categoryID - The category ID.\n   * @return {FeaturedPlaylistCategoryFetcher}\n   * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id\n   */\n  setCategoryID(categoryID) {\n    this.categoryID = categoryID;\n    return this;\n  }\n\n  /**\n   * Fetch metadata of the category you init.\n   *\n   * @return {Promise}\n   * @example api.featuredPlaylistCategoryFetcher.setCategoryID('LXUR688EBKRRZydAWb').fetchMetadata();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id\n   */\n  fetchMetadata() {\n    return this.http.get(ENDPOINT + '/' + this.categoryID, {\n      territory: this.territory\n    });\n  }\n\n  /**\n   * Fetch featured playlists of the category with the category fetcher you init. Result will be paged.\n   *\n   * @param {number} [limit] - The size of one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example api.featuredPlaylistCategoryFetcher.setCategoryID('LXUR688EBKRRZydAWb').fetchPlaylists();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id-playlists\n   */\n  fetchPlaylists(limit = undefined, offset = undefined) {\n    return this.http.get(ENDPOINT + '/' + this.categoryID + '/playlists', {\n      territory: this.territory,\n      limit: limit,\n      offset: offset\n    });\n  }\n}\n",
@@ -1976,7 +1665,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 115,
+    "__docId__": 99,
     "kind": "class",
     "name": "FeaturedPlaylistCategoryFetcher",
     "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js",
@@ -1997,7 +1686,7 @@
     ]
   },
   {
-    "__docId__": 116,
+    "__docId__": 100,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
@@ -2011,7 +1700,7 @@
     "ignore": true
   },
   {
-    "__docId__": 117,
+    "__docId__": 101,
     "kind": "member",
     "name": "categoryID",
     "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
@@ -2028,7 +1717,7 @@
     }
   },
   {
-    "__docId__": 118,
+    "__docId__": 102,
     "kind": "method",
     "name": "fetchAllFeaturedPlaylistCategories",
     "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
@@ -2056,7 +1745,7 @@
     "params": []
   },
   {
-    "__docId__": 119,
+    "__docId__": 103,
     "kind": "method",
     "name": "setCategoryID",
     "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
@@ -2092,7 +1781,7 @@
     }
   },
   {
-    "__docId__": 121,
+    "__docId__": 105,
     "kind": "method",
     "name": "fetchMetadata",
     "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
@@ -2120,7 +1809,7 @@
     "params": []
   },
   {
-    "__docId__": 122,
+    "__docId__": 106,
     "kind": "method",
     "name": "fetchPlaylists",
     "memberof": "src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher",
@@ -2169,7 +1858,7 @@
     }
   },
   {
-    "__docId__": 123,
+    "__docId__": 107,
     "kind": "file",
     "name": "src/api/FeaturedPlaylistFetcher.js",
     "content": "import { FEATURED_PLAYLISTS as ENDPOINT } from '../Endpoint';\nimport Fetcher from './Fetcher';\n\n/**\n * List all featured playlists.\n * @see https://docs-en.kkbox.codes/v1.1/reference#featured-playlists\n */\nexport default class FeaturedPlaylistFetcher extends Fetcher {\n  /**\n   * @ignore\n   */\n  constructor(http, territory = 'TW') {\n    super(http, territory);\n  }\n\n  /**\n   * Fetch all featured playlists. Result will be paged.\n   *\n   * @param {number} [limit] - The size for one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example api.featuredPlaylistFetcher.fetchAllFeaturedPlaylists();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#featuredplaylists\n   */\n  fetchAllFeaturedPlaylists(limit = undefined, offset = undefined) {\n    return this.http.get(ENDPOINT, {\n      limit: limit,\n      offset: offset,\n      territory: this.territory\n    });\n  }\n}\n",
@@ -2180,7 +1869,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 124,
+    "__docId__": 108,
     "kind": "class",
     "name": "FeaturedPlaylistFetcher",
     "memberof": "src/api/FeaturedPlaylistFetcher.js",
@@ -2201,7 +1890,7 @@
     ]
   },
   {
-    "__docId__": 125,
+    "__docId__": 109,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/FeaturedPlaylistFetcher.js~FeaturedPlaylistFetcher",
@@ -2215,7 +1904,7 @@
     "ignore": true
   },
   {
-    "__docId__": 126,
+    "__docId__": 110,
     "kind": "method",
     "name": "fetchAllFeaturedPlaylists",
     "memberof": "src/api/FeaturedPlaylistFetcher.js~FeaturedPlaylistFetcher",
@@ -2264,7 +1953,7 @@
     }
   },
   {
-    "__docId__": 127,
+    "__docId__": 111,
     "kind": "file",
     "name": "src/api/Fetcher.js",
     "content": "/**\n * Base api fetcher.\n */\nexport default class Fetcher {\n  /**\n   * @param {Http} http\n   * @param {string} [territory = 'TW'] - ['TW', 'HK', 'SG', 'MY', 'JP'] The territory for the fetcher.\n   */\n  constructor(http, territory = 'TW') {\n    /**\n     * @ignore\n     */\n    this.http = http;\n\n    /**\n     * @ignore\n     */\n    this.territory = territory;\n  }\n\n  /**\n   * Set the fetcher's territory.\n   * @param {string} [territory = 'TW'] - ['TW', 'HK', 'SG', 'MY', 'JP'] The territory for the fetcher.\n   * @return {Fetcher}\n   */\n  setTerritory(territory) {\n    this.territory = territory;\n    return this;\n  }\n\n  /**\n   * Gets an object's nested property by path.\n   * @ignore\n   */\n  getPropertyByPath(object, path) {\n    path = path.replace(/\\[(\\w+)\\]/g, '.$1'); // convert indexes to properties\n    path = path.replace(/^\\./, ''); // strip a leading dot\n    var keys = path.split('.');\n    for (var i = 0, n = keys.length; i < n; ++i) {\n      var key = keys[i];\n      if (key in object) {\n        object = object[key];\n      } else {\n        return;\n      }\n    }\n    return object;\n  }\n\n  /**\n   * Fetches next page of various paged APIs.\n   *\n   * @param {fulfillment} fulfillment - The fulfillment get from Promose's onFulfillment function\n   * @param {String} nextUriPath - The next uri's path. Defaults to 'data.paging.next',\n   * which means we will get the next uri path from 'fulfillment.data.paging.next'.\n   * The correct next uri path depends on respective api's response.\n   * @return {Promise}\n   * @example\n   * api.albumFetcher\n   *   .setAlbumID('KmRKnW5qmUrTnGRuxF')\n   *   .fetchTracks()\n   *   .then(response => {\n   *     api.albumFetcher.fetchNextPage(response));\n   *   });\n   */\n  fetchNextPage(fulfillment, nextUriPath = 'data.paging.next') {\n    var nextUri = this.getPropertyByPath(fulfillment, nextUriPath);\n    if (nextUri != null && nextUri !== undefined) {\n      return this.http.get(nextUri);\n    } else {\n      return new Promise((resolve, reject) => {\n        reject(new Error('Cannot fetch next page'));\n      });\n    }\n  }\n\n  /**\n   * Is next page available for various paged APIs.\n   * @param {fulfillment} fulfillment - The fulfillment get from Promose's onFulfillment function\n   * @param {String} nextUriPath - The next uri's path. Defaults to 'data.paging.next',\n   * which means we will get the next uri path from 'fulfillment.data.paging.next'.\n   * The correct next uri path depends on respective api's response.\n   * @return {Boolean}\n   * @example\n   * api.albumFetcher\n   *   .setAlbumID('KmRKnW5qmUrTnGRuxF')\n   *   .fetchTracks()\n   *   .then(response => {\n   *     if (api.albumFetcher.hasNextPage(response)) {\n   *       // more data available\n   *     }\n   *   });\n   */\n  hasNextPage(fulfillment, nextUriPath = 'data.paging.next') {\n    var nextUri = this.getPropertyByPath(fulfillment, nextUriPath);\n    return nextUri != null && nextUri !== undefined;\n  }\n}\n",
@@ -2275,7 +1964,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 128,
+    "__docId__": 112,
     "kind": "class",
     "name": "Fetcher",
     "memberof": "src/api/Fetcher.js",
@@ -2290,7 +1979,7 @@
     "interface": false
   },
   {
-    "__docId__": 129,
+    "__docId__": 113,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/Fetcher.js~Fetcher",
@@ -2327,7 +2016,7 @@
     ]
   },
   {
-    "__docId__": 130,
+    "__docId__": 114,
     "kind": "member",
     "name": "http",
     "memberof": "src/api/Fetcher.js~Fetcher",
@@ -2344,7 +2033,7 @@
     }
   },
   {
-    "__docId__": 131,
+    "__docId__": 115,
     "kind": "member",
     "name": "territory",
     "memberof": "src/api/Fetcher.js~Fetcher",
@@ -2361,7 +2050,7 @@
     }
   },
   {
-    "__docId__": 132,
+    "__docId__": 116,
     "kind": "method",
     "name": "setTerritory",
     "memberof": "src/api/Fetcher.js~Fetcher",
@@ -2396,7 +2085,7 @@
     }
   },
   {
-    "__docId__": 134,
+    "__docId__": 118,
     "kind": "method",
     "name": "getPropertyByPath",
     "memberof": "src/api/Fetcher.js~Fetcher",
@@ -2429,7 +2118,7 @@
     }
   },
   {
-    "__docId__": 135,
+    "__docId__": 119,
     "kind": "method",
     "name": "fetchNextPage",
     "memberof": "src/api/Fetcher.js~Fetcher",
@@ -2475,7 +2164,7 @@
     }
   },
   {
-    "__docId__": 136,
+    "__docId__": 120,
     "kind": "method",
     "name": "hasNextPage",
     "memberof": "src/api/Fetcher.js~Fetcher",
@@ -2521,7 +2210,7 @@
     }
   },
   {
-    "__docId__": 137,
+    "__docId__": 121,
     "kind": "file",
     "name": "src/api/GenreStationFetcher.js",
     "content": "import { GENRE_STATIONS as ENDPOINT } from '../Endpoint';\nimport Fetcher from './Fetcher';\n\n/**\n * Get genre stations.\n * @see https://docs-en.kkbox.codes/v1.1/reference#genre-stations\n */\nexport default class GenreStationFetcher extends Fetcher {\n  /**\n   * @ignore\n   */\n  constructor(http, territory = 'TW') {\n    super(http, territory);\n\n    /**\n     *  @ignore\n     */\n    this.genreStationID = undefined;\n  }\n\n  /**\n   * Fetch all genre stations. The result will be paged.\n   *\n   * @param {number} [limit] - The size for one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example api.genreStationFetcher.fetchAllGenreStations();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#genrestations\n   */\n  fetchAllGenreStations(limit = undefined, offset = undefined) {\n    return this.http.get(ENDPOINT, {\n      territory: this.territory,\n      limit: limit,\n      offset: offset\n    });\n  }\n\n  /**\n   * Init the genre station fetcher.\n   *\n   * @param {string} genreStationID - The ID of a genre station.\n   * @return {GenreStation}\n   * @see https://docs-en.kkbox.codes/v1.1/reference#genrestations-station_id\n   */\n  setGenreStationID(genreStationID) {\n    this.genreStationID = genreStationID;\n    return this;\n  }\n\n  /**\n   * Fetch metadata of the genre station with the genre station fetcher.\n   *\n   * @return {Promise}\n   * @example api.genreStationFetcher.setGenreStationID('TYq3EHFTl-1EOvJM5Y').fetchMetadata();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#genrestations-station_id\n   */\n  fetchMetadata() {\n    return this.http.get(ENDPOINT + '/' + this.genreStationID, {\n      territory: this.territory\n    });\n  }\n}\n",
@@ -2532,7 +2221,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 138,
+    "__docId__": 122,
     "kind": "class",
     "name": "GenreStationFetcher",
     "memberof": "src/api/GenreStationFetcher.js",
@@ -2553,7 +2242,7 @@
     ]
   },
   {
-    "__docId__": 139,
+    "__docId__": 123,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/GenreStationFetcher.js~GenreStationFetcher",
@@ -2567,7 +2256,7 @@
     "ignore": true
   },
   {
-    "__docId__": 140,
+    "__docId__": 124,
     "kind": "member",
     "name": "genreStationID",
     "memberof": "src/api/GenreStationFetcher.js~GenreStationFetcher",
@@ -2584,7 +2273,7 @@
     }
   },
   {
-    "__docId__": 141,
+    "__docId__": 125,
     "kind": "method",
     "name": "fetchAllGenreStations",
     "memberof": "src/api/GenreStationFetcher.js~GenreStationFetcher",
@@ -2633,7 +2322,7 @@
     }
   },
   {
-    "__docId__": 142,
+    "__docId__": 126,
     "kind": "method",
     "name": "setGenreStationID",
     "memberof": "src/api/GenreStationFetcher.js~GenreStationFetcher",
@@ -2669,7 +2358,7 @@
     }
   },
   {
-    "__docId__": 144,
+    "__docId__": 128,
     "kind": "method",
     "name": "fetchMetadata",
     "memberof": "src/api/GenreStationFetcher.js~GenreStationFetcher",
@@ -2697,7 +2386,7 @@
     "params": []
   },
   {
-    "__docId__": 145,
+    "__docId__": 129,
     "kind": "file",
     "name": "src/api/HttpClient.js",
     "content": "import axios from 'axios';\nimport { apiError } from '../catchError';\n\n/**\n * Do request to open api server with authorization header and error catch.\n */\nexport default class HttpClient {\n  /**\n   * @param {string} token - Need access token to initialize.\n   */\n  constructor(token) {\n    /**\n     * @private\n     * @type {string}\n     */\n    this.token = 'Bearer ' + token;\n  }\n\n  /**\n   * Http get method.\n   *\n   * @param {string} endpoint - Uri endpoint.\n   * @param {object} params - Uri parameters.\n   * @return {Promise}\n   */\n  get(endpoint, params = {}) {\n    return axios\n      .get(endpoint, {\n        params: params,\n        headers: {\n          Authorization: this.token\n        }\n      })\n      .catch(apiError);\n  }\n\n  /**\n   * Http post method.\n   *\n   * @param {string} endpoint - Uri endpoint.\n   * @param {object} data - Body json data.\n   * @return {Promise}\n   */\n  post(endpoint, data = {}) {\n    return axios\n      .post(endpoint, data, {\n        headers: {\n          Authorization: this.token\n        }\n      })\n      .catch(apiError);\n  }\n}\n",
@@ -2708,7 +2397,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 146,
+    "__docId__": 130,
     "kind": "class",
     "name": "HttpClient",
     "memberof": "src/api/HttpClient.js",
@@ -2723,7 +2412,7 @@
     "interface": false
   },
   {
-    "__docId__": 147,
+    "__docId__": 131,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/HttpClient.js~HttpClient",
@@ -2748,7 +2437,7 @@
     ]
   },
   {
-    "__docId__": 148,
+    "__docId__": 132,
     "kind": "member",
     "name": "token",
     "memberof": "src/api/HttpClient.js~HttpClient",
@@ -2767,7 +2456,7 @@
     }
   },
   {
-    "__docId__": 149,
+    "__docId__": 133,
     "kind": "method",
     "name": "get",
     "memberof": "src/api/HttpClient.js~HttpClient",
@@ -2810,7 +2499,7 @@
     }
   },
   {
-    "__docId__": 150,
+    "__docId__": 134,
     "kind": "method",
     "name": "post",
     "memberof": "src/api/HttpClient.js~HttpClient",
@@ -2853,7 +2542,7 @@
     }
   },
   {
-    "__docId__": 151,
+    "__docId__": 135,
     "kind": "file",
     "name": "src/api/MoodStationFetcher.js",
     "content": "import { MOOD_STATIONS as ENDPOINT } from '../Endpoint';\nimport Fetcher from './Fetcher';\n\n/**\n * Get mood stations.\n * @see https://docs-en.kkbox.codes/v1.1/reference#mood-stations\n */\nexport default class MoodStationFetcher extends Fetcher {\n  /**\n   * @ignore\n   */\n  constructor(http, territory = 'TW') {\n    super(http, territory);\n\n    /**\n     * @ignore\n     */\n    this.moodStationID = undefined;\n  }\n\n  /**\n   * Fetch all mood stations.\n   *\n   * @return {Promise}\n   * @example api.moodStationFetcher.fetchAllMoodStations();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#moodstations\n   */\n  fetchAllMoodStations() {\n    return this.http.get(ENDPOINT, {\n      territory: this.territory\n    });\n  }\n\n  /**\n   * Init the mood station fetcher.\n   *\n   * @param {string} moodStationID - The ID of a mood station.\n   * @param {string} [territory = 'TW'] - ['TW', 'HK', 'SG', 'MY', 'JP'] The territory of a mood station.\n   * @return {MoodStation}\n   * @see https://docs-en.kkbox.codes/v1.1/reference#moodstations-station_id\n   */\n  setMoodStationID(moodStationID, territory = 'TW') {\n    this.moodStationID = moodStationID;\n    this.territory = territory;\n    return this;\n  }\n\n  /**\n   * Fetch the mood station's metadata.\n   *\n   * @return {Promise}\n   * @example api.moodStationFetcher.setMoodStationID('StGZp2ToWq92diPHS7').fetchMetadata();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#moodstations-station_id\n   */\n  fetchMetadata() {\n    return this.http.get(ENDPOINT + '/' + this.moodStationID, {\n      territory: this.territory\n    });\n  }\n}\n",
@@ -2864,7 +2553,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 152,
+    "__docId__": 136,
     "kind": "class",
     "name": "MoodStationFetcher",
     "memberof": "src/api/MoodStationFetcher.js",
@@ -2885,7 +2574,7 @@
     ]
   },
   {
-    "__docId__": 153,
+    "__docId__": 137,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/MoodStationFetcher.js~MoodStationFetcher",
@@ -2899,7 +2588,7 @@
     "ignore": true
   },
   {
-    "__docId__": 154,
+    "__docId__": 138,
     "kind": "member",
     "name": "moodStationID",
     "memberof": "src/api/MoodStationFetcher.js~MoodStationFetcher",
@@ -2916,7 +2605,7 @@
     }
   },
   {
-    "__docId__": 155,
+    "__docId__": 139,
     "kind": "method",
     "name": "fetchAllMoodStations",
     "memberof": "src/api/MoodStationFetcher.js~MoodStationFetcher",
@@ -2944,7 +2633,7 @@
     "params": []
   },
   {
-    "__docId__": 156,
+    "__docId__": 140,
     "kind": "method",
     "name": "setMoodStationID",
     "memberof": "src/api/MoodStationFetcher.js~MoodStationFetcher",
@@ -2992,7 +2681,7 @@
     }
   },
   {
-    "__docId__": 158,
+    "__docId__": 142,
     "kind": "member",
     "name": "territory",
     "memberof": "src/api/MoodStationFetcher.js~MoodStationFetcher",
@@ -3009,7 +2698,7 @@
     }
   },
   {
-    "__docId__": 159,
+    "__docId__": 143,
     "kind": "method",
     "name": "fetchMetadata",
     "memberof": "src/api/MoodStationFetcher.js~MoodStationFetcher",
@@ -3037,7 +2726,7 @@
     "params": []
   },
   {
-    "__docId__": 160,
+    "__docId__": 144,
     "kind": "file",
     "name": "src/api/NewHitsPlaylistFetcher.js",
     "content": "import { NEW_HITS_PLAYLISTS as ENDPOINT } from '../Endpoint';\nimport Fetcher from './Fetcher';\n\n/**\n * List new hits playlists.\n * @see https://docs-en.kkbox.codes/v1.1/reference#new-hits-playlists\n */\nexport default class NewHitsPlaylistFetcher extends Fetcher {\n  /**\n   * @ignore\n   */\n  constructor(http, territory = 'TW') {\n    super(http, territory);\n\n    /**\n     * @ignore\n     */\n    this.playlistID = undefined;\n  }\n\n  /**\n   * Fetch all new hits playlists.\n   *\n   * @param {number} [limit] - The size of one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example api.newHitsPlaylistFetcher.fetchAllNewHitsPlaylists();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists\n   */\n  fetchAllNewHitsPlaylists(limit = undefined, offset = undefined) {\n    return this.http.get(ENDPOINT, {\n      territory: this.territory\n    });\n  }\n\n  /**\n   * Init the new hits playlist fetcher.\n   *\n   * @param {string} playlistID - The playlist ID.\n   * @return {NewHitsPlaylistFetcher}\n   * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists-playlist_id\n   */\n  setPlaylistID(playlistID) {\n    this.playlistID = playlistID;\n    return this;\n  }\n\n  /**\n   * Fetch metadata of the new hits playlist you set.\n   *\n   * @return {Promise}\n   * @example api.newHitsPlaylistFetcher.setPlaylistID('DZrC8m29ciOFY2JAm3').fetchMetadata();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists-playlist_id\n   */\n  fetchMetadata() {\n    return this.http.get(ENDPOINT + '/' + this.playlistID, {\n      territory: this.territory\n    });\n  }\n\n  /**\n   * Fetch tracks of the new hits playlist you set. Result will be paged.\n   *\n   * @param {number} [limit] - The size of one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example api.newHitsPlaylistFetcher.setPlaylistID('DZrC8m29ciOFY2JAm3').fetchTracks();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists-playlist_id-tracks\n   */\n  fetchTracks(limit = undefined, offset = undefined) {\n    return this.http.get(ENDPOINT + '/' + this.playlistID + '/tracks', {\n      territory: this.territory,\n      limit: limit,\n      offset: offset\n    });\n  }\n}\n",
@@ -3048,7 +2737,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 161,
+    "__docId__": 145,
     "kind": "class",
     "name": "NewHitsPlaylistFetcher",
     "memberof": "src/api/NewHitsPlaylistFetcher.js",
@@ -3069,7 +2758,7 @@
     ]
   },
   {
-    "__docId__": 162,
+    "__docId__": 146,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher",
@@ -3083,7 +2772,7 @@
     "ignore": true
   },
   {
-    "__docId__": 163,
+    "__docId__": 147,
     "kind": "member",
     "name": "playlistID",
     "memberof": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher",
@@ -3100,7 +2789,7 @@
     }
   },
   {
-    "__docId__": 164,
+    "__docId__": 148,
     "kind": "method",
     "name": "fetchAllNewHitsPlaylists",
     "memberof": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher",
@@ -3149,7 +2838,7 @@
     }
   },
   {
-    "__docId__": 165,
+    "__docId__": 149,
     "kind": "method",
     "name": "setPlaylistID",
     "memberof": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher",
@@ -3185,7 +2874,7 @@
     }
   },
   {
-    "__docId__": 167,
+    "__docId__": 151,
     "kind": "method",
     "name": "fetchMetadata",
     "memberof": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher",
@@ -3213,7 +2902,7 @@
     "params": []
   },
   {
-    "__docId__": 168,
+    "__docId__": 152,
     "kind": "method",
     "name": "fetchTracks",
     "memberof": "src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher",
@@ -3262,7 +2951,7 @@
     }
   },
   {
-    "__docId__": 169,
+    "__docId__": 153,
     "kind": "file",
     "name": "src/api/NewReleaseCategoryFetcher.js",
     "content": "import { NEW_RELEASE_CATEGORIES as ENDPOINT } from '../Endpoint';\nimport Fetcher from './Fetcher';\n\n/**\n * List categories of new release albums.\n * @see https://docs-en.kkbox.codes/v1.1/reference#new-release-categories\n */\nexport default class NewReleaseCategoryFetcher extends Fetcher {\n  /**\n   * @ignore\n   */\n  constructor(http, territory = 'TW') {\n    super(http, territory);\n\n    /**\n     * @ignore\n     */\n    this.categoryID = undefined;\n  }\n\n  /**\n   * Fetch all new release categories.\n   *\n   * @param {number} [limit] - The size of one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example api.newReleaseCategoryFetcher.fetchAllNewReleaseCategories();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories\n   */\n  fetchAllNewReleaseCategories(limit = undefined, offset = undefined) {\n    return this.http.get(ENDPOINT, {\n      limit: limit,\n      offset: offset,\n      territory: this.territory\n    });\n  }\n\n  /**\n   * Init the new release category fetcher.\n   *\n   * @param {string} categoryID - The category ID.\n   * @return {NewReleaseCategoryFetcher}\n   * @see https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id\n   */\n  setCategoryID(categoryID) {\n    this.categoryID = categoryID;\n    return this;\n  }\n\n  /**\n   * Fetch metadata of the new release category you set.\n   *\n   * @return {Promise}\n   * @example api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchMetadata();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id\n   */\n  fetchMetadata() {\n    return this.http.get(ENDPOINT + '/' + this.categoryID, {\n      territory: this.territory\n    });\n  }\n\n  /**\n   * Fetch albums of the new release category with the category fetcher you init. Result will be paged.\n   *\n   * @param {number} [limit] - The size of one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example api.newReleaseCategoryFetcher.setCategoryID('Cng5IUIQhxb8w1cbsz').fetchAlbums();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id-albums\n   */\n  fetchAlbums(limit = undefined, offset = undefined) {\n    return this.http.get(ENDPOINT + '/' + this.categoryID + '/albums', {\n      territory: this.territory,\n      limit: limit,\n      offset: offset\n    });\n  }\n}\n",
@@ -3273,7 +2962,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 170,
+    "__docId__": 154,
     "kind": "class",
     "name": "NewReleaseCategoryFetcher",
     "memberof": "src/api/NewReleaseCategoryFetcher.js",
@@ -3294,7 +2983,7 @@
     ]
   },
   {
-    "__docId__": 171,
+    "__docId__": 155,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
@@ -3308,7 +2997,7 @@
     "ignore": true
   },
   {
-    "__docId__": 172,
+    "__docId__": 156,
     "kind": "member",
     "name": "categoryID",
     "memberof": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
@@ -3325,7 +3014,7 @@
     }
   },
   {
-    "__docId__": 173,
+    "__docId__": 157,
     "kind": "method",
     "name": "fetchAllNewReleaseCategories",
     "memberof": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
@@ -3374,7 +3063,7 @@
     }
   },
   {
-    "__docId__": 174,
+    "__docId__": 158,
     "kind": "method",
     "name": "setCategoryID",
     "memberof": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
@@ -3410,7 +3099,7 @@
     }
   },
   {
-    "__docId__": 176,
+    "__docId__": 160,
     "kind": "method",
     "name": "fetchMetadata",
     "memberof": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
@@ -3438,7 +3127,7 @@
     "params": []
   },
   {
-    "__docId__": 177,
+    "__docId__": 161,
     "kind": "method",
     "name": "fetchAlbums",
     "memberof": "src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher",
@@ -3487,7 +3176,7 @@
     }
   },
   {
-    "__docId__": 178,
+    "__docId__": 162,
     "kind": "file",
     "name": "src/api/SearchFetcher.js",
     "content": "import { SEARCH as ENDPOINT } from '../Endpoint';\nimport Fetcher from './Fetcher';\n\n/**\n * Search API.\n * @see https://docs-en.kkbox.codes/v1.1/reference#search\n */\nexport default class SearchFetcher extends Fetcher {\n  /**\n   * @ignore\n   */\n  constructor(http, territory = 'TW') {\n    super(http, territory);\n\n    /**\n     * @ignore\n     */\n    this.filterConditions = undefined;\n\n    /**\n     * @ignore\n     */\n    this.q = undefined;\n\n    /**\n     * @ignore\n     */\n    this.type = undefined;\n  }\n\n  /**\n   * Filter what you don't want when search.\n   *\n   * @param {Object} [conditions] - search conditions.\n   * @param {string} conditions.track - track's name.\n   * @param {string} conditions.album - album's name.\n   * @param {string} conditions.artist - artist's name.\n   * @param {string} conditions.playlist - playlist's title.\n   * @param {string} conditions.availableTerritory - tracks and albums available territory.\n   * @return {Search}\n   * @example\n   * api.searchFetcher\n   *  .setSearchCriteria('五月天 好好')\n   *  .filter({artist: '五月天'})\n   *  .fetchSearchResult();\n   */\n  filter(conditions = {}) {\n    this.filterConditions = conditions;\n    return this;\n  }\n\n  /**\n   * Init the search fetcher for the artist, album, track or playlist.\n   *\n   * @param {string} q - The keyword to be searched.\n   * @param {string} [type] - ['artist', 'album', 'track', 'playlist'] The type of search. Default to search all types. If you want to use multiple type at the same time, you may use ',' to separate them.\n   * @return {Search}\n   * @see https://docs-en.kkbox.codes/v1.1/reference#search_1\n   */\n  setSearchCriteria(q, type = undefined) {\n    this.q = q;\n    this.type = type;\n    return this;\n  }\n\n  /**\n   * Fetch the search result.\n   *\n   * @param {number} [limit] - The size of one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example\n   * api.searchFetcher\n   *  .setSearchCriteria('五月天 好好')\n   *  .fetchSearchResult();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#search_1\n   */\n  fetchSearchResult(limit = undefined, offset = undefined) {\n    return this.http\n      .get(ENDPOINT, {\n        q: this.q,\n        type: this.type,\n        territory: this.territory,\n        limit: limit,\n        offset: offset\n      })\n      .then(doFilter.bind(this));\n  }\n}\n\nfunction doFilter(response) {\n  if (this.filterConditions !== undefined) {\n    const data = Object.keys(response.data).map(key => {\n      switch (key) {\n        case 'tracks':\n          return {\n            [key]: Object.assign(response.data[key], {\n              data: response.data[key].data.filter(track => {\n                if (\n                  this.filterConditions.availableTerritory !== undefined &&\n                  !track.available_territories.includes(\n                    this.filterConditions.availableTerritory\n                  )\n                ) {\n                  return false;\n                }\n                if (\n                  this.filterConditions.track !== undefined &&\n                  !new RegExp('.*' + this.filterConditions.track + '.*').test(\n                    track.name\n                  )\n                ) {\n                  return false;\n                }\n                if (\n                  this.filterConditions.album !== undefined &&\n                  !new RegExp('.*' + this.filterConditions.album + '.*').test(\n                    track.album.name\n                  )\n                ) {\n                  return false;\n                }\n                return !(\n                  this.filterConditions.artist !== undefined &&\n                  !new RegExp('.*' + this.filterConditions.artist + '.*').test(\n                    track.album.artist.name\n                  )\n                );\n              })\n            })\n          };\n        case 'albums':\n          return {\n            [key]: Object.assign(response.data[key], {\n              data: response.data[key].data.filter(album => {\n                if (\n                  this.filterConditions.availableTerritory !== undefined &&\n                  !album.available_territories.includes(\n                    this.filterConditions.availableTerritory\n                  )\n                ) {\n                  return false;\n                }\n                if (\n                  this.filterConditions.album !== undefined &&\n                  !new RegExp('.*' + this.filterConditions.album + '.*').test(\n                    album.name\n                  )\n                ) {\n                  return false;\n                }\n                return !(\n                  this.filterConditions.artist !== undefined &&\n                  !new RegExp('.*' + this.filterConditions.artist + '.*').test(\n                    album.artist.name\n                  )\n                );\n              })\n            })\n          };\n        case 'artists':\n          return {\n            [key]: Object.assign(response.data[key], {\n              data: response.data[key].data.filter(artist => {\n                if (this.filterConditions.artist === undefined) {\n                  return true;\n                } else {\n                  return new RegExp(\n                    '.*' + this.filterConditions.artist + '.*'\n                  ).test(artist.name);\n                }\n              })\n            })\n          };\n        case 'playlists':\n          return {\n            [key]: Object.assign(response.data[key], {\n              data: response.data[key].data.filter(playlist => {\n                if (this.filterConditions.playlist === undefined) {\n                  return true;\n                } else {\n                  return new RegExp(\n                    '.*' + this.filterConditions.playlist + '.*'\n                  ).test(playlist.title);\n                }\n              })\n            })\n          };\n        default:\n          return {\n            [key]: response.data[key]\n          };\n      }\n    });\n    return Object.assign(response, {\n      data: Object.assign(...data)\n    });\n  } else {\n    return response;\n  }\n}\n",
@@ -3498,7 +3187,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 179,
+    "__docId__": 163,
     "kind": "class",
     "name": "SearchFetcher",
     "memberof": "src/api/SearchFetcher.js",
@@ -3519,7 +3208,7 @@
     ]
   },
   {
-    "__docId__": 180,
+    "__docId__": 164,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/SearchFetcher.js~SearchFetcher",
@@ -3533,7 +3222,7 @@
     "ignore": true
   },
   {
-    "__docId__": 181,
+    "__docId__": 165,
     "kind": "member",
     "name": "filterConditions",
     "memberof": "src/api/SearchFetcher.js~SearchFetcher",
@@ -3550,7 +3239,7 @@
     }
   },
   {
-    "__docId__": 182,
+    "__docId__": 166,
     "kind": "member",
     "name": "q",
     "memberof": "src/api/SearchFetcher.js~SearchFetcher",
@@ -3567,7 +3256,7 @@
     }
   },
   {
-    "__docId__": 183,
+    "__docId__": 167,
     "kind": "member",
     "name": "type",
     "memberof": "src/api/SearchFetcher.js~SearchFetcher",
@@ -3584,7 +3273,7 @@
     }
   },
   {
-    "__docId__": 184,
+    "__docId__": 168,
     "kind": "method",
     "name": "filter",
     "memberof": "src/api/SearchFetcher.js~SearchFetcher",
@@ -3670,7 +3359,7 @@
     }
   },
   {
-    "__docId__": 186,
+    "__docId__": 170,
     "kind": "method",
     "name": "setSearchCriteria",
     "memberof": "src/api/SearchFetcher.js~SearchFetcher",
@@ -3716,7 +3405,7 @@
     }
   },
   {
-    "__docId__": 189,
+    "__docId__": 173,
     "kind": "method",
     "name": "fetchSearchResult",
     "memberof": "src/api/SearchFetcher.js~SearchFetcher",
@@ -3765,7 +3454,7 @@
     }
   },
   {
-    "__docId__": 190,
+    "__docId__": 174,
     "kind": "function",
     "name": "doFilter",
     "memberof": "src/api/SearchFetcher.js",
@@ -3796,7 +3485,7 @@
     "ignore": true
   },
   {
-    "__docId__": 191,
+    "__docId__": 175,
     "kind": "file",
     "name": "src/api/SharedPlaylistFetcher.js",
     "content": "import { SHARED_PLAYLISTS as ENDPOINT } from '../Endpoint';\nimport Fetcher from './Fetcher';\n\n/**\n * Get playlist metadata.\n * @see https://docs-en.kkbox.codes/v1.1/reference#shared-playlists\n */\nexport default class SharedPlaylistFetcher extends Fetcher {\n  /**\n   * @ignore\n   */\n  constructor(http, territory = 'TW') {\n    super(http, territory);\n\n    /**\n     * @ignore\n     */\n    this.playlistID = undefined;\n  }\n\n  /**\n   * Init the shared playlist fetcher.\n   *\n   * @param {string} playlistID - The ID of a playlist.\n   * @return {SharedPlaylistFetcher}\n   * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id\n   */\n  setPlaylistID(playlistID) {\n    this.playlistID = playlistID;\n    return this;\n  }\n\n  /**\n   * Fetch metadata of the shared playlist with the shared playlist fetcher.\n   *\n   * @return {Promise}\n   * @example\n   *  api.sharedPlaylistFetcher\n   *    .setPlaylistID('4nUZM-TY2aVxZ2xaA-')\n   *    .fetchMetadata();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id\n   */\n  fetchMetadata() {\n    return this.http.get(ENDPOINT + '/' + this.playlistID, {\n      territory: this.territory\n    });\n  }\n\n  /**\n   * Get KKBOX web widget uri of the playlist.\n   * @example https://widget.kkbox.com/v1/?id=KmjwNXizu5MxHFSloP&type=playlist\n   * @return {string}\n   */\n  getWidgetUri() {\n    return `https://widget.kkbox.com/v1/?id=${this.playlistID}&type=playlist`;\n  }\n\n  /**\n   * Fetch track list of a shared playlist.\n   *\n   * @param {number} [limit] - The size for one page.\n   * @param {number} [offset] - The offset index for first element.\n   * @return {Promise}\n   * @example\n   *  api.sharedPlaylistFetcher\n   *    .setPlaylistID('4nUZM-TY2aVxZ2xaA-')\n   *    .fetchTracks();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id-tracks\n   */\n  fetchTracks(limit = undefined, offset = undefined) {\n    return this.http.get(ENDPOINT + '/' + this.playlistID + '/tracks', {\n      territory: this.territory,\n      limit: limit,\n      offset: offset\n    });\n  }\n}\n",
@@ -3807,7 +3496,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 192,
+    "__docId__": 176,
     "kind": "class",
     "name": "SharedPlaylistFetcher",
     "memberof": "src/api/SharedPlaylistFetcher.js",
@@ -3828,7 +3517,7 @@
     ]
   },
   {
-    "__docId__": 193,
+    "__docId__": 177,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
@@ -3842,7 +3531,7 @@
     "ignore": true
   },
   {
-    "__docId__": 194,
+    "__docId__": 178,
     "kind": "member",
     "name": "playlistID",
     "memberof": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
@@ -3859,7 +3548,7 @@
     }
   },
   {
-    "__docId__": 195,
+    "__docId__": 179,
     "kind": "method",
     "name": "setPlaylistID",
     "memberof": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
@@ -3895,7 +3584,7 @@
     }
   },
   {
-    "__docId__": 197,
+    "__docId__": 181,
     "kind": "method",
     "name": "fetchMetadata",
     "memberof": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
@@ -3923,7 +3612,7 @@
     "params": []
   },
   {
-    "__docId__": 198,
+    "__docId__": 182,
     "kind": "method",
     "name": "getWidgetUri",
     "memberof": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
@@ -3948,7 +3637,7 @@
     "params": []
   },
   {
-    "__docId__": 199,
+    "__docId__": 183,
     "kind": "method",
     "name": "fetchTracks",
     "memberof": "src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher",
@@ -3997,7 +3686,7 @@
     }
   },
   {
-    "__docId__": 200,
+    "__docId__": 184,
     "kind": "file",
     "name": "src/api/TrackFetcher.js",
     "content": "import { TRACKS as ENDPOINT } from '../Endpoint';\nimport Fetcher from './Fetcher';\n\n/**\n * Get metadata of a track.\n * @see https://docs-en.kkbox.codes/v1.1/reference#tracks\n */\nexport default class TrackFetcher extends Fetcher {\n  /**\n   * @ignore\n   */\n  constructor(http, territory = 'TW') {\n    super(http, territory);\n\n    /**\n     * @ignore\n     */\n    this.trackID = undefined;\n  }\n\n  /**\n   * Set the track fetcher's track ID.\n   *\n   * @param {string} trackID - The ID of a track.\n   * @return {Track}\n   * @see https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id\n   */\n  setTrackID(trackID) {\n    this.trackID = trackID;\n    return this;\n  }\n\n  /**\n   * Get metadata of the track with the track fetcher.\n   *\n   * @return {Promise}\n   * @example api.trackFetcher.setTrackID('KpnEGVHEsGgkoB0MBk').fetchMetadata();\n   * @see https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id\n   */\n  fetchMetadata() {\n    return this.http.get(ENDPOINT + '/' + this.trackID, {\n      territory: this.territory\n    });\n  }\n\n  /**\n   * Get KKBOX web widget uri of the track.\n   * @example https://widget.kkbox.com/v1/?id=8sD5pE4dV0Zqmmler6&type=song\n   * @return {string}\n   */\n  getWidgetUri() {\n    return `https://widget.kkbox.com/v1/?id=${this.trackID}&type=song`;\n  }\n}\n",
@@ -4008,7 +3697,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 201,
+    "__docId__": 185,
     "kind": "class",
     "name": "TrackFetcher",
     "memberof": "src/api/TrackFetcher.js",
@@ -4029,7 +3718,7 @@
     ]
   },
   {
-    "__docId__": 202,
+    "__docId__": 186,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/api/TrackFetcher.js~TrackFetcher",
@@ -4043,7 +3732,7 @@
     "ignore": true
   },
   {
-    "__docId__": 203,
+    "__docId__": 187,
     "kind": "member",
     "name": "trackID",
     "memberof": "src/api/TrackFetcher.js~TrackFetcher",
@@ -4060,7 +3749,7 @@
     }
   },
   {
-    "__docId__": 204,
+    "__docId__": 188,
     "kind": "method",
     "name": "setTrackID",
     "memberof": "src/api/TrackFetcher.js~TrackFetcher",
@@ -4096,7 +3785,7 @@
     }
   },
   {
-    "__docId__": 206,
+    "__docId__": 190,
     "kind": "method",
     "name": "fetchMetadata",
     "memberof": "src/api/TrackFetcher.js~TrackFetcher",
@@ -4124,7 +3813,7 @@
     "params": []
   },
   {
-    "__docId__": 207,
+    "__docId__": 191,
     "kind": "method",
     "name": "getWidgetUri",
     "memberof": "src/api/TrackFetcher.js~TrackFetcher",
@@ -4149,7 +3838,7 @@
     "params": []
   },
   {
-    "__docId__": 208,
+    "__docId__": 192,
     "kind": "file",
     "name": "src/auth/Auth.js",
     "content": "import ClientCredentialsFlow from './ClientCredentialsFlow';\nimport TokenFetcher from './TokenFetcher';\n\n/**\n * Implements various KKBOX OAuth 2.0 authorization flows.\n */\nexport default class Auth {\n  /**\n   * Initialize the Auth object with client id and client secret.\n   *\n   * @param {string} clientID\n   * @param {string} clientSecret\n   * @example new Auth(clientID, clientSecret);\n   */\n  constructor(clientID, clientSecret) {\n    /**\n     * @type {TokenFetcher}\n     */\n    this.tokenFetcher = new TokenFetcher(clientID, clientSecret);\n\n    /**\n     * @type {ClientCredentialsFlow}\n     */\n    this.clientCredentialsFlow = new ClientCredentialsFlow(this.tokenFetcher);\n  }\n}\n",
@@ -4160,7 +3849,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 209,
+    "__docId__": 193,
     "kind": "class",
     "name": "Auth",
     "memberof": "src/auth/Auth.js",
@@ -4175,7 +3864,7 @@
     "interface": false
   },
   {
-    "__docId__": 210,
+    "__docId__": 194,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/auth/Auth.js~Auth",
@@ -4213,7 +3902,7 @@
     ]
   },
   {
-    "__docId__": 211,
+    "__docId__": 195,
     "kind": "member",
     "name": "tokenFetcher",
     "memberof": "src/auth/Auth.js~Auth",
@@ -4232,7 +3921,7 @@
     }
   },
   {
-    "__docId__": 212,
+    "__docId__": 196,
     "kind": "member",
     "name": "clientCredentialsFlow",
     "memberof": "src/auth/Auth.js~Auth",
@@ -4251,7 +3940,7 @@
     }
   },
   {
-    "__docId__": 213,
+    "__docId__": 197,
     "kind": "file",
     "name": "src/auth/ClientCredentialsFlow.js",
     "content": "/**\n * Implements the client credentials flow. Used for accessing APIs that don't need any KKBOX\n * user's personal data.\n * @see https://docs-en.kkbox.codes/docs/getting-started\n */\nexport default class ClientCredentialsFlow {\n  /**\n   * @ignore\n   */\n  constructor(token) {\n    /**\n     * @ignore\n     */\n    this.token = token;\n  }\n\n  /**\n   * Fetch access token.\n   *\n   * @return {Promise}\n   * @example auth.clientCredentialsFlow.fetchAccessToken();\n   */\n  fetchAccessToken() {\n    return this.token.fetchAccessToken({\n      grant_type: 'client_credentials'\n    });\n  }\n}\n",
@@ -4262,7 +3951,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 214,
+    "__docId__": 198,
     "kind": "class",
     "name": "ClientCredentialsFlow",
     "memberof": "src/auth/ClientCredentialsFlow.js",
@@ -4280,7 +3969,7 @@
     "interface": false
   },
   {
-    "__docId__": 215,
+    "__docId__": 199,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow",
@@ -4294,7 +3983,7 @@
     "ignore": true
   },
   {
-    "__docId__": 216,
+    "__docId__": 200,
     "kind": "member",
     "name": "token",
     "memberof": "src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow",
@@ -4311,7 +4000,7 @@
     }
   },
   {
-    "__docId__": 217,
+    "__docId__": 201,
     "kind": "method",
     "name": "fetchAccessToken",
     "memberof": "src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow",
@@ -4336,7 +4025,7 @@
     "params": []
   },
   {
-    "__docId__": 218,
+    "__docId__": 202,
     "kind": "file",
     "name": "src/auth/TokenFetcher.js",
     "content": "import axios from 'axios';\nimport { authError } from '../catchError';\nimport querystring from 'querystring';\nimport { Token as ENDPOINT_TOKEN } from '../Endpoint';\n\n/**\n * Fetches access token.\n */\nexport default class TokenFetcher {\n  /**\n   * @ignore\n   */\n  constructor(clientID, clientSecret) {\n    /**\n     * @ignore\n     */\n    this.clientID = clientID;\n\n    /**\n     * @ignore\n     */\n    this.clientSecret = clientSecret;\n  }\n\n  /**\n   * Fetches access token.\n   *\n   * @param {object} params - Form data.\n   * @return {Promise}\n   */\n  fetchAccessToken(params) {\n    return axios\n      .post(ENDPOINT_TOKEN, querystring.stringify(params), {\n        auth: {\n          username: this.clientID,\n          password: this.clientSecret\n        },\n        headers: {}\n      })\n      .catch(authError);\n  }\n}\n",
@@ -4347,7 +4036,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 219,
+    "__docId__": 203,
     "kind": "class",
     "name": "TokenFetcher",
     "memberof": "src/auth/TokenFetcher.js",
@@ -4362,7 +4051,7 @@
     "interface": false
   },
   {
-    "__docId__": 220,
+    "__docId__": 204,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/auth/TokenFetcher.js~TokenFetcher",
@@ -4376,7 +4065,7 @@
     "ignore": true
   },
   {
-    "__docId__": 221,
+    "__docId__": 205,
     "kind": "member",
     "name": "clientID",
     "memberof": "src/auth/TokenFetcher.js~TokenFetcher",
@@ -4393,7 +4082,7 @@
     }
   },
   {
-    "__docId__": 222,
+    "__docId__": 206,
     "kind": "member",
     "name": "clientSecret",
     "memberof": "src/auth/TokenFetcher.js~TokenFetcher",
@@ -4410,7 +4099,7 @@
     }
   },
   {
-    "__docId__": 223,
+    "__docId__": 207,
     "kind": "method",
     "name": "fetchAccessToken",
     "memberof": "src/auth/TokenFetcher.js~TokenFetcher",
@@ -4443,7 +4132,7 @@
     }
   },
   {
-    "__docId__": 224,
+    "__docId__": 208,
     "kind": "file",
     "name": "src/catchError.js",
     "content": "/**\n * @ignore\n */\nexport const apiError = error => {\n  if (error.response) {\n    throw new Error(error.response.data.error.message);\n  } else {\n    throw new Error(error.message);\n  }\n};\n\n/**\n * @ignore\n */\nexport const authError = error => {\n  throw new Error(error.response.data.error);\n};\n",
@@ -4454,7 +4143,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 225,
+    "__docId__": 209,
     "kind": "function",
     "name": "apiError",
     "memberof": "src/catchError.js",
@@ -4480,7 +4169,7 @@
     "return": null
   },
   {
-    "__docId__": 226,
+    "__docId__": 210,
     "kind": "function",
     "name": "authError",
     "memberof": "src/catchError.js",
@@ -4506,8 +4195,178 @@
     "return": null
   },
   {
+    "__docId__": 211,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "export { default as Auth } from './auth/Auth';\nexport { default as Api } from './api/Api';\n",
+    "static": true,
+    "longname": "/Users/ajhsu/Git/kkcorp/OpenAPI-JavaScript/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 212,
+    "kind": "file",
+    "name": "src/test/apitest.js",
+    "content": "import should from 'should';\nimport HttpClient from '../api/HttpClient';\nimport SearchFetcher from '../api/SearchFetcher';\nimport AlbumFetcher from '../api/AlbumFetcher';\nimport ArtistFetcher from '../api/ArtistFetcher';\nimport FeaturedPlaylistFetcher from '../api/FeaturedPlaylistFetcher';\nimport FeaturedPlaylistCategoryFetcher from '../api/FeaturedPlaylistCategoryFetcher';\nimport NewReleaseCategoryFetcher from '../api/NewReleaseCategoryFetcher';\nimport NewHitsPlaylistFetcher from '../api/NewHitsPlaylistFetcher';\nimport SharedPlaylistFetcher from '../api/SharedPlaylistFetcher';\nimport MoodStationFetcher from '../api/MoodStationFetcher';\nimport GenreStationFetcher from '../api/GenreStationFetcher';\nimport ChartFetcher from '../api/ChartFetcher';\nimport TrackFetcher from '../api/TrackFetcher';\nimport TokenFetcher from '../auth/TokenFetcher';\nimport ClientCredentials from '../auth/ClientCredentialsFlow';\nimport { kkbox_sdk } from '../../client_secrets.json';\nconst CLIENT_ID = kkbox_sdk.client_id;\nconst CLIENT_SECRET = kkbox_sdk.client_secret;\n\ndescribe('Api Begin to Test', () => {\n  describe('ClientCredentials', () => {\n    describe('#fetch the access token()', () => {\n      it('should fetch access token', () => {\n        const tokenFetcher = new TokenFetcher(CLIENT_ID, CLIENT_SECRET);\n        const clientCredentials = new ClientCredentials(tokenFetcher);\n        return clientCredentials.fetchAccessToken().then(\n          response => {\n            const access_token = response.data.access_token;\n            access_token.should.be.ok;\n\n            const httpClient = new HttpClient(access_token);\n\n            describe('Search', () => {\n              const searchFetcher = new SearchFetcher(\n                httpClient\n              ).setSearchCriteria('Linkin Park');\n              describe('#fetchSearchResult()', () => {\n                it('should response status 200', () => {\n                  return searchFetcher.fetchSearchResult().then(response => {\n                    response.status.should.be.exactly(200),\n                      reject => should.not.exists(reject);\n                  });\n                });\n              });\n\n              describe('#filter()', () => {\n                it('should get result', () => {\n                  return searchFetcher\n                    .filter({\n                      artist: 'Linkin Park',\n                      album: 'One More Light',\n                      available_territory: 'TW'\n                    })\n                    .fetchSearchResult()\n                    .then(response => {\n                      response.data.tracks.data.length.should.be.greaterThan(0);\n                    });\n                });\n              });\n            });\n\n            describe('Track', () => {\n              const track_id = 'KpnEGVHEsGgkoB0MBk';\n              const trackFetcher = new TrackFetcher(httpClient).setTrackID(\n                track_id\n              );\n              it('should response status 200', () => {\n                return trackFetcher\n                  .fetchMetadata()\n                  .then(\n                    response => response.status.should.be.exactly(200),\n                    reject => should.not.exists(reject)\n                  );\n              });\n\n              describe('#getWidgetUri', () => {\n                it('should return right uri', function(doneCb) {\n                  trackFetcher\n                    .getWidgetUri()\n                    .should.be.exactly(\n                      `https://widget.kkbox.com/v1/?id=${track_id}&type=song`\n                    );\n                  doneCb();\n                });\n              });\n            });\n\n            describe('Album', () => {\n              const album_id = 'KmRKnW5qmUrTnGRuxF';\n              const albumFetcher = new AlbumFetcher(httpClient).setAlbumID(\n                album_id\n              );\n              describe('#fetchMetadata()', () => {\n                it('should response status 200', () => {\n                  return albumFetcher.fetchMetadata().then(\n                    response => {\n                      response.status.should.be.exactly(200);\n                    },\n                    reject => {\n                      should.not.exist(reject);\n                    }\n                  );\n                });\n              });\n\n              describe('#fetchTracks()', () => {\n                var fulfillment = undefined;\n                it('should response status 200', () => {\n                  return albumFetcher.fetchTracks().then(\n                    response => {\n                      response.status.should.be.exactly(200);\n                      fulfillment = response;\n                    },\n                    reject => {\n                      should.not.exist(reject);\n                    }\n                  );\n                });\n\n                it('fetch next page should fail', () => {\n                  return albumFetcher.fetchNextPage(fulfillment).then(\n                    response => {\n                      throw new Error('Should not get response');\n                    },\n                    reject => {\n                      should.exist(reject);\n                    }\n                  );\n                });\n\n                it('should not have next page', done => {\n                  albumFetcher.hasNextPage(fulfillment).should.be.false;\n                  done();\n                });\n              });\n\n              describe('#getWidgetUri', () => {\n                it('should return right uri', done => {\n                  albumFetcher\n                    .getWidgetUri()\n                    .should.be.exactly(\n                      `https://widget.kkbox.com/v1/?id=${album_id}&type=album`\n                    );\n                  done();\n                });\n              });\n            });\n\n            describe('Album fetch next tracks', () => {\n              const album_id = 'Ks8MAYNedkIB_sGajW'; // Cosmic Explorer from Perfume\n              const albumFetcher = new AlbumFetcher(httpClient).setAlbumID(\n                album_id\n              );\n\n              describe('#fetchTracks(1)', () => {\n                it('should succeed and should fetch next page succeed', done => {\n                  albumFetcher.fetchTracks(1).then(\n                    response => {\n                      response.status.should.be.exactly(200);\n                      albumFetcher.fetchNextPage(response).then(\n                        response => {\n                          response.data.data.should.be.an.instanceOf(Array);\n                          response.data.data.length.should.be.equal(1);\n                          response.status.should.be.exactly(200);\n                          done();\n                        },\n                        reject => {\n                          done(reject);\n                        }\n                      );\n                    },\n                    reject => {\n                      done(reject);\n                    }\n                  );\n                });\n              });\n            });\n\n            describe('Album fetch next page', () => {\n              const album_id = 'Ks8MAYNedkIB_sGajW'; // Cosmic Explorer from Perfume\n              const albumFetcher = new AlbumFetcher(httpClient).setAlbumID(\n                album_id\n              );\n\n              it('fetch next page should response status 200', () => {\n                return albumFetcher.fetchTracks(1).then(\n                  response => {\n                    response.status.should.be.exactly(200);\n                    albumFetcher.fetchNextPage(response).then(\n                      response => {\n                        response.status.should.be.exactly(200);\n                      },\n                      reject => {\n                        should.not.exists(reject);\n                      }\n                    );\n                  },\n                  reject => {\n                    should.not.exists(reject);\n                  }\n                );\n              });\n            });\n\n            describe('Shared Playlists', () => {\n              const playlist_id = '4nUZM-TY2aVxZ2xaA-';\n              const sharedPlaylistFetcher = new SharedPlaylistFetcher(\n                httpClient\n              ).setPlaylistID(playlist_id);\n              describe('#find and get()', () => {\n                it('should response status 200', done => {\n                  sharedPlaylistFetcher\n                    .fetchMetadata()\n                    .then(response => {\n                      response.status.should.be.exactly(200);\n                      done();\n                    })\n                    .catch(error => {\n                      should.not.exists(error);\n                      done(error);\n                    });\n                });\n              });\n\n              describe('#tracks()', () => {\n                it('should response status 200', done => {\n                  sharedPlaylistFetcher.fetchTracks().then(\n                    response => {\n                      response.status.should.be.exactly(200);\n                      done();\n                    },\n                    reject => {\n                      done(reject);\n                    }\n                  );\n                });\n              });\n\n              describe('#getWidgetUri', () => {\n                it('should return right uri', done => {\n                  sharedPlaylistFetcher\n                    .getWidgetUri()\n                    .should.be.exactly(\n                      `https://widget.kkbox.com/v1/?id=${playlist_id}&type=playlist`\n                    );\n                  done();\n                });\n              });\n            });\n\n            describe('Artist', () => {\n              const artistFetcher = new ArtistFetcher(httpClient).setArtistID(\n                'Cnv_K6i5Ft4y41SxLy'\n              );\n              describe('#fetchMetadata()', () => {\n                it('should response status 200', () => {\n                  return artistFetcher\n                    .fetchMetadata()\n                    .then(response => {\n                      response.status.should.be.exactly(200);\n                      return response;\n                    })\n                    .catch(error => should.not.exists(error));\n                });\n              });\n\n              describe('#fetchAlbums()', () => {\n                it('should succeed and fetch next page should fail', () => {\n                  return artistFetcher\n                    .fetchAlbums()\n                    .then(response => {\n                      response.status.should.be.exactly(200);\n                      artistFetcher\n                        .fetchNextPage(response)\n                        .then(response => {\n                          response.status.should.not.be.exactly(200);\n                          return response;\n                        })\n                        .catch(error => should.exists(error));\n                      return response;\n                    })\n                    .catch(error => should.not.exists(error));\n                });\n              });\n\n              describe('#fetchTopTracks()', () => {\n                it('should response status 200', done => {\n                  artistFetcher.fetchTopTracks().then(\n                    response => {\n                      response.status.should.be.exactly(200);\n                      done();\n                    },\n                    reject => {\n                      should.not.exists(reject);\n                      done();\n                    }\n                  );\n                });\n              });\n\n              describe('#fetchRelatedArtists()', () => {\n                it('should response status 200', done => {\n                  artistFetcher.fetchRelatedArtists().then(\n                    response => {\n                      response.status.should.be.exactly(200);\n                      done();\n                    },\n                    reject => {\n                      should.not.exists(reject);\n                      done();\n                    }\n                  );\n                });\n              });\n            });\n\n            describe('Artist fetch album tests', () => {\n              const artistFetcher = new ArtistFetcher(httpClient).setArtistID(\n                'Cnv_K6i5Ft4y41SxLy'\n              );\n              describe('#fetchAlbums(1)', () => {\n                it('should succeed and fetch next page shuold succeed', done => {\n                  artistFetcher.fetchAlbums(1).then(response => {\n                    response.status.should.be.exactly(200);\n                    artistFetcher.fetchNextPage(response).then(\n                      response => {\n                        response.status.should.be.exactly(200);\n                        done();\n                      },\n                      reject => {\n                        done(reject);\n                      }\n                    );\n                  });\n                });\n              });\n\n              describe('#fetchTopTracks(1)', () => {\n                it('should succeed and fetch next page shuold succeed', done => {\n                  artistFetcher.fetchTopTracks(1).then(response => {\n                    response.status.should.be.exactly(200);\n                    artistFetcher.fetchNextPage(response).then(\n                      response => {\n                        response.status.should.be.exactly(200);\n                        done();\n                      },\n                      reject => {\n                        done(reject);\n                      }\n                    );\n                  });\n                });\n              });\n            });\n\n            describe('Featured Playlists', () => {\n              const featuredPlaylistFetcher = new FeaturedPlaylistFetcher(\n                httpClient\n              );\n              describe('#fetchAllFeaturedPlaylists()', () => {\n                it('should response status 200', done => {\n                  featuredPlaylistFetcher\n                    .fetchAllFeaturedPlaylists(1)\n                    .then(response => {\n                      response.status.should.be.exactly(200);\n                      featuredPlaylistFetcher.fetchNextPage(response).then(\n                        response => {\n                          response.status.should.be.exactly(200);\n                          done();\n                        },\n                        reject => {\n                          done(reject);\n                        }\n                      );\n                    });\n                });\n              });\n            });\n\n            describe('Featured Playlist Category', () => {\n              const featuredPlaylistCategoryFetcher = new FeaturedPlaylistCategoryFetcher(\n                httpClient\n              );\n              describe('#fetchAll()', () => {\n                it('should response status 200', () => {\n                  return featuredPlaylistCategoryFetcher\n                    .fetchAllFeaturedPlaylistCategories()\n                    .then(\n                      response => response.status.should.be.exactly(200),\n                      reject => should.not.exists(reject)\n                    );\n                });\n              });\n\n              const f = featuredPlaylistCategoryFetcher.setCategoryID(\n                'LXUR688EBKRRZydAWb'\n              );\n              describe('#fetchMetadata()', () => {\n                it('should response status 200', () => {\n                  return f\n                    .fetchMetadata()\n                    .then(\n                      response => response.status.should.be.exactly(200),\n                      reject => should.not.exists(reject)\n                    );\n                });\n              });\n\n              describe('#fetchPlaylists()', () => {\n                it('should response status 200 and fetch next page should succeed', done => {\n                  f.fetchPlaylists().then(response => {\n                    response.status.should.be.exactly(200);\n                    f.fetchNextPage(response).then(\n                      response => {\n                        response.status.should.be.exactly(200);\n                        done();\n                      },\n                      reject => {\n                        done(reject);\n                      }\n                    );\n                  });\n                });\n              });\n            });\n\n            describe('Mood Station', () => {\n              const moodStationFetcher = new MoodStationFetcher(httpClient);\n              describe('#fetchAll()', () => {\n                it('should succeed', () => {\n                  return moodStationFetcher\n                    .fetchAllMoodStations()\n                    .then(\n                      response => response.status.should.be.exactly(200),\n                      reject => should.not.exists(reject)\n                    );\n                });\n              });\n\n              describe('#fetchMetadata()', () => {\n                it('should succeed', () => {\n                  return moodStationFetcher\n                    .setMoodStationID('StGZp2ToWq92diPHS7')\n                    .fetchMetadata()\n                    .then(\n                      response => response.status.should.be.exactly(200),\n                      reject => should.not.exists(reject)\n                    );\n                });\n              });\n            });\n\n            describe('Genre Station', () => {\n              const genreStationFetcher = new GenreStationFetcher(httpClient);\n              describe('#fetchAllGenreStations()', () => {\n                it('should succeed and fetch next page should succeed', done => {\n                  genreStationFetcher\n                    .fetchAllGenreStations(1)\n                    .then(response => {\n                      response.status.should.be.exactly(200);\n                      genreStationFetcher.fetchNextPage(response).then(\n                        response => {\n                          response.status.should.be.exactly(200);\n                          done();\n                        },\n                        reject => {\n                          done(reject);\n                        }\n                      );\n                    });\n                });\n              });\n\n              describe('#fetchMetadata()', () => {\n                it('should succeed', () => {\n                  return genreStationFetcher\n                    .setGenreStationID('TYq3EHFTl-1EOvJM5Y')\n                    .fetchMetadata()\n                    .then(\n                      response => response.status.should.be.exactly(200),\n                      reject => should.not.exists(reject)\n                    );\n                });\n              });\n            });\n\n            describe('Chart', () => {\n              const chartFetcher = new ChartFetcher(httpClient);\n              describe('#fetchCharts()', () => {\n                it('should succeed and fetch next page should fail', done => {\n                  chartFetcher.fetchCharts().then(response => {\n                    response.status.should.be.exactly(200);\n                    chartFetcher.hasNextPage(response).should.be.false();\n                    chartFetcher.fetchNextPage(response).then(\n                      response => {\n                        response.should.not.exists();\n                        done(response);\n                      },\n                      reject => {\n                        done();\n                      }\n                    );\n                  });\n                });\n              });\n\n              describe('#fetchMetadata()', () => {\n                it('should succeed', done => {\n                  chartFetcher\n                    .setPlaylistID('4mJSYXvueA8t0odsny')\n                    .fetchMetadata()\n                    .then(\n                      response => {\n                        response.status.should.be.exactly(200);\n                        done();\n                      },\n                      reject => {\n                        should.not.exists(reject);\n                        done();\n                      }\n                    );\n                });\n              });\n\n              describe('#fetchTracks()', () => {\n                it('should succeed', done => {\n                  chartFetcher\n                    .setPlaylistID('4mJSYXvueA8t0odsny')\n                    .fetchTracks()\n                    .then(\n                      response => {\n                        response.status.should.be.exactly(200);\n                        done();\n                      },\n                      reject => {\n                        should.not.exists(reject);\n                        done();\n                      }\n                    );\n                });\n              });\n            });\n\n            describe('New Release Category', () => {\n              const newReleaseCategoryFetcher = new NewReleaseCategoryFetcher(\n                httpClient\n              );\n              describe('#fetchAll()', () => {\n                it('should succeed and fetch next page should succeed', done => {\n                  newReleaseCategoryFetcher\n                    .fetchAllNewReleaseCategories(1)\n                    .then(\n                      response => {\n                        response.status.should.be.exactly(200);\n                        newReleaseCategoryFetcher\n                          .hasNextPage(response)\n                          .should.be.true();\n                        newReleaseCategoryFetcher.fetchNextPage(response).then(\n                          response => {\n                            response.status.should.be.ok();\n                            done();\n                          },\n                          reject => {\n                            done(reject);\n                          }\n                        );\n                      },\n                      reject => should.not.exists(reject)\n                    );\n                });\n              });\n\n              const f = newReleaseCategoryFetcher.setCategoryID(\n                'Cng5IUIQhxb8w1cbsz'\n              );\n              describe('#fetchMetadata()', () => {\n                it('should response status 200', () => {\n                  return f\n                    .fetchMetadata()\n                    .then(\n                      response => response.status.should.be.exactly(200),\n                      reject => should.not.exists(reject)\n                    );\n                });\n              });\n\n              describe('#fetchAlbums()', () => {\n                it('should response status 200 and fetch next page should succeed', done => {\n                  f.fetchAlbums().then(response => {\n                    response.status.should.be.exactly(200);\n                    f.fetchNextPage(response).then(\n                      response => {\n                        response.status.should.be.exactly(200);\n                        done();\n                      },\n                      reject => {\n                        done(reject);\n                      }\n                    );\n                  });\n                });\n              });\n            });\n\n            describe('New Hits Playlists', () => {\n              const newHitsPlaylistFetcher = new NewHitsPlaylistFetcher(\n                httpClient\n              );\n              describe('#fetchAll()', () => {\n                it('should succeed', () => {\n                  newHitsPlaylistFetcher\n                    .fetchAllNewHitsPlaylists()\n                    .then(response => {\n                      response.status.should.be.exactly(200);\n                    })\n                    .catch(error => should.not.exists(error));\n                });\n              });\n\n              const f = newHitsPlaylistFetcher.setPlaylistID(\n                'DZni8m29ciOFbRxTJq'\n              );\n              describe('#fetchMetadata()', () => {\n                it('should succeed', () => {\n                  return f\n                    .fetchMetadata()\n                    .then(\n                      response => response.status.should.be.exactly(200),\n                      reject => should.not.exists(reject)\n                    )\n                    .catch(error => should.not.exsits(error));\n                });\n              });\n\n              describe('#fetchTracks()', () => {\n                it('should succeed', () => {\n                  return f\n                    .fetchTracks()\n                    .then(\n                      response => response.status.should.be.exactly(200),\n                      reject => should.not.exists(reject)\n                    )\n                    .catch(error => should.not.exsits(error));\n                });\n              });\n            });\n          },\n          reject => should.not.exists(reject)\n        );\n      });\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/Users/ajhsu/Git/kkcorp/OpenAPI-JavaScript/src/test/apitest.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 213,
+    "kind": "variable",
+    "name": "CLIENT_ID",
+    "memberof": "src/test/apitest.js",
+    "static": true,
+    "longname": "src/test/apitest.js~CLIENT_ID",
+    "access": "public",
+    "export": false,
+    "importPath": "@kkbox/kkbox-js-sdk/src/test/apitest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 214,
+    "kind": "variable",
+    "name": "CLIENT_SECRET",
+    "memberof": "src/test/apitest.js",
+    "static": true,
+    "longname": "src/test/apitest.js~CLIENT_SECRET",
+    "access": "public",
+    "export": false,
+    "importPath": "@kkbox/kkbox-js-sdk/src/test/apitest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 215,
+    "kind": "file",
+    "name": "src/test/authtest.js",
+    "content": "import should from 'should';\nimport TokenFetcher from '../auth/TokenFetcher';\nimport ClientCredentialsFlow from '../auth/ClientCredentialsFlow';\nimport { kkbox_sdk } from '../../client_secrets.json';\n\nconst CLIENT_ID = kkbox_sdk.client_id;\nconst CLIENT_SECRET = kkbox_sdk.client_secret;\n\ndescribe('Auth Begin to Test', () => {\n  const tokenFetcher = new TokenFetcher(CLIENT_ID, CLIENT_SECRET);\n  describe('clientCredentialsFlow', () => {\n    describe('#fetchAccessToken()', () => {\n      it('should get access token', () => {\n        const clientCredentialsFlow = new ClientCredentialsFlow(tokenFetcher);\n        return clientCredentialsFlow.fetchAccessToken().then(response => {\n          const access_token = response.data.access_token;\n          access_token.should.be.ok;\n        });\n      });\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/Users/ajhsu/Git/kkcorp/OpenAPI-JavaScript/src/test/authtest.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 216,
+    "kind": "variable",
+    "name": "CLIENT_ID",
+    "memberof": "src/test/authtest.js",
+    "static": true,
+    "longname": "src/test/authtest.js~CLIENT_ID",
+    "access": "public",
+    "export": false,
+    "importPath": "@kkbox/kkbox-js-sdk/src/test/authtest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 217,
+    "kind": "variable",
+    "name": "CLIENT_SECRET",
+    "memberof": "src/test/authtest.js",
+    "static": true,
+    "longname": "src/test/authtest.js~CLIENT_SECRET",
+    "access": "public",
+    "export": false,
+    "importPath": "@kkbox/kkbox-js-sdk/src/test/authtest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 218,
+    "kind": "file",
+    "name": "src/test/sdktest.js",
+    "content": "import should from 'should';\nimport { Auth, Api } from '../';\nimport { kkbox_sdk } from '../../client_secrets.json';\n\nconst CLIENT_ID = kkbox_sdk.client_id;\nconst CLIENT_SECRET = kkbox_sdk.client_secret;\n\ndescribe('SDK Begin to Test', () => {\n  describe('Auth', () => {\n    it('should get access token', () => {\n      const auth = new Auth(CLIENT_ID, CLIENT_SECRET);\n      return auth.clientCredentialsFlow.fetchAccessToken().then(response => {\n        describe('Api With Fake Token', () => {\n          const api = new Api('FAKE_TOKEN', 'HK');\n          describe('Property checking', () => {\n            it('should have HK as territory', done => {\n              api.territory.should.be.exactly('HK');\n              done();\n            });\n          });\n\n          describe('Search with fake token', () => {\n            it('should fail', () => {\n              return api.searchFetcher\n                .setSearchCriteria('flash')\n                .fetchSearchResult()\n                .then(response => {\n                  should.not.exists(response);\n                })\n                .catch(error => {\n                  should.exists(error);\n                });\n            });\n          });\n        });\n\n        const access_token = response.data.access_token;\n        access_token.should.be.ok;\n\n        describe('Api', () => {\n          const api = new Api('FAKE_TOKEN', 'HK');\n          api.setToken(access_token);\n          describe('Search', () => {\n            it('should response status 200', () => {\n              return api.searchFetcher\n                .setSearchCriteria('flash')\n                .fetchSearchResult()\n                .then(response => response.status.should.be.exactly(200));\n            });\n          });\n\n          describe('Track', () => {\n            it('should response status 200', () => {\n              return api.trackFetcher\n                .setTrackID('KpnEGVHEsGgkoB0MBk')\n                .fetchMetadata()\n                .then(response => response.status.should.be.exactly(200));\n            });\n          });\n\n          describe('Album', () => {\n            it('should response status 200', () => {\n              return api.albumFetcher\n                .setAlbumID('KmRKnW5qmUrTnGRuxF')\n                .fetchMetadata()\n                .then(response => response.status.should.be.exactly(200));\n            });\n          });\n\n          describe('Artist', () => {\n            it('should response status 200', () => {\n              return api.artistFetcher\n                .setArtistID('Cnv_K6i5Ft4y41SxLy')\n                .fetchMetadata()\n                .then(response => response.status.should.be.exactly(200));\n            });\n          });\n\n          describe('Featured Playlists', () => {\n            it('should response status 200', () => {\n              return api.featuredPlaylistFetcher\n                .fetchAllFeaturedPlaylists()\n                .then(response => response.status.should.be.exactly(200));\n            });\n          });\n\n          describe('Featured Playlist Category', () => {\n            it('should response status 200', () => {\n              return api.featuredPlaylistCategoryFetcher\n                .fetchAllFeaturedPlaylistCategories()\n                .then(response => response.status.should.be.exactly(200));\n            });\n          });\n\n          describe('Mood Station', () => {\n            it('should response status 200', () => {\n              return api.moodStationFetcher\n                .fetchAllMoodStations()\n                .then(response => response.status.should.be.exactly(200));\n            });\n          });\n\n          describe('Genre Station', () => {\n            it('should response status 200', () => {\n              return api.genreStationFetcher\n                .fetchAllGenreStations()\n                .then(response => response.status.should.be.exactly(200));\n            });\n          });\n\n          describe('Chart', () => {\n            it('should response status 200', () => {\n              return api.chartFetcher\n                .fetchCharts()\n                .then(response => response.status.should.be.exactly(200));\n            });\n          });\n\n          describe('New Release Category', () => {\n            it('should response status 200', () => {\n              return api.newReleaseCategoryFetcher\n                .fetchAllNewReleaseCategories()\n                .then(response => response.status.should.be.exactly(200));\n            });\n          });\n\n          describe('New Hits Playlists', () => {\n            it('should response status 200', () => {\n              return api.newHitsPlaylistFetcher\n                .fetchAllNewHitsPlaylists()\n                .then(response => response.status.should.be.exactly(200));\n            });\n          });\n\n          describe('Shared Playlist', () => {\n            it('should response status 200', () => {\n              return api.sharedPlaylistFetcher\n                .setPlaylistID('KsOjSf4whgbL45hRfl')\n                .fetchMetadata()\n                .then(response => response.status.should.be.exactly(200));\n            });\n            it('should response status 200', () => {\n              return api.sharedPlaylistFetcher\n                .setPlaylistID('KsOjSf4whgbL45hRfl')\n                .fetchTracks()\n                .then(response => response.status.should.be.exactly(200));\n            });\n          });\n        });\n      });\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/Users/ajhsu/Git/kkcorp/OpenAPI-JavaScript/src/test/sdktest.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 219,
+    "kind": "variable",
+    "name": "CLIENT_ID",
+    "memberof": "src/test/sdktest.js",
+    "static": true,
+    "longname": "src/test/sdktest.js~CLIENT_ID",
+    "access": "public",
+    "export": false,
+    "importPath": "@kkbox/kkbox-js-sdk/src/test/sdktest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 220,
+    "kind": "variable",
+    "name": "CLIENT_SECRET",
+    "memberof": "src/test/sdktest.js",
+    "static": true,
+    "longname": "src/test/sdktest.js~CLIENT_SECRET",
+    "access": "public",
+    "export": false,
+    "importPath": "@kkbox/kkbox-js-sdk/src/test/sdktest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
     "kind": "index",
-    "content": "# KKBOX Open API Developer SDK for JavaScript\n\n[![npm (scoped)](https://img.shields.io/npm/v/@kkbox/kkbox-js-sdk.svg)](https://www.npmjs.com/package/@kkbox/kkbox-js-sdk)\n[![Build Status](https://travis-ci.org/KKBOX/OpenAPI-JavaScript.svg?branch=master)](https://travis-ci.org/KKBOX/OpenAPI-JavaScript)\n[![License Apache](https://img.shields.io/badge/license-Apache-green.svg?style=flat)](https://raw.githubusercontent.com/KKBOX/OpenAPI-JavaScript/master/LICENSE.txt)\n\nThe SDK helps you to access various metadata from KKBOX, including tracks, albums, artists, playlists and stations.\n\n### Getting Started\n\nInstall the SDK using npm\n\n```bash\n$ npm install @kkbox/kkbox-js-sdk\n```\n\n### Usage example\n```js\nimport { Auth, Api } from '@kkbox/kkbox-js-sdk';\n\n// Create an auth object with client id and secret\nconst auth = new Auth(client_id, client_secret);\n\n// Fetch your access token\nauth.clientCredentialsFlow\n  .fetchAccessToken()\n  .then(response => {\n    const access_token = response.data.access_token;\n\n    // Create an API object with your access token\n    const api = new Api(access_token);\n\n    // Fetch content with various fetchers\n    api.searchFetcher\n      .setSearchCriteria('五月天 派對動物', 'track')\n      .fetchSearchResult()\n      .then(response => {\n\n        // Content from the KKBOX Open API\n        console.log(response.data);\n\n        // Continue to the next page\n        api.searchFetcher.fetchNextPage(response).then(response => {\n          console.log(response.data);\n        });\n\n      });\n  });\n```\n\n### Test\n\nTo test the SDK, a valid client ID and client secret are required.\n\nPlease visit [https://developer.kkbox.com/](https://developer.kkbox.com/), create a new developer account, and obtain the client ID and client secret of your app.\n\nThen, create a file named `client_secrets.json`, put it into the `test` directory, and fill your client ID and client secret into it.\n\nIt may look like\n\n```json\n{\n  \"kkbox_sdk\": {\n    \"client_id\": \"YOUR CLIENT ID\",\n    \"client_secret\": \"YOUR CLIENT SECRET\"\n  }\n}\n```\n\nRun the test:\n``` bash\n$ npm test\n```\n\n### Documentation\n\nSee [https://kkbox.github.io/OpenAPI-JavaScript/](https://kkbox.github.io/OpenAPI-JavaScript/) for full documentation.\n\n### Use the SDK in Web Browsers\n\nThe SDK plays fine with Node.js, but works partially in web browsers.\n\nYou can use the SDK in your Web and [Electron](https://electronjs.org) apps, but you need to prepare a middle man server to help you to obtain access tokens. That's because KKBOX's Open API server supports [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), but the Auth server does not.\n\nIn other words, your JavaScript code hosted on your own website could access data from KKBOX, but direct access to the Auth server is forbidden by the security policy of modern web browsers.\n\nWhen developing an Electron app, you can choose to turn web security off to make you app able to fetch access tokens. You can do this while creating browser windows.\n\n```js\nmainWindow = new BrowserWindow({\n  width: 500,\n  height: 500,\n  useContentSize: true,\n  webPreferences: {\n    webSecurity: false\n  }\n});\n```\n\n### License\n\nCopyright 2018 KKBOX Technologies Limited\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n",
+    "content": "# KKBOX Open API Developer SDK for JavaScript\n\n[![npm (scoped)](https://img.shields.io/npm/v/@kkbox/kkbox-js-sdk.svg)](https://www.npmjs.com/package/@kkbox/kkbox-js-sdk)\n[![Build Status](https://travis-ci.org/KKBOX/OpenAPI-JavaScript.svg?branch=master)](https://travis-ci.org/KKBOX/OpenAPI-JavaScript)\n[![License Apache](https://img.shields.io/badge/license-Apache-green.svg?style=flat)](https://raw.githubusercontent.com/KKBOX/OpenAPI-JavaScript/master/LICENSE.txt)\n\nThe SDK helps you to access various metadata from KKBOX, including tracks, albums, artists, playlists and stations.\n\n## Getting Started\n\nInstall the SDK using npm\n\n```bash\n$ npm install @kkbox/kkbox-js-sdk\n```\n\n## Usage example\n```js\nimport { Auth, Api } from '@kkbox/kkbox-js-sdk';\n\n// Create an auth object with client id and secret\nconst auth = new Auth(client_id, client_secret);\n\n// Fetch your access token\nauth.clientCredentialsFlow\n  .fetchAccessToken()\n  .then(response => {\n    const access_token = response.data.access_token;\n\n    // Create an API object with your access token\n    const api = new Api(access_token);\n\n    // Fetch content with various fetchers\n    api.searchFetcher\n      .setSearchCriteria('五月天 派對動物', 'track')\n      .fetchSearchResult()\n      .then(response => {\n\n        // Content from the KKBOX Open API\n        console.log(response.data);\n\n        // Continue to the next page\n        api.searchFetcher.fetchNextPage(response).then(response => {\n          console.log(response.data);\n        });\n\n      });\n  });\n```\n\n## Test\n\nTo test the SDK, a valid client ID and client secret are required.\n\nPlease visit [https://developer.kkbox.com/](https://developer.kkbox.com/), create a new developer account, and obtain the client ID and client secret of your app.\n\nThen, create a file named `client_secrets.json`, put it into the `test` directory, and fill your client ID and client secret into it.\n\nIt may look like\n\n```json\n{\n  \"kkbox_sdk\": {\n    \"client_id\": \"YOUR CLIENT ID\",\n    \"client_secret\": \"YOUR CLIENT SECRET\"\n  }\n}\n```\n\nRun the test:\n``` bash\n$ npm test\n```\n\n## Documentation\n\nSee [https://kkbox.github.io/OpenAPI-JavaScript/](https://kkbox.github.io/OpenAPI-JavaScript/) for full documentation.\n\n## Use the SDK in Web Browsers\n\nThe SDK plays fine with Node.js, but works partially in web browsers.\n\nYou can use the SDK in your Web and [Electron](https://electronjs.org) apps, but you need to prepare a middle man server to help you to obtain access tokens. That's because KKBOX's Open API server supports [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), but the Auth server does not.\n\nIn other words, your JavaScript code hosted on your own website could access data from KKBOX, but direct access to the Auth server is forbidden by the security policy of modern web browsers.\n\nWhen developing an Electron app, you can choose to turn web security off to make you app able to fetch access tokens. You can do this while creating browser windows.\n\n```js\nmainWindow = new BrowserWindow({\n  width: 500,\n  height: 500,\n  useContentSize: true,\n  webPreferences: {\n    webSecurity: false\n  }\n});\n```\n\n## License\n\nCopyright 2018 KKBOX Technologies Limited\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n",
     "longname": "/Users/ajhsu/Git/kkcorp/OpenAPI-JavaScript/README.md",
     "name": "./README.md",
     "static": true,
@@ -4515,7 +4374,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@kkbox/kkbox-js-sdk\",\n  \"version\": \"1.3.3\",\n  \"description\": \"KKBOX Open API developer SDK for JavaScript. Use it to easily access KKBOX open API to get various metadata about KKBOX's tracks, albums, artists, playlists and stations. \",\n  \"main\": \"./dist/SDK.js\",\n  \"scripts\": {\n    \"test\": \"mocha --trace-warnings -R spec -t 50000 --compilers babel-register ./test/authtest ./test/apitest\",\n    \"test-sdk\": \"mocha -t 50000 --compilers babel-register ./test/sdktest\",\n    \"test-auth\": \"mocha -t 50000 --compilers babel-register ./test/authtest\",\n    \"test-all\": \"mocha -t 50000 --compilers babel-register\",\n    \"build-webpack\": \"webpack -p\",\n    \"build\": \"babel src --presets babel-preset-es2015 --out-dir dist\",\n    \"prepublishOnly\": \"npm run build\",\n    \"doc\": \"esdoc\"\n  },\n  \"author\": \"KKBOX\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/KKBOX/OpenAPI-JavaScript.git\"\n  },\n  \"license\": \"Apache-2.0\",\n  \"dependencies\": {\n    \"axios\": \"^0.15.3\",\n    \"babel-polyfill\": \"^6.23.0\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-core\": \"^6.24.0\",\n    \"babel-loader\": \"^6.4.1\",\n    \"babel-plugin-syntax-dynamic-import\": \"^6.18.0\",\n    \"babel-plugin-transform-async-to-generator\": \"^6.22.0\",\n    \"babel-plugin-transform-regenerator\": \"^6.22.0\",\n    \"babel-plugin-transform-runtime\": \"^6.23.0\",\n    \"babel-preset-babili\": \"^0.1.2\",\n    \"babel-preset-env\": \"^1.3.2\",\n    \"babel-preset-es2015\": \"^6.24.1\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"mocha\": \"^5.2.0\",\n    \"should\": \"^11.2.1\",\n    \"webpack\": \"^2.3.3\"\n  },\n  \"babel\": {\n    \"presets\": [\n      [\n        \"env\",\n        {\n          \"targets\": {\n            \"node\": 5\n          }\n        }\n      ],\n      [\n        \"babili\",\n        {\n          \"evaluate\": true,\n          \"mangle\": true\n        }\n      ]\n    ]\n  },\n  \"mailTo\": \"willyliu@kkbox.com\",\n  \"bugs\": {\n    \"url\": \"https://github.com/KKBOX/OpenAPI-JavaScript/issues\"\n  },\n  \"homepage\": \"https://github.com/KKBOX/OpenAPI-JavaScript#readme\",\n  \"directories\": {\n    \"test\": \"test\"\n  },\n  \"keywords\": [\n    \"KKBOX\",\n    \"OpenAPI\",\n    \"Open\",\n    \"API\"\n  ]\n}\n",
+    "content": "{\n  \"name\": \"@kkbox/kkbox-js-sdk\",\n  \"version\": \"1.3.3\",\n  \"description\": \"KKBOX Open API Developer SDK for JavaScript\",\n  \"main\": \"./dist/index.js\",\n  \"scripts\": {\n    \"build\": \"babel src -d dist\",\n    \"build:webpack\": \"webpack -p\",\n    \"pretest\": \"npm run build\",\n    \"test\": \"mocha -R spec -t 30000 ./dist/test\",\n    \"doc\": \"esdoc\",\n    \"prepublishOnly\": \"npm run build\"\n  },\n  \"author\": \"KKBOX\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/KKBOX/OpenAPI-JavaScript.git\"\n  },\n  \"license\": \"Apache-2.0\",\n  \"dependencies\": {\n    \"axios\": \"^0.18.0\",\n    \"babel-preset-env\": \"^1.7.0\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-loader\": \"^7.1.4\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"mocha\": \"^5.2.0\",\n    \"should\": \"^11.2.1\",\n    \"webpack\": \"^2.3.3\"\n  },\n  \"mailTo\": \"willyliu@kkbox.com\",\n  \"bugs\": {\n    \"url\": \"https://github.com/KKBOX/OpenAPI-JavaScript/issues\"\n  },\n  \"homepage\": \"https://github.com/KKBOX/OpenAPI-JavaScript#readme\",\n  \"directories\": {\n    \"test\": \"test\"\n  },\n  \"keywords\": [\n    \"KKBOX\",\n    \"OpenAPI\",\n    \"Open\",\n    \"API\"\n  ]\n}\n",
     "longname": "/Users/ajhsu/Git/kkcorp/OpenAPI-JavaScript/package.json",
     "name": "package.json",
     "static": true,

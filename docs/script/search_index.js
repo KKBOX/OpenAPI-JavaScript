@@ -396,12 +396,6 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "src/sdk.js",
-    "file/src/SDK.js.html",
-    "src/SDK.js",
-    "file"
-  ],
-  [
     "src/api/albumfetcher.js",
     "file/src/api/AlbumFetcher.js.html",
     "src/api/AlbumFetcher.js",
@@ -945,6 +939,30 @@ window.esdocSearchIndex = [
     "src/catcherror.js",
     "file/src/catchError.js.html",
     "src/catchError.js",
+    "file"
+  ],
+  [
+    "src/index.js",
+    "file/src/index.js.html",
+    "src/index.js",
+    "file"
+  ],
+  [
+    "src/test/apitest.js",
+    "file/src/test/apitest.js.html",
+    "src/test/apitest.js",
+    "file"
+  ],
+  [
+    "src/test/authtest.js",
+    "file/src/test/authtest.js.html",
+    "src/test/authtest.js",
+    "file"
+  ],
+  [
+    "src/test/sdktest.js",
+    "file/src/test/sdktest.js.html",
+    "src/test/sdktest.js",
     "file"
   ]
 ]

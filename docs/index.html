@@ -8,7 +8,7 @@
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="KKBOX Open API developer SDK for JavaScript. Use it to easily access KKBOX open API to get various metadata about KKBOX&apos;s tracks, albums, artists, playlists and stations. "><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@kkbox/kkbox-js-sdk"><meta property="twitter:description" content="KKBOX Open API developer SDK for JavaScript. Use it to easily access KKBOX open API to get various metadata about KKBOX&apos;s tracks, albums, artists, playlists and stations. "></head>
+<meta name="description" content="KKBOX Open API Developer SDK for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@kkbox/kkbox-js-sdk"><meta property="twitter:description" content="KKBOX Open API Developer SDK for JavaScript"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -55,10 +55,10 @@
 <a href="https://travis-ci.org/KKBOX/OpenAPI-JavaScript"><img src="https://travis-ci.org/KKBOX/OpenAPI-JavaScript.svg?branch=master" alt="Build Status"></a>
 <a href="https://raw.githubusercontent.com/KKBOX/OpenAPI-JavaScript/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache-green.svg?style=flat" alt="License Apache"></a></p>
 <p>The SDK helps you to access various metadata from KKBOX, including tracks, albums, artists, playlists and stations.</p>
-<h3 id="getting-started">Getting Started</h3><p>Install the SDK using npm</p>
+<h2 id="getting-started">Getting Started</h2><p>Install the SDK using npm</p>
 <pre><code class="lang-bash"><code class="source-code prettyprint">$ npm install @kkbox/kkbox-js-sdk</code>
 </code></pre>
-<h3 id="usage-example">Usage example</h3><pre><code class="lang-js"><code class="source-code prettyprint">import { Auth, Api } from &apos;@kkbox/kkbox-js-sdk&apos;;
+<h2 id="usage-example">Usage example</h2><pre><code class="lang-js"><code class="source-code prettyprint">import { Auth, Api } from &apos;@kkbox/kkbox-js-sdk&apos;;
 
 // Create an auth object with client id and secret
 const auth = new Auth(client_id, client_secret);
@@ -89,7 +89,7 @@ auth.clientCredentialsFlow
       });
   });</code>
 </code></pre>
-<h3 id="test">Test</h3><p>To test the SDK, a valid client ID and client secret are required.</p>
+<h2 id="test">Test</h2><p>To test the SDK, a valid client ID and client secret are required.</p>
 <p>Please visit <a href="https://developer.kkbox.com/">https://developer.kkbox.com/</a>, create a new developer account, and obtain the client ID and client secret of your app.</p>
 <p>Then, create a file named <code>client_secrets.json</code>, put it into the <code>test</code> directory, and fill your client ID and client secret into it.</p>
 <p>It may look like</p>
@@ -103,8 +103,8 @@ auth.clientCredentialsFlow
 <p>Run the test:</p>
 <pre><code class="lang-bash"><code class="source-code prettyprint">$ npm test</code>
 </code></pre>
-<h3 id="documentation">Documentation</h3><p>See <a href="https://kkbox.github.io/OpenAPI-JavaScript/">https://kkbox.github.io/OpenAPI-JavaScript/</a> for full documentation.</p>
-<h3 id="use-the-sdk-in-web-browsers">Use the SDK in Web Browsers</h3><p>The SDK plays fine with Node.js, but works partially in web browsers.</p>
+<h2 id="documentation">Documentation</h2><p>See <a href="https://kkbox.github.io/OpenAPI-JavaScript/">https://kkbox.github.io/OpenAPI-JavaScript/</a> for full documentation.</p>
+<h2 id="use-the-sdk-in-web-browsers">Use the SDK in Web Browsers</h2><p>The SDK plays fine with Node.js, but works partially in web browsers.</p>
 <p>You can use the SDK in your Web and <a href="https://electronjs.org">Electron</a> apps, but you need to prepare a middle man server to help you to obtain access tokens. That&apos;s because KKBOX&apos;s Open API server supports <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a>, but the Auth server does not.</p>
 <p>In other words, your JavaScript code hosted on your own website could access data from KKBOX, but direct access to the Auth server is forbidden by the security policy of modern web browsers.</p>
 <p>When developing an Electron app, you can choose to turn web security off to make you app able to fetch access tokens. You can do this while creating browser windows.</p>
@@ -117,7 +117,7 @@ auth.clientCredentialsFlow
   }
 });</code>
 </code></pre>
-<h3 id="license">License</h3><p>Copyright 2018 KKBOX Technologies Limited</p>
+<h2 id="license">License</h2><p>Copyright 2018 KKBOX Technologies Limited</p>
 <p>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at</p>
