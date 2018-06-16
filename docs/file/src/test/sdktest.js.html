@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/test/sdktest.js | @kkbox/kkbox-js-sdk</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="KKBOX Open API Developer SDK for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@kkbox/kkbox-js-sdk"><meta property="twitter:description" content="KKBOX Open API Developer SDK for JavaScript"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/KKBOX/OpenAPI-JavaScript"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api">api</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/AlbumFetcher.js~AlbumFetcher.html">AlbumFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/Api.js~Api.html">Api</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ArtistFetcher.js~ArtistFetcher.html">ArtistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ChartFetcher.js~ChartFetcher.html">ChartFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher.html">FeaturedPlaylistCategoryFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/FeaturedPlaylistFetcher.js~FeaturedPlaylistFetcher.html">FeaturedPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/Fetcher.js~Fetcher.html">Fetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/GenreStationFetcher.js~GenreStationFetcher.html">GenreStationFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/HttpClient.js~HttpClient.html">HttpClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/MoodStationFetcher.js~MoodStationFetcher.html">MoodStationFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher.html">NewHitsPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher.html">NewReleaseCategoryFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SearchFetcher.js~SearchFetcher.html">SearchFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher.html">SharedPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/TrackFetcher.js~TrackFetcher.html">TrackFetcher</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#auth">auth</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/Auth.js~Auth.html">Auth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow.html">ClientCredentialsFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/TokenFetcher.js~TokenFetcher.html">TokenFetcher</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/test/sdktest.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import should from &apos;should&apos;;
+import { Auth, Api } from &apos;../&apos;;
+import { kkbox_sdk } from &apos;../../client_secrets.json&apos;;
+
+const CLIENT_ID = kkbox_sdk.client_id;
+const CLIENT_SECRET = kkbox_sdk.client_secret;
+
+describe(&apos;SDK Begin to Test&apos;, () =&gt; {
+  describe(&apos;Auth&apos;, () =&gt; {
+    it(&apos;should get access token&apos;, () =&gt; {
+      const auth = new Auth(CLIENT_ID, CLIENT_SECRET);
+      return auth.clientCredentialsFlow.fetchAccessToken().then(response =&gt; {
+        describe(&apos;Api With Fake Token&apos;, () =&gt; {
+          const api = new Api(&apos;FAKE_TOKEN&apos;, &apos;HK&apos;);
+          describe(&apos;Property checking&apos;, () =&gt; {
+            it(&apos;should have HK as territory&apos;, done =&gt; {
+              api.territory.should.be.exactly(&apos;HK&apos;);
+              done();
+            });
+          });
+
+          describe(&apos;Search with fake token&apos;, () =&gt; {
+            it(&apos;should fail&apos;, () =&gt; {
+              return api.searchFetcher
+                .setSearchCriteria(&apos;flash&apos;)
+                .fetchSearchResult()
+                .then(response =&gt; {
+                  should.not.exists(response);
+                })
+                .catch(error =&gt; {
+                  should.exists(error);
+                });
+            });
+          });
+        });
+
+        const access_token = response.data.access_token;
+        access_token.should.be.ok;
+
+        describe(&apos;Api&apos;, () =&gt; {
+          const api = new Api(&apos;FAKE_TOKEN&apos;, &apos;HK&apos;);
+          api.setToken(access_token);
+          describe(&apos;Search&apos;, () =&gt; {
+            it(&apos;should response status 200&apos;, () =&gt; {
+              return api.searchFetcher
+                .setSearchCriteria(&apos;flash&apos;)
+                .fetchSearchResult()
+                .then(response =&gt; response.status.should.be.exactly(200));
+            });
+          });
+
+          describe(&apos;Track&apos;, () =&gt; {
+            it(&apos;should response status 200&apos;, () =&gt; {
+              return api.trackFetcher
+                .setTrackID(&apos;KpnEGVHEsGgkoB0MBk&apos;)
+                .fetchMetadata()
+                .then(response =&gt; response.status.should.be.exactly(200));
+            });
+          });
+
+          describe(&apos;Album&apos;, () =&gt; {
+            it(&apos;should response status 200&apos;, () =&gt; {
+              return api.albumFetcher
+                .setAlbumID(&apos;KmRKnW5qmUrTnGRuxF&apos;)
+                .fetchMetadata()
+                .then(response =&gt; response.status.should.be.exactly(200));
+            });
+          });
+
+          describe(&apos;Artist&apos;, () =&gt; {
+            it(&apos;should response status 200&apos;, () =&gt; {
+              return api.artistFetcher
+                .setArtistID(&apos;Cnv_K6i5Ft4y41SxLy&apos;)
+                .fetchMetadata()
+                .then(response =&gt; response.status.should.be.exactly(200));
+            });
+          });
+
+          describe(&apos;Featured Playlists&apos;, () =&gt; {
+            it(&apos;should response status 200&apos;, () =&gt; {
+              return api.featuredPlaylistFetcher
+                .fetchAllFeaturedPlaylists()
+                .then(response =&gt; response.status.should.be.exactly(200));
+            });
+          });
+
+          describe(&apos;Featured Playlist Category&apos;, () =&gt; {
+            it(&apos;should response status 200&apos;, () =&gt; {
+              return api.featuredPlaylistCategoryFetcher
+                .fetchAllFeaturedPlaylistCategories()
+                .then(response =&gt; response.status.should.be.exactly(200));
+            });
+          });
+
+          describe(&apos;Mood Station&apos;, () =&gt; {
+            it(&apos;should response status 200&apos;, () =&gt; {
+              return api.moodStationFetcher
+                .fetchAllMoodStations()
+                .then(response =&gt; response.status.should.be.exactly(200));
+            });
+          });
+
+          describe(&apos;Genre Station&apos;, () =&gt; {
+            it(&apos;should response status 200&apos;, () =&gt; {
+              return api.genreStationFetcher
+                .fetchAllGenreStations()
+                .then(response =&gt; response.status.should.be.exactly(200));
+            });
+          });
+
+          describe(&apos;Chart&apos;, () =&gt; {
+            it(&apos;should response status 200&apos;, () =&gt; {
+              return api.chartFetcher
+                .fetchCharts()
+                .then(response =&gt; response.status.should.be.exactly(200));
+            });
+          });
+
+          describe(&apos;New Release Category&apos;, () =&gt; {
+            it(&apos;should response status 200&apos;, () =&gt; {
+              return api.newReleaseCategoryFetcher
+                .fetchAllNewReleaseCategories()
+                .then(response =&gt; response.status.should.be.exactly(200));
+            });
+          });
+
+          describe(&apos;New Hits Playlists&apos;, () =&gt; {
+            it(&apos;should response status 200&apos;, () =&gt; {
+              return api.newHitsPlaylistFetcher
+                .fetchAllNewHitsPlaylists()
+                .then(response =&gt; response.status.should.be.exactly(200));
+            });
+          });
+
+          describe(&apos;Shared Playlist&apos;, () =&gt; {
+            it(&apos;should response status 200&apos;, () =&gt; {
+              return api.sharedPlaylistFetcher
+                .setPlaylistID(&apos;KsOjSf4whgbL45hRfl&apos;)
+                .fetchMetadata()
+                .then(response =&gt; response.status.should.be.exactly(200));
+            });
+            it(&apos;should response status 200&apos;, () =&gt; {
+              return api.sharedPlaylistFetcher
+                .setPlaylistID(&apos;KsOjSf4whgbL45hRfl&apos;)
+                .fetchTracks()
+                .then(response =&gt; response.status.should.be.exactly(200));
+            });
+          });
+        });
+      });
+    });
+  });
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

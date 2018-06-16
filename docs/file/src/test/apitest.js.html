@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/test/apitest.js | @kkbox/kkbox-js-sdk</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="KKBOX Open API Developer SDK for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@kkbox/kkbox-js-sdk"><meta property="twitter:description" content="KKBOX Open API Developer SDK for JavaScript"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/KKBOX/OpenAPI-JavaScript"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api">api</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/AlbumFetcher.js~AlbumFetcher.html">AlbumFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/Api.js~Api.html">Api</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ArtistFetcher.js~ArtistFetcher.html">ArtistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ChartFetcher.js~ChartFetcher.html">ChartFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/FeaturedPlaylistCategoryFetcher.js~FeaturedPlaylistCategoryFetcher.html">FeaturedPlaylistCategoryFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/FeaturedPlaylistFetcher.js~FeaturedPlaylistFetcher.html">FeaturedPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/Fetcher.js~Fetcher.html">Fetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/GenreStationFetcher.js~GenreStationFetcher.html">GenreStationFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/HttpClient.js~HttpClient.html">HttpClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/MoodStationFetcher.js~MoodStationFetcher.html">MoodStationFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/NewHitsPlaylistFetcher.js~NewHitsPlaylistFetcher.html">NewHitsPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/NewReleaseCategoryFetcher.js~NewReleaseCategoryFetcher.html">NewReleaseCategoryFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SearchFetcher.js~SearchFetcher.html">SearchFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SharedPlaylistFetcher.js~SharedPlaylistFetcher.html">SharedPlaylistFetcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/TrackFetcher.js~TrackFetcher.html">TrackFetcher</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#auth">auth</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/Auth.js~Auth.html">Auth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/ClientCredentialsFlow.js~ClientCredentialsFlow.html">ClientCredentialsFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/auth/TokenFetcher.js~TokenFetcher.html">TokenFetcher</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/test/apitest.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import should from &apos;should&apos;;
+import HttpClient from &apos;../api/HttpClient&apos;;
+import SearchFetcher from &apos;../api/SearchFetcher&apos;;
+import AlbumFetcher from &apos;../api/AlbumFetcher&apos;;
+import ArtistFetcher from &apos;../api/ArtistFetcher&apos;;
+import FeaturedPlaylistFetcher from &apos;../api/FeaturedPlaylistFetcher&apos;;
+import FeaturedPlaylistCategoryFetcher from &apos;../api/FeaturedPlaylistCategoryFetcher&apos;;
+import NewReleaseCategoryFetcher from &apos;../api/NewReleaseCategoryFetcher&apos;;
+import NewHitsPlaylistFetcher from &apos;../api/NewHitsPlaylistFetcher&apos;;
+import SharedPlaylistFetcher from &apos;../api/SharedPlaylistFetcher&apos;;
+import MoodStationFetcher from &apos;../api/MoodStationFetcher&apos;;
+import GenreStationFetcher from &apos;../api/GenreStationFetcher&apos;;
+import ChartFetcher from &apos;../api/ChartFetcher&apos;;
+import TrackFetcher from &apos;../api/TrackFetcher&apos;;
+import TokenFetcher from &apos;../auth/TokenFetcher&apos;;
+import ClientCredentials from &apos;../auth/ClientCredentialsFlow&apos;;
+import { kkbox_sdk } from &apos;../../client_secrets.json&apos;;
+const CLIENT_ID = kkbox_sdk.client_id;
+const CLIENT_SECRET = kkbox_sdk.client_secret;
+
+describe(&apos;Api Begin to Test&apos;, () =&gt; {
+  describe(&apos;ClientCredentials&apos;, () =&gt; {
+    describe(&apos;#fetch the access token()&apos;, () =&gt; {
+      it(&apos;should fetch access token&apos;, () =&gt; {
+        const tokenFetcher = new TokenFetcher(CLIENT_ID, CLIENT_SECRET);
+        const clientCredentials = new ClientCredentials(tokenFetcher);
+        return clientCredentials.fetchAccessToken().then(
+          response =&gt; {
+            const access_token = response.data.access_token;
+            access_token.should.be.ok;
+
+            const httpClient = new HttpClient(access_token);
+
+            describe(&apos;Search&apos;, () =&gt; {
+              const searchFetcher = new SearchFetcher(
+                httpClient
+              ).setSearchCriteria(&apos;Linkin Park&apos;);
+              describe(&apos;#fetchSearchResult()&apos;, () =&gt; {
+                it(&apos;should response status 200&apos;, () =&gt; {
+                  return searchFetcher.fetchSearchResult().then(response =&gt; {
+                    response.status.should.be.exactly(200),
+                      reject =&gt; should.not.exists(reject);
+                  });
+                });
+              });
+
+              describe(&apos;#filter()&apos;, () =&gt; {
+                it(&apos;should get result&apos;, () =&gt; {
+                  return searchFetcher
+                    .filter({
+                      artist: &apos;Linkin Park&apos;,
+                      album: &apos;One More Light&apos;,
+                      available_territory: &apos;TW&apos;
+                    })
+                    .fetchSearchResult()
+                    .then(response =&gt; {
+                      response.data.tracks.data.length.should.be.greaterThan(0);
+                    });
+                });
+              });
+            });
+
+            describe(&apos;Track&apos;, () =&gt; {
+              const track_id = &apos;KpnEGVHEsGgkoB0MBk&apos;;
+              const trackFetcher = new TrackFetcher(httpClient).setTrackID(
+                track_id
+              );
+              it(&apos;should response status 200&apos;, () =&gt; {
+                return trackFetcher
+                  .fetchMetadata()
+                  .then(
+                    response =&gt; response.status.should.be.exactly(200),
+                    reject =&gt; should.not.exists(reject)
+                  );
+              });
+
+              describe(&apos;#getWidgetUri&apos;, () =&gt; {
+                it(&apos;should return right uri&apos;, function(doneCb) {
+                  trackFetcher
+                    .getWidgetUri()
+                    .should.be.exactly(
+                      `https://widget.kkbox.com/v1/?id=${track_id}&amp;type=song`
+                    );
+                  doneCb();
+                });
+              });
+            });
+
+            describe(&apos;Album&apos;, () =&gt; {
+              const album_id = &apos;KmRKnW5qmUrTnGRuxF&apos;;
+              const albumFetcher = new AlbumFetcher(httpClient).setAlbumID(
+                album_id
+              );
+              describe(&apos;#fetchMetadata()&apos;, () =&gt; {
+                it(&apos;should response status 200&apos;, () =&gt; {
+                  return albumFetcher.fetchMetadata().then(
+                    response =&gt; {
+                      response.status.should.be.exactly(200);
+                    },
+                    reject =&gt; {
+                      should.not.exist(reject);
+                    }
+                  );
+                });
+              });
+
+              describe(&apos;#fetchTracks()&apos;, () =&gt; {
+                var fulfillment = undefined;
+                it(&apos;should response status 200&apos;, () =&gt; {
+                  return albumFetcher.fetchTracks().then(
+                    response =&gt; {
+                      response.status.should.be.exactly(200);
+                      fulfillment = response;
+                    },
+                    reject =&gt; {
+                      should.not.exist(reject);
+                    }
+                  );
+                });
+
+                it(&apos;fetch next page should fail&apos;, () =&gt; {
+                  return albumFetcher.fetchNextPage(fulfillment).then(
+                    response =&gt; {
+                      throw new Error(&apos;Should not get response&apos;);
+                    },
+                    reject =&gt; {
+                      should.exist(reject);
+                    }
+                  );
+                });
+
+                it(&apos;should not have next page&apos;, done =&gt; {
+                  albumFetcher.hasNextPage(fulfillment).should.be.false;
+                  done();
+                });
+              });
+
+              describe(&apos;#getWidgetUri&apos;, () =&gt; {
+                it(&apos;should return right uri&apos;, done =&gt; {
+                  albumFetcher
+                    .getWidgetUri()
+                    .should.be.exactly(
+                      `https://widget.kkbox.com/v1/?id=${album_id}&amp;type=album`
+                    );
+                  done();
+                });
+              });
+            });
+
+            describe(&apos;Album fetch next tracks&apos;, () =&gt; {
+              const album_id = &apos;Ks8MAYNedkIB_sGajW&apos;; // Cosmic Explorer from Perfume
+              const albumFetcher = new AlbumFetcher(httpClient).setAlbumID(
+                album_id
+              );
+
+              describe(&apos;#fetchTracks(1)&apos;, () =&gt; {
+                it(&apos;should succeed and should fetch next page succeed&apos;, done =&gt; {
+                  albumFetcher.fetchTracks(1).then(
+                    response =&gt; {
+                      response.status.should.be.exactly(200);
+                      albumFetcher.fetchNextPage(response).then(
+                        response =&gt; {
+                          response.data.data.should.be.an.instanceOf(Array);
+                          response.data.data.length.should.be.equal(1);
+                          response.status.should.be.exactly(200);
+                          done();
+                        },
+                        reject =&gt; {
+                          done(reject);
+                        }
+                      );
+                    },
+                    reject =&gt; {
+                      done(reject);
+                    }
+                  );
+                });
+              });
+            });
+
+            describe(&apos;Album fetch next page&apos;, () =&gt; {
+              const album_id = &apos;Ks8MAYNedkIB_sGajW&apos;; // Cosmic Explorer from Perfume
+              const albumFetcher = new AlbumFetcher(httpClient).setAlbumID(
+                album_id
+              );
+
+              it(&apos;fetch next page should response status 200&apos;, () =&gt; {
+                return albumFetcher.fetchTracks(1).then(
+                  response =&gt; {
+                    response.status.should.be.exactly(200);
+                    albumFetcher.fetchNextPage(response).then(
+                      response =&gt; {
+                        response.status.should.be.exactly(200);
+                      },
+                      reject =&gt; {
+                        should.not.exists(reject);
+                      }
+                    );
+                  },
+                  reject =&gt; {
+                    should.not.exists(reject);
+                  }
+                );
+              });
+            });
+
+            describe(&apos;Shared Playlists&apos;, () =&gt; {
+              const playlist_id = &apos;4nUZM-TY2aVxZ2xaA-&apos;;
+              const sharedPlaylistFetcher = new SharedPlaylistFetcher(
+                httpClient
+              ).setPlaylistID(playlist_id);
+              describe(&apos;#find and get()&apos;, () =&gt; {
+                it(&apos;should response status 200&apos;, done =&gt; {
+                  sharedPlaylistFetcher
+                    .fetchMetadata()
+                    .then(response =&gt; {
+                      response.status.should.be.exactly(200);
+                      done();
+                    })
+                    .catch(error =&gt; {
+                      should.not.exists(error);
+                      done(error);
+                    });
+                });
+              });
+
+              describe(&apos;#tracks()&apos;, () =&gt; {
+                it(&apos;should response status 200&apos;, done =&gt; {
+                  sharedPlaylistFetcher.fetchTracks().then(
+                    response =&gt; {
+                      response.status.should.be.exactly(200);
+                      done();
+                    },
+                    reject =&gt; {
+                      done(reject);
+                    }
+                  );
+                });
+              });
+
+              describe(&apos;#getWidgetUri&apos;, () =&gt; {
+                it(&apos;should return right uri&apos;, done =&gt; {
+                  sharedPlaylistFetcher
+                    .getWidgetUri()
+                    .should.be.exactly(
+                      `https://widget.kkbox.com/v1/?id=${playlist_id}&amp;type=playlist`
+                    );
+                  done();
+                });
+              });
+            });
+
+            describe(&apos;Artist&apos;, () =&gt; {
+              const artistFetcher = new ArtistFetcher(httpClient).setArtistID(
+                &apos;Cnv_K6i5Ft4y41SxLy&apos;
+              );
+              describe(&apos;#fetchMetadata()&apos;, () =&gt; {
+                it(&apos;should response status 200&apos;, () =&gt; {
+                  return artistFetcher
+                    .fetchMetadata()
+                    .then(response =&gt; {
+                      response.status.should.be.exactly(200);
+                      return response;
+                    })
+                    .catch(error =&gt; should.not.exists(error));
+                });
+              });
+
+              describe(&apos;#fetchAlbums()&apos;, () =&gt; {
+                it(&apos;should succeed and fetch next page should fail&apos;, () =&gt; {
+                  return artistFetcher
+                    .fetchAlbums()
+                    .then(response =&gt; {
+                      response.status.should.be.exactly(200);
+                      artistFetcher
+                        .fetchNextPage(response)
+                        .then(response =&gt; {
+                          response.status.should.not.be.exactly(200);
+                          return response;
+                        })
+                        .catch(error =&gt; should.exists(error));
+                      return response;
+                    })
+                    .catch(error =&gt; should.not.exists(error));
+                });
+              });
+
+              describe(&apos;#fetchTopTracks()&apos;, () =&gt; {
+                it(&apos;should response status 200&apos;, done =&gt; {
+                  artistFetcher.fetchTopTracks().then(
+                    response =&gt; {
+                      response.status.should.be.exactly(200);
+                      done();
+                    },
+                    reject =&gt; {
+                      should.not.exists(reject);
+                      done();
+                    }
+                  );
+                });
+              });
+
+              describe(&apos;#fetchRelatedArtists()&apos;, () =&gt; {
+                it(&apos;should response status 200&apos;, done =&gt; {
+                  artistFetcher.fetchRelatedArtists().then(
+                    response =&gt; {
+                      response.status.should.be.exactly(200);
+                      done();
+                    },
+                    reject =&gt; {
+                      should.not.exists(reject);
+                      done();
+                    }
+                  );
+                });
+              });
+            });
+
+            describe(&apos;Artist fetch album tests&apos;, () =&gt; {
+              const artistFetcher = new ArtistFetcher(httpClient).setArtistID(
+                &apos;Cnv_K6i5Ft4y41SxLy&apos;
+              );
+              describe(&apos;#fetchAlbums(1)&apos;, () =&gt; {
+                it(&apos;should succeed and fetch next page shuold succeed&apos;, done =&gt; {
+                  artistFetcher.fetchAlbums(1).then(response =&gt; {
+                    response.status.should.be.exactly(200);
+                    artistFetcher.fetchNextPage(response).then(
+                      response =&gt; {
+                        response.status.should.be.exactly(200);
+                        done();
+                      },
+                      reject =&gt; {
+                        done(reject);
+                      }
+                    );
+                  });
+                });
+              });
+
+              describe(&apos;#fetchTopTracks(1)&apos;, () =&gt; {
+                it(&apos;should succeed and fetch next page shuold succeed&apos;, done =&gt; {
+                  artistFetcher.fetchTopTracks(1).then(response =&gt; {
+                    response.status.should.be.exactly(200);
+                    artistFetcher.fetchNextPage(response).then(
+                      response =&gt; {
+                        response.status.should.be.exactly(200);
+                        done();
+                      },
+                      reject =&gt; {
+                        done(reject);
+                      }
+                    );
+                  });
+                });
+              });
+            });
+
+            describe(&apos;Featured Playlists&apos;, () =&gt; {
+              const featuredPlaylistFetcher = new FeaturedPlaylistFetcher(
+                httpClient
+              );
+              describe(&apos;#fetchAllFeaturedPlaylists()&apos;, () =&gt; {
+                it(&apos;should response status 200&apos;, done =&gt; {
+                  featuredPlaylistFetcher
+                    .fetchAllFeaturedPlaylists(1)
+                    .then(response =&gt; {
+                      response.status.should.be.exactly(200);
+                      featuredPlaylistFetcher.fetchNextPage(response).then(
+                        response =&gt; {
+                          response.status.should.be.exactly(200);
+                          done();
+                        },
+                        reject =&gt; {
+                          done(reject);
+                        }
+                      );
+                    });
+                });
+              });
+            });
+
+            describe(&apos;Featured Playlist Category&apos;, () =&gt; {
+              const featuredPlaylistCategoryFetcher = new FeaturedPlaylistCategoryFetcher(
+                httpClient
+              );
+              describe(&apos;#fetchAll()&apos;, () =&gt; {
+                it(&apos;should response status 200&apos;, () =&gt; {
+                  return featuredPlaylistCategoryFetcher
+                    .fetchAllFeaturedPlaylistCategories()
+                    .then(
+                      response =&gt; response.status.should.be.exactly(200),
+                      reject =&gt; should.not.exists(reject)
+                    );
+                });
+              });
+
+              const f = featuredPlaylistCategoryFetcher.setCategoryID(
+                &apos;LXUR688EBKRRZydAWb&apos;
+              );
+              describe(&apos;#fetchMetadata()&apos;, () =&gt; {
+                it(&apos;should response status 200&apos;, () =&gt; {
+                  return f
+                    .fetchMetadata()
+                    .then(
+                      response =&gt; response.status.should.be.exactly(200),
+                      reject =&gt; should.not.exists(reject)
+                    );
+                });
+              });
+
+              describe(&apos;#fetchPlaylists()&apos;, () =&gt; {
+                it(&apos;should response status 200 and fetch next page should succeed&apos;, done =&gt; {
+                  f.fetchPlaylists().then(response =&gt; {
+                    response.status.should.be.exactly(200);
+                    f.fetchNextPage(response).then(
+                      response =&gt; {
+                        response.status.should.be.exactly(200);
+                        done();
+                      },
+                      reject =&gt; {
+                        done(reject);
+                      }
+                    );
+                  });
+                });
+              });
+            });
+
+            describe(&apos;Mood Station&apos;, () =&gt; {
+              const moodStationFetcher = new MoodStationFetcher(httpClient);
+              describe(&apos;#fetchAll()&apos;, () =&gt; {
+                it(&apos;should succeed&apos;, () =&gt; {
+                  return moodStationFetcher
+                    .fetchAllMoodStations()
+                    .then(
+                      response =&gt; response.status.should.be.exactly(200),
+                      reject =&gt; should.not.exists(reject)
+                    );
+                });
+              });
+
+              describe(&apos;#fetchMetadata()&apos;, () =&gt; {
+                it(&apos;should succeed&apos;, () =&gt; {
+                  return moodStationFetcher
+                    .setMoodStationID(&apos;StGZp2ToWq92diPHS7&apos;)
+                    .fetchMetadata()
+                    .then(
+                      response =&gt; response.status.should.be.exactly(200),
+                      reject =&gt; should.not.exists(reject)
+                    );
+                });
+              });
+            });
+
+            describe(&apos;Genre Station&apos;, () =&gt; {
+              const genreStationFetcher = new GenreStationFetcher(httpClient);
+              describe(&apos;#fetchAllGenreStations()&apos;, () =&gt; {
+                it(&apos;should succeed and fetch next page should succeed&apos;, done =&gt; {
+                  genreStationFetcher
+                    .fetchAllGenreStations(1)
+                    .then(response =&gt; {
+                      response.status.should.be.exactly(200);
+                      genreStationFetcher.fetchNextPage(response).then(
+                        response =&gt; {
+                          response.status.should.be.exactly(200);
+                          done();
+                        },
+                        reject =&gt; {
+                          done(reject);
+                        }
+                      );
+                    });
+                });
+              });
+
+              describe(&apos;#fetchMetadata()&apos;, () =&gt; {
+                it(&apos;should succeed&apos;, () =&gt; {
+                  return genreStationFetcher
+                    .setGenreStationID(&apos;TYq3EHFTl-1EOvJM5Y&apos;)
+                    .fetchMetadata()
+                    .then(
+                      response =&gt; response.status.should.be.exactly(200),
+                      reject =&gt; should.not.exists(reject)
+                    );
+                });
+              });
+            });
+
+            describe(&apos;Chart&apos;, () =&gt; {
+              const chartFetcher = new ChartFetcher(httpClient);
+              describe(&apos;#fetchCharts()&apos;, () =&gt; {
+                it(&apos;should succeed and fetch next page should fail&apos;, done =&gt; {
+                  chartFetcher.fetchCharts().then(response =&gt; {
+                    response.status.should.be.exactly(200);
+                    chartFetcher.hasNextPage(response).should.be.false();
+                    chartFetcher.fetchNextPage(response).then(
+                      response =&gt; {
+                        response.should.not.exists();
+                        done(response);
+                      },
+                      reject =&gt; {
+                        done();
+                      }
+                    );
+                  });
+                });
+              });
+
+              describe(&apos;#fetchMetadata()&apos;, () =&gt; {
+                it(&apos;should succeed&apos;, done =&gt; {
+                  chartFetcher
+                    .setPlaylistID(&apos;4mJSYXvueA8t0odsny&apos;)
+                    .fetchMetadata()
+                    .then(
+                      response =&gt; {
+                        response.status.should.be.exactly(200);
+                        done();
+                      },
+                      reject =&gt; {
+                        should.not.exists(reject);
+                        done();
+                      }
+                    );
+                });
+              });
+
+              describe(&apos;#fetchTracks()&apos;, () =&gt; {
+                it(&apos;should succeed&apos;, done =&gt; {
+                  chartFetcher
+                    .setPlaylistID(&apos;4mJSYXvueA8t0odsny&apos;)
+                    .fetchTracks()
+                    .then(
+                      response =&gt; {
+                        response.status.should.be.exactly(200);
+                        done();
+                      },
+                      reject =&gt; {
+                        should.not.exists(reject);
+                        done();
+                      }
+                    );
+                });
+              });
+            });
+
+            describe(&apos;New Release Category&apos;, () =&gt; {
+              const newReleaseCategoryFetcher = new NewReleaseCategoryFetcher(
+                httpClient
+              );
+              describe(&apos;#fetchAll()&apos;, () =&gt; {
+                it(&apos;should succeed and fetch next page should succeed&apos;, done =&gt; {
+                  newReleaseCategoryFetcher
+                    .fetchAllNewReleaseCategories(1)
+                    .then(
+                      response =&gt; {
+                        response.status.should.be.exactly(200);
+                        newReleaseCategoryFetcher
+                          .hasNextPage(response)
+                          .should.be.true();
+                        newReleaseCategoryFetcher.fetchNextPage(response).then(
+                          response =&gt; {
+                            response.status.should.be.ok();
+                            done();
+                          },
+                          reject =&gt; {
+                            done(reject);
+                          }
+                        );
+                      },
+                      reject =&gt; should.not.exists(reject)
+                    );
+                });
+              });
+
+              const f = newReleaseCategoryFetcher.setCategoryID(
+                &apos;Cng5IUIQhxb8w1cbsz&apos;
+              );
+              describe(&apos;#fetchMetadata()&apos;, () =&gt; {
+                it(&apos;should response status 200&apos;, () =&gt; {
+                  return f
+                    .fetchMetadata()
+                    .then(
+                      response =&gt; response.status.should.be.exactly(200),
+                      reject =&gt; should.not.exists(reject)
+                    );
+                });
+              });
+
+              describe(&apos;#fetchAlbums()&apos;, () =&gt; {
+                it(&apos;should response status 200 and fetch next page should succeed&apos;, done =&gt; {
+                  f.fetchAlbums().then(response =&gt; {
+                    response.status.should.be.exactly(200);
+                    f.fetchNextPage(response).then(
+                      response =&gt; {
+                        response.status.should.be.exactly(200);
+                        done();
+                      },
+                      reject =&gt; {
+                        done(reject);
+                      }
+                    );
+                  });
+                });
+              });
+            });
+
+            describe(&apos;New Hits Playlists&apos;, () =&gt; {
+              const newHitsPlaylistFetcher = new NewHitsPlaylistFetcher(
+                httpClient
+              );
+              describe(&apos;#fetchAll()&apos;, () =&gt; {
+                it(&apos;should succeed&apos;, () =&gt; {
+                  newHitsPlaylistFetcher
+                    .fetchAllNewHitsPlaylists()
+                    .then(response =&gt; {
+                      response.status.should.be.exactly(200);
+                    })
+                    .catch(error =&gt; should.not.exists(error));
+                });
+              });
+
+              const f = newHitsPlaylistFetcher.setPlaylistID(
+                &apos;DZni8m29ciOFbRxTJq&apos;
+              );
+              describe(&apos;#fetchMetadata()&apos;, () =&gt; {
+                it(&apos;should succeed&apos;, () =&gt; {
+                  return f
+                    .fetchMetadata()
+                    .then(
+                      response =&gt; response.status.should.be.exactly(200),
+                      reject =&gt; should.not.exists(reject)
+                    )
+                    .catch(error =&gt; should.not.exsits(error));
+                });
+              });
+
+              describe(&apos;#fetchTracks()&apos;, () =&gt; {
+                it(&apos;should succeed&apos;, () =&gt; {
+                  return f
+                    .fetchTracks()
+                    .then(
+                      response =&gt; response.status.should.be.exactly(200),
+                      reject =&gt; should.not.exists(reject)
+                    )
+                    .catch(error =&gt; should.not.exsits(error));
+                });
+              });
+            });
+          },
+          reject =&gt; should.not.exists(reject)
+        );
+      });
+    });
+  });
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -8,7 +8,7 @@
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="KKBOX Open API developer SDK for JavaScript. Use it to easily access KKBOX open API to get various metadata about KKBOX&apos;s tracks, albums, artists, playlists and stations. "><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@kkbox/kkbox-js-sdk"><meta property="twitter:description" content="KKBOX Open API developer SDK for JavaScript. Use it to easily access KKBOX open API to get various metadata about KKBOX&apos;s tracks, albums, artists, playlists and stations. "></head>
+<meta name="description" content="KKBOX Open API Developer SDK for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@kkbox/kkbox-js-sdk"><meta property="twitter:description" content="KKBOX Open API Developer SDK for JavaScript"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -52,91 +52,25 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/Endpoint.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const API_DOMAIN = (() =&gt; {
-  return &apos;https://api.kkbox.com/v1.1/&apos;;
-})();
-/**
- * @ignore
- */
-export const SEARCH = API_DOMAIN + &apos;search&apos;;
-
-/**
- * @ignore
- */
-export const TRACKS = API_DOMAIN + &apos;tracks&apos;;
-
-/**
- * @ignore
- */
-export const ARTISTS = API_DOMAIN + &apos;artists&apos;;
-
-/**
- * @ignore
- */
-export const ALBUMS = API_DOMAIN + &apos;albums&apos;;
-
-/**
- * @ignore
- */
-export const SHARED_PLAYLISTS = API_DOMAIN + &apos;shared-playlists&apos;;
-
-/**
- * @ignore
- */
-export const MOOD_STATIONS = API_DOMAIN + &apos;mood-stations&apos;;
-
-/**
- * @ignore
- */
-export const FEATURED_PLAYLISTS = API_DOMAIN + &apos;featured-playlists&apos;;
-
-/**
- * @ignore
- */
-export const FEATURED_PLAYLISTS_CATEGORIES =
-  API_DOMAIN + &apos;featured-playlist-categories&apos;;
-
-/**
- * @ignore
- */
-export const NEW_RELEASE_CATEGORIES = API_DOMAIN + &apos;new-release-categories&apos;;
-
-/**
- * @ignore
- */
-export const NEW_HITS_PLAYLISTS = API_DOMAIN + &apos;new-hits-playlists&apos;;
-
-/**
- * @ignore
- */
-export const GENRE_STATIONS = API_DOMAIN + &apos;genre-stations&apos;;
-
-/**
- * @ignore
- */
-export const CHARTS = API_DOMAIN + &apos;charts&apos;;
-
-/**
- * @ignore
- */
-export const SEARCH_TYPES = {
-  ARTIST: &apos;artist&apos;,
-  ALBUM: &apos;album&apos;,
-  TRACK: &apos;track&apos;,
-  PLAY_LIST: &apos;playlist&apos;
-};
-
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const API_DOMAIN = &apos;https://api.kkbox.com/v1.1/&apos;;
 const OAUTH_DOMAIN = &apos;https://account.kkbox.com/oauth2/&apos;;
 
-/**
- * @ignore
- */
-export const Token = OAUTH_DOMAIN + &apos;token/&apos;;
-
-/**
- * @ignore
- */
-export const Authorization = OAUTH_DOMAIN + &apos;authorize/&apos;;
+module.exports = {
+  SEARCH: API_DOMAIN + &apos;search&apos;,
+  TRACKS: API_DOMAIN + &apos;tracks&apos;,
+  ARTISTS: API_DOMAIN + &apos;artists&apos;,
+  ALBUMS: API_DOMAIN + &apos;albums&apos;,
+  SHARED_PLAYLISTS: API_DOMAIN + &apos;shared-playlists&apos;,
+  MOOD_STATIONS: API_DOMAIN + &apos;mood-stations&apos;,
+  FEATURED_PLAYLISTS: API_DOMAIN + &apos;featured-playlists&apos;,
+  FEATURED_PLAYLISTS_CATEGORIES: API_DOMAIN + &apos;featured-playlist-categories&apos;,
+  NEW_RELEASE_CATEGORIES: API_DOMAIN + &apos;new-release-categories&apos;,
+  NEW_HITS_PLAYLISTS: API_DOMAIN + &apos;new-hits-playlists&apos;,
+  GENRE_STATIONS: API_DOMAIN + &apos;genre-stations&apos;,
+  CHARTS: API_DOMAIN + &apos;charts&apos;,
+  Token: OAUTH_DOMAIN + &apos;token/&apos;,
+  Authorization: OAUTH_DOMAIN + &apos;authorize/&apos;
+};
 </code></pre>
 
 </div>
