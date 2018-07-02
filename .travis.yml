@@ -7,6 +7,9 @@ node_js:
   - "8"
   - "9"
   - "10"
+cache:
+  directories:
+    - node_modules
 before_script:
   - |
     echo -e "{\"kkbox_sdk\": {\"client_id\": \"$CLIENT_ID\", \"client_secret\": \"$CLIENT_SECRET\"}}" > client_secrets.json
