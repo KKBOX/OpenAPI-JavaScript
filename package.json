@@ -4,7 +4,7 @@
   "description": "KKBOX Open API developer SDK for JavaScript. Use it to easily access KKBOX open API to get various metadata about KKBOX's tracks, albums, artists, playlists and stations. ",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "babel src -d dist",
+    "build": "npx babel src -d dist",
     "build:webpack": "webpack -p",
     "pretest": "npm run build",
     "test": "mocha -R spec -t 30000 ./dist/test",
@@ -22,9 +22,10 @@
     "babel-preset-env": "^1.7.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "esdoc": "^1.0.4",
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "esdoc": "^1.1.0",
     "esdoc-standard-plugin": "^1.0.0",
     "mocha": "^5.2.0",
     "should": "^11.2.1",
