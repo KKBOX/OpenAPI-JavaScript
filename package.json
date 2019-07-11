@@ -1,6 +1,6 @@
 {
   "name": "@kkbox/kkbox-js-sdk",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "KKBOX Open API developer SDK for JavaScript. Use it to easily access KKBOX open API to get various metadata about KKBOX's tracks, albums, artists, playlists and stations. ",
   "main": "./dist/index.js",
   "scripts": {
