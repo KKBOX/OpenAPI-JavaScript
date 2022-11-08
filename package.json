@@ -29,7 +29,7 @@
     "esdoc-standard-plugin": "^1.0.0",
     "mocha": "^5.2.0",
     "should": "^11.2.1",
-    "webpack": "^2.3.3"
+    "webpack": "^5.74.0"
   },
   "mailTo": "willyliu@kkbox.com",
   "bugs": {
